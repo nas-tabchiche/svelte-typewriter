@@ -2,7 +2,7 @@
 	"name": "svelte-typewriter",
 	"description": "A simple and reusable typewriter effect for your Svelte applications",
 	"version": "1.0.1",
-	"main": "typewriter.svelte",
+	"main": "Typewriter.svelte",
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
 	"peerDependencies": {
