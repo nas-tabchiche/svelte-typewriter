@@ -1,6 +1,8 @@
 # svelte-typewriter
 > A simple and reusable typewriter effect for your Svelte applications
 
+[DEMO](https://svelte.dev/repl/eddf80db94da42a0b659c1d1da687665?version=3.14.0)
+
 ## Installation
 
 ```bash
