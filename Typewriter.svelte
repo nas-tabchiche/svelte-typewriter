@@ -1,11 +1,13 @@
 <script>
+	let typewriter
+	
 	// Only works for text content inside tags
 	import { onMount } from 'svelte'
 	onMount(async () => {
 		const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 		// Store all elements splitted text in array
 		const isTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
-		let [...elements] = document.querySelectorAll('.typewriter-effect *')
+		let [...elements] = typewriter.children
 		// Get only elements with textNodes
 		elements = elements.filter(el => isTextNode(el))
 		// Save all element texts on array
@@ -23,6 +25,6 @@
 	})
 </script>
 
-<div class='typewriter-effect'>
+<div bind:this={typewriter}>
 	<slot />
 </div>
