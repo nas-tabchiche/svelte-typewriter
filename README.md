@@ -29,6 +29,36 @@ npm install --save-dev svelte-typewriter
 </Typewriter>
 ```
 
-## TODO
+## Options
 
-- Pass a option through props to enable/disable typewriting cascading effect
+You can control the behavior of the typewriter effect by passing specific props to the `Typewriter` component
+
+### `interval`
+
+The interval in milliseconds between each letter
+
+default: `30`
+
+#### Example:
+
+```html
+<Typewriter interval={50}>
+	<p>Each letter of this paragraph will be displayed with a interval of 50 milliseconds</p>
+</Typewriter>
+```
+
+### `cascade`
+
+Enables the cascading mode, where each element is animated sequentially instead of simultaneously
+
+default: `false`
+
+#### Example:
+
+```html
+<Typewriter cascade>
+	<h1>First</h1>
+	<h2>Second</h2>
+	<h3>Third</h3>
+</Typewriter>
+```

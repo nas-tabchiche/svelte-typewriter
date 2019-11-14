@@ -1,26 +1,32 @@
 <script>
-	let typewriter
-	
-	// Only works for text content inside tags
 	import { onMount } from 'svelte'
+	export let interval = 30
+	export let cascade
+	let typewriter
 	onMount(async () => {
 		const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-		// Store all elements splitted text in array
+		// Verify if the given element has only a single textNode
 		const isTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
-		let [...elements] = typewriter.children
-		// Get only elements with textNodes
-		elements = elements.filter(el => isTextNode(el))
-		// Save all element texts on array
-		const elementsText = [ ...elements.map(el => el.textContent.split('')) ]
+		// Get only elements containing a single textNode
+		let elements = [...typewriter.getElementsByTagName('*')].filter(el => isTextNode(el))
+		// Store the splitted textContent of each element in array
+		const elementsText = [...elements.map(el => el.textContent.split(''))]
 		// Remove text from all elements
 		elements.forEach(el => el.textContent = '')
-		// Applies the typewriter effect, sequentially, on each element
-		for (const [elIndex, element] of elements.entries()) {
+		// Apply the typewriter effect
+		const typewriterEffect = async (el, elIndex) => {
 			for (const letter of elementsText[elIndex]) {
-				if (element.textContent === elementsText[elIndex].join('')) return
-				await sleep(30)
-				element.textContent += letter
+				if (el.textContent === elementsText[elIndex].join('')) return
+				await sleep(interval)
+				el.textContent += letter
 			}
+		}
+		if (cascade) {
+			// Applies the typewriter effect sequentially
+			for (const [elIndex, el] of elements.entries()) await typewriterEffect(el, elIndex)
+		} else {
+			// Applies the typewriter effect simultaneously
+			elements.forEach((el, elIndex) => typewriterEffect(el, elIndex))
 		}
 	})
 </script>
