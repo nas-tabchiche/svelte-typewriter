@@ -3,7 +3,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-[DEMO](https://svelte.dev/repl/eddf80db94da42a0b659c1d1da687665?version=3.14.1)
+[DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a?version=3.14.1)
 
 ## Installation
 
@@ -39,6 +39,8 @@ The interval in milliseconds between each letter
 
 default: `30`
 
+[DEMO](https://svelte.dev/repl/eb6caec159cf454b8f2bc98f3444fa8c?version=3.14.1)
+
 #### Example:
 
 ```html
@@ -52,6 +54,8 @@ default: `30`
 Enables the cascading mode, where each element is animated sequentially instead of simultaneously
 
 default: `false`
+
+[DEMO](https://svelte.dev/repl/9ddb89942e954a2a90b553356952ff46?version=3.14.1)
 
 #### Example:
 
