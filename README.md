@@ -3,7 +3,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-[DEMO](https://svelte.dev/repl/eddf80db94da42a0b659c1d1da687665?version=3.14.0)
+[DEMO](https://svelte.dev/repl/eddf80db94da42a0b659c1d1da687665?version=3.14.1)
 
 ## Installation
 
