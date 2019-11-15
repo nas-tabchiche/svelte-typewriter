@@ -15,7 +15,7 @@
 	"license": "MIT",
 	"husky": {
 		"hooks": {
-			"pre-push": "auto-changelog -p && git add CHANGELOG.md && git commit -m 'create CHANGELOG.md'"
+			"pre-push": "auto-changelog -p && git add CHANGELOG.md && git commit -m 'generate CHANGELOG.md'"
 		}
 	},
 	"peerDependencies": {
