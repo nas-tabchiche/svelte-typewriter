@@ -9,13 +9,16 @@
 		"type": "git",
 		"url": "https://github.com/henriquehbr/svelte-typewriter"
 	},
-	"version": "1.3.0",
+	"version": "1.2.1",
 	"main": "Typewriter.svelte",
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
+	"scripts": {
+		"version": "auto-changelog -p && git add CHANGELOG.md && git commit -m 'generate CHANGELOG.md'"
+	},
 	"husky": {
 		"hooks": {
-			"pre-push": "auto-changelog -p && git add CHANGELOG.md && git commit -m 'generate CHANGELOG.md'"
+			"pre-push": "yarn version"
 		}
 	},
 	"peerDependencies": {
