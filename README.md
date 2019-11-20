@@ -66,3 +66,28 @@ default: `false`
 	<h3>Third</h3>
 </Typewriter>
 ```
+
+### `loop`
+
+Cycles the typewriter animation between the children elements of the `<Typewriter>` component, the pause interval between loops (1500 milliseconds by default) can be determined by passing a `number` (eg: `<Typewriter loop={3000}>`)
+
+> When using the `loop` prop, the tag name will be determined by the first child of the `<Typewriter>` component
+
+default: `false`
+
+#### Example:
+
+```html
+<Typewriter loop>
+	<p>This is a draft about the loop typewriter effect</p>
+	<p>This is a draft about svelte-typewriter</p>
+	<p>This text has nothing to do with the two previous phrases</p>
+</Typewriter>
+
+<!-- You can also pass a custom interval between loops -->
+<Typewriter loop={500}>
+	<p>This is a draft about the loop typewriter effect</p>
+	<p>This is a draft about svelte-typewriter</p>
+	<p>This text has nothing to do with the two previous phrases</p>
+</Typewriter>
+```

@@ -9,7 +9,7 @@
 		"type": "git",
 		"url": "https://github.com/henriquehbr/svelte-typewriter"
 	},
-	"version": "1.2.1",
+	"version": "1.3.0",
 	"main": "Typewriter.svelte",
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
@@ -19,7 +19,7 @@
 		}
 	},
 	"peerDependencies": {
-		"svelte": "^3.14.1"
+		"svelte": "^3.15.0"
 	},
 	"devDependencies": {
 		"auto-changelog": "^1.16.2",
