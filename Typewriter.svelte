@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	export let interval = 30
 	export let cascade = false
-	export let loop = 1500 // Pause interval between loops (in milliseconds)
+	export let loop = false
 	let typewriter
 
 	// Stop execution for a specified amount of milliseconds
@@ -48,6 +48,7 @@
 			while (true) {
 				for (const [phraseIndex] of elementsText.entries()) {
 					await typewriterEffect(loopParagraph, phraseIndex)
+					// Check if `loop` is a number, if not, sets the pause interval between loops to 1500 milliseconds
 					typeof loop == 'number' ? await sleep(loop) : await sleep(1500)
 					await typewriterEffect(loopParagraph, phraseIndex, true)
 				}

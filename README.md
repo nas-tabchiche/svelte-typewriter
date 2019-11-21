@@ -79,6 +79,8 @@ default: `false`
 
 Cycles the typewriter animation between the children elements of the `<Typewriter>` component
 
+> **Warning:** won't work if `cascade` is enabled
+
 > When using the `loop` prop, the tag name will be determined by the first child of the `<Typewriter>` component
 
 default: `false`
