@@ -26,7 +26,13 @@
 				if (!reverse && el.textContent === elementsText[elIndex].join('')) return
 				// End animation if text is fully erased (backwards)
 				if (reverse && el.textContent === '') return
-				await sleep(interval)
+				// Check if the interval is an array and use random intervals between each word
+				if (Array.isArray(interval)) {
+					const randomInterval = Math.floor(Math.random() * interval.length)
+					await sleep(interval[randomInterval])
+				} else if (typeof interval == 'number') {
+					await sleep(interval)
+				}
 				!reverse ? el.textContent += letter : el.textContent = el.textContent.slice(0, -1)
 			}
 		}
