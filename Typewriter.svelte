@@ -14,6 +14,9 @@
 	onMount(async () => {
 		const elements = [...typewriter.getElementsByTagName('*')].filter(el => hasSingleTextNode(el))
 		const elementsText = [...elements.map(el => el.textContent.split(''))]
+
+		// Avoid FOUC (flash-of-unstyled-content)
+		typewriter.style.display = 'block'
 		elements.forEach(el => el.textContent = '')
 
 		// Apply the typewriter effect on a given element
@@ -50,6 +53,6 @@
 	})
 </script>
 
-<div bind:this={typewriter}>
+<div bind:this={typewriter} style='display: none'>
 	<slot />
 </div>
