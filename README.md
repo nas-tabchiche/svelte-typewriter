@@ -12,12 +12,12 @@
 yarn add -D svelte-typewriter
 
 # npm
-npm install --save-dev svelte-typewriter
+npm install -D svelte-typewriter
 ```
 
 ## Usage
 
-```html
+```svelte
 <script>
 	import Typewriter from 'svelte-typewriter'
 </script>
@@ -43,9 +43,17 @@ default: `30`
 
 #### Example:
 
-```html
+```svelte
 <Typewriter interval={50}>
 	<p>Each letter of this paragraph will be displayed with a interval of 50 milliseconds</p>
+</Typewriter>
+```
+
+You can also pass a custom array of distinct intervals to mimic human typing
+
+```svelte
+<Typewriter interval={[50, 60, 80]}>
+	<p>Each letter of this paragraph will be randomly displayed with an interval of 50 or 60 or 80 milliseconds</p>
 </Typewriter>
 ```
 
@@ -59,7 +67,7 @@ default: `false`
 
 #### Example:
 
-```html
+```svelte
 <Typewriter cascade>
 	<h1>First</h1>
 	<h2>Second</h2>
@@ -77,7 +85,7 @@ default: `false`
 
 #### Example:
 
-```html
+```svelte
 <Typewriter loop>
 	<p>This is a draft about the loop typewriter effect</p>
 	<p>This is a draft about svelte-typewriter</p>
@@ -87,7 +95,7 @@ default: `false`
 
 You can also pass a custom time interval between loops in milliseconds (the default interval is 1500 milliseconds)
 
-```html
+```svelte
 <Typewriter loop={500}>
 	<p>This is a draft about the loop typewriter effect</p>
 	<p>This is a draft about svelte-typewriter</p>
