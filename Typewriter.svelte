@@ -5,61 +5,68 @@
 	export let loop = false
 	let typewriter
 
-	// Stop execution for a specified amount of milliseconds
 	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+	const rng = (min, max) => Math.floor(Math.random() * max - min) + min
+	const typingInterval = async () =>
+		Array.isArray(interval) ? await sleep(interval[rng(0, interval.length)]) : await sleep(interval)
 
-	// Verify if the given element has only a single textNode
-	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
+	const typewriterMode =
+		cascade && !loop ? 'cascade' :
+		loop && !cascade ? 'loop' :
+		!cascade && !loop ? 'default' : (() => { throw new Error('`cascade` mode should not be used with `loop`!') })()
 
 	onMount(async () => {
-		const elements = [...typewriter.getElementsByTagName('*')].filter(el => hasSingleTextNode(el))
-		const elementsText = [...elements.map(el => el.textContent.split(''))]
+		const elements =
+			typewriterMode === 'cascade' || typewriterMode === 'default'
+				? [...typewriter.getElementsByTagName('*')].map(el => ({ el, text: el.textContent.split('') }))
+				: [...typewriter.children].map(el => el.textContent.split(''))
 
-		// Avoid FOUC (flash-of-unstyled-content)
-		typewriter.style.display = 'block'
-		elements.forEach(el => el.textContent = '')
-
-		// Apply the typewriter effect on a given element
-		const typewriterEffect = async (el, elIndex, reverse = false) => {
-			for (const letter of elementsText[elIndex]) {
-				// End animation if text is fully written (forwards)
-				if (!reverse && el.textContent === elementsText[elIndex].join('')) return
-				// End animation if text is fully erased (backwards)
-				if (reverse && el.textContent === '') return
-				// Check if the interval is an array and use random intervals between each word
-				if (Array.isArray(interval)) {
-					const randomInterval = Math.floor(Math.random() * interval.length)
-					await sleep(interval[randomInterval])
-				} else if (typeof interval == 'number') {
-					await sleep(interval)
+		const typewriterEffect = async (el, { loopAnimation } = { loopAnimation: false }) => {
+			const elText = el.textContent.split('')
+			el.textContent = ''
+			for (const letter of elText) {
+				el.textContent += letter
+				// Erase text if it's fully written
+				if (loopAnimation && el.textContent === elText.join('')) {
+					typeof loop == 'number' ? await sleep(loop) : await sleep(1500)
+					while (el.textContent !== '') {
+						el.textContent = el.textContent.slice(0, -1)
+						await typingInterval()
+					}
+					return
 				}
-				!reverse ? el.textContent += letter : el.textContent = el.textContent.slice(0, -1)
+				await typingInterval()
 			}
 		}
 
-		if (cascade) {
-			// Applies the typewriter effect sequentially
-			for (const [elIndex, el] of elements.entries()) await typewriterEffect(el, elIndex)
-		} else if (loop) {
-			const loopParagraphTag = elements[0].tagName.toLowerCase()
-			const loopParagraph = document.createElement(loopParagraphTag)
-			elements.forEach(el => el.remove())
-			typewriter.appendChild(loopParagraph)
-			while (true) {
-				for (const [phraseIndex] of elementsText.entries()) {
-					await typewriterEffect(loopParagraph, phraseIndex)
-					// Check if `loop` is a number, if not, sets the pause interval between loops to 1500 milliseconds
-					typeof loop == 'number' ? await sleep(loop) : await sleep(1500)
-					await typewriterEffect(loopParagraph, phraseIndex, true)
+		switch (typewriterMode) {
+			case 'cascade':
+				elements.forEach(({ el }) => el.textContent = '')
+				for (const { el, text } of elements) {
+					el.textContent = text.join('')
+					await typewriterEffect(el)
 				}
-			}
-		} else if (!cascade) {
-			// Applies the typewriter effect simultaneously
-			elements.forEach((el, elIndex) => typewriterEffect(el, elIndex))
+				break
+			case 'loop':
+				const loopParagraphTag = typewriter.firstChild.tagName.toLowerCase()
+				const loopParagraph = document.createElement(loopParagraphTag)
+				typewriter.querySelectorAll('*').forEach(el => el.remove())
+				typewriter.appendChild(loopParagraph)
+				while (true) {
+					for (const text of elements) {
+						loopParagraph.textContent = text.join('')
+						await typewriterEffect(loopParagraph, { loopAnimation: true })
+					}
+				}
+			case 'default':
+				for (const { el, text } of elements) {
+					el.textContent = text.join('')
+					typewriterEffect(el)
+				}
 		}
 	})
 </script>
 
-<div bind:this={typewriter} style='display: none'>
+<div bind:this={typewriter}>
 	<slot />
 </div>
