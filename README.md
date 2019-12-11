@@ -17,6 +17,15 @@ npm install -D svelte-typewriter
 
 ## Usage
 
+You can apply the typewriter effect on your elements in two ways:
+
+- Component-based approach
+- Directive-based approach
+
+### Component-based approach
+
+In order to use this method, you need to import the Svelte component, and wrap your elements with the `<Typewriter>` component
+
 ```svelte
 <script>
 	import Typewriter from 'svelte-typewriter'
@@ -27,6 +36,22 @@ npm install -D svelte-typewriter
 	<h2>The typewriter effect cascades by default</h2>
 	<p>Lorem ipsum dolor sit amet consectetur</p>
 </Typewriter>
+```
+
+### Directive-based approach
+
+This method relies on [Svelte actions](https://svelte.dev/docs#use_action) (more specifically, the `use:action` directive), in order to animate your components with this approach, you must import the directive and include it as a attribute on your element
+
+```svelte
+<script>
+	import typewriter from 'svelte-typewriter/typewriter'
+</script>
+
+<!-- Without parameters -->
+<h1 use:typewriter>Hello World!</h1>
+
+<!-- With parameters -->
+<h1 use:typewriter={{ loop: true, interval: 50 }}>The force will be with you, Always...</h1>
 ```
 
 ## Options
