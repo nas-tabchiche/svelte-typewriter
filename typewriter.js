@@ -1,4 +1,4 @@
-export default async (node, { loop = false, cascade = false, interval = 30 } = { loop, cascade, interval }) => {
+export default async (node, { loop = false, cascade = false, interval = 30 } = {}) => {
 	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 	const typingInterval = async () =>
 		Array.isArray(interval) ? await sleep(interval[rng(0, interval.length)]) : await sleep(interval)
