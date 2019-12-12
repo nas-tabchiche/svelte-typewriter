@@ -17,7 +17,7 @@
 		"publish": "auto-changelog -p && git add CHANGELOG.md"
 	},
 	"peerDependencies": {
-		"svelte": "^3.15.0"
+		"svelte": "^3.16.4"
 	},
 	"devDependencies": {
 		"auto-changelog": "^1.16.2"
