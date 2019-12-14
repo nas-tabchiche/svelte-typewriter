@@ -1,5 +1,6 @@
 export default async (node, { loop = false, cascade = false, interval = 30 } = {}) => {
 	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
 	const typingInterval = async () =>
 		Array.isArray(interval) ? await sleep(interval[rng(0, interval.length)]) : await sleep(interval)
 
@@ -22,20 +23,18 @@ export default async (node, { loop = false, cascade = false, interval = 30 } = {
 	}
 
 	const typewriterMode =
-		cascade && !loop
-			? 'cascade'
-			: loop && !cascade
-			? 'loop'
-			: !cascade && !loop
-			? 'default'
-			: (() => {
-					throw new Error('`cascade` mode should not be used with `loop`!')
-			  })()
+		cascade && !loop ? 'cascade' :
+		loop && !cascade ? 'loop' :
+		!cascade && !loop && hasSingleTextNode(node) ? 'singleDefault' :
+		!cascade && !loop ? 'childrenDefault' : ''
 
 	const elements =
-		typewriterMode === 'cascade' || typewriterMode === 'default'
-			? [...node.getElementsByTagName('*')].map(el => ({ el, text: el.textContent.split('') }))
-			: [...node.children].map(el => el.textContent.split(''))
+		typewriterMode === 'cascade' || typewriterMode === 'childrenDefault'
+			? [...node.children].map(el => ({ el, text: el.textContent.split('') })) :
+		typewriterMode === 'singleDefault'
+			? node.textContent.split('') :
+		typewriterMode === 'loop' ?
+			[...node.children].map(el => el.textContent.split('')) : ''
 
 	switch (typewriterMode) {
 		case 'cascade':
@@ -56,10 +55,15 @@ export default async (node, { loop = false, cascade = false, interval = 30 } = {
 					await typewriterEffect(loopParagraph, { loopAnimation: true })
 				}
 			}
-		case 'default':
+		case 'singleDefault':
+			typewriterEffect(node)
+			break
+		case 'childrenDefault':
 			for (const { el, text } of elements) {
 				el.textContent = text.join('')
 				typewriterEffect(el)
 			}
+			break
+		default: throw new Error('`cascade` mode should not be used with `loop`!')
 	}
 }
