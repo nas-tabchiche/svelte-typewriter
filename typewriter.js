@@ -1,6 +1,7 @@
 export default async (node, { loop = false, cascade = false, interval = 30 } = {}) => {
+	if (cascade && loop) throw new Error('`cascade` mode should not be used with `loop`!')
 	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
+	const rng = (min, max) => Math.floor(Math.random() * (max - min) + min)
 	const typingInterval = async () =>
 		Array.isArray(interval) ? await sleep(interval[rng(0, interval.length)]) : await sleep(interval)
 
@@ -9,9 +10,8 @@ export default async (node, { loop = false, cascade = false, interval = 30 } = {
 		el.textContent = ''
 		for (const letter of elText) {
 			el.textContent += letter
-			// Erase text if it's fully written
 			if (loopAnimation && el.textContent === elText.join('')) {
-				typeof loop == 'number' ? await sleep(loop) : await sleep(1500)
+				typeof loop === 'number' ? await sleep(loop) : await sleep(1500)
 				while (el.textContent !== '') {
 					el.textContent = el.textContent.slice(0, -1)
 					await typingInterval()
@@ -22,32 +22,21 @@ export default async (node, { loop = false, cascade = false, interval = 30 } = {
 		}
 	}
 
-	const typewriterMode =
-		cascade && !loop ? 'cascade' :
-		loop && !cascade ? 'loop' :
-		!cascade && !loop && hasSingleTextNode(node) ? 'singleDefault' :
-		!cascade && !loop ? 'childrenDefault' : ''
+	const elements = [...node.children]
+		.map(el => (loop ? el.textContent.split('') : { el, text: el.textContent.split('') } ))
 
-	const elements =
-		typewriterMode === 'cascade' || typewriterMode === 'childrenDefault'
-			? [...node.children].map(el => ({ el, text: el.textContent.split('') })) :
-		typewriterMode === 'singleDefault'
-			? node.textContent.split('') :
-		typewriterMode === 'loop' ?
-			[...node.children].map(el => el.textContent.split('')) : ''
-
-	switch (typewriterMode) {
-		case 'cascade':
+	switch (true) {
+		case cascade:
 			elements.forEach(({ el }) => (el.textContent = ''))
 			for (const { el, text } of elements) {
 				el.textContent = text.join('')
 				await typewriterEffect(el)
 			}
 			break
-		case 'loop':
+		case loop:
 			const loopParagraphTag = node.firstChild.tagName.toLowerCase()
 			const loopParagraph = document.createElement(loopParagraphTag)
-			node.querySelectorAll('*').forEach(el => el.remove())
+			node.childNodes.forEach(el => el.remove())
 			node.appendChild(loopParagraph)
 			while (true) {
 				for (const text of elements) {
@@ -55,15 +44,8 @@ export default async (node, { loop = false, cascade = false, interval = 30 } = {
 					await typewriterEffect(loopParagraph, { loopAnimation: true })
 				}
 			}
-		case 'singleDefault':
-			typewriterEffect(node)
-			break
-		case 'childrenDefault':
-			for (const { el, text } of elements) {
-				el.textContent = text.join('')
-				typewriterEffect(el)
-			}
-			break
-		default: throw new Error('`cascade` mode should not be used with `loop`!')
+		default:
+			const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
+			hasSingleTextNode(node) ? typewriterEffect(node) : elements.forEach(({ el }) => typewriterEffect(el))
 	}
 }
