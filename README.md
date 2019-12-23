@@ -5,6 +5,13 @@
 
 [DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a?version=3.14.1)
 
+> **NOTICE:** In order to keep delivering new features in short periods, and keeping up the development of
+> `svelte-typewriter` seamlessy and without bloating the codebase with unnecessary features and bottlenecks, the
+> support for animating elements with the `use:typewriter` directive will be dropped starting from version `2.0` due
+> to it's implementation flaws in comparison to it's component-based counterpart whom is way more readable and easier > to maintain of the, thanks for you comprehension!
+
+> If you want to keep using the old directive-based approach, install the old version by running: `npm i -D svelte-typewriter@1.5.5`
+
 ## Installation
 
 ```bash
@@ -20,7 +27,7 @@ npm install -D svelte-typewriter
 You can apply the typewriter effect on your elements in two ways:
 
 - Component-based approach
-- Directive-based approach
+- Directive-based approach *(pre-2.0 only)*
 
 ### Component-based approach
 
@@ -39,6 +46,8 @@ In order to use this method, you need to import the Svelte component, and wrap y
 ```
 
 ### Directive-based approach
+
+> **WARNING:** this option is deprecated, and will only work on versions under 2.0
 
 This method relies on [Svelte actions](https://svelte.dev/docs#use_action) (more specifically, the `use:action` directive), in order to animate your components with this approach, you must import the directive and include it as a attribute on your element
 
@@ -129,3 +138,28 @@ You can also pass a custom time interval between loops in milliseconds (the defa
 	<p>This text has nothing to do with the two previous phrases</p>
 </Typewriter>
 ```
+
+
+### `cursor`
+
+> **INFO:** requires version ^2.0
+
+Enables/disables the terminal cursor on the Typewriter animation, and also, allows you to pass any valid color name, hex code, rgb/rgba valid values to change the cursor color
+
+```svelte
+<Typewriter>
+	<p>Terminal vibes, now on the web!</p>
+</Typewriter>
+
+<!-- Disables the cursor -->
+<Typewriter cursor={false}>
+	<p>No cursor here :/</p>
+</Typewriter>
+
+<!-- Changes the cursor color to green -->
+<Typewriter cursor='green'>
+	<p>All things green</p>
+</Typewriter>
+```
+
+default: `true`
