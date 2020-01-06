@@ -3,14 +3,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-[DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a?version=3.14.1)
-
-> **NOTICE:** In order to keep delivering new features in short periods, and keeping up the development of
-> `svelte-typewriter` seamlessy and without bloating the codebase with unnecessary features and bottlenecks, the
-> support for animating elements with the `use:typewriter` directive will be dropped starting from version `2.0` due
-> to it's implementation flaws in comparison to it's component-based counterpart whom is way more readable and easier > to maintain of the, thanks for you comprehension!
-
-> If you want to keep using the old directive-based approach, install the old version by running: `npm i -D svelte-typewriter@1.5.5`
+[DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a)
 
 ## Installation
 
@@ -27,7 +20,7 @@ npm install -D svelte-typewriter
 You can apply the typewriter effect on your elements in two ways:
 
 - Component-based approach
-- Directive-based approach *(pre-2.0 only)*
+- Directive-based approach *(deprecated)*
 
 ### Component-based approach
 
@@ -47,7 +40,7 @@ In order to use this method, you need to import the Svelte component, and wrap y
 
 ### Directive-based approach
 
-> **WARNING:** this option is deprecated, and will only work on versions under 2.0
+> **WARNING:** this option is deprecated, and will only work on versions under 2.0, if you want to keep using this approach, install the old version by running: `npm i -D svelte-typewriter@1.5.5`
 
 This method relies on [Svelte actions](https://svelte.dev/docs#use_action) (more specifically, the `use:action` directive), in order to animate your components with this approach, you must import the directive and include it as a attribute on your element
 
@@ -73,7 +66,7 @@ The interval in milliseconds between each letter
 
 default: `30`
 
-[DEMO](https://svelte.dev/repl/eb6caec159cf454b8f2bc98f3444fa8c?version=3.14.1)
+[DEMO](https://svelte.dev/repl/eb6caec159cf454b8f2bc98f3444fa8c)
 
 #### Example:
 
@@ -97,7 +90,7 @@ Enables the cascading mode, where each element is animated sequentially instead 
 
 default: `false`
 
-[DEMO](https://svelte.dev/repl/9ddb89942e954a2a90b553356952ff46?version=3.14.1)
+[DEMO](https://svelte.dev/repl/9ddb89942e954a2a90b553356952ff46)
 
 #### Example:
 
