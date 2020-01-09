@@ -104,11 +104,9 @@ default: `false`
 
 ### `loop`
 
-Cycles the typewriter animation between the children elements of the `<Typewriter>` component
-
 > **Warning:** won't work if `cascade` is enabled
 
-> When using the `loop` prop, the tag name will be determined by the first child of the `<Typewriter>` component
+Cycles the typewriter animation between the children elements of the `<Typewriter>` component, the tag name will be determined by the first child of the `<Typewriter>` component
 
 default: `false`
 
@@ -132,12 +130,15 @@ You can also pass a custom time interval between loops in milliseconds (the defa
 </Typewriter>
 ```
 
-
 ### `cursor`
 
 > **INFO:** requires version ^2.0
 
 Enables/disables the terminal cursor on the Typewriter animation, and also, allows you to pass any valid color name, hex code, rgb/rgba valid values to change the cursor color
+
+[DEMO](https://svelte.dev/repl/6008b5aaff6f46e5909c63e795a19f5a)
+
+#### Example:
 
 ```svelte
 <Typewriter>
