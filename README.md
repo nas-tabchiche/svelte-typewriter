@@ -17,14 +17,7 @@ npm install -D svelte-typewriter
 
 ## Usage
 
-You can apply the typewriter effect on your elements in two ways:
-
-- Component-based approach
-- Directive-based approach *(deprecated)*
-
-### Component-based approach
-
-In order to use this method, you need to import the Svelte component, and wrap your elements with the `<Typewriter>` component
+You need to import the Svelte component, and wrap your elements with the `<Typewriter>` component
 
 ```svelte
 <script>
@@ -36,24 +29,6 @@ In order to use this method, you need to import the Svelte component, and wrap y
 	<h2>The typewriter effect cascades by default</h2>
 	<p>Lorem ipsum dolor sit amet consectetur</p>
 </Typewriter>
-```
-
-### Directive-based approach
-
-> **WARNING:** this option is deprecated, and will only work on versions under 2.0, if you want to keep using this approach, install the old version by running: `npm i -D svelte-typewriter@1.5.5`
-
-This method relies on [Svelte actions](https://svelte.dev/docs#use_action) (more specifically, the `use:action` directive), in order to animate your components with this approach, you must import the directive and include it as a attribute on your element
-
-```svelte
-<script>
-	import typewriter from 'svelte-typewriter/typewriter'
-</script>
-
-<!-- Without parameters -->
-<h1 use:typewriter>Hello World!</h1>
-
-<!-- With parameters -->
-<h1 use:typewriter={{ loop: true, interval: 50 }}>The force will be with you, Always...</h1>
 ```
 
 ## Options
@@ -131,8 +106,6 @@ You can also pass a custom time interval between loops in milliseconds (the defa
 ```
 
 ### `cursor`
-
-> **INFO:** requires version ^2.0
 
 Enables/disables the terminal cursor on the Typewriter animation, and also, allows you to pass any valid color name, hex code, rgb/rgba valid values to change the cursor color
 
