@@ -85,6 +85,8 @@ Cycles the typewriter animation between the children elements of the `<Typewrite
 
 default: `false`
 
+[DEMO](https://svelte.dev/repl/e8b82d83f6c2444b97619238404bcd4d)
+
 #### Example:
 
 ```svelte
