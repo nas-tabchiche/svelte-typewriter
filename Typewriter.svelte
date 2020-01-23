@@ -1,9 +1,11 @@
 <script>
-	import { onMount } from 'svelte'
+	import { onMount, createEventDispatcher } from 'svelte'
 	export let interval = 30
 	export let cascade = false
 	export let loop = false
 	export let cursor = true
+
+	const dispatch = createEventDispatcher()
 
 	if (cascade && loop) throw new Error('`cascade` mode should not be used with `loop`!')
 
@@ -45,6 +47,7 @@
 				el.textContent = text.join('')
 				await typewriterEffect(el)
 			}
+			dispatch('done')
 		} else if (loop) {
 			const loopParagraphTag = node.firstChild.tagName.toLowerCase()
 			const loopParagraph = document.createElement(loopParagraphTag)
@@ -58,7 +61,15 @@
 			}
 		} else {
 			const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
-			hasSingleTextNode(node) ? typewriterEffect(node) : elements.forEach(({ el }) => typewriterEffect(el))
+			hasSingleTextNode(node)
+				? await typewriterEffect(node)
+				: await new Promise(resolve => {
+					elements.forEach(async ({ el }, i) => {
+						await typewriterEffect(el)
+						i + 1 === elements.length && resolve()
+					})
+				})
+			dispatch('done')
 		}
 	})
 </script>
