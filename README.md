@@ -133,3 +133,29 @@ Enables/disables the terminal cursor on the Typewriter animation, and also, allo
 ```
 
 default: `true`
+
+### `on:done`
+
+Executes a specified function after the animation execution has finished
+
+[DEMO](https://svelte.dev/repl/145cbf66c396497aa5338846077d53e0)
+
+#### Example:
+
+```svelte
+<Typewriter on:done={() => alert('Done!')}>
+	<h1>A "Done!" will be displayed after...</h1>
+	<h2>Both of these texts animations are finished</h2>
+</Typewriter>
+
+<!-- You can omit both parenthesis and arrow function when you don't need to pass arguments -->
+
+const alertOnDone = () => console.log('Typewriter Effect finished!')
+
+<Typewriter on:done={alertOnDone}>
+	<p>Lorem ipsum dolor...</p>
+	<small>...sit amet consectetur</small>
+</Typewriter>
+```
+
+default: `undefined`
