@@ -5,72 +5,85 @@
 	export let loop = false
 	export let cursor = true
 
+	let node
+	let elements = []
+
 	const dispatch = createEventDispatcher()
 
 	if (cascade && loop) throw new Error('`cascade` mode should not be used with `loop`!')
 
 	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 	const rng = (min, max) => Math.floor(Math.random() * (max - min) + min)
+	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
 	const typingInterval = async () =>
 		Array.isArray(interval) ? await sleep(interval[rng(0, interval.length)]) : await sleep(interval)
 
-	const typewriterEffect = async (el, { loopAnimation } = { loopAnimation: false }) => {
-		const elText = el.textContent.split('')
-		el.textContent = ''
-		el.classList.add('typing')
-		for (const letter of elText) {
-			el.textContent += letter
-			const fullyWritten = loopAnimation && el.textContent === elText.join('')
+	const getElements = parentElement => {
+		const treeWalker = document.createTreeWalker(parentElement, NodeFilter.SHOW_ELEMENT)
+		let currentNode = treeWalker.nextNode()
+		while (currentNode) {
+			const text = currentNode.textContent.split('')
+			hasSingleTextNode(currentNode) && elements.push(!loop ? { currentNode, text } : text)
+			currentNode = treeWalker.nextNode()
+		}
+	}
+
+	const typewriterEffect = async ({ currentNode, text }, { loopAnimation } = { loopAnimation: false }) => {
+		currentNode.textContent = ''
+		currentNode.classList.add('typing')
+		for (const letter of text) {
+			currentNode.textContent += letter
+			const fullyWritten = loopAnimation && currentNode.textContent === text.join('')
 			if (fullyWritten) {
 				typeof loop === 'number' ? await sleep(loop) : await sleep(1500)
-				while (el.textContent !== '') {
-					el.textContent = el.textContent.slice(0, -1)
+				while (currentNode.textContent !== '') {
+					currentNode.textContent = currentNode.textContent.slice(0, -1)
 					await typingInterval()
 				}
 				return
 			}
 			await typingInterval()
 		}
-		if (el.nextSibling !== null) el.classList.remove('typing')
+		if (currentNode.nextSibling !== null || !cascade)
+			currentNode.classList.length == 1
+				? currentNode.removeAttribute('class')
+				: currentNode.classList.remove('typing')
 	}
 
-	let node
+	const cascadeMode = async () => {
+		elements.forEach(({ currentNode }) => (currentNode.textContent = ''))
+		for (const element of elements) await typewriterEffect(element)
+		dispatch('done')
+	}
+
+	const loopMode = async () => {
+		const loopParagraphTag = node.firstChild.tagName.toLowerCase()
+		const loopParagraph = document.createElement(loopParagraphTag)
+		node.childNodes.forEach(el => el.remove())
+		node.appendChild(loopParagraph)
+		while (true) {
+			console.log(elements)
+			for (const text of elements) {
+				loopParagraph.textContent = text.join('')
+				await typewriterEffect({ currentNode: loopParagraph, text }, { loopAnimation: true })
+			}
+		}
+	}
+
+	const defaultMode = async () => {
+		await new Promise(resolve => {
+			elements.forEach(async (element, i) => {
+				await typewriterEffect(element)
+				i + 1 === elements.length && resolve()
+			})
+		})
+		dispatch('done')
+	}
 
 	onMount(async () => {
-		const elements = [...node.children].map(el =>
-			loop ? el.textContent.split('') : { el, text: el.textContent.split('') }
-		)
-
-		if (cascade) {
-			elements.forEach(({ el }) => (el.textContent = ''))
-			for (const { el, text } of elements) {
-				el.textContent = text.join('')
-				await typewriterEffect(el)
-			}
-			dispatch('done')
-		} else if (loop) {
-			const loopParagraphTag = node.firstChild.tagName.toLowerCase()
-			const loopParagraph = document.createElement(loopParagraphTag)
-			node.childNodes.forEach(el => el.remove())
-			node.appendChild(loopParagraph)
-			while (true) {
-				for (const text of elements) {
-					loopParagraph.textContent = text.join('')
-					await typewriterEffect(loopParagraph, { loopAnimation: true })
-				}
-			}
-		} else {
-			const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
-			hasSingleTextNode(node)
-				? await typewriterEffect(node)
-				: await new Promise(resolve => {
-					elements.forEach(async ({ el }, i) => {
-						await typewriterEffect(el)
-						i + 1 === elements.length && resolve()
-					})
-				})
-			dispatch('done')
-		}
+		if (hasSingleTextNode(node)) throw new Error('<Typewriter /> must have at least one element')
+		getElements(node)
+		cascade ? cascadeMode() : loop ? loopMode() : defaultMode()
 	})
 </script>
 
@@ -91,6 +104,7 @@
 
 	.cursor :global(.typing::after) {
 		content: '▌';
+		display: inline-block;
 		color: var(--cursor-color);
 		animation: cursorFade 1.25s infinite;
 	}
