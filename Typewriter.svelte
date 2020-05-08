@@ -1,5 +1,5 @@
 <script>
-	import { onMount, createEventDispatcher } from 'svelte'
+	import { onMount, createEventDispatcher, onDestroy } from 'svelte'
 	export let interval = 30
 	export let cascade = false
 	export let loop = false
@@ -61,7 +61,7 @@
 		const loopParagraph = document.createElement(loopParagraphTag)
 		node.childNodes.forEach(el => el.remove())
 		node.appendChild(loopParagraph)
-		while (true) {
+		while (loop) {
 			for (const text of elements) {
 				loopParagraph.textContent = text.join('')
 				await typewriterEffect({ currentNode: loopParagraph, text }, { loopAnimation: true })
@@ -85,6 +85,8 @@
 		getElements(node)
 		cascade ? cascadeMode() : loop ? loopMode() : defaultMode()
 	})
+
+	onDestroy(() => loop = false)
 </script>
 
 <style>
