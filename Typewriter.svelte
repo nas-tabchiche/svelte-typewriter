@@ -62,11 +62,11 @@
 		node.childNodes.forEach(el => el.remove())
 		node.appendChild(loopParagraph)
 		while (true) {
-			console.log(elements)
 			for (const text of elements) {
 				loopParagraph.textContent = text.join('')
 				await typewriterEffect({ currentNode: loopParagraph, text }, { loopAnimation: true })
 			}
+			dispatch('done')
 		}
 	}
 
