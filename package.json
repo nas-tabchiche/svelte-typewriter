@@ -14,7 +14,7 @@
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"start": "yarn --cwd example run start",
+		"start": "yarn --cwd example && yarn --cwd example run start",
 		"publish": "auto-changelog -p && git add CHANGELOG.md"
 	},
 	"peerDependencies": {
