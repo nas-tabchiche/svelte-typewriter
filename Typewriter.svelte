@@ -86,7 +86,7 @@
 		cascade ? cascadeMode() : loop ? loopMode() : defaultMode()
 	})
 
-	onDestroy(() => loop = false)
+	onDestroy(() => (loop = false))
 </script>
 
 <style>

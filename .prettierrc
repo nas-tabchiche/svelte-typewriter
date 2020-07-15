@@ -1,8 +1,11 @@
 {
+	"plugins": ["prettier-plugin-svelte"],
 	"printWidth": 120,
 	"tabWidth": 4,
 	"semi": false,
 	"singleQuote": true,
 	"trailingComma": "none",
-	"useTabs": true
+	"useTabs": true,
+  "arrowParens": "avoid",
+  "svelteBracketNewLine": true
 }
