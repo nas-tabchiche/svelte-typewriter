@@ -4,31 +4,35 @@ import commonjs from '@rollup/plugin-commonjs'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
+
 const production = !process.env.ROLLUP_WATCH
 
-export default {
+/** @type {import('rollup').RollupOptions} */
+const options = {
 	input: 'index.js',
 	output: {
-		format: 'esm',
+		format: 'es',
 		name: 'app',
 		dir: 'build'
 	},
 	plugins: [
 		svelte({
-			dev: !production,
+			dev: false,
 			css: css => css.write('build/bundle.css', false)
 		}),
 		resolve({
 			browser: true,
-			dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/'),
+			dedupe: ['svelte'],
 			customResolveOptions: {
 				moduleDirectory: ['src', 'node_modules'],
 				extensions: ['.svelte', '/index.svelte', '.mjs', '.js', '.json']
 			}
 		}),
 		commonjs(),
-		serve('./'),
-		livereload('./'),
+		!production && serve('./'),
+		!production && livereload('./'),
 		terser()
 	]
 }
+
+export default options
