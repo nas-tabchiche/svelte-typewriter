@@ -14,17 +14,23 @@
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"changelog": "auto-changelog -l false -u --hide-credit",
+		"changelog": "auto-changelog -l false -u --hide-credit && git add CHANGELOG.md",
 		"start": "yarn --cwd example && yarn --cwd example run start",
-		"publish": "yarn changelog && git add CHANGELOG.md",
+		"publish": "yarn changelog",
 		"prettier": "prettier --write \"./**/*.{svelte,js}\""
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn changelog"
+		}
 	},
 	"devDependencies": {
 		"auto-changelog": "^2.2.0",
+		"husky": "^4.2.5",
 		"prettier": "^2.0.5",
 		"prettier-plugin-svelte": "^1.1.0"
 	},
-	"dependencies": {
+	"peerDependencies": {
 		"svelte": "^3.24.0"
 	}
 }
