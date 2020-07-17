@@ -10,34 +10,49 @@
 
 	const dispatch = createEventDispatcher()
 
-	if (cascade && loop) throw new Error('`cascade` mode should not be used with `loop`!')
+	if (cascade && loop)
+		throw new Error('`cascade` mode should not be used with `loop`!')
 
 	const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 	const rng = (min, max) => Math.floor(Math.random() * (max - min) + min)
-	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
+	const hasSingleTextNode = el =>
+		el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
 	const typingInterval = async () =>
-		Array.isArray(interval) ? await sleep(interval[rng(0, interval.length)]) : await sleep(interval)
+		Array.isArray(interval)
+			? await sleep(interval[rng(0, interval.length)])
+			: await sleep(interval)
 
 	const getElements = parentElement => {
-		const treeWalker = document.createTreeWalker(parentElement, NodeFilter.SHOW_ELEMENT)
+		const treeWalker = document.createTreeWalker(
+			parentElement,
+			NodeFilter.SHOW_ELEMENT
+		)
 		let currentNode = treeWalker.nextNode()
 		while (currentNode) {
 			const text = currentNode.textContent.split('')
-			hasSingleTextNode(currentNode) && elements.push(!loop ? { currentNode, text } : text)
+			hasSingleTextNode(currentNode) &&
+				elements.push(!loop ? { currentNode, text } : text)
 			currentNode = treeWalker.nextNode()
 		}
 	}
 
-	const typewriterEffect = async ({ currentNode, text }, { loopAnimation } = { loopAnimation: false }) => {
+	const typewriterEffect = async (
+		{ currentNode, text },
+		{ loopAnimation } = { loopAnimation: false }
+	) => {
 		currentNode.textContent = ''
 		currentNode.classList.add('typing')
 		for (const letter of text) {
 			currentNode.textContent += letter
-			const fullyWritten = loopAnimation && currentNode.textContent === text.join('')
+			const fullyWritten =
+				loopAnimation && currentNode.textContent === text.join('')
 			if (fullyWritten) {
 				typeof loop === 'number' ? await sleep(loop) : await sleep(1500)
 				while (currentNode.textContent !== '') {
-					currentNode.textContent = currentNode.textContent.slice(0, -1)
+					currentNode.textContent = currentNode.textContent.slice(
+						0,
+						-1
+					)
 					await typingInterval()
 				}
 				return
@@ -64,7 +79,10 @@
 		while (loop) {
 			for (const text of elements) {
 				loopParagraph.textContent = text.join('')
-				await typewriterEffect({ currentNode: loopParagraph, text }, { loopAnimation: true })
+				await typewriterEffect(
+					{ currentNode: loopParagraph, text },
+					{ loopAnimation: true }
+				)
 			}
 			dispatch('done')
 		}
@@ -81,7 +99,8 @@
 	}
 
 	onMount(async () => {
-		if (hasSingleTextNode(node)) throw new Error('<Typewriter /> must have at least one element')
+		if (hasSingleTextNode(node))
+			throw new Error('<Typewriter /> must have at least one element')
 		getElements(node)
 		cascade ? cascadeMode() : loop ? loopMode() : defaultMode()
 	})
@@ -112,6 +131,10 @@
 	}
 </style>
 
-<div class:cursor style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}" bind:this={node}>
+<div
+	class:cursor
+	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
+	bind:this={node}
+>
 	<slot />
 </div>
