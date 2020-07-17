@@ -14,8 +14,9 @@
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
 	"scripts": {
+		"changelog": "auto-changelog -l false --hide-credit",
 		"start": "yarn --cwd example && yarn --cwd example run start",
-		"publish": "auto-changelog -p && git add CHANGELOG.md",
+		"publish": "yarn changelog && git add CHANGELOG.md",
 		"prettier": "prettier --write \"./**/*.{svelte,js}\""
 	},
 	"devDependencies": {
