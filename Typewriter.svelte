@@ -18,9 +18,7 @@
 	const hasSingleTextNode = el =>
 		el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
 	const typingInterval = async () =>
-		Array.isArray(interval)
-			? await sleep(interval[rng(0, interval.length)])
-			: await sleep(interval)
+		await sleep(interval[rng(0, interval.length)] || interval)
 
 	const getElements = parentElement => {
 		const treeWalker = document.createTreeWalker(
@@ -47,7 +45,7 @@
 			const fullyWritten =
 				loopAnimation && currentNode.textContent === text.join('')
 			if (fullyWritten) {
-				typeof loop === 'number' ? await sleep(loop) : await sleep(1500)
+				await sleep(typeof loop === 'number' ? loop : 1500)
 				while (currentNode.textContent !== '') {
 					currentNode.textContent = currentNode.textContent.slice(
 						0,
