@@ -21,7 +21,8 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn changelog"
+			"pre-commit": "yarn prettier && git add . && yarn changelog",
+			"pre-push": "yarn prettier"
 		}
 	},
 	"devDependencies": {

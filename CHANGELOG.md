@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - lint: change printWidth from 120 to 80 [`8c48357`](https://github.com/henriquehbr/svelte-typewriter/commit/8c48357de785f241e14727dd5ba78153c3d5fe96)
 - chore: modify options related to changelog generation [`b8b8b8d`](https://github.com/henriquehbr/svelte-typewriter/commit/b8b8b8dc2dcde7fa22b8780b12887d9aaa8b2ef6)
 - refactor: simplify conditional expressions [`1fde2ba`](https://github.com/henriquehbr/svelte-typewriter/commit/1fde2ba8a5a3cfaf1c05f2cd9e972a493db8073d)
+- chore: update CHANGELOG.md [`18ffa6a`](https://github.com/henriquehbr/svelte-typewriter/commit/18ffa6a19db96614cf4b8bf826090be426765b25)
 
 #### [v2.1.11](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.10...v2.1.11)
 
