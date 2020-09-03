@@ -2,9 +2,21 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.12...HEAD)
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v3.0.0...HEAD)
 
-- fix: solve problem with on:done listener on loop mode [`365c824`](https://github.com/henriquehbr/svelte-typewriter/commit/365c8240aa2f90dceed5eeeb6993dfea551d5aae)
+- fix: solve problem with on:done listener on loop mode [`e5b947e`](https://github.com/henriquehbr/svelte-typewriter/commit/e5b947e8d8525357cc0be7da121eccdb02acf093)
+
+### [v3.0.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.12...v3.0.0)
+
+> 22 July 2020
+
+- fix: change loop mode behavior to use all child tags [`092075e`](https://github.com/henriquehbr/svelte-typewriter/commit/092075ed658a91de657d37db388c5340f3a36211)
+- BREAKING CHANGES: replace mode props with a single one [`7c1d7dc`](https://github.com/henriquehbr/svelte-typewriter/commit/7c1d7dc85e6a42527e97e703f2d44e57fe4b2d14)
+- chore: bump dependencies [`a5e6937`](https://github.com/henriquehbr/svelte-typewriter/commit/a5e6937eb8ad5313c61c9c7b2abc7c5a3f1e3a1a)
+- docs: add "loopInterval" prop [`9602da2`](https://github.com/henriquehbr/svelte-typewriter/commit/9602da26062a089cabad7239841138efa00afe91)
+- docs: add warning about breaking changes on mode props [`3596559`](https://github.com/henriquehbr/svelte-typewriter/commit/35965591ac7c4b806f8eb4e6f0d02e038922d0d5)
+- chore: update changelog [`26588dd`](https://github.com/henriquehbr/svelte-typewriter/commit/26588ddb276c8fde5a2bbc0406af1c27d44618ca)
+- fix: solve problem with on:done listener on loop mode [`fc2f301`](https://github.com/henriquehbr/svelte-typewriter/commit/fc2f3012f39c2efca2df674e3949149d2f0f399f)
 
 #### [v2.1.12](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.11...v2.1.12)
 
