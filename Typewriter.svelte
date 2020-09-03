@@ -45,6 +45,7 @@
 			const fullyWritten =
 				loopAnimation && currentNode.textContent === text.join('')
 			if (fullyWritten) {
+				dispatch('done')
 				await sleep(typeof loop === 'number' ? loop : 1500)
 				while (currentNode.textContent !== '') {
 					currentNode.textContent = currentNode.textContent.slice(
@@ -82,7 +83,6 @@
 					{ loopAnimation: true }
 				)
 			}
-			dispatch('done')
 		}
 	}
 

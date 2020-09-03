@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.11...HEAD)
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.12...HEAD)
+
+- fix: solve problem with on:done listener on loop mode [`365c824`](https://github.com/henriquehbr/svelte-typewriter/commit/365c8240aa2f90dceed5eeeb6993dfea551d5aae)
+
+#### [v2.1.12](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.11...v2.1.12)
+
+> 18 July 2020
 
 - chore: add husky pre-push hook for changelog generation [`abdff18`](https://github.com/henriquehbr/svelte-typewriter/commit/abdff188ffc585936826c5377af7a25a48e81016)
 - chore: include "Unreleased" commits on changelog [`ebdaf21`](https://github.com/henriquehbr/svelte-typewriter/commit/ebdaf21b60e52ca93fb6abe46438796a162b819d)
