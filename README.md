@@ -61,14 +61,14 @@ The `<Typewriter>` component can receive props that allows to manipulate the beh
 
 You can control the behavior of the typewriter effect by passing specific props to the `<Typewriter>` component, the table below contains information about all modes:
 
-| Value     | Description                                                                                              |                                                                  |
-| --------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `cascade` | Apply animation on all elements sequentially instead of simultaneously                                   | [DEMO](https://svelte.dev/repl/9ddb89942e954a2a90b553356952ff46) |
-| `loop`    | Cycles the animation between the children elements of the parent `Typewriter` component                  | [DEMO](https://svelte.dev/repl/e8b82d83f6c2444b97619238404bcd4d) |
-| `default` | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode | [DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a) |
+| Mode      | Type                  | Description                                                                                                                                                                                  | Default |                                                                  |
+| --------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
+| `cascade` | `boolean`             | Apply animation on all elements sequentially instead of simultaneously                                                                                                                       | `false` | [DEMO](https://svelte.dev/repl/9ddb89942e954a2a90b553356952ff46) |
+| `loop`    | `boolean` or `number` | Cycles the animation between the children elements of the parent `Typewriter` component, if a number argument is passed, it's defined as the interval between each word (defaults to `1500`) | `false` | [DEMO](https://svelte.dev/repl/e8b82d83f6c2444b97619238404bcd4d) |
+| `default` |                       | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode                                                                                     | `true`  | [DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a) |
 
 ### Event listeners
 
-| Event     | Trigger                                                                                                           |                                                                  |
-| --------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `on:done` | Is executed at the end of the animation, if using `mode="loop"`, this event will be fired at the end of each loop | [DEMO](https://svelte.dev/repl/145cbf66c396497aa5338846077d53e0) |
+| Event     | Trigger                                                                                                             |                                                                  |
+| --------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `on:done` | Is executed at the end of the animation, if used with `loop` mode, this event will be fired at the end of each loop | [DEMO](https://svelte.dev/repl/145cbf66c396497aa5338846077d53e0) |
