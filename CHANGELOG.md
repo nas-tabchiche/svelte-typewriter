@@ -2,11 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...HEAD)
+#### [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16)
+
+> 6 September 2020
 
 - chore(changelog): refactor changelog generation script [`5af084a`](https://github.com/henriquehbr/svelte-typewriter/commit/5af084aad7f488ce8f4b8369b4486d9fdce82d1d)
 - chore: bump dependencies [`55ac97a`](https://github.com/henriquehbr/svelte-typewriter/commit/55ac97a7cf5c1185228c2137738ff8243250709d)
-- docs(readme): update "Modes" and "Event listeners" sections [`544d071`](https://github.com/henriquehbr/svelte-typewriter/commit/544d0716670fc6001b4cd397fc18befb28ee29fa)
+- docs(readme): update "Modes" and "Event listeners" sections [`cc70d08`](https://github.com/henriquehbr/svelte-typewriter/commit/cc70d08e50d778a142c4533d78d51eca9e83ef66)
 
 #### [v2.1.15](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.14...v2.1.15)
 
