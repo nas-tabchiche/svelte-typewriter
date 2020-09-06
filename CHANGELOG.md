@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...HEAD)
 
-- chore(changelog): refactor changelog generation script [`fc4ef38`](https://github.com/henriquehbr/svelte-typewriter/commit/fc4ef38999c0ce6574da0a4ad872b202caabee4e)
+- chore(changelog): refactor changelog generation script [`5af084a`](https://github.com/henriquehbr/svelte-typewriter/commit/5af084aad7f488ce8f4b8369b4486d9fdce82d1d)
+- chore: bump dependencies [`8c37229`](https://github.com/henriquehbr/svelte-typewriter/commit/8c37229b96f2e860cf5f073ae60072b4cfe66f72)
 
 #### [v2.1.15](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.14...v2.1.15)
 
