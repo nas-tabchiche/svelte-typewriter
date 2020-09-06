@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v3.0.0...HEAD)
 
-- fix: solve imprecise trigger of `on:done` event on default mode [`0441282`](https://github.com/henriquehbr/svelte-typewriter/commit/0441282e1e0a766ef25fdaf738f8f99c3f98d9e2)
+- docs(README): refactor documentation [`1d135c3`](https://github.com/henriquehbr/svelte-typewriter/commit/1d135c32536a970a9b485c981bdf889adbf23658)
+- fix: solve imprecise trigger of `on:done` event on default mode [`abf4ee2`](https://github.com/henriquehbr/svelte-typewriter/commit/abf4ee28a76a16fe47f6328f0d0ef8e6082038e9)
 - fix: solve problem with on:done listener on loop mode [`e5b947e`](https://github.com/henriquehbr/svelte-typewriter/commit/e5b947e8d8525357cc0be7da121eccdb02acf093)
 
 ### [v3.0.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.13...v3.0.0)
