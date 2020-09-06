@@ -4,9 +4,10 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v3.0.0...HEAD)
 
+- fix: solve imprecise trigger of `on:done` event on default mode [`0441282`](https://github.com/henriquehbr/svelte-typewriter/commit/0441282e1e0a766ef25fdaf738f8f99c3f98d9e2)
 - fix: solve problem with on:done listener on loop mode [`e5b947e`](https://github.com/henriquehbr/svelte-typewriter/commit/e5b947e8d8525357cc0be7da121eccdb02acf093)
 
-### [v3.0.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.12...v3.0.0)
+### [v3.0.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.13...v3.0.0)
 
 > 22 July 2020
 
@@ -17,6 +18,12 @@ All notable changes to this project will be documented in this file. Dates are d
 - docs: add warning about breaking changes on mode props [`3596559`](https://github.com/henriquehbr/svelte-typewriter/commit/35965591ac7c4b806f8eb4e6f0d02e038922d0d5)
 - chore: update changelog [`26588dd`](https://github.com/henriquehbr/svelte-typewriter/commit/26588ddb276c8fde5a2bbc0406af1c27d44618ca)
 - fix: solve problem with on:done listener on loop mode [`fc2f301`](https://github.com/henriquehbr/svelte-typewriter/commit/fc2f3012f39c2efca2df674e3949149d2f0f399f)
+
+#### [v2.1.13](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.12...v2.1.13)
+
+> 3 September 2020
+
+- fix: solve problem with on:done listener on loop mode [`e5b947e`](https://github.com/henriquehbr/svelte-typewriter/commit/e5b947e8d8525357cc0be7da121eccdb02acf093)
 
 #### [v2.1.12](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.11...v2.1.12)
 
