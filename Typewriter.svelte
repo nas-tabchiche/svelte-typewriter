@@ -14,8 +14,6 @@
 	const rng = (min, max) => Math.floor(Math.random() * (max - min) + min)
 	const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNodes[0].nodeType === 3
 	const typingInterval = async () => sleep(interval[rng(0, interval.length)] || interval)
-	const cleanElementsText = () =>
-		elements.forEach(({ currentNode }) => (currentNode.textContent = ''))
 
 	const getElements = parentElement => {
 		const treeWalker = document.createTreeWalker(parentElement, NodeFilter.SHOW_ELEMENT)
@@ -64,14 +62,19 @@
 		node.appendChild(loopParagraph)
 		while (loop) {
 			for (const { currentNode, text } of elements) {
+				node.childNodes.forEach(el => el.remove())
+				const loopParagraphTag = currentNode.tagName.toLowerCase()
+				const loopParagraph = document.createElement(loopParagraphTag)
 				loopParagraph.textContent = text.join('')
+				node.appendChild(loopParagraph)
 				await typewriterEffect({ currentNode: loopParagraph, text })
+				node.childNodes.forEach(el => el.remove())
 			}
 		}
 	}
 
 	const nonLoopMode = async () => {
-		cascade && cleanElementsText()
+		cascade && elements.forEach(({ currentNode }) => (currentNode.textContent = ''))
 		for (const element of elements) {
 			cascade ? await typewriterEffect(element) : typewriterEffect(element)
 		}

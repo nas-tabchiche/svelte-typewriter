@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.14...HEAD)
+
+- fix: change loop mode behavior to use all child tags [`71a9614`](https://github.com/henriquehbr/svelte-typewriter/commit/71a9614920bccff689e224d14f46cca362515cde)
+
 #### [v2.1.14](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.13...v2.1.14)
 
 > 5 September 2020
