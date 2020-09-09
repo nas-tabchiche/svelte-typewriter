@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...HEAD)
+
+- refactor: implement new architecture PoC [`9145735`](https://github.com/henriquehbr/svelte-typewriter/commit/91457350592ec0b33d5f553b0ce0566337a2c700)
+
 #### [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16)
 
 > 6 September 2020

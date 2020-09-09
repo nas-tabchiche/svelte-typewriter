@@ -2,7 +2,7 @@
 	import Typewriter from '../Typewriter'
 </script>
 
-<Typewriter on:done={() => console.log('Hello World!')} loop>
+<Typewriter on:done={() => console.log('Hello World!')}>
 	<h1>Foobar</h1>
 	<p>Hello World!</p>
 	<nav>
