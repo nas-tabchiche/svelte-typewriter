@@ -10,13 +10,13 @@
 		"url": "https://github.com/henriquehbr/svelte-typewriter"
 	},
 	"version": "2.1.16",
-	"main": "Typewriter.svelte",
+	"main": "src/Typewriter.svelte",
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
 	"scripts": {
 		"changelog": "auto-changelog -l false -u --hide-credit && git add CHANGELOG.md",
 		"postchangelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
-		"start": "yarn --cwd example && yarn --cwd example run start",
+		"dev": "yarn --cwd example && yarn --cwd example run dev",
 		"publish": "yarn changelog",
 		"prettier": "prettier --write \"./**/*.{svelte,js}\""
 	},

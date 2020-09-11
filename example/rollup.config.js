@@ -1,25 +1,32 @@
-import svelte from 'rollup-plugin-svelte'
+import svelte from 'rollup-plugin-svelte-hot'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import serve from 'rollup-plugin-serve'
-import livereload from 'rollup-plugin-livereload'
+import hmr from 'rollup-plugin-hot'
 import { terser } from 'rollup-plugin-terser'
-
-const production = !process.env.ROLLUP_WATCH
 
 /** @type {import('rollup').RollupOptions} */
 const options = {
 	input: 'index.js',
 	output: {
-		format: 'es',
+		format: 'esm',
 		name: 'app',
 		dir: 'build'
 	},
 	plugins: [
 		svelte({
-			dev: false,
-			css: css => css.write('build/bundle.css', false)
+			dev: true,
+			css: css => css.write('build/bundle.css', false),
+			hot: {
+				optimistic: true,
+				noPreserveState: false
+			}
 		}),
+		hmr({
+			public: './',
+			inMemory: true,
+			compatModuleHot: false
+		}),
+		serve(),
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
@@ -29,14 +36,25 @@ const options = {
 			}
 		}),
 		commonjs(),
-		!production &&
-			serve({
-				contentBase: './',
-				port: 8080
-			}),
-		!production && livereload('./'),
 		terser()
 	]
+}
+
+function serve() {
+	let started = false
+	return {
+		name: 'svelte/template:serve',
+		writeBundle() {
+			if (!started) {
+				started = true
+				const flags = ['run', 'start', '--', '--dev']
+				require('child_process').spawn('npm', flags, {
+					stdio: ['ignore', 'inherit', 'inherit'],
+					shell: true
+				})
+			}
+		}
+	}
 }
 
 export default options

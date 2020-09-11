@@ -1,5 +1,5 @@
 <script>
-	import Typewriter from '../Typewriter'
+	import Typewriter from '../src/Typewriter'
 </script>
 
 <Typewriter on:done={() => console.log('Hello World!')}>

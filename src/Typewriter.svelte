@@ -14,8 +14,8 @@
 
 	const loadComponent = () =>
 		loop
-			? import('./src/Loop.svelte').then(res => (modeComponent = res.default))
-			: import('./src/NonLoop.svelte').then(res => (modeComponent = res.default))
+			? import('./modes/Loop').then(res => (modeComponent = res.default))
+			: import('./modes/NonLoop').then(res => (modeComponent = res.default))
 
 	onMount(() => loadComponent())
 </script>
