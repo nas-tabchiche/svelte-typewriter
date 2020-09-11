@@ -4,8 +4,9 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...HEAD)
 
-- refactor: modularize modes and actions [`ed20270`](https://github.com/henriquehbr/svelte-typewriter/commit/ed2027015f459243dbf88a282da3db178e771e91)
+- refactor: modularize modes and actions [`9d8d86d`](https://github.com/henriquehbr/svelte-typewriter/commit/9d8d86d853f19b4cd41a48c1e416f6688e7b1624)
 - refactor: implement new architecture PoC [`c5044a2`](https://github.com/henriquehbr/svelte-typewriter/commit/c5044a207f69164aa9b18afd1680806c38bfac1b)
+- docs: annotate `utils` and `typewriter-effect` with jsdoc [`348cb03`](https://github.com/henriquehbr/svelte-typewriter/commit/348cb03611d51fb0fd71e3a5d2a7d3ba30f08e25)
 
 #### [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16)
 
