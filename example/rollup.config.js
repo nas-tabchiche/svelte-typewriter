@@ -2,7 +2,11 @@ import svelte from 'rollup-plugin-svelte-hot'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import hmr from 'rollup-plugin-hot'
+import analyze from 'rollup-plugin-analyzer'
 import { terser } from 'rollup-plugin-terser'
+
+const dev = process.env.ROLLUP_WATCH
+const production = !dev
 
 /** @type {import('rollup').RollupOptions} */
 const options = {
@@ -14,9 +18,9 @@ const options = {
 	},
 	plugins: [
 		svelte({
-			dev: true,
+			dev: !production,
 			css: css => css.write('build/bundle.css', false),
-			hot: {
+			hot: dev && {
 				optimistic: true,
 				noPreserveState: false
 			}
@@ -24,9 +28,9 @@ const options = {
 		hmr({
 			public: './',
 			inMemory: true,
-			compatModuleHot: false
+			compatModuleHot: !dev
 		}),
-		serve(),
+		dev && serve(),
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
@@ -36,7 +40,8 @@ const options = {
 			}
 		}),
 		commonjs(),
-		terser()
+		production && terser(),
+		analyze()
 	]
 }
 

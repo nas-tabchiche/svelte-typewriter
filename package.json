@@ -16,7 +16,9 @@
 	"scripts": {
 		"changelog": "auto-changelog -l false -u --hide-credit && git add CHANGELOG.md",
 		"postchangelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
-		"dev": "yarn --cwd example && yarn --cwd example run dev",
+		"example:dev": "yarn --cwd example && yarn --cwd example run dev",
+		"example:build": "yarn --cwd example && yarn --cwd example run build",
+		"example:start": "yarn example:build && yarn --cwd example run start",
 		"publish": "yarn changelog",
 		"prettier": "prettier --write \"./**/*.{svelte,js}\""
 	},
