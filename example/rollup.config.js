@@ -12,7 +12,7 @@ const production = !dev
 const options = {
 	input: 'index.js',
 	output: {
-		format: 'esm',
+		format: 'es',
 		name: 'app',
 		dir: 'build'
 	},

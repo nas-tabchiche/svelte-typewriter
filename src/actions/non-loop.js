@@ -1,7 +1,9 @@
 import { typewriterEffect } from '../typewriter-effect'
 import { getElements } from '../utils'
 
-export const nonLoop = async (node, options) => {
+console.log('non-loop')
+
+export default async (node, options) => {
 	const elements = getElements(node)
 	options.cascade && elements.forEach(({ currentNode }) => (currentNode.textContent = ''))
 	for (const element of elements) {

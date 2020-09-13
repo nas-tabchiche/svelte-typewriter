@@ -1,5 +1,6 @@
 <script>
-	import { onMount, setContext, createEventDispatcher } from 'svelte'
+	import { createEventDispatcher } from 'svelte'
+	import { typewriter } from './actions'
 
 	export let interval = 30
 	export let cascade = false
@@ -8,18 +9,13 @@
 
 	const dispatch = createEventDispatcher()
 
-	setContext('options', { interval, cascade, loop, cursor, dispatch })
-
-	let modeComponent
-
-	const loadComponent = () =>
-		loop
-			? import('./modes/Loop').then(res => (modeComponent = res.default))
-			: import('./modes/NonLoop').then(res => (modeComponent = res.default))
-
-	onMount(() => loadComponent())
+	$: options = { interval, cascade, loop, cursor, dispatch }
 </script>
 
-<svelte:component this={modeComponent}>
+<div
+	use:typewriter={options}
+	class:cursor
+	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
+>
 	<slot />
-</svelte:component>
+</div>
