@@ -8,7 +8,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - refactor: implement new architecture PoC #15 [`731368c`](https://github.com/henriquehbr/svelte-typewriter/commit/731368ca6fa161d52d1b919096c5ef6aeb9c6833)
 - docs: annotate `utils` and `typewriter-effect` with jsdoc #15 [`4231014`](https://github.com/henriquehbr/svelte-typewriter/commit/42310149e4838f0e995c2eeb06763959207c7196)
 - build: add build script to example app [`40e4997`](https://github.com/henriquehbr/svelte-typewriter/commit/40e4997850fd216b9e6e4ffb16896369602eafd9)
-- chore: add favicon [`55751db`](https://github.com/henriquehbr/svelte-typewriter/commit/55751db7510e09f88c0786792ee352937b641ea1)
+- refactor: simplify `getElements` function [`88a32e3`](https://github.com/henriquehbr/svelte-typewriter/commit/88a32e3ea436adebe707ffb7c7be8db829474705)
+- chore: add favicon [`7c1cd9d`](https://github.com/henriquehbr/svelte-typewriter/commit/7c1cd9d6f60050a6c26396923e3bcaf1eaee170c)
 
 #### [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16)
 

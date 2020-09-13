@@ -20,7 +20,7 @@ export const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 export const rng = (min, max) => Math.floor(Math.random() * (max - min) + min)
 
 /**
- * Verifies if a given element contains at least one text node child
+ * Verifies if a given element contains only one text node child
  * @param {HTMLElement} el
  * @example
  * const h1 = document.createElement('h1')
@@ -48,21 +48,7 @@ export const typingInterval = async interval => sleep(interval[rng(0, interval.l
  * p.textContent = 'Lorem ipsum dolor sit consectetur'
  * getElements(p)
  */
-export const getElements = parentElement => {
-	const elements = []
-	const treeWalker = document.createTreeWalker(parentElement, NodeFilter.SHOW_ELEMENT)
-	let currentNode = treeWalker.nextNode()
-	while (currentNode) {
-		const text = currentNode.textContent.split('')
-		hasSingleTextNode(currentNode) && elements.push({ currentNode, text })
-		currentNode = treeWalker.nextNode()
-	}
-	if (hasSingleTextNode(parentElement)) {
-		const text = node.textContent.split('')
-		parentElement.textContent = ''
-		const childNode = document.createElement('p')
-		parentElement.appendChild(childNode)
-		elements.push({ currentNode: childNode, text })
-	}
-	return elements
-}
+export const getElements = parentElement =>
+	[...parentElement.getElementsByTagName('*')]
+		.filter(el => hasSingleTextNode(el))
+		.map(currentNode => ({ currentNode, text: currentNode.textContent.split('') }))
