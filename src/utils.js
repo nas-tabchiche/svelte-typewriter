@@ -48,7 +48,16 @@ export const typingInterval = async interval => sleep(interval[rng(0, interval.l
  * p.textContent = 'Lorem ipsum dolor sit consectetur'
  * getElements(p)
  */
-export const getElements = parentElement =>
-	[...parentElement.getElementsByTagName('*')]
-		.filter(el => hasSingleTextNode(el))
-		.map(currentNode => ({ currentNode, text: currentNode.textContent.split('') }))
+export const getElements = parentElement => {
+	if (hasSingleTextNode(parentElement)) {
+		const text = parentElement.textContent.split('')
+		parentElement.textContent = ''
+		const childNode = document.createElement('p')
+		parentElement.appendChild(childNode)
+		return [{ currentNode: childNode, text }]
+	} else {
+		return [...parentElement.getElementsByTagName('*')]
+			.filter(el => hasSingleTextNode(el))
+			.map(currentNode => ({ currentNode, text: currentNode.textContent.split('') }))
+	}
+}
