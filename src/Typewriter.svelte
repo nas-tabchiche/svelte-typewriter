@@ -1,6 +1,6 @@
 <script>
 	import { createEventDispatcher } from 'svelte'
-	import { typewriter } from './actions'
+	import { typewriter } from './modes'
 
 	export let interval = 30
 	export let cascade = false

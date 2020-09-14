@@ -1,8 +1,6 @@
 import { typewriterEffect } from '../typewriter-effect'
 import { getElements } from '../utils'
 
-console.log('loop')
-
 export default async (node, options) => {
 	const elements = getElements(node)
 	const loopParagraphTag = node.firstChild.tagName.toLowerCase()

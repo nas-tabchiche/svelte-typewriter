@@ -10,16 +10,16 @@ const production = !dev
 
 /** @type {import('rollup').RollupOptions} */
 const options = {
-	input: 'index.js',
+	input: 'src/index.js',
 	output: {
 		format: 'es',
 		name: 'app',
-		dir: 'build'
+		dir: 'public/build'
 	},
 	plugins: [
 		svelte({
 			dev: !production,
-			css: css => css.write('build/bundle.css', false),
+			css: css => css.write('public/build/bundle.css', false),
 			hot: dev && {
 				optimistic: true,
 				noPreserveState: false
@@ -35,7 +35,7 @@ const options = {
 			browser: true,
 			dedupe: ['svelte'],
 			customResolveOptions: {
-				moduleDirectory: ['src', 'node_modules'],
+				moduleDirectory: ['../src', 'node_modules'],
 				extensions: ['.svelte', '/index.svelte', '.mjs', '.js', '.json']
 			}
 		}),

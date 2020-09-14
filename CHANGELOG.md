@@ -5,13 +5,14 @@ All notable changes to this project will be documented in this file. Dates are d
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...HEAD)
 
 - refactor: modularize modes and actions #15 [`3bc5e44`](https://github.com/henriquehbr/svelte-typewriter/commit/3bc5e4452f310435c76906e79509412d6b54cf24)
+- build: generate ESM and UMD compatible bundles [`e1160ea`](https://github.com/henriquehbr/svelte-typewriter/commit/e1160ea8117bd459c02425c0956948db6d2e4b5a)
 - refactor: implement new architecture PoC #15 [`731368c`](https://github.com/henriquehbr/svelte-typewriter/commit/731368ca6fa161d52d1b919096c5ef6aeb9c6833)
 - refactor: replace mode components with actions #15 [`4582316`](https://github.com/henriquehbr/svelte-typewriter/commit/4582316183823748fb6fd58a854001b643bd4f5f)
 - docs: annotate `utils` and `typewriter-effect` with jsdoc #15 [`4231014`](https://github.com/henriquehbr/svelte-typewriter/commit/42310149e4838f0e995c2eeb06763959207c7196)
 - refactor: move cursor styles to Typewriter.svelte [`e9f0d3c`](https://github.com/henriquehbr/svelte-typewriter/commit/e9f0d3c0c0e54995b6348c85ed5c5a3fe26a496b)
 - build: add build script to example app [`40e4997`](https://github.com/henriquehbr/svelte-typewriter/commit/40e4997850fd216b9e6e4ffb16896369602eafd9)
 - refactor: simplify `getElements` function [`c71a2c1`](https://github.com/henriquehbr/svelte-typewriter/commit/c71a2c1b409b7474ad0859cab46ca633f4f52d37)
-- fix(getElements): solve single text node elements regression [`60866d3`](https://github.com/henriquehbr/svelte-typewriter/commit/60866d3ffd16679120506163f11e2601291d5f1e)
+- fix(getElements): solve single text node elements regression [`c223b78`](https://github.com/henriquehbr/svelte-typewriter/commit/c223b78093012ebd0ee9f76eef82bfe84c773df7)
 - chore: add favicon [`7c1cd9d`](https://github.com/henriquehbr/svelte-typewriter/commit/7c1cd9d6f60050a6c26396923e3bcaf1eaee170c)
 
 #### [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16)

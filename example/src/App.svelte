@@ -1,8 +1,8 @@
 <script>
-	import Typewriter from '../src/Typewriter'
+	import Typewriter from 'Typewriter.svelte'
 </script>
 
-<Typewriter on:done={() => console.log('Hello World!')}>
+<Typewriter loop>
 	<h1>Foobar</h1>
 	<p>Hello World!</p>
 	<nav>
