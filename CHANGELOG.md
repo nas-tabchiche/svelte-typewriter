@@ -6,9 +6,10 @@ All notable changes to this project will be documented in this file. Dates are d
 
 - refactor: modularize modes and actions #15 [`3bc5e44`](https://github.com/henriquehbr/svelte-typewriter/commit/3bc5e4452f310435c76906e79509412d6b54cf24)
 - refactor: implement new architecture PoC #15 [`731368c`](https://github.com/henriquehbr/svelte-typewriter/commit/731368ca6fa161d52d1b919096c5ef6aeb9c6833)
-- refactor: replace mode components with actions #15 [`f49aac4`](https://github.com/henriquehbr/svelte-typewriter/commit/f49aac4deb2a9cc803c5ccacbd6143ba3b260c54)
+- refactor: replace mode components with actions #15 [`4582316`](https://github.com/henriquehbr/svelte-typewriter/commit/4582316183823748fb6fd58a854001b643bd4f5f)
 - docs: annotate `utils` and `typewriter-effect` with jsdoc #15 [`4231014`](https://github.com/henriquehbr/svelte-typewriter/commit/42310149e4838f0e995c2eeb06763959207c7196)
 - build: add build script to example app [`40e4997`](https://github.com/henriquehbr/svelte-typewriter/commit/40e4997850fd216b9e6e4ffb16896369602eafd9)
+- refactor: move cursor styles to Typewriter.svelte [`77da3b1`](https://github.com/henriquehbr/svelte-typewriter/commit/77da3b1cb61540bfcb0aaccceaad5eb5a921f0e4)
 - refactor: simplify `getElements` function [`c71a2c1`](https://github.com/henriquehbr/svelte-typewriter/commit/c71a2c1b409b7474ad0859cab46ca633f4f52d37)
 - chore: add favicon [`7c1cd9d`](https://github.com/henriquehbr/svelte-typewriter/commit/7c1cd9d6f60050a6c26396923e3bcaf1eaee170c)
 

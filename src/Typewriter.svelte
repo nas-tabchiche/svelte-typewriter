@@ -12,6 +12,26 @@
 	$: options = { interval, cascade, loop, cursor, dispatch }
 </script>
 
+<style>
+	@keyframes cursorFade {
+		0%,
+		100% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0;
+		}
+	}
+
+	.cursor :global(.typing::after) {
+		content: '▌';
+		display: inline-block;
+		color: var(--cursor-color);
+		animation: cursorFade 1.25s infinite;
+	}
+</style>
+
 <div
 	use:typewriter={options}
 	class:cursor
