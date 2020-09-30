@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...HEAD)
 
+- chore(deps): bump node-fetch from 2.6.0 to 2.6.1 [`#19`](https://github.com/henriquehbr/svelte-typewriter/pull/19)
 - refactor: modularize modes and actions #15 [`3bc5e44`](https://github.com/henriquehbr/svelte-typewriter/commit/3bc5e4452f310435c76906e79509412d6b54cf24)
 - build: generate ESM and UMD compatible bundles [`4a74590`](https://github.com/henriquehbr/svelte-typewriter/commit/4a74590da01399c97e0a94620d276ca2a4978de5)
 - refactor: implement new architecture PoC #15 [`731368c`](https://github.com/henriquehbr/svelte-typewriter/commit/731368ca6fa161d52d1b919096c5ef6aeb9c6833)
@@ -12,9 +13,10 @@ All notable changes to this project will be documented in this file. Dates are d
 - refactor: move cursor styles to Typewriter.svelte [`e9f0d3c`](https://github.com/henriquehbr/svelte-typewriter/commit/e9f0d3c0c0e54995b6348c85ed5c5a3fe26a496b)
 - build: add build script to example app [`40e4997`](https://github.com/henriquehbr/svelte-typewriter/commit/40e4997850fd216b9e6e4ffb16896369602eafd9)
 - refactor: simplify `getElements` function [`c71a2c1`](https://github.com/henriquehbr/svelte-typewriter/commit/c71a2c1b409b7474ad0859cab46ca633f4f52d37)
+- refactor: remove unnecessary code from loop mode [`2d5244b`](https://github.com/henriquehbr/svelte-typewriter/commit/2d5244bcf1869d79462b531392efa76e8dc7adfe)
 - fix(getElements): solve single text node elements regression [`c223b78`](https://github.com/henriquehbr/svelte-typewriter/commit/c223b78093012ebd0ee9f76eef82bfe84c773df7)
+- chore: add build script to pre-commit hook [`26d7766`](https://github.com/henriquehbr/svelte-typewriter/commit/26d77660001c84741a4809fd86abf850c5d5ab9b)
 - chore: add favicon [`7c1cd9d`](https://github.com/henriquehbr/svelte-typewriter/commit/7c1cd9d6f60050a6c26396923e3bcaf1eaee170c)
-- chore: add build script to pre-commit hook [`9994b84`](https://github.com/henriquehbr/svelte-typewriter/commit/9994b84e16bdbdb70d08836f92038ee0c447388d)
 
 #### [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16)
 

@@ -26,6 +26,7 @@ const plugins = [
 const libConfig = format => ({
 	input: 'src/Typewriter.svelte',
 	output: {
+		chunkFileNames: '[name].js',
 		format,
 		...(format === 'es'
 			? { dir: 'lib/esm', entryFileNames: 'index.mjs' }

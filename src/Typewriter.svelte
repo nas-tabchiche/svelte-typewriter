@@ -9,7 +9,7 @@
 
 	const dispatch = createEventDispatcher()
 
-	$: options = { interval, cascade, loop, cursor, dispatch }
+	const options = { interval, cascade, loop, cursor, dispatch }
 </script>
 
 <style>
