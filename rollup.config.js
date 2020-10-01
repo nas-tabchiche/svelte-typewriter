@@ -26,11 +26,15 @@ const plugins = [
 const libConfig = format => ({
 	input: 'src/Typewriter.svelte',
 	output: {
-		chunkFileNames: '[name].js',
 		format,
 		...(format === 'es'
-			? { dir: 'lib/esm', entryFileNames: 'index.mjs' }
-			: { dir: 'lib/umd', name: 'Typewriter', entryFileNames: 'index.js' })
+			? { dir: 'lib/esm', entryFileNames: 'index.mjs', chunkFileNames: '[name].mjs' }
+			: {
+					dir: 'lib/umd',
+					name: 'Typewriter',
+					entryFileNames: 'index.js',
+					chunkFileNames: '[name].js'
+			  })
 	},
 	plugins,
 	...(format === 'es' && { external: ['svelte/internal'] }),
