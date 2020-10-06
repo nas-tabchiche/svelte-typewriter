@@ -20,8 +20,8 @@
 		"src/Typewriter.svelte"
 	],
 	"scripts": {
-		"changelog": "auto-changelog -l false -u --hide-credit && git add CHANGELOG.md",
-		"postchangelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
+		"changelog": "auto-changelog -l false --hide-credit",
+		"postchangelog": "git add CHANGELOG.md && cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
 		"build": "rimraf lib && rollup -c",
 		"example:dev": "yarn --cwd example && yarn --cwd example run dev",
 		"example:build": "yarn --cwd example && yarn --cwd example run build",
@@ -33,7 +33,7 @@
 	"husky": {
 		"hooks": {
 			"pre-commit": "yarn prettier && yarn build && git add .",
-			"post-commit": "yarn changelog",
+			"post-commit": "yarn changelog -u",
 			"pre-push": "yarn prettier"
 		}
 	},

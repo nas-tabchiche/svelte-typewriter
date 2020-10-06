@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.17...HEAD)
+
+- chore: remove changelog "Unreleased" section on `publish` script [`0b7e085`](https://github.com/henriquehbr/svelte-typewriter/commit/0b7e08557c98c7566449c15298e6f19822983446)
+
 #### [v2.1.17](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...v2.1.17)
 
 > 6 October 2020
