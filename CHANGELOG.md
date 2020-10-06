@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.17...HEAD)
 
-- chore: remove changelog "Unreleased" section on `publish` script [`0b7e085`](https://github.com/henriquehbr/svelte-typewriter/commit/0b7e08557c98c7566449c15298e6f19822983446)
+- docs: add jsdoc annotations to animation modes [`008d8be`](https://github.com/henriquehbr/svelte-typewriter/commit/008d8be878b5b56f8515ead7cf10bc8bc9e7b48b)
+- chore: remove changelog "Unreleased" section on `publish` script [`5f9c5fa`](https://github.com/henriquehbr/svelte-typewriter/commit/5f9c5fa540d2ff6261a7a843c6d032ec567a853c)
 
 #### [v2.1.17](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...v2.1.17)
 
