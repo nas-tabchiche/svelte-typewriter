@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...HEAD)
+#### [v2.1.17](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...v2.1.17)
+
+> 6 October 2020
 
 - chore(deps): bump node-fetch from 2.6.0 to 2.6.1 [`#19`](https://github.com/henriquehbr/svelte-typewriter/pull/19)
 - refactor: modularize modes and actions #15 [`3bc5e44`](https://github.com/henriquehbr/svelte-typewriter/commit/3bc5e4452f310435c76906e79509412d6b54cf24)
@@ -17,7 +19,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - refactor(loop): remove unnecessary code [`2023b33`](https://github.com/henriquehbr/svelte-typewriter/commit/2023b33107d3e32308f47868fb4901a8000a63d2)
 - fix(utils): solve single text node elements regression [`df753be`](https://github.com/henriquehbr/svelte-typewriter/commit/df753be689b6ef3a0a9d460fb7b63de86b31e4c9)
 - build: disable hash on bundle filenames [`36c1e0c`](https://github.com/henriquehbr/svelte-typewriter/commit/36c1e0ca2d26bd25137089bf7b8e889ac7af6c94)
-- build: set `summaryOnly` to true on rollup-plugin-analyzer [`da367d1`](https://github.com/henriquehbr/svelte-typewriter/commit/da367d1b830a55584730cc2b007153c5bebb23c0)
+- build: set `summaryOnly` to true on rollup-plugin-analyzer [`fa7b25f`](https://github.com/henriquehbr/svelte-typewriter/commit/fa7b25fd747209f9a3c58421d1ecbaa16dd29c64)
 - chore: add build script to pre-commit hook [`04878e6`](https://github.com/henriquehbr/svelte-typewriter/commit/04878e6b4445cce44ca8485c07f1fc672cf8d9d6)
 - chore: add favicon [`7c1cd9d`](https://github.com/henriquehbr/svelte-typewriter/commit/7c1cd9d6f60050a6c26396923e3bcaf1eaee170c)
 
