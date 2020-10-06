@@ -1,3 +1,5 @@
+import { typingInterval } from '../utils'
+
 /**
  *
  * @typedef {Object} TypewriterElement

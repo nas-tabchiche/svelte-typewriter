@@ -6,10 +6,11 @@
 	export let cascade = false
 	export let loop = false
 	export let cursor = true
+	export let delay = 0
 
 	const dispatch = createEventDispatcher()
 
-	const options = { interval, cascade, loop, cursor, dispatch }
+	const options = { interval, cascade, loop, cursor, delay, dispatch }
 </script>
 
 <style>
@@ -30,11 +31,16 @@
 		color: var(--cursor-color);
 		animation: cursorFade 1.25s infinite;
 	}
+
+	.delay {
+		visibility: hidden;
+	}
 </style>
 
 <div
 	use:typewriter={options}
 	class:cursor
+	class:delay={options.delay > 0}
 	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
 >
 	<slot />

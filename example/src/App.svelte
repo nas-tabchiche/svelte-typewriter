@@ -2,7 +2,7 @@
 	import Typewriter from 'Typewriter.svelte'
 </script>
 
-<Typewriter loop>
+<Typewriter delay={1000} on:done={() => console.log('Hello World!')}>
 	<h1>Foobar</h1>
 	<p>Hello World!</p>
 	<nav>
