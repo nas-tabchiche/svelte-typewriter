@@ -9,7 +9,7 @@
 		"type": "git",
 		"url": "https://github.com/henriquehbr/svelte-typewriter"
 	},
-	"version": "2.1.17",
+	"version": "2.2.0",
 	"svelte": "src/Typewriter.svelte",
 	"main": "lib/index.js",
 	"module": "lib/index.mjs",
