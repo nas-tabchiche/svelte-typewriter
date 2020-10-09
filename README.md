@@ -3,6 +3,8 @@
 > A simple and reusable typewriter effect for your Svelte applications
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![npm Version](https://img.shields.io/npm/v/svelte-typewriter)](https://www.npmjs.com/package/svelte-typewriter)
+[![npm Downloads](https://img.shields.io/npm/dw/svelte-typewriter)](https://www.npmjs.com/package/svelte-typewriter)
 [![MadeWithSvelte.com shield](https://madewithsvelte.com/storage/repo-shields/2074-shield.svg)](https://madewithsvelte.com/p/svelte-typewriter/shield-link)
 
 [DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a)
