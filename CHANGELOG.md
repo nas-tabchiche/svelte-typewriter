@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.2.0...HEAD)
 
-- docs: add npm stats badges [`0422965`](https://github.com/henriquehbr/svelte-typewriter/commit/04229653cb8578e554738168b22cc498782af6b4)
+- docs: add npm stats badges [`e54fc12`](https://github.com/henriquehbr/svelte-typewriter/commit/e54fc12b89da77960abb5a278be19521c510b867)
+- docs: add notice about dynamic imports issue on rollup #21 [`49208d3`](https://github.com/henriquehbr/svelte-typewriter/commit/49208d33c575cdaccd9db3982aa1ca893decc8a7)
 
 #### [v2.2.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.17...v2.2.0)
 

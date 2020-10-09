@@ -20,6 +20,8 @@
 
 ## Installation
 
+> **Notice:** From version 2.1.17 onwards, this library makes use of dynamic imports, if your Rollup configuration `output.format` is set to `iife` or `umd`, consider setting `inlineDynamicImports` to `true`, otherwise, change `output.format` to something else, like `esm` (for more details, consider checking [#21](https://github.com/henriquehbr/svelte-typewriter/issues/21))
+
 ```bash
 # yarn
 yarn add -D svelte-typewriter
