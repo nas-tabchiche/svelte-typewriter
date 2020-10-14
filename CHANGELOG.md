@@ -4,8 +4,9 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.2.0...HEAD)
 
+- docs: move jsdoc annotations into a single file [`749e0bf`](https://github.com/henriquehbr/svelte-typewriter/commit/749e0bf4b325bd16749443f360c2658326d5a634)
 - docs: add npm stats badges [`e54fc12`](https://github.com/henriquehbr/svelte-typewriter/commit/e54fc12b89da77960abb5a278be19521c510b867)
-- docs: add notice about dynamic imports issue on rollup #21 [`49208d3`](https://github.com/henriquehbr/svelte-typewriter/commit/49208d33c575cdaccd9db3982aa1ca893decc8a7)
+- docs: add notice about dynamic imports issue on rollup #21 [`930ddde`](https://github.com/henriquehbr/svelte-typewriter/commit/930dddec9cd82f059fe41ed9a9be1ebf616b4330)
 
 #### [v2.2.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.17...v2.2.0)
 
