@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file. Dates are d
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.2.0...HEAD)
 
 - docs: move jsdoc annotations into a single file [`f6df25b`](https://github.com/henriquehbr/svelte-typewriter/commit/f6df25bd914288ed1fd31f4a50ba9f1d681a819e)
-- feat: add proof-of-concept version of scramble mode [`9936fbe`](https://github.com/henriquehbr/svelte-typewriter/commit/9936fbefd775fe06f4a27af13828bd750af8acd6)
+- feat: add proof-of-concept version of scramble mode [`37f8e9c`](https://github.com/henriquehbr/svelte-typewriter/commit/37f8e9ce666453b535c9bd4a88650b602fc212ec)
+- refactor: split scramble mode into smaller functions [`cceb261`](https://github.com/henriquehbr/svelte-typewriter/commit/cceb2614a7b7ff1dd9be1e3f1d8124176914d849)
 - docs: add npm stats badges [`e54fc12`](https://github.com/henriquehbr/svelte-typewriter/commit/e54fc12b89da77960abb5a278be19521c510b867)
 - docs: add notice about dynamic imports issue on rollup #21 [`930ddde`](https://github.com/henriquehbr/svelte-typewriter/commit/930dddec9cd82f059fe41ed9a9be1ebf616b4330)
 
