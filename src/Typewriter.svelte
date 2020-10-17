@@ -5,12 +5,13 @@
 	export let interval = 30
 	export let cascade = false
 	export let loop = false
+	export let scramble = false
 	export let cursor = true
 	export let delay = 0
 
 	const dispatch = createEventDispatcher()
 
-	const options = { interval, cascade, loop, cursor, delay, dispatch }
+	const options = { interval, cascade, loop, scramble, cursor, delay, dispatch }
 </script>
 
 <style>
