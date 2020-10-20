@@ -3,35 +3,47 @@ import { sleep } from '../utils'
 
 let matchingLetters = []
 
-const scrambleLetters = (element, matchingLetters) => {
+const scrambleLetters = element => {
 	const scrambledText = element.textContent
 		.split('')
 		.map((letter, index) => {
-			const foundMatchingLetterOrSpace = matchingLetters.includes(index) || letter === ' '
+			const foundMatchingLetterOrSpace =
+				matchingLetters.some(
+					({ currentNode, matchingLetters }) =>
+						currentNode === element && matchingLetters.includes(index)
+				) || letter === ' '
 			const randomLetter = String.fromCharCode(65 + Math.round(Math.random() * 50))
 			return foundMatchingLetterOrSpace ? letter : randomLetter
 		})
 		.join('')
 	element.textContent = scrambledText
-	return scrambledText
 }
 
-const hasMatchingLetter = (scrambledText, normalText) =>
-	normalText.forEach(
-		(letter, i) =>
-			!matchingLetters.includes(i) && letter === scrambledText[i] && matchingLetters.push(i)
-	)
+const hasMatchingLetter = (elementWithScrambledText, normalText) => {
+	const scrambledText = elementWithScrambledText.textContent
+	normalText.forEach((letter, i) => {
+		!matchingLetters.some(
+			({ matchingLetters, currentNode }) =>
+				currentNode === elementWithScrambledText && matchingLetters.includes(i)
+		) &&
+			letter === scrambledText[i] &&
+			matchingLetters.forEach(
+				({ currentNode, matchingLetters }) =>
+					currentNode === elementWithScrambledText && matchingLetters.push(i)
+			)
+	})
+}
 
 /** @type {TypewriterModeFn} */
 export default async ({ elements }, options) => {
+	matchingLetters = [...elements.map(({ currentNode }) => ({ currentNode, matchingLetters: [] }))]
 	elements.forEach(async ({ currentNode, text }) => {
-		matchingLetters = []
 		const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
 		const startTime = new Date().getTime()
+		console.log(matchingLetters)
 		while (true) {
-			const scrambledText = scrambleLetters(currentNode, matchingLetters)
-			// Check if the scrambled text has any matching letter
-			hasMatchingLetter(scrambledText, text)
+			scrambleLetters(currentNode)
+			hasMatchingLetter(currentNode, text)
 			await sleep(options.interval)
 			const scrambledTextMatch = currentNode.textContent != text.join('')
 			const didTimeout = new Date().getTime() - startTime < scrambleDuration
