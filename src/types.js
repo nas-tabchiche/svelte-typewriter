@@ -17,6 +17,7 @@
  * @property {number|number[]} interval The interval between keystrokes
  * @property {boolean} cascade Toggles the `cascade` animation mode
  * @property {boolean|number} loop Toggles the `loop` animation mode (if it's a number, sets the interval on each word reset)
+ * @property {boolean} scramble Toggles the `scramble` animation mode
  * @property {boolean|string} cursor Toggles the `cursor` animation effect (if it's a string, sets the cursor color)
  * @property {number} delay The interval before the beginning of the animation
  * @property {(type: string, detail?: any) => void} dispatch Svelte's dispatch function
