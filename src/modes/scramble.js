@@ -32,18 +32,23 @@ export default async ({ elements }, options) => {
 	elementsToScramble = [
 		...elements.map(({ currentNode }) => ({ currentNode, matchingLetters: [] }))
 	]
-	elements.forEach(async ({ currentNode, text }) => {
-		const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
-		const startTime = new Date().getTime()
-		while (true) {
-			scrambleLetters(currentNode)
-			hasMatchingLetter(currentNode, text)
-			await sleep(options.interval)
-			const scrambledTextMatch = currentNode.textContent != text.join('')
-			const didTimeout = new Date().getTime() - startTime < scrambleDuration
-			if (!scrambledTextMatch || !didTimeout) break
-		}
-		options.dispatch('done')
-		currentNode.textContent = text.join('')
+	await new Promise(resolve => {
+		elements.forEach(async ({ currentNode, text }) => {
+			const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
+			const startTime = new Date().getTime()
+			while (true) {
+				scrambleLetters(currentNode)
+				hasMatchingLetter(currentNode, text)
+				await sleep(options.interval)
+				const scrambledTextMatch = currentNode.textContent != text.join('')
+				const didTimeout = new Date().getTime() - startTime < scrambleDuration
+				if (!scrambledTextMatch || !didTimeout) {
+					resolve()
+					break
+				}
+			}
+			currentNode.textContent = text.join('')
+		})
 	})
+	options.dispatch('done')
 }
