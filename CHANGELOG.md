@@ -9,7 +9,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - fix(scramble): solve animation issue with multiple elements [`f582f02`](https://github.com/henriquehbr/svelte-typewriter/commit/f582f02c5410db69cdc6d2099f27f51e617f8c2c)
 - refactor: split scramble mode into smaller functions [`b3386a7`](https://github.com/henriquehbr/svelte-typewriter/commit/b3386a72a768afc6f6243e66c6e7d9932d1a846f)
 - refactor(scramble): simplify helper functions [`11d6925`](https://github.com/henriquehbr/svelte-typewriter/commit/11d69253664e6ae2a2332fc63b6c0fbc12d82a79)
-- docs: add `scramble` mode details [`500f78b`](https://github.com/henriquehbr/svelte-typewriter/commit/500f78bd79d44451b8deeae5873b218cb2b1a85c)
+- docs: add `scramble` mode details [`9ee2a20`](https://github.com/henriquehbr/svelte-typewriter/commit/9ee2a20c6a0ccc74b0d55a691cbca9d83ade5b3f)
+- fix: properly animate single text elements on scramble mode [`0740e7f`](https://github.com/henriquehbr/svelte-typewriter/commit/0740e7f3fe26eb8ee3c4781330c4e07320d8d1a5)
 - docs: add npm stats badges [`e54fc12`](https://github.com/henriquehbr/svelte-typewriter/commit/e54fc12b89da77960abb5a278be19521c510b867)
 - docs: add notice about dynamic imports issue on rollup #21 [`930ddde`](https://github.com/henriquehbr/svelte-typewriter/commit/930dddec9cd82f059fe41ed9a9be1ebf616b4330)
 

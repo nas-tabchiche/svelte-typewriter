@@ -51,8 +51,9 @@ export const typingInterval = async interval => sleep(interval[rng(0, interval.l
 export const getElements = parentElement => {
 	if (hasSingleTextNode(parentElement)) {
 		const text = parentElement.textContent.split('')
-		parentElement.textContent = ''
 		const childNode = document.createElement('p')
+		childNode.textContent = parentElement.textContent
+		parentElement.textContent = ''
 		parentElement.appendChild(childNode)
 		return [{ currentNode: childNode, text }]
 	} else {
