@@ -36,6 +36,7 @@ You need to import the Svelte component, and wrap your elements with the `<Typew
 
 ```svelte
 <script>
+  import Typewriter from 'svelte-typewriter'
 </script>
 
 <Typewriter>

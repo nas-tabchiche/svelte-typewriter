@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.0...HEAD)
+
+- docs: add missing import on example [`cc2bb79`](https://github.com/henriquehbr/svelte-typewriter/commit/cc2bb7988783fa76073901b54b3af7aa35ec0e02)
+
 #### [v2.3.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.2.0...v2.3.0)
 
 > 20 October 2020
