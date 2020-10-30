@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.3.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.0...v2.3.1)
+
+> 30 October 2020
+
+- chore: bump dependencies [`bb3a056`](https://github.com/henriquehbr/svelte-typewriter/commit/bb3a056023ac662d6478f70648f9745c22fbc40a)
+- docs: add missing import on example [`233e1e6`](https://github.com/henriquehbr/svelte-typewriter/commit/233e1e6e68b2c55427a0967d37144c7de4d1ac06)
+
 #### [v2.3.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.2.0...v2.3.0)
 
 > 20 October 2020
