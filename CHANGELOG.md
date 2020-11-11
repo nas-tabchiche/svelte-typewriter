@@ -4,10 +4,11 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...HEAD)
 
+- chore: bump dependencies [`4bb2159`](https://github.com/henriquehbr/svelte-typewriter/commit/4bb2159cda620419fb2265883001609a8676a7d9)
 - refactor: rewrite changelog generation scripts [`df8a593`](https://github.com/henriquehbr/svelte-typewriter/commit/df8a5938507d2cb39b9ab0cff2bba79316aeae4e)
 - chore: bump rollup from 2.32.1 to 2.33.0 [`c50ee34`](https://github.com/henriquehbr/svelte-typewriter/commit/c50ee344a1697ea43c192253fee77b72c98207f9)
 - chore: automate pushing of git tags to remote [`26a26a6`](https://github.com/henriquehbr/svelte-typewriter/commit/26a26a68907608ad7346d22b449f7c2025d51498)
-- chore: remove "git push" from "post-commit" hook [`e23a93a`](https://github.com/henriquehbr/svelte-typewriter/commit/e23a93a388bd70e0f066eb19de099a91c0818829)
+- chore: remove "git push" from "post-commit" hook [`36a511b`](https://github.com/henriquehbr/svelte-typewriter/commit/36a511bdaee2c6210772c7a495b4abac0bf00933)
 
 #### [v2.3.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.0...v2.3.1)
 
