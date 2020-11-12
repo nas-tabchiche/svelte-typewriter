@@ -6,8 +6,9 @@ All notable changes to this project will be documented in this file. Dates are d
 
 - chore: bump dependencies [`5fd8bae`](https://github.com/henriquehbr/svelte-typewriter/commit/5fd8baedd0edd0790536c702a0cdb5dcc7602312)
 - feat: add "loopRandom" mode #23 [`75579eb`](https://github.com/henriquehbr/svelte-typewriter/commit/75579ebea856c1ae6440787ab7841ae33cfd55cc)
+- refactor(loop,loopRandom): dedupe "typewriterEffect" [`6241fb4`](https://github.com/henriquehbr/svelte-typewriter/commit/6241fb4a7e54f7e89ab28ea057c008151306623c)
 - docs: add "loopMode" details #23 [`d30f52c`](https://github.com/henriquehbr/svelte-typewriter/commit/d30f52c61b9cf3e8382cdfda6e7c3cfe1d39f1ef)
-- docs: improve description of "loop" and "loopRandom" [`5f92aac`](https://github.com/henriquehbr/svelte-typewriter/commit/5f92aac9a6662c803a9302c5a4f872d881462a92)
+- docs: improve description of "loop" and "loopRandom" [`445fbeb`](https://github.com/henriquehbr/svelte-typewriter/commit/445fbeb85d4d01c20a86a1e7f6c9322cb47e0409)
 
 #### [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2)
 
