@@ -1,8 +1,5 @@
 /// <reference path='../types.js' />
-import { loopTypewriterEffect } from '../utils'
-import { rng } from '../utils'
-
-const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
+import { loopTypewriterEffect, rng, cleanChildNodes } from '../utils'
 
 let alreadyChoosenTexts = []
 

@@ -42,6 +42,8 @@ export const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNod
  */
 export const typingInterval = async interval => sleep(interval[rng(0, interval.length)] || interval)
 
+export const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
+
 /**
  * Get children data from `parentElement`
  * @param {HTMLElement} parentElement The element to get children from
