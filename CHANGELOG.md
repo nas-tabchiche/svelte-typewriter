@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...HEAD)
+#### [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2)
 
 - chore: bump dependencies [`5fd8bae`](https://github.com/henriquehbr/svelte-typewriter/commit/5fd8baedd0edd0790536c702a0cdb5dcc7602312)
 - feat: add "loopRandom" mode #23 [`a1ec427`](https://github.com/henriquehbr/svelte-typewriter/commit/a1ec427ad63af617218776b634a70fb880c5a300)
