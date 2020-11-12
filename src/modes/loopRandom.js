@@ -1,5 +1,5 @@
 /// <reference path='../types.js' />
-import { loopTypewriterEffect, rng, cleanChildNodes } from '../utils'
+import { loopTypewriterEffect, rng, cleanChildNodes, hasSingleTextNode } from '../utils'
 
 let alreadyChoosenTexts = []
 
@@ -18,7 +18,11 @@ const getRandomText = elements => {
 			return randomText
 		}
 		const restartRandomization = alreadyChoosenTexts.length === elements.length
-		restartRandomization && (alreadyChoosenTexts = alreadyChoosenTexts.pop())
+		if (restartRandomization) {
+			!hasSingleTextNode
+				? (alreadyChoosenTexts = alreadyChoosenTexts.pop())
+				: (alreadyChoosenTexts = [])
+		}
 	}
 }
 

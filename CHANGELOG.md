@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.0...HEAD)
+
+- fix(loopRandom): properly animate single text nodes [`3fbc839`](https://github.com/henriquehbr/svelte-typewriter/commit/3fbc8396e1dd4cae04fd699dc7d6b9d0822038ac)
+
 #### [v2.4.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.2...v2.4.0)
+
+> 12 November 2020
 
 - Add "loopRandom" mode [`#24`](https://github.com/henriquehbr/svelte-typewriter/pull/24)
 - chore: bump dependencies [`5fd8bae`](https://github.com/henriquehbr/svelte-typewriter/commit/5fd8baedd0edd0790536c702a0cdb5dcc7602312)
