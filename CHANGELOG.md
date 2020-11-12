@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.0...HEAD)
+#### [v2.4.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.0...v2.4.1)
 
-- fix(loopRandom): properly animate single text nodes [`3fbc839`](https://github.com/henriquehbr/svelte-typewriter/commit/3fbc8396e1dd4cae04fd699dc7d6b9d0822038ac)
+- fix(loopRandom): properly animate single text nodes [`ffe37a1`](https://github.com/henriquehbr/svelte-typewriter/commit/ffe37a1fdeb62ca40dd4b2447f070c233ce10092)
 
 #### [v2.4.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.2...v2.4.0)
 
