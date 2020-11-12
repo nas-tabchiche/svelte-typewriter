@@ -2,10 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2)
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.2...HEAD)
 
 - chore: bump dependencies [`5fd8bae`](https://github.com/henriquehbr/svelte-typewriter/commit/5fd8baedd0edd0790536c702a0cdb5dcc7602312)
-- feat: add "loopRandom" mode #23 [`a1ec427`](https://github.com/henriquehbr/svelte-typewriter/commit/a1ec427ad63af617218776b634a70fb880c5a300)
+- feat: add "loopRandom" mode #23 [`75579eb`](https://github.com/henriquehbr/svelte-typewriter/commit/75579ebea856c1ae6440787ab7841ae33cfd55cc)
+- docs: add "loopMode" details #23 [`80e63b2`](https://github.com/henriquehbr/svelte-typewriter/commit/80e63b2f81b468ddc2ea67fae985ee62a48a889e)
+
+#### [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2)
+
+> 11 November 2020
+
 - refactor: rewrite changelog generation scripts [`df8a593`](https://github.com/henriquehbr/svelte-typewriter/commit/df8a5938507d2cb39b9ab0cff2bba79316aeae4e)
 - chore: bump rollup from 2.32.1 to 2.33.0 [`c50ee34`](https://github.com/henriquehbr/svelte-typewriter/commit/c50ee344a1697ea43c192253fee77b72c98207f9)
 - chore: automate pushing of git tags to remote [`26a26a6`](https://github.com/henriquehbr/svelte-typewriter/commit/26a26a68907608ad7346d22b449f7c2025d51498)
