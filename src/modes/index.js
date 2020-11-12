@@ -5,6 +5,7 @@ import { getElements } from '../utils'
 export const typewriter = async (node, options) => {
 	const { default: mode } =
 		(options.loop && (await import('./loop'))) ||
+		(options.loopRandom && (await import('./loopRandom'))) ||
 		(options.cascade && (await import('./cascade'))) ||
 		(options.scramble && (await import('./scramble'))) ||
 		(await import('./default'))
