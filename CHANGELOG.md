@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.2...HEAD)
+
+- chore: bump dependencies [`5fd8bae`](https://github.com/henriquehbr/svelte-typewriter/commit/5fd8baedd0edd0790536c702a0cdb5dcc7602312)
+- feat: add "loopRandom" mode #23 [`75579eb`](https://github.com/henriquehbr/svelte-typewriter/commit/75579ebea856c1ae6440787ab7841ae33cfd55cc)
+- refactor(loop,loopRandom): dedupe "typewriterEffect" [`0cf223f`](https://github.com/henriquehbr/svelte-typewriter/commit/0cf223fff824ab11f7d0b5ea99502368af39f420)
+- docs: add "loopMode" details #23 [`d30f52c`](https://github.com/henriquehbr/svelte-typewriter/commit/d30f52c61b9cf3e8382cdfda6e7c3cfe1d39f1ef)
+- docs: improve description of "loop" and "loopRandom" [`445fbeb`](https://github.com/henriquehbr/svelte-typewriter/commit/445fbeb85d4d01c20a86a1e7f6c9322cb47e0409)
+- refactor(loop,loopRandom): dedupe "cleanChilNodes" [`44e7317`](https://github.com/henriquehbr/svelte-typewriter/commit/44e731732dd546618b873860c96978b36ffa7586)
+- docs: write jsdoc annotations for "cleanChildNodes" [`fe1b515`](https://github.com/henriquehbr/svelte-typewriter/commit/fe1b515c140675451c704f3bcfec481310d7e76a)
+
 #### [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2)
+
+> 11 November 2020
 
 - refactor: rewrite changelog generation scripts [`df8a593`](https://github.com/henriquehbr/svelte-typewriter/commit/df8a5938507d2cb39b9ab0cff2bba79316aeae4e)
 - chore: bump rollup from 2.32.1 to 2.33.0 [`c50ee34`](https://github.com/henriquehbr/svelte-typewriter/commit/c50ee344a1697ea43c192253fee77b72c98207f9)

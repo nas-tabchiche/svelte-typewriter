@@ -36,7 +36,6 @@ You need to import the Svelte component, and wrap your elements with the `<Typew
 
 ```svelte
 <script>
-  import Typewriter from 'svelte-typewriter'
 </script>
 
 <Typewriter>
@@ -67,12 +66,13 @@ The `<Typewriter>` component can receive props that allows to manipulate the beh
 
 You can control the behavior of the typewriter effect by passing specific props to the `<Typewriter>` component, the table below contains information about all modes:
 
-| Mode       | Type                  | Description                                                                                                                                                                                  | Default |                                                                  |
-| ---------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
-| `cascade`  | `boolean`             | Apply animation on all elements sequentially instead of simultaneously                                                                                                                       | `false` | [DEMO](https://svelte.dev/repl/9ddb89942e954a2a90b553356952ff46) |
-| `loop`     | `boolean` or `number` | Cycles the animation between the children elements of the parent `Typewriter` component, if a number argument is passed, it's defined as the interval between each word (defaults to `1500`) | `false` | [DEMO](https://svelte.dev/repl/e8b82d83f6c2444b97619238404bcd4d) |
-| `default`  |                       | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode                                                                                     | `true`  | [DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a) |
-| `scramble` | `boolean` or `number` | Randomize all letters in a element text for a specific amount of time, if a number is passed as argument, it's defined as the duration of the animation (defaults to `3000`)                 | `false` | [DEMO](https://svelte.dev/repl/1c48ad0ad8d34eb7b6e561d39799ff6e) |
+| Mode         | Type                  | Description                                                                                                                                                                                                                                                                      | Default |                                                                  |
+| ------------ | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
+| `cascade`    | `boolean`             | Apply animation on all elements sequentially instead of simultaneously                                                                                                                                                                                                           | `false` | [DEMO](https://svelte.dev/repl/9ddb89942e954a2a90b553356952ff46) |
+| `loop`       | `boolean` or `number` | Cycles the animation between the children elements of the parent `Typewriter` component, the interval (in milliseconds) between each word can be defined by passing a number as the parameter, otherwise defaults to `1500`                                                      | `false` | [DEMO](https://svelte.dev/repl/e8b82d83f6c2444b97619238404bcd4d) |
+| `loopRandom` | `boolean` or `number` | It's very similar to `loop` mode, but instead of cycling the animation in a linear way, it picks a random child element to animate each time, the interval (in milliseconds) between each word can be defined by passing a number as the parameter, otherwise defaults to `1500` | `false` | [DEMO](https://svelte.dev/repl/d75f38dc86374f7ebd20e1e33d278b09) |
+| `default`    |                       | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode                                                                                                                                                                         | `true`  | [DEMO](https://svelte.dev/repl/9dfb73bfa9b34aeea4740fa23f5cde8a) |
+| `scramble`   | `boolean` or `number` | Randomize all letters in a element text for a specific amount of time, if a number is passed as argument, it's defined as the duration of the animation (defaults to `3000`)                                                                                                     | `false` | [DEMO](https://svelte.dev/repl/1c48ad0ad8d34eb7b6e561d39799ff6e) |
 
 ### Event listeners
 

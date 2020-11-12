@@ -1,3 +1,5 @@
+/// <reference path='./types.js' />
+
 /**
  * Waits for a given amount of time
  * @param {number} ms The time in milliseconds to wait before resuming execution
@@ -41,6 +43,17 @@ export const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNod
 export const typingInterval = async interval => sleep(interval[rng(0, interval.length)] || interval)
 
 /**
+ * Remove all children from a specified element
+ * @param {HTMLElement} node The parent element whom children will be removed
+ * @example
+ * const parent = document.createElement('div')
+ * const child = document.createElement('p')
+ * parent.appendChild(child)
+ * cleanChildNodes(parent)
+ */
+export const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
+
+/**
  * Get children data from `parentElement`
  * @param {HTMLElement} parentElement The element to get children from
  * @example
@@ -61,4 +74,26 @@ export const getElements = parentElement => {
 			.filter(el => hasSingleTextNode(el))
 			.map(currentNode => ({ currentNode, text: currentNode.textContent.split('') }))
 	}
+}
+
+/** @type {TypewriterEffectFn} */
+export const loopTypewriterEffect = async ({ currentNode, text }, options) => {
+	currentNode.textContent = ''
+	currentNode.classList.add('typing')
+	for (const letter of text) {
+		currentNode.textContent += letter
+		const fullyWritten = currentNode.textContent === text.join('')
+		if (fullyWritten) {
+			options.dispatch('done')
+			await sleep(typeof options.loop === 'number' ? options.loop : 1500)
+			while (currentNode.textContent !== '') {
+				currentNode.textContent = currentNode.textContent.slice(0, -1)
+				await typingInterval(options.interval)
+			}
+		}
+		await typingInterval(options.interval)
+	}
+	currentNode.nextSibling !== null && currentNode.classList.length == 1
+		? currentNode.removeAttribute('class')
+		: currentNode.classList.remove('typing')
 }
