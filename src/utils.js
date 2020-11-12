@@ -42,6 +42,15 @@ export const hasSingleTextNode = el => el.childNodes.length === 1 && el.childNod
  */
 export const typingInterval = async interval => sleep(interval[rng(0, interval.length)] || interval)
 
+/**
+ * Remove all children from a specified element
+ * @param {HTMLElement} node The parent element whom children will be removed
+ * @example
+ * const parent = document.createElement('div')
+ * const child = document.createElement('p')
+ * parent.appendChild(child)
+ * cleanChildNodes(parent)
+ */
 export const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
 
 /**

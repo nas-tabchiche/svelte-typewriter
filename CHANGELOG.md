@@ -9,7 +9,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - refactor(loop,loopRandom): dedupe "typewriterEffect" [`0cf223f`](https://github.com/henriquehbr/svelte-typewriter/commit/0cf223fff824ab11f7d0b5ea99502368af39f420)
 - docs: add "loopMode" details #23 [`d30f52c`](https://github.com/henriquehbr/svelte-typewriter/commit/d30f52c61b9cf3e8382cdfda6e7c3cfe1d39f1ef)
 - docs: improve description of "loop" and "loopRandom" [`445fbeb`](https://github.com/henriquehbr/svelte-typewriter/commit/445fbeb85d4d01c20a86a1e7f6c9322cb47e0409)
-- refactor(loop,loopRandom): dedupe "cleanChilNodes" [`03f7e23`](https://github.com/henriquehbr/svelte-typewriter/commit/03f7e239fd353bbc0e7efb1bb77476fdffab9790)
+- refactor(loop,loopRandom): dedupe "cleanChilNodes" [`44e7317`](https://github.com/henriquehbr/svelte-typewriter/commit/44e731732dd546618b873860c96978b36ffa7586)
+- docs: write jsdoc annotations for "cleanChildNodes" [`fe1b515`](https://github.com/henriquehbr/svelte-typewriter/commit/fe1b515c140675451c704f3bcfec481310d7e76a)
 
 #### [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2)
 
