@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.1...HEAD)
+
+- chore: bump dependencies [`5289e0b`](https://github.com/henriquehbr/svelte-typewriter/commit/5289e0b7a318f1c197b3d832e7747d34f7e99c9e)
+
 #### [v2.4.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.0...v2.4.1)
+
+> 12 November 2020
 
 - fix(loopRandom): properly animate single text nodes [`ffe37a1`](https://github.com/henriquehbr/svelte-typewriter/commit/ffe37a1fdeb62ca40dd4b2447f070c233ce10092)
 

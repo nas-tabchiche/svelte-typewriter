@@ -7,7 +7,10 @@ import { terser } from 'rollup-plugin-terser'
 /** @type {import('rollup').Plugin[]} */
 const plugins = [
 	svelte({
-		dev: false
+		emitCss: false,
+		compilerOptions: {
+			dev: false
+		}
 	}),
 	resolve({
 		browser: true,
