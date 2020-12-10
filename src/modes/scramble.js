@@ -7,7 +7,8 @@ const getMatchingLetters = elementWithScrambledText =>
 	elementsToScramble.find(element => element.currentNode === elementWithScrambledText)
 
 const scrambleLetters = element => {
-	const scrambledText = element.textContent
+	const scrambledText = element.innerHTML
+		.replaceAll(/(<([^>]+)>)/gi, '')
 		.split('')
 		.map((letter, letterIdx) => {
 			const { matchingLetters } = getMatchingLetters(element)
@@ -16,15 +17,16 @@ const scrambleLetters = element => {
 			return foundMatchingLetterOrSpace ? letter : randomLetter
 		})
 		.join('')
-	element.textContent = scrambledText
+	element.innerHTML = scrambledText
 }
 
 const hasMatchingLetter = (elementWithScrambledText, normalText) => {
-	const scrambledText = elementWithScrambledText.textContent
-	normalText.forEach((letter, i) => {
+	const scrambledText = elementWithScrambledText.innerHTML.replaceAll(/(<([^>]+)>)/gi, '')
+	for (let i = 0; i < normalText.length; i++) {
+		const letter = normalText[i]
 		const { matchingLetters } = getMatchingLetters(elementWithScrambledText)
 		!matchingLetters.includes(i) && letter === scrambledText[i] && matchingLetters.push(i)
-	})
+	}
 }
 
 /** @type {TypewriterModeFn} */
@@ -32,6 +34,7 @@ export default async ({ elements }, options) => {
 	elementsToScramble = [
 		...elements.map(({ currentNode }) => ({ currentNode, matchingLetters: [] }))
 	]
+	console.log(elementsToScramble)
 	await new Promise(resolve => {
 		elements.forEach(async ({ currentNode, text }) => {
 			const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
@@ -40,14 +43,14 @@ export default async ({ elements }, options) => {
 				scrambleLetters(currentNode)
 				hasMatchingLetter(currentNode, text)
 				await sleep(options.interval)
-				const scrambledTextMatch = currentNode.textContent != text.join('')
+				const scrambledTextMatch = currentNode.innerHTML != text
 				const didTimeout = new Date().getTime() - startTime < scrambleDuration
 				if (!scrambledTextMatch || !didTimeout) {
 					resolve()
 					break
 				}
 			}
-			currentNode.textContent = text.join('')
+			currentNode.innerHTML = text
 		})
 	})
 	options.dispatch('done')

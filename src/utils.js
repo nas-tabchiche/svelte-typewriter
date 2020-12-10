@@ -54,6 +54,19 @@ export const typingInterval = async interval => sleep(interval[rng(0, interval.l
 export const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
 
 /**
+ * Create a HTML element
+ * @param {string} text The text to be inserted into the HTML element
+ * @param {string} elementTag The tag name of the newly created HTML element
+ * @example
+ * convertTextToElement(parent)
+ */
+export const createElement = (text, elementTag) => {
+	const element = document.createElement(elementTag)
+	element.textContent = text
+	return element
+}
+
+/**
  * Get children data from `parentElement`
  * @param {HTMLElement} parentElement The element to get children from
  * @example
@@ -64,15 +77,26 @@ export const cleanChildNodes = node => node.childNodes.forEach(el => el.remove()
 export const getElements = parentElement => {
 	if (hasSingleTextNode(parentElement)) {
 		const text = parentElement.textContent.split('')
-		const childNode = document.createElement('p')
-		childNode.textContent = parentElement.textContent
+		const childNode = createElement(parentElement.textContent, 'p')
 		parentElement.textContent = ''
 		parentElement.appendChild(childNode)
 		return [{ currentNode: childNode, text }]
 	} else {
-		return [...parentElement.getElementsByTagName('*')]
-			.filter(el => hasSingleTextNode(el))
-			.map(currentNode => ({ currentNode, text: currentNode.textContent.split('') }))
+		const childElements = [...parentElement.children]
+		return childElements.map(currentNode => ({
+			currentNode,
+			text: currentNode.innerHTML
+		}))
+	}
+}
+
+const unwriteEffect = async (currentNode, options) => {
+	const text = currentNode.innerHTML
+	for (let index = text.length - 1; index >= 0; index--) {
+		const letter = text[index]
+		letter === '>' && (index = text.lastIndexOf('<', index))
+		currentNode.innerHTML = text.slice(0, index)
+		await typingInterval(options.interval)
 	}
 }
 
@@ -80,16 +104,15 @@ export const getElements = parentElement => {
 export const loopTypewriterEffect = async ({ currentNode, text }, options) => {
 	currentNode.textContent = ''
 	currentNode.classList.add('typing')
-	for (const letter of text) {
-		currentNode.textContent += letter
-		const fullyWritten = currentNode.textContent === text.join('')
+	for (let index = 0; index <= text.length; index++) {
+		const letter = text[index]
+		letter === '<' && (index = text.indexOf('>', index))
+		currentNode.innerHTML = text.slice(0, index)
+		const fullyWritten = currentNode.innerHTML === text
 		if (fullyWritten) {
 			options.dispatch('done')
 			await sleep(typeof options.loop === 'number' ? options.loop : 1500)
-			while (currentNode.textContent !== '') {
-				currentNode.textContent = currentNode.textContent.slice(0, -1)
-				await typingInterval(options.interval)
-			}
+			await unwriteEffect(currentNode, options)
 		}
 		await typingInterval(options.interval)
 	}

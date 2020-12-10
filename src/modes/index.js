@@ -10,6 +10,7 @@ export const typewriter = async (node, options) => {
 		(options.scramble && (await import('./scramble'))) ||
 		(await import('./default'))
 	const elements = getElements(node)
+	console.log(elements)
 	if (options.delay > 0) {
 		const { sleep } = await import('../utils')
 		await sleep(options.delay)
