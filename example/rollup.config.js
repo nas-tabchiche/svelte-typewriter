@@ -34,10 +34,7 @@ const options = {
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
-			customResolveOptions: {
-				moduleDirectory: ['../src', 'node_modules'],
-				extensions: ['.svelte', '/index.svelte', '.mjs', '.js', '.json']
-			}
+			moduleDirectories: ['../src/', 'node_modules']
 		}),
 		commonjs(),
 		production && terser(),

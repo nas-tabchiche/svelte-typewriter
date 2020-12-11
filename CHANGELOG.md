@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v2.4.3](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...v2.4.3)
+## [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...HEAD)
+
+### Commits
+
+- chore: bump dependencies [`b8348eb`](https://github.com/henriquehbr/svelte-typewriter/commit/b8348ebec70c2faf79f7e9c8e0c6573f515671ab)
+
+## [v2.4.3](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...v2.4.3) - 2020-12-11
 
 ### Fixed
 
