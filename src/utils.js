@@ -102,7 +102,6 @@ const unwriteEffect = async (currentNode, options) => {
 
 /** @type {TypewriterEffectFn} */
 export const loopTypewriterEffect = async ({ currentNode, text }, options) => {
-	console.log('currentNode', currentNode)
 	currentNode.textContent = ''
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {

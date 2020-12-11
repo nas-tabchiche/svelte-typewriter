@@ -39,6 +39,10 @@ export default async ({ node, elements }, options) => {
 		cleanChildNodes(node)
 		const loopParagraphTag = currentNode.tagName.toLowerCase()
 		const loopParagraph = createElement(text, loopParagraphTag)
+		const loopParagraphAttributes = [...currentNode.attributes]
+		loopParagraphAttributes.forEach(({ name, value }) =>
+			loopParagraph.setAttribute(name, value)
+		)
 		node.appendChild(loopParagraph)
 		await loopTypewriterEffect({ currentNode: loopParagraph, text }, options)
 		cleanChildNodes(node)

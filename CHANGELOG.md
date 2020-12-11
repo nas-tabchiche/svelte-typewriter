@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...HEAD)
 
+### Fixed
+
+- fix(loopRandom): preserve element attributes, closes #29 [`#29`](https://github.com/henriquehbr/svelte-typewriter/issues/29)
+
 ### Commits
 
 - chore: set changelog template to "keepachangelog" [`bdc50d1`](https://github.com/henriquehbr/svelte-typewriter/commit/bdc50d14607b8fd9bdf970a979e078e5e5d628a1)
-- fix(loop): preserve element attributes (#29) [`741cd5c`](https://github.com/henriquehbr/svelte-typewriter/commit/741cd5c6a20aaee55e0ec7c8b294fc2444a2f558)
+- fix(loop): preserve element attributes (#29) [`dfae70f`](https://github.com/henriquehbr/svelte-typewriter/commit/dfae70f83e9aefc256388e20742b712cfca01e86)
 - docs: add contribution steps [`57c3551`](https://github.com/henriquehbr/svelte-typewriter/commit/57c355185862e2abcd1007cd2788974f56c359ad)
 
 ## [v2.4.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.1...v2.4.2) - 2020-12-10
