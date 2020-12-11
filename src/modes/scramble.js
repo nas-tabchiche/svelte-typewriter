@@ -6,13 +6,40 @@ let elementsToScramble = []
 const getMatchingLetters = elementWithScrambledText =>
 	elementsToScramble.find(element => element.currentNode === elementWithScrambledText)
 
+const getHTMLTagsIndexes = element => {
+	const getHTMLTagsRegex = /(<([^>]+)>)/g
+	const HTMLTagsIndexes = []
+	let HTMLTagsFound = []
+	while ((HTMLTagsFound = getHTMLTagsRegex.exec(element.innerHTML)) !== null) {
+		const tagStartingPosition = HTMLTagsFound.index
+		const tagEndingPosition = getHTMLTagsRegex.lastIndex
+		// The tagEndingPosition must be subtracted, otherwise, it will match one character after the tag
+		HTMLTagsIndexes.push([tagStartingPosition, tagEndingPosition - 1])
+	}
+	return HTMLTagsIndexes
+}
+
+const isInRange = (val, min, max) => val >= min && val <= max
+
+const isLetterHTMLTag = (letterIdx, HTMLTagIndexes) => {
+	const isLetterIndexHtmlTag = HTMLTagIndexes.some(([tagStartingIndex, tagEndingIndex]) => {
+		const isHTMLTag = isInRange(letterIdx, tagStartingIndex, tagEndingIndex)
+		return isHTMLTag
+	})
+	return isLetterIndexHtmlTag
+}
+
 const scrambleLetters = element => {
+	const HTMLTagIndexes = getHTMLTagsIndexes(element)
 	const scrambledText = element.innerHTML
-		.replaceAll(/(<([^>]+)>)/gi, '')
 		.split('')
 		.map((letter, letterIdx) => {
 			const { matchingLetters } = getMatchingLetters(element)
-			const foundMatchingLetterOrSpace = matchingLetters.includes(letterIdx) || letter === ' '
+			const emptySpaceRegex = /\s+/g
+			const foundMatchingLetterOrSpace =
+				matchingLetters.includes(letterIdx) ||
+				letter.match(emptySpaceRegex) ||
+				isLetterHTMLTag(letterIdx, HTMLTagIndexes)
 			const randomLetter = String.fromCharCode(65 + Math.round(Math.random() * 50))
 			return foundMatchingLetterOrSpace ? letter : randomLetter
 		})
@@ -21,7 +48,7 @@ const scrambleLetters = element => {
 }
 
 const hasMatchingLetter = (elementWithScrambledText, normalText) => {
-	const scrambledText = elementWithScrambledText.innerHTML.replaceAll(/(<([^>]+)>)/gi, '')
+	const scrambledText = elementWithScrambledText.innerHTML
 	for (let i = 0; i < normalText.length; i++) {
 		const letter = normalText[i]
 		const { matchingLetters } = getMatchingLetters(elementWithScrambledText)
@@ -34,7 +61,6 @@ export default async ({ elements }, options) => {
 	elementsToScramble = [
 		...elements.map(({ currentNode }) => ({ currentNode, matchingLetters: [] }))
 	]
-	console.log(elementsToScramble)
 	await new Promise(resolve => {
 		elements.forEach(async ({ currentNode, text }) => {
 			const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
