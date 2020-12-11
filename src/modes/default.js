@@ -1,12 +1,14 @@
 /// <reference path='../types.js' />
 import { typingInterval } from '../utils'
 
+// Unify the function below with the one on default mode
 /** @type {TypewriterEffectFn} */
 const typewriterEffect = async ({ currentNode, text }, options) => {
-	currentNode.textContent = ''
 	currentNode.classList.add('typing')
-	for (const letter of text) {
-		currentNode.textContent += letter
+	for (let index = 0; index <= text.length; index++) {
+		const char = text[index]
+		char === '<' && (index = text.indexOf('>', index))
+		currentNode.innerHTML = text.slice(0, index)
 		await typingInterval(options.interval)
 	}
 	currentNode.nextSibling !== null && currentNode.classList.length == 1
@@ -17,6 +19,8 @@ const typewriterEffect = async ({ currentNode, text }, options) => {
 /** @type {TypewriterModeFn} */
 export default async ({ elements }, options) => {
 	for (const element of elements) typewriterEffect(element, options)
+
+	// Modularize this
 	const { currentNode: lastElementToFinish } = elements.reduce((longestTextElement, element) => {
 		const longestTextLength = longestTextElement.text.length
 		return element.text.length > longestTextLength

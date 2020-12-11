@@ -1,5 +1,11 @@
 /// <reference path='../types.js' />
-import { loopTypewriterEffect, rng, cleanChildNodes, hasSingleTextNode } from '../utils'
+import {
+	loopTypewriterEffect,
+	createElement,
+	rng,
+	cleanChildNodes,
+	hasSingleTextNode
+} from '../utils'
 
 let alreadyChoosenTexts = []
 
@@ -32,11 +38,9 @@ export default async ({ node, elements }, options) => {
 		const { currentNode, text } = getRandomText(elements)
 		cleanChildNodes(node)
 		const loopParagraphTag = currentNode.tagName.toLowerCase()
-		const loopParagraph = document.createElement(loopParagraphTag)
-		loopParagraph.textContent = text.join('')
+		const loopParagraph = createElement(text, loopParagraphTag)
 		node.appendChild(loopParagraph)
 		await loopTypewriterEffect({ currentNode: loopParagraph, text }, options)
-		node.childNodes.forEach(el => el.remove())
 		cleanChildNodes(node)
 	}
 }

@@ -4,7 +4,9 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.1...HEAD)
 
-- chore: bump dependencies [`5289e0b`](https://github.com/henriquehbr/svelte-typewriter/commit/5289e0b7a318f1c197b3d832e7747d34f7e99c9e)
+- chore: bump dependencies [`798ff61`](https://github.com/henriquehbr/svelte-typewriter/commit/798ff61ca834125a69b2dbd36fac853ae9e09d7a)
+- fix(cascade): properly animate nested elements (#25) [`519ce6c`](https://github.com/henriquehbr/svelte-typewriter/commit/519ce6c9594125adb81b72d15352c7ad6639cb20)
+- fix(scramble): adjust to work with "getElements" changes (#25) [`1eba996`](https://github.com/henriquehbr/svelte-typewriter/commit/1eba99659b74e9360e8d2d89046b427493fc05ab)
 
 #### [v2.4.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.0...v2.4.1)
 

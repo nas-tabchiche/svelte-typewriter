@@ -1,5 +1,5 @@
 /// <reference path='../types.js' />
-import { loopTypewriterEffect } from '../utils'
+import { loopTypewriterEffect, createElement } from '../utils'
 
 const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
 
@@ -9,11 +9,9 @@ export default async ({ node, elements }, options) => {
 		for (const { currentNode, text } of elements) {
 			cleanChildNodes(node)
 			const loopParagraphTag = currentNode.tagName.toLowerCase()
-			const loopParagraph = document.createElement(loopParagraphTag)
-			loopParagraph.textContent = text.join('')
+			const loopParagraph = createElement(text, loopParagraphTag)
 			node.appendChild(loopParagraph)
 			await loopTypewriterEffect({ currentNode: loopParagraph, text }, options)
-			node.childNodes.forEach(el => el.remove())
 			cleanChildNodes(node)
 		}
 	}
