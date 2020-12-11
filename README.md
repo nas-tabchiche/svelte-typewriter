@@ -79,3 +79,11 @@ You can control the behavior of the typewriter effect by passing specific props 
 | Event     | Trigger                                                                                                             |                                                                  |
 | --------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | `on:done` | Is executed at the end of the animation, if used with `loop` mode, this event will be fired at the end of each loop | [DEMO](https://svelte.dev/repl/145cbf66c396497aa5338846077d53e0) |
+
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b feat/my-new-feature`
+3. Commit your changes: `git commit -am 'feat: Add some feature'`
+4. Push to the branch: `git push origin feat/my-new-feature`
+5. Submit a pull request :D

@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...HEAD)
+
+- docs: add contribution steps [`213cf85`](https://github.com/henriquehbr/svelte-typewriter/commit/213cf85a734d201bc6692e65baf2bf78dcc4a33a)
+
 #### [v2.4.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.1...v2.4.2)
+
+> 10 December 2020
 
 - fix(cascade): properly animate nested elements [`#27`](https://github.com/henriquehbr/svelte-typewriter/pull/27)
 - chore: bump dependencies [`798ff61`](https://github.com/henriquehbr/svelte-typewriter/commit/798ff61ca834125a69b2dbd36fac853ae9e09d7a)
