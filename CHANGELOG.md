@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- fix(cascade): re-add cursor, closes #30 [`#30`](https://github.com/henriquehbr/svelte-typewriter/issues/30)
 - fix(loopRandom): preserve element attributes, closes #29 [`#29`](https://github.com/henriquehbr/svelte-typewriter/issues/29)
 
 ### Commits
