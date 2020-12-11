@@ -9,8 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
+- chore: set changelog template to "keepachangelog" [`bdc50d1`](https://github.com/henriquehbr/svelte-typewriter/commit/bdc50d14607b8fd9bdf970a979e078e5e5d628a1)
+- fix(loop): preserve element attributes (#29) [`741cd5c`](https://github.com/henriquehbr/svelte-typewriter/commit/741cd5c6a20aaee55e0ec7c8b294fc2444a2f558)
 - docs: add contribution steps [`57c3551`](https://github.com/henriquehbr/svelte-typewriter/commit/57c355185862e2abcd1007cd2788974f56c359ad)
-- chore: set changelog template to "keepachangelog" [`1906319`](https://github.com/henriquehbr/svelte-typewriter/commit/1906319ab88f68327d178c3c1ece9ca3e99848cd)
 
 ## [v2.4.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.1...v2.4.2) - 2020-12-10
 
