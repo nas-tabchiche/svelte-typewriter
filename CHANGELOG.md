@@ -1,31 +1,43 @@
-### Changelog
+# Changelog
 
-All notable changes to this project will be documented in this file. Dates are displayed in UTC.
+All notable changes to this project will be documented in this file.
 
-#### [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...HEAD)
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-- docs: add contribution steps [`213cf85`](https://github.com/henriquehbr/svelte-typewriter/commit/213cf85a734d201bc6692e65baf2bf78dcc4a33a)
+## [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...HEAD)
 
-#### [v2.4.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.1...v2.4.2)
+### Commits
 
-> 10 December 2020
+- docs: add contribution steps [`57c3551`](https://github.com/henriquehbr/svelte-typewriter/commit/57c355185862e2abcd1007cd2788974f56c359ad)
+- chore: set changelog template to "keepachangelog" [`1906319`](https://github.com/henriquehbr/svelte-typewriter/commit/1906319ab88f68327d178c3c1ece9ca3e99848cd)
+
+## [v2.4.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.1...v2.4.2) - 2020-12-10
+
+### Merged
 
 - fix(cascade): properly animate nested elements [`#27`](https://github.com/henriquehbr/svelte-typewriter/pull/27)
+
+### Commits
+
 - chore: bump dependencies [`798ff61`](https://github.com/henriquehbr/svelte-typewriter/commit/798ff61ca834125a69b2dbd36fac853ae9e09d7a)
 - fix(cascade): properly animate nested elements (#25) [`519ce6c`](https://github.com/henriquehbr/svelte-typewriter/commit/519ce6c9594125adb81b72d15352c7ad6639cb20)
 - fix(scramble): adjust to work with "getElements" changes (#25) [`ae7b457`](https://github.com/henriquehbr/svelte-typewriter/commit/ae7b4570d41ef8069fa90f3cd87e1a9ab99f78d8)
 
-#### [v2.4.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.0...v2.4.1)
+## [v2.4.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.0...v2.4.1) - 2020-11-12
 
-> 12 November 2020
+### Commits
 
 - fix(loopRandom): properly animate single text nodes [`ffe37a1`](https://github.com/henriquehbr/svelte-typewriter/commit/ffe37a1fdeb62ca40dd4b2447f070c233ce10092)
 
-#### [v2.4.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.2...v2.4.0)
+## [v2.4.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.2...v2.4.0) - 2020-11-12
 
-> 12 November 2020
+### Merged
 
 - Add "loopRandom" mode [`#24`](https://github.com/henriquehbr/svelte-typewriter/pull/24)
+
+### Commits
+
 - chore: bump dependencies [`5fd8bae`](https://github.com/henriquehbr/svelte-typewriter/commit/5fd8baedd0edd0790536c702a0cdb5dcc7602312)
 - feat: add "loopRandom" mode #23 [`75579eb`](https://github.com/henriquehbr/svelte-typewriter/commit/75579ebea856c1ae6440787ab7841ae33cfd55cc)
 - refactor(loop,loopRandom): dedupe "typewriterEffect" [`0cf223f`](https://github.com/henriquehbr/svelte-typewriter/commit/0cf223fff824ab11f7d0b5ea99502368af39f420)
@@ -34,27 +46,30 @@ All notable changes to this project will be documented in this file. Dates are d
 - refactor(loop,loopRandom): dedupe "cleanChilNodes" [`44e7317`](https://github.com/henriquehbr/svelte-typewriter/commit/44e731732dd546618b873860c96978b36ffa7586)
 - docs: write jsdoc annotations for "cleanChildNodes" [`54ba41e`](https://github.com/henriquehbr/svelte-typewriter/commit/54ba41e3997359cb11e833e1661ee0c964ac8d4f)
 
-#### [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2)
+## [v2.3.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.1...v2.3.2) - 2020-11-11
 
-> 11 November 2020
+### Commits
 
 - refactor: rewrite changelog generation scripts [`df8a593`](https://github.com/henriquehbr/svelte-typewriter/commit/df8a5938507d2cb39b9ab0cff2bba79316aeae4e)
 - chore: bump rollup from 2.32.1 to 2.33.0 [`c50ee34`](https://github.com/henriquehbr/svelte-typewriter/commit/c50ee344a1697ea43c192253fee77b72c98207f9)
 - chore: automate pushing of git tags to remote [`26a26a6`](https://github.com/henriquehbr/svelte-typewriter/commit/26a26a68907608ad7346d22b449f7c2025d51498)
 - chore: remove "git push" from "post-commit" hook [`36a511b`](https://github.com/henriquehbr/svelte-typewriter/commit/36a511bdaee2c6210772c7a495b4abac0bf00933)
 
-#### [v2.3.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.0...v2.3.1)
+## [v2.3.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.3.0...v2.3.1) - 2020-10-30
 
-> 30 October 2020
+### Commits
 
 - chore: bump dependencies [`bb3a056`](https://github.com/henriquehbr/svelte-typewriter/commit/bb3a056023ac662d6478f70648f9745c22fbc40a)
 - docs: add missing import on example [`233e1e6`](https://github.com/henriquehbr/svelte-typewriter/commit/233e1e6e68b2c55427a0967d37144c7de4d1ac06)
 
-#### [v2.3.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.2.0...v2.3.0)
+## [v2.3.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.2.0...v2.3.0) - 2020-10-20
 
-> 20 October 2020
+### Merged
 
 - Add "scramble" animation mode [`#22`](https://github.com/henriquehbr/svelte-typewriter/pull/22)
+
+### Commits
+
 - docs: move jsdoc annotations into a single file [`f6df25b`](https://github.com/henriquehbr/svelte-typewriter/commit/f6df25bd914288ed1fd31f4a50ba9f1d681a819e)
 - feat: add proof-of-concept version of scramble mode [`37f8e9c`](https://github.com/henriquehbr/svelte-typewriter/commit/37f8e9ce666453b535c9bd4a88650b602fc212ec)
 - fix(scramble): solve animation issue with multiple elements [`f582f02`](https://github.com/henriquehbr/svelte-typewriter/commit/f582f02c5410db69cdc6d2099f27f51e617f8c2c)
@@ -66,9 +81,9 @@ All notable changes to this project will be documented in this file. Dates are d
 - docs: add npm stats badges [`e54fc12`](https://github.com/henriquehbr/svelte-typewriter/commit/e54fc12b89da77960abb5a278be19521c510b867)
 - docs: add notice about dynamic imports issue on rollup #21 [`930ddde`](https://github.com/henriquehbr/svelte-typewriter/commit/930dddec9cd82f059fe41ed9a9be1ebf616b4330)
 
-#### [v2.2.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.17...v2.2.0)
+## [v2.2.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.17...v2.2.0) - 2020-10-06
 
-> 6 October 2020
+### Commits
 
 - docs: add jsdoc annotations to animation modes [`82e8504`](https://github.com/henriquehbr/svelte-typewriter/commit/82e85041ce4880df846fcd02802a0c30b2ebf65a)
 - feat: implement `delay` prop [`86bd9b5`](https://github.com/henriquehbr/svelte-typewriter/commit/86bd9b5ec1561ddf00896c0055c511646513f672)
@@ -76,11 +91,14 @@ All notable changes to this project will be documented in this file. Dates are d
 - chore: remove changelog "Unreleased" section on `publish` script [`5f9c5fa`](https://github.com/henriquehbr/svelte-typewriter/commit/5f9c5fa540d2ff6261a7a843c6d032ec567a853c)
 - fix: solve regression in package.json `files` field #18 [`59c89f7`](https://github.com/henriquehbr/svelte-typewriter/commit/59c89f78d1b2c7eea082a037049c38bc1cef8d5e)
 
-#### [v2.1.17](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...v2.1.17)
+## [v2.1.17](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.16...v2.1.17) - 2020-10-06
 
-> 6 October 2020
+### Merged
 
 - chore(deps): bump node-fetch from 2.6.0 to 2.6.1 [`#19`](https://github.com/henriquehbr/svelte-typewriter/pull/19)
+
+### Commits
+
 - refactor: modularize modes and actions #15 [`3bc5e44`](https://github.com/henriquehbr/svelte-typewriter/commit/3bc5e4452f310435c76906e79509412d6b54cf24)
 - build: generate ESM and UMD compatible bundles [`8619f46`](https://github.com/henriquehbr/svelte-typewriter/commit/8619f46d544891c70deba13da29bfe666abd6016)
 - refactor: implement new architecture PoC #15 [`731368c`](https://github.com/henriquehbr/svelte-typewriter/commit/731368ca6fa161d52d1b919096c5ef6aeb9c6833)
@@ -97,36 +115,36 @@ All notable changes to this project will be documented in this file. Dates are d
 - chore: add build script to pre-commit hook [`04878e6`](https://github.com/henriquehbr/svelte-typewriter/commit/04878e6b4445cce44ca8485c07f1fc672cf8d9d6)
 - chore: add favicon [`7c1cd9d`](https://github.com/henriquehbr/svelte-typewriter/commit/7c1cd9d6f60050a6c26396923e3bcaf1eaee170c)
 
-#### [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16)
+## [v2.1.16](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.15...v2.1.16) - 2020-09-06
 
-> 6 September 2020
+### Commits
 
 - chore(changelog): refactor changelog generation script [`5af084a`](https://github.com/henriquehbr/svelte-typewriter/commit/5af084aad7f488ce8f4b8369b4486d9fdce82d1d)
 - chore: bump dependencies [`55ac97a`](https://github.com/henriquehbr/svelte-typewriter/commit/55ac97a7cf5c1185228c2137738ff8243250709d)
 - docs(readme): update "Modes" and "Event listeners" sections [`cc70d08`](https://github.com/henriquehbr/svelte-typewriter/commit/cc70d08e50d778a142c4533d78d51eca9e83ef66)
 
-#### [v2.1.15](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.14...v2.1.15)
+## [v2.1.15](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.14...v2.1.15) - 2020-09-06
 
-> 6 September 2020
+### Commits
 
 - fix: change loop mode behavior to use all child tags [`bd46032`](https://github.com/henriquehbr/svelte-typewriter/commit/bd460320b75449eda1365dda820213b82476597c)
 
-#### [v2.1.14](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.13...v2.1.14)
+## [v2.1.14](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.13...v2.1.14) - 2020-09-05
 
-> 5 September 2020
+### Commits
 
 - docs(README): refactor documentation [`c202bea`](https://github.com/henriquehbr/svelte-typewriter/commit/c202bea7bd6087f53219b8958efd8c53d43bf347)
 - fix: solve imprecise trigger of `on:done` event on default mode [`abf4ee2`](https://github.com/henriquehbr/svelte-typewriter/commit/abf4ee28a76a16fe47f6328f0d0ef8e6082038e9)
 
-#### [v2.1.13](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.12...v2.1.13)
+## [v2.1.13](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.12...v2.1.13) - 2020-09-03
 
-> 3 September 2020
+### Commits
 
 - fix: solve problem with on:done listener on loop mode [`e5b947e`](https://github.com/henriquehbr/svelte-typewriter/commit/e5b947e8d8525357cc0be7da121eccdb02acf093)
 
-#### [v2.1.12](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.11...v2.1.12)
+## [v2.1.12](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.11...v2.1.12) - 2020-07-18
 
-> 18 July 2020
+### Commits
 
 - chore: add husky pre-push hook for changelog generation [`abdff18`](https://github.com/henriquehbr/svelte-typewriter/commit/abdff188ffc585936826c5377af7a25a48e81016)
 - chore: include "Unreleased" commits on changelog [`ebdaf21`](https://github.com/henriquehbr/svelte-typewriter/commit/ebdaf21b60e52ca93fb6abe46438796a162b819d)
@@ -136,9 +154,9 @@ All notable changes to this project will be documented in this file. Dates are d
 - chore: add prettier script to husky hooks [`cca400f`](https://github.com/henriquehbr/svelte-typewriter/commit/cca400fd867a281c9bfc1a89cc4d610faca38da8)
 - chore: update CHANGELOG.md [`18ffa6a`](https://github.com/henriquehbr/svelte-typewriter/commit/18ffa6a19db96614cf4b8bf826090be426765b25)
 
-#### [v2.1.11](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.10...v2.1.11)
+## [v2.1.11](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.10...v2.1.11) - 2020-07-16
 
-> 16 July 2020
+### Commits
 
 - bump "example" directory dependencies [`1fea39d`](https://github.com/henriquehbr/svelte-typewriter/commit/1fea39d7bb8b448e2dbf64eed901eb8e4e7ff86f)
 - chore: add "build" directory to .gitignore [`5f70071`](https://github.com/henriquehbr/svelte-typewriter/commit/5f7007194f3404b4831fd3f1b1b74f218bfe1729)
@@ -146,143 +164,155 @@ All notable changes to this project will be documented in this file. Dates are d
 - chore: add typings to rollup config [`a6333b2`](https://github.com/henriquehbr/svelte-typewriter/commit/a6333b2ef6db3c1c954ba13e3767f35e82636049)
 - chore: bump "auto-changelog" from 1.16.2 to 2.2.0 [`1b50aaa`](https://github.com/henriquehbr/svelte-typewriter/commit/1b50aaa760898cfe5e6828752b70347d2b1ca72a)
 
-#### [v2.1.10](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.9...v2.1.10)
+## [v2.1.10](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.9...v2.1.10) - 2020-05-26
 
-> 26 May 2020
+### Merged
 
 - Removed console.log, added event on loopMode [`#9`](https://github.com/henriquehbr/svelte-typewriter/pull/9)
+
+### Commits
+
 - Delete package-lock.json [`0157ae9`](https://github.com/henriquehbr/svelte-typewriter/commit/0157ae92e6c3d1204452e4eb55898594f070efef)
 - Delete package-lock.json [`2758c85`](https://github.com/henriquehbr/svelte-typewriter/commit/2758c85f114ac7dc2409e96a942782987b9d1da2)
 - Kill loop on component dismount. [`a67deb7`](https://github.com/henriquehbr/svelte-typewriter/commit/a67deb7d4b671d18366bc414ed80037a22d970a2)
 
-#### [v2.1.9](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.8...v2.1.9)
+## [v2.1.9](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.8...v2.1.9) - 2020-03-10
 
-> 10 March 2020
+### Commits
 
 - chore: add `example` directory for testing purposes [`b14a18b`](https://github.com/henriquehbr/svelte-typewriter/commit/b14a18b3b9d2fefeb7a30f975e91487327c03122)
 - fix: solve animation issue on nested DOM elements [`4c5aa70`](https://github.com/henriquehbr/svelte-typewriter/commit/4c5aa7041974a4eafe794b1f4ff86e50b9937769)
 
-#### [v2.1.8](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.4...v2.1.8)
+## [v2.1.8](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.4...v2.1.8) - 2020-02-25
 
-> 25 February 2020
+### Commits
 
 - chore: change svelte version from latest to 3.x [`2b53f0d`](https://github.com/henriquehbr/svelte-typewriter/commit/2b53f0d8aacd7546ef41df7125ca460606606195)
 - lint: remove .prettierignore [`5f5884b`](https://github.com/henriquehbr/svelte-typewriter/commit/5f5884b5be79aafe5cf1caa90d04e3324eeba5ff)
 
-#### [v2.1.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.1...v2.1.4)
+## [v2.1.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.1...v2.1.4) - 2020-02-10
 
-> 10 February 2020
+### Commits
 
 - chore: bump svelte from 3.17.2 to 3.18.2 [`c3a2699`](https://github.com/henriquehbr/svelte-typewriter/commit/c3a26996ec8843d1e157690c17f995ac9ff994ae)
 
-#### [v2.1.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.0...v2.1.1)
+## [v2.1.1](https://github.com/henriquehbr/svelte-typewriter/compare/v2.1.0...v2.1.1) - 2020-01-23
 
-> 23 January 2020
+### Fixed
 
 - docs(README): add `on:done` section, closes #8 [`#8`](https://github.com/henriquehbr/svelte-typewriter/issues/8)
 
-#### [v2.1.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.0.3...v2.1.0)
+## [v2.1.0](https://github.com/henriquehbr/svelte-typewriter/compare/v2.0.3...v2.1.0) - 2020-01-23
 
-> 23 January 2020
+### Commits
 
 - feat: implement animation callback event #8 [`63ef3c1`](https://github.com/henriquehbr/svelte-typewriter/commit/63ef3c164b636f36589caa51a29508f30b1cbde2)
 
-#### [v2.0.3](https://github.com/henriquehbr/svelte-typewriter/compare/v2.0.2...v2.0.3)
+## [v2.0.3](https://github.com/henriquehbr/svelte-typewriter/compare/v2.0.2...v2.0.3) - 2020-01-20
 
-> 20 January 2020
+### Commits
 
 - docs(README): add "Made with Svelte" badge [`d410971`](https://github.com/henriquehbr/svelte-typewriter/commit/d4109715c29a62035b0952258d0e83c4385eb219)
 
-#### [v2.0.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.0.0...v2.0.2)
+## [v2.0.2](https://github.com/henriquehbr/svelte-typewriter/compare/v2.0.0...v2.0.2) - 2020-01-12
 
-> 12 January 2020
+### Commits
 
 - docs(README): remove directives deprecation notice [`c9589fb`](https://github.com/henriquehbr/svelte-typewriter/commit/c9589fbe88ba66a80e549447aa1055341dddc1da)
 - docs(README): update directives deprecation notice [`823f202`](https://github.com/henriquehbr/svelte-typewriter/commit/823f202146eb215c06ce94873cc879694a9dc72e)
 - docs(README): add demo repl for `cursor` option [`1e8221c`](https://github.com/henriquehbr/svelte-typewriter/commit/1e8221c729db97b88e9d9e88b7c93b5a9371f6e0)
 - docs(README): add repl link for `loop` option [`78202cc`](https://github.com/henriquehbr/svelte-typewriter/commit/78202cce1659f85843f7b6e1f15a9041e65aedcf)
 
-### [v2.0.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.5...v2.0.0)
+## [v2.0.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.5...v2.0.0) - 2019-12-23
 
-> 23 December 2019
+### Fixed
 
 - v2.0.0 (closes #7) [`#7`](https://github.com/henriquehbr/svelte-typewriter/issues/7)
+
+### Commits
+
 - BREAKING CHANGES: remove directive-based animation [`9eab55f`](https://github.com/henriquehbr/svelte-typewriter/commit/9eab55f1800856b47a78fa8afae6e8147e5a8a07)
 - docs(README): document `cursor` option #7 [`85be9a2`](https://github.com/henriquehbr/svelte-typewriter/commit/85be9a2932d4fd9756b1c6b4b321ad94a1032005)
 
-#### [v1.5.5](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.4...v1.5.5)
+## [v1.5.5](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.4...v1.5.5) - 2019-12-15
 
-> 15 December 2019
+### Commits
 
 - refactor: simplify verification of animation props [`c48db9f`](https://github.com/henriquehbr/svelte-typewriter/commit/c48db9f86c1fab6b2cfe217dab1bf6f8b0b46b56)
 
-#### [v1.5.4](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.3...v1.5.4)
+## [v1.5.4](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.3...v1.5.4) - 2019-12-14
 
-> 14 December 2019
+### Commits
 
 - fix: resolve `use` directive not working on single text node elements [`5722811`](https://github.com/henriquehbr/svelte-typewriter/commit/572281123b1c2f6066d877d2c07e992fba19dd1e)
 
-#### [v1.5.3](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.2...v1.5.3)
+## [v1.5.3](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.2...v1.5.3) - 2019-12-12
 
-> 12 December 2019
+### Commits
 
 - dependencies: bump `svelte` from "^3.15.0" to "^3.16.4" [`cb2e7f2`](https://github.com/henriquehbr/svelte-typewriter/commit/cb2e7f2c2a37419f8b6560c8ecd61d19b55b0676)
 
-#### [v1.5.2](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.1...v1.5.2)
+## [v1.5.2](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.1...v1.5.2) - 2019-12-11
 
-> 11 December 2019
+### Commits
 
 - docs(README): document the "directive-based" animation approach [`34e9e39`](https://github.com/henriquehbr/svelte-typewriter/commit/34e9e398f283859feb55081c442873c7d9f3e35e)
 
-#### [v1.5.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.0...v1.5.1)
+## [v1.5.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.5.0...v1.5.1) - 2019-12-11
 
-> 11 December 2019
+### Commits
 
 - fix: remove unused properties from default parameters object [`cc2c031`](https://github.com/henriquehbr/svelte-typewriter/commit/cc2c03172f72c0a29e33620a953d5ace524f3555)
 
-#### [v1.5.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.4.2...v1.5.0)
+## [v1.5.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.4.2...v1.5.0) - 2019-12-11
 
-> 11 December 2019
+### Fixed
 
 - feat: create `use:typewriter` directive, closes #6 [`#6`](https://github.com/henriquehbr/svelte-typewriter/issues/6)
 
-#### [v1.4.2](https://github.com/henriquehbr/svelte-typewriter/compare/v1.4.1...v1.4.2)
+## [v1.4.2](https://github.com/henriquehbr/svelte-typewriter/compare/v1.4.1...v1.4.2) - 2019-12-11
 
-> 11 December 2019
+### Commits
 
 - refactor: rewrite typewriter function for svelte `use` directive [`ea81c4e`](https://github.com/henriquehbr/svelte-typewriter/commit/ea81c4e2c6489ed15b2e4d85a3f46eb630b622c7)
 
-#### [v1.4.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.4.0...v1.4.1)
+## [v1.4.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.4.0...v1.4.1) - 2019-11-21
 
-> 21 November 2019
+### Commits
 
 - fix(loop): change the default value of `loop` to false [`5733038`](https://github.com/henriquehbr/svelte-typewriter/commit/5733038d8d58c65bf7a1c477444dddb4a274514f)
 
-#### [v1.4.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.3.4...v1.4.0)
+## [v1.4.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.3.4...v1.4.0) - 2019-11-21
 
-> 21 November 2019
+### Fixed
 
 - docs(README): add custom timing array to `interval` section, closes #4 [`#4`](https://github.com/henriquehbr/svelte-typewriter/issues/4)
+
+### Commits
+
 - feat: enable custom timing on `interval` #4 [`b7e59b0`](https://github.com/henriquehbr/svelte-typewriter/commit/b7e59b04a1224c5585f69a2a5818c929ab1534fb)
 
-#### [v1.3.4](https://github.com/henriquehbr/svelte-typewriter/compare/v1.3.0...v1.3.4)
+## [v1.3.4](https://github.com/henriquehbr/svelte-typewriter/compare/v1.3.0...v1.3.4) - 2019-11-21
 
-> 21 November 2019
+### Commits
 
 - fix(fouc): prevent flash of unstyled content [`f373766`](https://github.com/henriquehbr/svelte-typewriter/commit/f37376623ed7a37779df40076e7f7699908570c0)
 
-#### [v1.3.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.2.1...v1.3.0)
+## [v1.3.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.2.1...v1.3.0) - 2019-11-20
 
-> 20 November 2019
+### Fixed
 
 - feat(loop): add `loop` option, closes #3 [`#3`](https://github.com/henriquehbr/svelte-typewriter/issues/3)
+
+### Commits
+
 - generate CHANGELOG.md [`5e01481`](https://github.com/henriquehbr/svelte-typewriter/commit/5e014817e84ab476e3f2450159ec29d5d52054f7)
 - chore: add auto-changelog `version` script [`356e9af`](https://github.com/henriquehbr/svelte-typewriter/commit/356e9af9585ef091255ed8b7940e7c2a6b7aee2b)
 - chore: change CHANGELOG generation commit message [`d6dc3fa`](https://github.com/henriquehbr/svelte-typewriter/commit/d6dc3fa8fe5a20d2f3f8104685e23c348dc7bcbc)
 
-#### [v1.2.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.1.1...v1.2.1)
+## [v1.2.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.1.1...v1.2.1) - 2019-11-15
 
-> 15 November 2019
+### Commits
 
 - feat: add `interval` and `cascade` options [`a3ff23e`](https://github.com/henriquehbr/svelte-typewriter/commit/a3ff23e0060c2b3db338c718b7f6e09f5aecdad2)
 - create CHANGELOG.md [`bf5a6df`](https://github.com/henriquehbr/svelte-typewriter/commit/bf5a6dfeb024acfbbee62b50358b945d98f93e62)
@@ -290,24 +320,27 @@ All notable changes to this project will be documented in this file. Dates are d
 - docs(README): update svelte version on demo link [`8a7e644`](https://github.com/henriquehbr/svelte-typewriter/commit/8a7e644aa16b3b366b1920c4e29d8e323aec62ec)
 - Create CNAME [`7cdcdfb`](https://github.com/henriquehbr/svelte-typewriter/commit/7cdcdfbe5604d4164386a215e2c36486c5cc121f)
 
-#### [v1.1.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.1.0...v1.1.1)
+## [v1.1.1](https://github.com/henriquehbr/svelte-typewriter/compare/v1.1.0...v1.1.1) - 2019-11-12
 
-> 12 November 2019
+### Commits
 
 - chore(README): add PR's welcome badge [`98604d3`](https://github.com/henriquehbr/svelte-typewriter/commit/98604d3da4f80bdb0fba8986c236d7bcff17d6d4)
 
-#### [v1.1.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.0.1...v1.1.0)
+## [v1.1.0](https://github.com/henriquehbr/svelte-typewriter/compare/v1.0.1...v1.1.0) - 2019-11-12
 
-> 12 November 2019
+### Merged
 
 - Adds REPL demo [`#1`](https://github.com/henriquehbr/svelte-typewriter/pull/1)
 - Changes to capitalisation and element binding [`#2`](https://github.com/henriquehbr/svelte-typewriter/pull/2)
+
+### Commits
+
 - chore: update the main field [`accd841`](https://github.com/henriquehbr/svelte-typewriter/commit/accd84140ce9864c459be38e89a304cf03cda2e6)
 - Merge branches 'master' and 'master' of github.com:henriquehbr/svelte-typewriter [`4231d73`](https://github.com/henriquehbr/svelte-typewriter/commit/4231d7305ec10dd2d11de71ce3d2e044b587c55a)
 - Create LICENSE [`b03bb60`](https://github.com/henriquehbr/svelte-typewriter/commit/b03bb60f4197aa02f9a5a722339d89f59f7d0a22)
 
-#### v1.0.1
+## v1.0.1 - 2019-11-12
 
-> 12 November 2019
+### Commits
 
 - Initial commit [`c61cb9b`](https://github.com/henriquehbr/svelte-typewriter/commit/c61cb9b0d74dc0ab70dad80e682bccec46129d48)
