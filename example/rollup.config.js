@@ -19,7 +19,7 @@ const options = {
 	plugins: [
 		svelte({
 			dev: !production,
-			css: css => css.write('public/build/bundle.css', false),
+			css: css => css.write('bundle.css', false),
 			hot: dev && {
 				optimistic: true,
 				noPreserveState: false

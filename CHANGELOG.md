@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Commits
 
 - chore: bump dependencies [`46cf177`](https://github.com/henriquehbr/svelte-typewriter/commit/46cf17746734193a0d3b34a83f9ef703b5e63bda)
+- chore(example): output css to ./public/build [`aa13305`](https://github.com/henriquehbr/svelte-typewriter/commit/aa13305013cd81e07785ab27d4740ff21af964bc)
 
 ## [v2.4.3](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...v2.4.3) - 2020-12-11
 
