@@ -106,7 +106,7 @@ export const loopTypewriterEffect = async ({ currentNode, text }, options) => {
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {
 		const letter = text[index]
-		letter === '<' && (index = text.indexOf('>', index))
+		letter === '<' && (index = text.indexOf('>', index) + 1)
 		currentNode.innerHTML = text.slice(0, index)
 		const fullyWritten = currentNode.innerHTML === text
 		if (fullyWritten) {

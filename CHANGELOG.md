@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...HEAD)
 
+### Fixed
+
+- fix(utils): properly filter innerHTML tags, closes #32 [`#32`](https://github.com/henriquehbr/svelte-typewriter/issues/32)
+
 ### Commits
 
-- chore: bump dependencies [`b8348eb`](https://github.com/henriquehbr/svelte-typewriter/commit/b8348ebec70c2faf79f7e9c8e0c6573f515671ab)
+- chore: bump dependencies [`46cf177`](https://github.com/henriquehbr/svelte-typewriter/commit/46cf17746734193a0d3b34a83f9ef703b5e63bda)
 
 ## [v2.4.3](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.2...v2.4.3) - 2020-12-11
 
