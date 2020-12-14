@@ -76,22 +76,25 @@ export const createElement = (text, elementTag) => {
  */
 export const getElements = parentElement => {
 	if (hasSingleTextNode(parentElement)) {
-		const text = parentElement.textContent.split('')
+		const text = parentElement.textContent
 		const childNode = createElement(parentElement.textContent, 'p')
 		parentElement.textContent = ''
 		parentElement.appendChild(childNode)
 		return [{ currentNode: childNode, text }]
 	} else {
 		const childElements = [...parentElement.children]
-		return childElements.map(currentNode => ({
-			currentNode,
-			text: currentNode.innerHTML
-		}))
+		return childElements.map(currentNode => {
+			const textWithFilteredAmpersand = currentNode.innerHTML.replaceAll('&amp;', '&')
+			return {
+				currentNode,
+				text: textWithFilteredAmpersand
+			}
+		})
 	}
 }
 
 const unwriteEffect = async (currentNode, options) => {
-	const text = currentNode.innerHTML
+	const text = currentNode.innerHTML.replaceAll('&amp;', '&')
 	for (let index = text.length - 1; index >= 0; index--) {
 		const letter = text[index]
 		letter === '>' && (index = text.lastIndexOf('<', index))
@@ -108,7 +111,8 @@ export const loopTypewriterEffect = async ({ currentNode, text }, options) => {
 		const letter = text[index]
 		letter === '<' && (index = text.indexOf('>', index) + 1)
 		currentNode.innerHTML = text.slice(0, index)
-		const fullyWritten = currentNode.innerHTML === text
+		const textWithUnescapedAmpersands = text.replaceAll('&', '&amp;')
+		const fullyWritten = currentNode.innerHTML === textWithUnescapedAmpersands
 		if (fullyWritten) {
 			options.dispatch('done')
 			await sleep(typeof options.loop === 'number' ? options.loop : 1500)
