@@ -1,5 +1,5 @@
 /// <reference path='../types.js' />
-import { sleep } from '../utils'
+import { sleep } from '../helpers'
 
 let elementsToScramble = []
 

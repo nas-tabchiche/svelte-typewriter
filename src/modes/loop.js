@@ -1,5 +1,5 @@
 /// <reference path='../types.js' />
-import { loopTypewriterEffect, createElement } from '../utils'
+import { loopTypewriterEffect, createElement } from '../helpers'
 
 const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
 

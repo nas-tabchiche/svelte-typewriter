@@ -5,7 +5,7 @@ import {
 	rng,
 	cleanChildNodes,
 	hasSingleTextNode
-} from '../utils'
+} from '../helpers'
 
 let alreadyChoosenTexts = []
 

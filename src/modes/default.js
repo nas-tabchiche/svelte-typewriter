@@ -1,5 +1,5 @@
 /// <reference path='../types.js' />
-import { typingInterval } from '../utils'
+import { typingInterval } from '../helpers'
 
 // Unify the function below with the one on default mode
 /** @type {TypewriterEffectFn} */

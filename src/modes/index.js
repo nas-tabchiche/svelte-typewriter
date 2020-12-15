@@ -1,5 +1,5 @@
 /// <reference path='../types.js' />
-import { getElements } from '../utils'
+import { getElements } from '../helpers'
 
 /** @type {(node: HTMLElement, options: TypewriterOptions) => Promise<any>} */
 export const typewriter = async (node, options) => {
@@ -11,7 +11,7 @@ export const typewriter = async (node, options) => {
 		(await import('./default'))
 	const elements = getElements(node)
 	if (options.delay > 0) {
-		const { sleep } = await import('../utils')
+		const { sleep } = await import('../helpers')
 		await sleep(options.delay)
 		node.classList.remove('delay')
 	}
