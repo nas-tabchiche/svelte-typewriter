@@ -1,5 +1,3 @@
-/// <reference path='../types.js' />
-
 /**
  * Remove all children from a specified element
  * @param {HTMLElement} node The parent element whom children will be removed
@@ -9,6 +7,6 @@
  * parent.appendChild(child)
  * cleanChildNodes(parent)
  */
-const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
+const cleanChildNodes = (node: any) => node.childNodes.forEach((el: any) => el.remove())
 
 export { cleanChildNodes }

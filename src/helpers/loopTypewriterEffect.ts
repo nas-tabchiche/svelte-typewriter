@@ -1,11 +1,9 @@
-/// <reference path='../types.js' />
-
 import { typingInterval } from './typingInterval'
 import { sleep } from './sleep'
 import { unwriteEffect } from './unwriteEffect'
 
 /** @type {TypewriterEffectFn} */
-export const loopTypewriterEffect = async ({ currentNode, text }, options) => {
+export const loopTypewriterEffect = async ({ currentNode, text }: any, options: any) => {
 	currentNode.textContent = ''
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {

@@ -1,8 +1,7 @@
-/// <reference path='../types.js' />
 import { getElements } from '../helpers'
 
 /** @type {(node: HTMLElement, options: TypewriterOptions) => Promise<any>} */
-export const typewriter = async (node, options) => {
+export const typewriter = async (node: any, options: any) => {
 	const { default: mode } =
 		(options.loop && (await import('./loop'))) ||
 		(options.loopRandom && (await import('./loopRandom'))) ||

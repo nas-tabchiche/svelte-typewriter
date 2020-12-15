@@ -1,5 +1,3 @@
-/// <reference path='../types.js' />
-
 /**
  * Create a HTML element
  * @param {string} text The text to be inserted into the HTML element
@@ -7,7 +5,7 @@
  * @example
  * convertTextToElement(parent)
  */
-const createElement = (text, elementTag) => {
+const createElement = (text: any, elementTag: any) => {
 	const element = document.createElement(elementTag)
 	element.textContent = text
 	return element

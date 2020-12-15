@@ -1,5 +1,3 @@
-/// <reference path='../types.js' />
-
 /**
  * Generates a random number between `min` and `max`
  * @param {number} min The minimum value in range
@@ -8,6 +6,6 @@
  * // Generates a random number between 10 and 20
  * rng(10, 20)
  */
-const rng = (min, max) => Math.floor(Math.random() * (max - min) + min)
+const rng = (min: any, max: any) => Math.floor(Math.random() * (max - min) + min)
 
 export { rng }

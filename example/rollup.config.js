@@ -34,7 +34,7 @@ const options = {
 		resolve({
 			browser: true,
 			dedupe: ['svelte'],
-			moduleDirectories: ['../src/', 'node_modules']
+			moduleDirectories: ['../lib/', 'node_modules']
 		}),
 		commonjs(),
 		production && terser(),

@@ -1,15 +1,14 @@
-/// <reference path='../types.js' />
 import { sleep } from '../helpers'
 
-let elementsToScramble = []
+let elementsToScramble: any = []
 
-const getMatchingLetters = elementWithScrambledText =>
-	elementsToScramble.find(element => element.currentNode === elementWithScrambledText)
+const getMatchingLetters = (elementWithScrambledText: any) =>
+	elementsToScramble.find((element: any) => element.currentNode === elementWithScrambledText)
 
-const getHTMLTagsIndexes = element => {
+const getHTMLTagsIndexes = (element: any) => {
 	const getHTMLTagsRegex = /(<([^>]+)>)/g
 	const HTMLTagsIndexes = []
-	let HTMLTagsFound = []
+	let HTMLTagsFound: any = []
 	while ((HTMLTagsFound = getHTMLTagsRegex.exec(element.innerHTML)) !== null) {
 		const tagStartingPosition = HTMLTagsFound.index
 		const tagEndingPosition = getHTMLTagsRegex.lastIndex
@@ -19,21 +18,21 @@ const getHTMLTagsIndexes = element => {
 	return HTMLTagsIndexes
 }
 
-const isInRange = (val, min, max) => val >= min && val <= max
+const isInRange = (val: any, min: any, max: any) => val >= min && val <= max
 
-const isLetterHTMLTag = (letterIdx, HTMLTagIndexes) => {
-	const isLetterIndexHtmlTag = HTMLTagIndexes.some(([tagStartingIndex, tagEndingIndex]) => {
+const isLetterHTMLTag = (letterIdx: any, HTMLTagIndexes: any) => {
+	const isLetterIndexHtmlTag = HTMLTagIndexes.some(([tagStartingIndex, tagEndingIndex]: any) => {
 		const isHTMLTag = isInRange(letterIdx, tagStartingIndex, tagEndingIndex)
 		return isHTMLTag
 	})
 	return isLetterIndexHtmlTag
 }
 
-const scrambleLetters = element => {
+const scrambleLetters = (element: any) => {
 	const HTMLTagIndexes = getHTMLTagsIndexes(element)
 	const scrambledText = element.innerHTML
 		.split('')
-		.map((letter, letterIdx) => {
+		.map((letter: any, letterIdx: any) => {
 			const { matchingLetters } = getMatchingLetters(element)
 			const emptySpaceRegex = /\s+/g
 			const foundMatchingLetterOrSpace =
@@ -47,7 +46,7 @@ const scrambleLetters = element => {
 	element.innerHTML = scrambledText
 }
 
-const hasMatchingLetter = (elementWithScrambledText, normalText) => {
+const hasMatchingLetter = (elementWithScrambledText: any, normalText: any) => {
 	const scrambledText = elementWithScrambledText.innerHTML
 	for (let i = 0; i < normalText.length; i++) {
 		const letter = normalText[i]
@@ -57,12 +56,12 @@ const hasMatchingLetter = (elementWithScrambledText, normalText) => {
 }
 
 /** @type {TypewriterModeFn} */
-export default async ({ elements }, options) => {
+export default async ({ elements }: any, options: any) => {
 	elementsToScramble = [
-		...elements.map(({ currentNode }) => ({ currentNode, matchingLetters: [] }))
+		...elements.map(({ currentNode }: any) => ({ currentNode, matchingLetters: [] }))
 	]
-	await new Promise(resolve => {
-		elements.forEach(async ({ currentNode, text }) => {
+	await new Promise((resolve: any) => {
+		elements.forEach(async ({ currentNode, text }: any) => {
 			const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
 			const startTime = new Date().getTime()
 			while (true) {

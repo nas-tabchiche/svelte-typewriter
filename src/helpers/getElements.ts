@@ -1,5 +1,3 @@
-/// <reference path='../types.js' />
-
 import { hasSingleTextNode } from './hasSingleTextNode'
 import { createElement } from './createElement'
 
@@ -11,7 +9,7 @@ import { createElement } from './createElement'
  * p.textContent = 'Lorem ipsum dolor sit consectetur'
  * getElements(p)
  */
-const getElements = parentElement => {
+const getElements = (parentElement: any) => {
 	if (hasSingleTextNode(parentElement)) {
 		const text = parentElement.textContent
 		const childNode = createElement(parentElement.textContent, 'p')

@@ -1,9 +1,8 @@
-/// <reference path='../types.js' />
 import { typingInterval } from '../helpers'
 
 // Unify the function below with the one on cascade mode
 /** @type {TypewriterEffectFn} */
-const typewriterEffect = async ({ currentNode, text }, options) => {
+const typewriterEffect = async ({ currentNode, text }: any, options: any) => {
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {
 		const char = text[index]
@@ -17,8 +16,8 @@ const typewriterEffect = async ({ currentNode, text }, options) => {
 }
 
 /** @type {TypewriterModeFn} */
-export default async ({ elements }, options) => {
-	elements.forEach(({ currentNode }) => (currentNode.textContent = ''))
+export default async ({ elements }: any, options: any) => {
+	elements.forEach(({ currentNode }: any) => (currentNode.textContent = ''))
 	for (const element of elements) await typewriterEffect(element, options)
 	options.dispatch('done')
 }

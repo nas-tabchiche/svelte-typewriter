@@ -1,10 +1,9 @@
-/// <reference path='../types.js' />
 import { loopTypewriterEffect, createElement } from '../helpers'
 
-const cleanChildNodes = node => node.childNodes.forEach(el => el.remove())
+const cleanChildNodes = (node: any) => node.childNodes.forEach((el: any) => el.remove())
 
 /** @type {TypewriterModeFn} */
-export default async ({ node, elements }, options) => {
+export default async ({ node, elements }: any, options: any) => {
 	while (options.loop) {
 		for (const { currentNode, text } of elements) {
 			cleanChildNodes(node)

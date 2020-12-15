@@ -1,4 +1,3 @@
-/// <reference path='../types.js' />
 import {
 	loopTypewriterEffect,
 	createElement,
@@ -7,9 +6,9 @@ import {
 	hasSingleTextNode
 } from '../helpers'
 
-let alreadyChoosenTexts = []
+let alreadyChoosenTexts: any = []
 
-const getRandomText = elements => {
+const getRandomText = (elements: any) => {
 	while (true) {
 		const randomIndex = rng(0, elements.length)
 		const isTextDifferentFromPrevious =
@@ -33,7 +32,7 @@ const getRandomText = elements => {
 }
 
 /** @type {TypewriterModeFn} */
-export default async ({ node, elements }, options) => {
+export default async ({ node, elements }: any, options: any) => {
 	while (options.loopRandom) {
 		const { currentNode, text } = getRandomText(elements)
 		cleanChildNodes(node)

@@ -1,5 +1,3 @@
-/// <reference path='../types.js' />
-
 import { sleep } from './sleep'
 import { rng } from './rng'
 
@@ -12,6 +10,6 @@ import { rng } from './rng'
  * // Randomly delays the next keystroke for 15, 30 or 45 milliseconds
  * typingInterval([15, 30, 45])
  */
-const typingInterval = async interval => sleep(interval[rng(0, interval.length)] || interval)
+const typingInterval = async (interval: any) => sleep(interval[rng(0, interval.length)] || interval)
 
 export { typingInterval }
