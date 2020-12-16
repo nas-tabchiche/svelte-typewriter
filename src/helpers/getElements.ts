@@ -1,5 +1,4 @@
-import { hasSingleTextNode } from './hasSingleTextNode'
-import { createElement } from './createElement'
+import { hasSingleTextNode, createElement } from '@svelte-typewriter/helpers'
 
 /**
  * Get children data from `parentElement`

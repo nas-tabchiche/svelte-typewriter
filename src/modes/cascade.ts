@@ -1,4 +1,4 @@
-import { typingInterval } from '../helpers'
+import { typingInterval } from '@svelte-typewriter/helpers'
 
 // Unify the function below with the one on cascade mode
 /** @type {TypewriterEffectFn} */

@@ -1,4 +1,4 @@
-import { sleep } from '../helpers'
+import { sleep } from '@svelte-typewriter/helpers'
 
 let elementsToScramble: any = []
 

@@ -1,5 +1,4 @@
-import { sleep } from './sleep'
-import { rng } from './rng'
+import { sleep, rng } from '@svelte-typewriter/helpers'
 
 /**
  * Delay for each keystroke during the typewriter animation

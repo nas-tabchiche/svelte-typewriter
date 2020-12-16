@@ -1,4 +1,4 @@
-import { loopTypewriterEffect, createElement } from '../helpers'
+import { loopTypewriterEffect, createElement } from '@svelte-typewriter/helpers'
 
 const cleanChildNodes = (node: any) => node.childNodes.forEach((el: any) => el.remove())
 

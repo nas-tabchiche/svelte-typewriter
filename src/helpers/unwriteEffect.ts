@@ -1,4 +1,4 @@
-import { typingInterval } from './typingInterval'
+import { typingInterval } from '@svelte-typewriter/helpers'
 
 const unwriteEffect = async (currentNode: any, options: any) => {
 	const text = currentNode.innerHTML.replaceAll('&amp;', '&')

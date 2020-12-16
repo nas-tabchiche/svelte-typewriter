@@ -4,7 +4,7 @@ import {
 	rng,
 	cleanChildNodes,
 	hasSingleTextNode
-} from '../helpers'
+} from '@svelte-typewriter/helpers'
 
 let alreadyChoosenTexts: any = []
 

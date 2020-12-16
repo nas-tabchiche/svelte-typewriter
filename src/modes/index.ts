@@ -1,4 +1,4 @@
-import { getElements } from '../helpers'
+import { getElements } from '@svelte-typewriter/helpers'
 
 /** @type {(node: HTMLElement, options: TypewriterOptions) => Promise<any>} */
 export const typewriter = async (node: any, options: any) => {

@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "esnext",
-    "outDir": "lib",
     "removeComments": true,
     "resolveJsonModule": true,
     "noImplicitAny": true,
@@ -10,7 +9,10 @@
     "strict": true,
     "moduleResolution": "node",
     "noUnusedLocals": true,
-    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@svelte-typewriter/*": ["./src/*"]
+    }
   },
   "include": ["src/**/*"]
 }
