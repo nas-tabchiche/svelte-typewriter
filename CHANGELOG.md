@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: convert helpers and modes to typescript (#33) [`4683a02`](https://github.com/henriquehbr/svelte-typewriter/commit/4683a02978a2b2608268cf5d136071d1993ad2e4)
 - refactor: add proper types for helpers and modes (#33) [`23ac8bc`](https://github.com/henriquehbr/svelte-typewriter/commit/23ac8bc7800166b7cdd4912ad3a092cde6b3ae46)
 - refactor: convert "utils" into separated "helpers" (#33) [`fb6158d`](https://github.com/henriquehbr/svelte-typewriter/commit/fb6158d296e2f99dde8ec7e5a39a6edf39087911)
-- chore: remove unnecessary "any" types [`710e47c`](https://github.com/henriquehbr/svelte-typewriter/commit/710e47c4c24c35c9b5b093d00efcf72b2e1cdfa9)
+- chore: remove unnecessary "any" types [`0e205bd`](https://github.com/henriquehbr/svelte-typewriter/commit/0e205bd2e1fc4b1cca60dfd6f7ada0a1b1cde490)
+- chore: remove duplicated "isInRange" helper types [`9d60d92`](https://github.com/henriquehbr/svelte-typewriter/commit/9d60d92a12b455e26a9fc2be75961d7834ab6cea)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
 

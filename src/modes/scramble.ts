@@ -1,9 +1,8 @@
-import { typingInterval } from '@svelte-typewriter/helpers'
+import { typingInterval, isInRange } from '@svelte-typewriter/helpers'
 import type {
 	ElementToScramble,
 	GetMatchingLetters,
 	GetHTMLTagIndexes,
-	IsInRange,
 	IsLetterHTMLTag,
 	ScrambleLetters,
 	HasMatchingLetter,
@@ -27,8 +26,6 @@ const getHTMLTagsIndexes: GetHTMLTagIndexes = element => {
 	}
 	return HTMLTagsIndexes
 }
-
-const isInRange: IsInRange = (val, [min, max]) => val >= min && val <= max
 
 const isLetterHTMLTag: IsLetterHTMLTag = (letterIdx, HTMLTagIndexes) => {
 	const isLetterIndexHtmlTag = HTMLTagIndexes.some(([tagStartingIndex, tagEndingIndex]) => {
