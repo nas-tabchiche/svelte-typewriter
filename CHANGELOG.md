@@ -14,7 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: add proper types for helpers and modes (#33) [`23ac8bc`](https://github.com/henriquehbr/svelte-typewriter/commit/23ac8bc7800166b7cdd4912ad3a092cde6b3ae46)
 - refactor: convert "utils" into separated "helpers" (#33) [`fb6158d`](https://github.com/henriquehbr/svelte-typewriter/commit/fb6158d296e2f99dde8ec7e5a39a6edf39087911)
 - chore: remove unnecessary "any" types [`0e205bd`](https://github.com/henriquehbr/svelte-typewriter/commit/0e205bd2e1fc4b1cca60dfd6f7ada0a1b1cde490)
-- chore: bump dependencies [`a16b48c`](https://github.com/henriquehbr/svelte-typewriter/commit/a16b48c5c67420d5d0b3e7c8d80b7539cc6205cf)
+- refactor(helpers): add writeEffect [`235e53f`](https://github.com/henriquehbr/svelte-typewriter/commit/235e53f9cb87bf25cde8575435127a227977913d)
+- chore: bump dependencies [`1444f38`](https://github.com/henriquehbr/svelte-typewriter/commit/1444f38c26cec088998f93d34ec04841408d8b2c)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
