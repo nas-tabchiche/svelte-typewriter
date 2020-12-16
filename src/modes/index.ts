@@ -1,7 +1,7 @@
 import { getElements } from '@svelte-typewriter/helpers'
+import type { TypewriterMainFn } from '@svelte-typewriter/types'
 
-/** @type {(node: HTMLElement, options: TypewriterOptions) => Promise<any>} */
-export const typewriter = async (node: any, options: any) => {
+const typewriter: TypewriterMainFn = async (node, options) => {
 	const { default: mode } =
 		(options.loop && (await import('./loop'))) ||
 		(options.loopRandom && (await import('./loopRandom'))) ||
@@ -16,3 +16,5 @@ export const typewriter = async (node: any, options: any) => {
 	}
 	mode({ node, elements }, options)
 }
+
+export { typewriter }

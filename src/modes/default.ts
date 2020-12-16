@@ -1,8 +1,8 @@
 import { typingInterval } from '@svelte-typewriter/helpers'
+import type { TypewriterEffectFn, TypewriterModeFn } from '@svelte-typewriter/types'
 
 // Unify the function below with the one on default mode
-/** @type {TypewriterEffectFn} */
-const typewriterEffect = async ({ currentNode, text }: any, options: any) => {
+const typewriterEffect: TypewriterEffectFn = async ({ currentNode, text }: any, options: any) => {
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {
 		const char = text[index]
@@ -15,8 +15,7 @@ const typewriterEffect = async ({ currentNode, text }: any, options: any) => {
 		: currentNode.classList.remove('typing')
 }
 
-/** @type {TypewriterModeFn} */
-export default async ({ elements }: any, options: any) => {
+const defaultMode: TypewriterModeFn = async ({ elements }: any, options: any) => {
 	for (const element of elements) typewriterEffect(element, options)
 
 	// Modularize this
@@ -44,3 +43,5 @@ export default async ({ elements }: any, options: any) => {
 		subtree: true
 	})
 }
+
+export default defaultMode

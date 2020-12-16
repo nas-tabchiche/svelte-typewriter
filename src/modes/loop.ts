@@ -1,9 +1,9 @@
 import { loopTypewriterEffect, createElement } from '@svelte-typewriter/helpers'
+import type { TypewriterModeFn, CleanChildNodes } from '@svelte-typewriter/types'
 
-const cleanChildNodes = (node: any) => node.childNodes.forEach((el: any) => el.remove())
+const cleanChildNodes: CleanChildNodes = node => node.childNodes.forEach(el => el.remove())
 
-/** @type {TypewriterModeFn} */
-export default async ({ node, elements }: any, options: any) => {
+const loop: TypewriterModeFn = async ({ node, elements }, options) => {
 	while (options.loop) {
 		for (const { currentNode, text } of elements) {
 			cleanChildNodes(node)
@@ -19,3 +19,5 @@ export default async ({ node, elements }: any, options: any) => {
 		}
 	}
 }
+
+export default loop

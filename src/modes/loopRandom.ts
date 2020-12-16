@@ -2,15 +2,16 @@ import {
 	loopTypewriterEffect,
 	createElement,
 	rng,
-	cleanChildNodes,
-	hasSingleTextNode
+	cleanChildNodes
 } from '@svelte-typewriter/helpers'
+import type { GetRandomText, TypewriterModeFn } from '@svelte-typewriter/types'
 
-let alreadyChoosenTexts: any = []
+let alreadyChoosenTexts: any[] = []
 
-const getRandomText = (elements: any) => {
+const getRandomText: GetRandomText = elements => {
 	while (true) {
 		const randomIndex = rng(0, elements.length)
+		// After each iteration, avoid repeating the last text from the last iteration
 		const isTextDifferentFromPrevious =
 			typeof alreadyChoosenTexts === 'number' && randomIndex !== alreadyChoosenTexts
 		const isTextFirstTime =
@@ -23,16 +24,11 @@ const getRandomText = (elements: any) => {
 			return randomText
 		}
 		const restartRandomization = alreadyChoosenTexts.length === elements.length
-		if (restartRandomization) {
-			!hasSingleTextNode
-				? (alreadyChoosenTexts = alreadyChoosenTexts.pop())
-				: (alreadyChoosenTexts = [])
-		}
+		restartRandomization && (alreadyChoosenTexts = alreadyChoosenTexts.pop()!)
 	}
 }
 
-/** @type {TypewriterModeFn} */
-export default async ({ node, elements }: any, options: any) => {
+const loopRandom: TypewriterModeFn = async ({ node, elements }, options) => {
 	while (options.loopRandom) {
 		const { currentNode, text } = getRandomText(elements)
 		cleanChildNodes(node)
@@ -47,3 +43,5 @@ export default async ({ node, elements }: any, options: any) => {
 		cleanChildNodes(node)
 	}
 }
+
+export default loopRandom

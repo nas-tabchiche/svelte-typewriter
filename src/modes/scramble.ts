@@ -1,11 +1,21 @@
-import { sleep } from '@svelte-typewriter/helpers'
+import { typingInterval } from '@svelte-typewriter/helpers'
+import type {
+	ElementToScramble,
+	GetMatchingLetters,
+	GetHTMLTagIndexes,
+	IsInRange,
+	IsLetterHTMLTag,
+	ScrambleLetters,
+	HasMatchingLetter,
+	TypewriterModeFn
+} from '@svelte-typewriter/types'
 
-let elementsToScramble: any = []
+let elementsToScramble: ElementToScramble[] = []
 
-const getMatchingLetters = (elementWithScrambledText: any) =>
-	elementsToScramble.find((element: any) => element.currentNode === elementWithScrambledText)
+const getMatchingLetters: GetMatchingLetters = elementWithScrambledText =>
+	elementsToScramble.find(element => element.currentNode === elementWithScrambledText)
 
-const getHTMLTagsIndexes = (element: any) => {
+const getHTMLTagsIndexes: GetHTMLTagIndexes = element => {
 	const getHTMLTagsRegex = /(<([^>]+)>)/g
 	const HTMLTagsIndexes = []
 	let HTMLTagsFound: any = []
@@ -18,17 +28,17 @@ const getHTMLTagsIndexes = (element: any) => {
 	return HTMLTagsIndexes
 }
 
-const isInRange = (val: any, min: any, max: any) => val >= min && val <= max
+const isInRange: IsInRange = (val: any, [min, max]) => val >= min && val <= max
 
-const isLetterHTMLTag = (letterIdx: any, HTMLTagIndexes: any) => {
-	const isLetterIndexHtmlTag = HTMLTagIndexes.some(([tagStartingIndex, tagEndingIndex]: any) => {
-		const isHTMLTag = isInRange(letterIdx, tagStartingIndex, tagEndingIndex)
+const isLetterHTMLTag: IsLetterHTMLTag = (letterIdx, HTMLTagIndexes) => {
+	const isLetterIndexHtmlTag = HTMLTagIndexes.some(([tagStartingIndex, tagEndingIndex]) => {
+		const isHTMLTag = isInRange(letterIdx, [tagStartingIndex, tagEndingIndex])
 		return isHTMLTag
 	})
 	return isLetterIndexHtmlTag
 }
 
-const scrambleLetters = (element: any) => {
+const scrambleLetters: ScrambleLetters = element => {
 	const HTMLTagIndexes = getHTMLTagsIndexes(element)
 	const scrambledText = element.innerHTML
 		.split('')
@@ -46,7 +56,7 @@ const scrambleLetters = (element: any) => {
 	element.innerHTML = scrambledText
 }
 
-const hasMatchingLetter = (elementWithScrambledText: any, normalText: any) => {
+const hasMatchingLetter: HasMatchingLetter = (elementWithScrambledText, normalText) => {
 	const scrambledText = elementWithScrambledText.innerHTML
 	for (let i = 0; i < normalText.length; i++) {
 		const letter = normalText[i]
@@ -55,19 +65,18 @@ const hasMatchingLetter = (elementWithScrambledText: any, normalText: any) => {
 	}
 }
 
-/** @type {TypewriterModeFn} */
-export default async ({ elements }: any, options: any) => {
+const scramble: TypewriterModeFn = async ({ elements }, options) => {
 	elementsToScramble = [
 		...elements.map(({ currentNode }: any) => ({ currentNode, matchingLetters: [] }))
 	]
-	await new Promise((resolve: any) => {
+	await new Promise<void>(resolve => {
 		elements.forEach(async ({ currentNode, text }: any) => {
 			const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
 			const startTime = new Date().getTime()
 			while (true) {
 				scrambleLetters(currentNode)
 				hasMatchingLetter(currentNode, text)
-				await sleep(options.interval)
+				await typingInterval(options.interval)
 				const scrambledTextMatch = currentNode.innerHTML != text
 				const didTimeout = new Date().getTime() - startTime < scrambleDuration
 				if (!scrambledTextMatch || !didTimeout) {
@@ -80,3 +89,5 @@ export default async ({ elements }: any, options: any) => {
 	})
 	options.dispatch('done')
 }
+
+export default scramble

@@ -1,8 +1,8 @@
 import { typingInterval } from '@svelte-typewriter/helpers'
+import type { TypewriterEffectFn, TypewriterModeFn } from '@svelte-typewriter/types'
 
 // Unify the function below with the one on cascade mode
-/** @type {TypewriterEffectFn} */
-const typewriterEffect = async ({ currentNode, text }: any, options: any) => {
+const typewriterEffect: TypewriterEffectFn = async ({ currentNode, text }: any, options: any) => {
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {
 		const char = text[index]
@@ -15,9 +15,10 @@ const typewriterEffect = async ({ currentNode, text }: any, options: any) => {
 		: currentNode.classList.remove('typing')
 }
 
-/** @type {TypewriterModeFn} */
-export default async ({ elements }: any, options: any) => {
+const cascade: TypewriterModeFn = async ({ elements }: any, options: any) => {
 	elements.forEach(({ currentNode }: any) => (currentNode.textContent = ''))
 	for (const element of elements) await typewriterEffect(element, options)
 	options.dispatch('done')
 }
+
+export default cascade

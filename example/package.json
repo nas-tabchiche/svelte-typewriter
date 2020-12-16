@@ -4,7 +4,7 @@
 	"main": "src/index.js",
 	"license": "MIT",
 	"scripts": {
-		"dev": "rollup -c -w",
+		"dev": "rollup -cw",
 		"build": "rimraf build && rollup -c",
 		"start": "sirv public -q -s"
 	},

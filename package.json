@@ -34,7 +34,7 @@
 		"example:build": "yarn --cwd example && yarn --cwd example run build",
 		"example:start": "yarn example:build && yarn --cwd example run start",
 		"prepublishOnly": "yarn build",
-		"prettier": "prettier --write \"./src/**/*.{svelte,js}\""
+		"prettier": "prettier --write \"./src/**/*.ts\""
 	},
 	"husky": {
 		"hooks": {

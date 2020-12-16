@@ -1,7 +1,7 @@
 import { typingInterval, sleep, unwriteEffect } from '@svelte-typewriter/helpers'
+import type { TypewriterEffectFn } from '@svelte-typewriter/types'
 
-/** @type {TypewriterEffectFn} */
-export const loopTypewriterEffect = async ({ currentNode, text }: any, options: any) => {
+const loopTypewriterEffect: TypewriterEffectFn = async ({ currentNode, text }, options) => {
 	currentNode.textContent = ''
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {
@@ -21,3 +21,5 @@ export const loopTypewriterEffect = async ({ currentNode, text }: any, options: 
 		? currentNode.removeAttribute('class')
 		: currentNode.classList.remove('typing')
 }
+
+export { loopTypewriterEffect }

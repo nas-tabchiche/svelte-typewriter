@@ -1,11 +1,5 @@
-/**
- * Generates a random number between `min` and `max`
- * @param {number} min The minimum value in range
- * @param {number} max The maximum value in range
- * @example
- * // Generates a random number between 10 and 20
- * rng(10, 20)
- */
-const rng = (min: any, max: any) => Math.floor(Math.random() * (max - min) + min)
+type RandomNumberGenerator = (min: number, max: number) => number
+
+const rng: RandomNumberGenerator = (min, max) => Math.floor(Math.random() * (max - min) + min)
 
 export { rng }
