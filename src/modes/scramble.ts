@@ -18,7 +18,7 @@ const getMatchingLetters: GetMatchingLetters = elementWithScrambledText =>
 const getHTMLTagsIndexes: GetHTMLTagIndexes = element => {
 	const getHTMLTagsRegex = /(<([^>]+)>)/g
 	const HTMLTagsIndexes = []
-	let HTMLTagsFound: any = []
+	let HTMLTagsFound: RegExpExecArray | null
 	while ((HTMLTagsFound = getHTMLTagsRegex.exec(element.innerHTML)) !== null) {
 		const tagStartingPosition = HTMLTagsFound.index
 		const tagEndingPosition = getHTMLTagsRegex.lastIndex
@@ -28,7 +28,7 @@ const getHTMLTagsIndexes: GetHTMLTagIndexes = element => {
 	return HTMLTagsIndexes
 }
 
-const isInRange: IsInRange = (val: any, [min, max]) => val >= min && val <= max
+const isInRange: IsInRange = (val, [min, max]) => val >= min && val <= max
 
 const isLetterHTMLTag: IsLetterHTMLTag = (letterIdx, HTMLTagIndexes) => {
 	const isLetterIndexHtmlTag = HTMLTagIndexes.some(([tagStartingIndex, tagEndingIndex]) => {
@@ -42,7 +42,7 @@ const scrambleLetters: ScrambleLetters = element => {
 	const HTMLTagIndexes = getHTMLTagsIndexes(element)
 	const scrambledText = element.innerHTML
 		.split('')
-		.map((letter: any, letterIdx: any) => {
+		.map((letter, letterIdx) => {
 			const { matchingLetters } = getMatchingLetters(element)
 			const emptySpaceRegex = /\s+/g
 			const foundMatchingLetterOrSpace =
@@ -67,10 +67,10 @@ const hasMatchingLetter: HasMatchingLetter = (elementWithScrambledText, normalTe
 
 const scramble: TypewriterModeFn = async ({ elements }, options) => {
 	elementsToScramble = [
-		...elements.map(({ currentNode }: any) => ({ currentNode, matchingLetters: [] }))
+		...elements.map(({ currentNode }) => ({ currentNode, matchingLetters: [] }))
 	]
 	await new Promise<void>(resolve => {
-		elements.forEach(async ({ currentNode, text }: any) => {
+		elements.forEach(async ({ currentNode, text }) => {
 			const scrambleDuration = typeof options.scramble == 'number' ? options.scramble : 3000
 			const startTime = new Date().getTime()
 			while (true) {

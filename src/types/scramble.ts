@@ -1,19 +1,19 @@
 interface ElementToScramble {
-	currentNode: HTMLElement
+	currentNode: Element
 	matchingLetters: number[]
 }
 
-type GetMatchingLetters = (elementWithScrambledText: HTMLElement) => any
+type GetMatchingLetters = (elementWithScrambledText: Element) => any
 
-type GetHTMLTagIndexes = (element: HTMLElement) => number[][]
+type GetHTMLTagIndexes = (element: Element) => number[][]
 
 type IsInRange = (val: number, minMaxRange: [min: number, max: number]) => boolean
 
 type IsLetterHTMLTag = (letterIdx: number, HTMLTagIndexes: number[][]) => boolean
 
-type ScrambleLetters = (element: HTMLElement) => void
+type ScrambleLetters = (element: Element) => void
 
-type HasMatchingLetter = (elementWithScrambledText: HTMLElement, normalText: string) => void
+type HasMatchingLetter = (elementWithScrambledText: Element, normalText: string) => void
 
 export {
 	ElementToScramble,

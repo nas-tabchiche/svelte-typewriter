@@ -11,8 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - build: replace tsc with rollup for building typescript [`96d620d`](https://github.com/henriquehbr/svelte-typewriter/commit/96d620d8ea4a843230fd29b543bc95c232b25c3d)
 - refactor: convert helpers and modes to typescript (#33) [`4683a02`](https://github.com/henriquehbr/svelte-typewriter/commit/4683a02978a2b2608268cf5d136071d1993ad2e4)
-- refactor: add proper types for helpers and modes (#33) [`56f9cf0`](https://github.com/henriquehbr/svelte-typewriter/commit/56f9cf043a44286803f560412cfbc6eec692898e)
+- refactor: add proper types for helpers and modes (#33) [`23ac8bc`](https://github.com/henriquehbr/svelte-typewriter/commit/23ac8bc7800166b7cdd4912ad3a092cde6b3ae46)
 - refactor: convert "utils" into separated "helpers" (#33) [`fb6158d`](https://github.com/henriquehbr/svelte-typewriter/commit/fb6158d296e2f99dde8ec7e5a39a6edf39087911)
+- chore: remove unnecessary "any" types [`710e47c`](https://github.com/henriquehbr/svelte-typewriter/commit/710e47c4c24c35c9b5b093d00efcf72b2e1cdfa9)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
 
