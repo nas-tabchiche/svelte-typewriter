@@ -1,7 +1,7 @@
 import { hasSingleTextNode, createElement } from '@svelte-typewriter/helpers'
 import type { TypewriterElement } from '@svelte-typewriter/types'
 
-type GetElements = (parentElement: HTMLElement) => TypewriterElement[]
+type GetElements = (parentElement: Element) => TypewriterElement[]
 
 const getElements: GetElements = parentElement => {
 	if (hasSingleTextNode(parentElement)) {

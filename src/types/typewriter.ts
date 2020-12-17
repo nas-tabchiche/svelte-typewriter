@@ -4,7 +4,7 @@ interface TypewriterElement {
 }
 
 interface TypewriterParentData {
-	node: HTMLElement
+	node: Element
 	elements: TypewriterElement[]
 }
 
@@ -26,7 +26,7 @@ type TypewriterModeFn = (
 	options: TypewriterOptions
 ) => Promise<void>
 
-type TypewriterMainFn = (node: HTMLElement, options: TypewriterOptions) => void
+type TypewriterMainFn = (node: Element, options: TypewriterOptions) => void
 
 export {
 	TypewriterElement,

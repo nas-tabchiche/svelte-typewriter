@@ -7,16 +7,10 @@ const writeEffect: TypewriterEffectFn = async ({ currentNode, text }, options) =
 		const char = text[index]
 		char === '<' && (index = text.indexOf('>', index))
 		currentNode.innerHTML = text.slice(0, index)
-		const textWithUnescapedAmpersands = text.replaceAll('&', '&amp;')
-		const isLoopModeEnabled = options.loop || options.loopRandom
-		const fullyWritten = currentNode.innerHTML === textWithUnescapedAmpersands
-		if (isLoopModeEnabled && fullyWritten) {
-			const { unwriteEffect } = await import('./unwriteEffect')
-			await unwriteEffect(currentNode, options)
-		}
 		await typingInterval(options.interval)
 	}
-	hideCursorOnAnimationEnd(currentNode)
+	const loopModeDisabled = !options.loop && !options.loopRandom
+	loopModeDisabled && hideCursorOnAnimationEnd(currentNode)
 }
 
 export { writeEffect }
