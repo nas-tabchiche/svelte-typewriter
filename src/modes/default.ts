@@ -1,16 +1,10 @@
-import { writeEffect } from '@svelte-typewriter/helpers'
+import { writeEffect, getLongestTextElement } from '@svelte-typewriter/helpers'
 import type { TypewriterModeFn } from '@svelte-typewriter/types'
 
 const defaultMode: TypewriterModeFn = async ({ elements }, options) => {
 	for (const element of elements) writeEffect(element, options)
 
-	// Modularize this (getElementWithLongestText)
-	const { currentNode: lastElementToFinish } = elements.reduce((longestTextElement, element) => {
-		const longestTextLength = longestTextElement.text.length
-		return element.text.length > longestTextLength
-			? (longestTextElement = element)
-			: longestTextElement
-	})
+	const { currentNode: lastElementToFinish } = getLongestTextElement(elements)
 
 	const observer = new MutationObserver(mutations => {
 		mutations.forEach((mutation: any) => {

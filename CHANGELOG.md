@@ -13,12 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: convert helpers and modes to typescript (#33) [`4683a02`](https://github.com/henriquehbr/svelte-typewriter/commit/4683a02978a2b2608268cf5d136071d1993ad2e4)
 - refactor: add proper types for helpers and modes (#33) [`23ac8bc`](https://github.com/henriquehbr/svelte-typewriter/commit/23ac8bc7800166b7cdd4912ad3a092cde6b3ae46)
 - refactor: convert "utils" into separated "helpers" (#33) [`fb6158d`](https://github.com/henriquehbr/svelte-typewriter/commit/fb6158d296e2f99dde8ec7e5a39a6edf39087911)
-- refactor: unify loop and loopRandom modes [`dd315ee`](https://github.com/henriquehbr/svelte-typewriter/commit/dd315ee617ff9b4ecb7f183cc60ad140230a4ce8)
+- refactor: unify loop and loopRandom modes [`914ef72`](https://github.com/henriquehbr/svelte-typewriter/commit/914ef722e84152f581546cd7e7bba8f168ad144e)
 - refactor(utils): integrate loop logic into "writeEffect" (#33) [`1ba9750`](https://github.com/henriquehbr/svelte-typewriter/commit/1ba975028c1e1b068c231fb03967796f7ad0821e)
 - chore: remove unnecessary "any" types [`0e205bd`](https://github.com/henriquehbr/svelte-typewriter/commit/0e205bd2e1fc4b1cca60dfd6f7ada0a1b1cde490)
 - refactor(helpers): add writeEffect [`939a86b`](https://github.com/henriquehbr/svelte-typewriter/commit/939a86b73780d4b2857fdabb1a7f0f2ed49a4416)
 - refactor: modularize cursor hiding module (#33) [`652895f`](https://github.com/henriquehbr/svelte-typewriter/commit/652895fb7a95f0d9e778ea4edbd3301e28b9d3db)
 - chore: bump dependencies [`1444f38`](https://github.com/henriquehbr/svelte-typewriter/commit/1444f38c26cec088998f93d34ec04841408d8b2c)
+- refactor(default): modularize "getLongestTextElement" [`1b37135`](https://github.com/henriquehbr/svelte-typewriter/commit/1b371356740d831a5b31c524f8f1b1b1aa112327)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
