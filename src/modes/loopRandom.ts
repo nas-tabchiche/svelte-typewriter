@@ -1,9 +1,4 @@
-import {
-	loopTypewriterEffect,
-	createElement,
-	rng,
-	cleanChildNodes
-} from '@svelte-typewriter/helpers'
+import { writeEffect, createElement, rng, cleanChildNodes } from '@svelte-typewriter/helpers'
 import type { GetRandomText, TypewriterModeFn } from '@svelte-typewriter/types'
 
 let alreadyChoosenTexts: any[] = []
@@ -23,8 +18,8 @@ const getRandomText: GetRandomText = elements => {
 			const randomText = elements[randomIndex]
 			return randomText
 		}
-		const restartRandomization = alreadyChoosenTexts.length === elements.length
-		restartRandomization && (alreadyChoosenTexts = alreadyChoosenTexts.pop()!)
+		const restartRandomizationCycle = alreadyChoosenTexts.length === elements.length
+		restartRandomizationCycle && (alreadyChoosenTexts = alreadyChoosenTexts.pop()!)
 	}
 }
 
@@ -39,7 +34,7 @@ const loopRandom: TypewriterModeFn = async ({ node, elements }, options) => {
 			loopParagraph.setAttribute(name, value)
 		)
 		node.appendChild(loopParagraph)
-		await loopTypewriterEffect({ currentNode: loopParagraph, text }, options)
+		await writeEffect({ currentNode: loopParagraph, text }, options)
 		cleanChildNodes(node)
 	}
 }

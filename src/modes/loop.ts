@@ -1,4 +1,4 @@
-import { loopTypewriterEffect, createElement, cleanChildNodes } from '@svelte-typewriter/helpers'
+import { writeEffect, createElement, cleanChildNodes } from '@svelte-typewriter/helpers'
 import type { TypewriterModeFn } from '@svelte-typewriter/types'
 
 const loop: TypewriterModeFn = async ({ node, elements }, options) => {
@@ -12,7 +12,7 @@ const loop: TypewriterModeFn = async ({ node, elements }, options) => {
 				loopParagraph.setAttribute(name, value)
 			)
 			node.appendChild(loopParagraph)
-			await loopTypewriterEffect({ currentNode: loopParagraph, text }, options)
+			await writeEffect({ currentNode: loopParagraph, text }, options)
 			cleanChildNodes(node)
 		}
 	}

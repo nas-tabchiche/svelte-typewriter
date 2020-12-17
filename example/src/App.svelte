@@ -2,8 +2,8 @@
 	import Typewriter from 'Typewriter.svelte'
 </script>
 
-<Typewriter loop on:done={() => console.log('Hello World!')}>
-  <p>Lorem</p>
-  <p>Ipsum</p>
-  <p>Dolor</p>
+<Typewriter loopRandom on:done={() => console.log('Hello World!')}>
+  <p>Lorem & Ipsum</p>
+  <p>Dolor & Sit</p>
+  <p>Amet & Consectetur</p>
 </Typewriter>

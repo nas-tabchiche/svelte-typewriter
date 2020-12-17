@@ -4,6 +4,8 @@ import type { TypewriterOptions } from '@svelte-typewriter/types'
 type UnwriteEffect = (currentNode: Element, options: TypewriterOptions) => Promise<void>
 
 const unwriteEffect: UnwriteEffect = async (currentNode, options) => {
+	options.dispatch('done')
+	await typingInterval(typeof options.loop === 'number' ? options.loop : 1500)
 	const text = currentNode.innerHTML.replaceAll('&amp;', '&')
 	for (let index = text.length - 1; index >= 0; index--) {
 		const letter = text[index]

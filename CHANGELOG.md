@@ -13,10 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: convert helpers and modes to typescript (#33) [`4683a02`](https://github.com/henriquehbr/svelte-typewriter/commit/4683a02978a2b2608268cf5d136071d1993ad2e4)
 - refactor: add proper types for helpers and modes (#33) [`23ac8bc`](https://github.com/henriquehbr/svelte-typewriter/commit/23ac8bc7800166b7cdd4912ad3a092cde6b3ae46)
 - refactor: convert "utils" into separated "helpers" (#33) [`fb6158d`](https://github.com/henriquehbr/svelte-typewriter/commit/fb6158d296e2f99dde8ec7e5a39a6edf39087911)
+- refactor(utils): integrate loop logic into "writeEffect" (#33) [`43e2642`](https://github.com/henriquehbr/svelte-typewriter/commit/43e2642e627ae5c6c64f065699a527ded6d2d112)
 - chore: remove unnecessary "any" types [`0e205bd`](https://github.com/henriquehbr/svelte-typewriter/commit/0e205bd2e1fc4b1cca60dfd6f7ada0a1b1cde490)
 - refactor(helpers): add writeEffect [`939a86b`](https://github.com/henriquehbr/svelte-typewriter/commit/939a86b73780d4b2857fdabb1a7f0f2ed49a4416)
+- refactor: modularize cursor hiding module (#33) [`652895f`](https://github.com/henriquehbr/svelte-typewriter/commit/652895fb7a95f0d9e778ea4edbd3301e28b9d3db)
 - chore: bump dependencies [`1444f38`](https://github.com/henriquehbr/svelte-typewriter/commit/1444f38c26cec088998f93d34ec04841408d8b2c)
-- refactor: modularize cursor hiding module (#33) [`f19c083`](https://github.com/henriquehbr/svelte-typewriter/commit/f19c083459ad7ca13a976c63701118b70a6c6cc8)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
