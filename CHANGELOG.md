@@ -19,8 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor(helpers): add writeEffect [`939a86b`](https://github.com/henriquehbr/svelte-typewriter/commit/939a86b73780d4b2857fdabb1a7f0f2ed49a4416)
 - refactor: modularize cursor hiding module (#33) [`652895f`](https://github.com/henriquehbr/svelte-typewriter/commit/652895fb7a95f0d9e778ea4edbd3301e28b9d3db)
 - chore: bump dependencies [`1444f38`](https://github.com/henriquehbr/svelte-typewriter/commit/1444f38c26cec088998f93d34ec04841408d8b2c)
-- refactor(default): modularize "getLongestTextElement" [`1b37135`](https://github.com/henriquehbr/svelte-typewriter/commit/1b371356740d831a5b31c524f8f1b1b1aa112327)
+- refactor(default): modularize "getLongestTextElement" [`41e7b02`](https://github.com/henriquehbr/svelte-typewriter/commit/41e7b02ffd33914057790a2f04ecd7b2550f5e20)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
+- chore(cascade): remove unnecessary cursor hiding function [`1da7a8e`](https://github.com/henriquehbr/svelte-typewriter/commit/1da7a8eb7b1f8b87a8c278610d28712b0e9063e0)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
 
