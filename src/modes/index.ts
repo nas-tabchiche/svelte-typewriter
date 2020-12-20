@@ -2,7 +2,7 @@ import { getElements } from '@svelte-typewriter/helpers'
 import type { TypewriterMainFn } from '@svelte-typewriter/types'
 
 const typewriter: TypewriterMainFn = async (node, options) => {
-	const { default: mode } =
+	const { mode } =
 		((options.loop || options.loopRandom) && (await import('./loop'))) ||
 		(options.scramble && (await import('./scramble'))) ||
 		(await import('./typewriter'))

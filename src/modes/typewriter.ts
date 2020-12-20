@@ -6,7 +6,7 @@ type CleanChildText = (elements: TypewriterElement[]) => void
 const cleanChildText: CleanChildText = elements =>
 	elements.forEach(element => (element.currentNode.textContent = ''))
 
-const defaultMode: TypewriterModeFn = async ({ elements }, options) => {
+const mode: TypewriterModeFn = async ({ elements }, options) => {
 	if (options.cascade) {
 		cleanChildText(elements)
 	} else {
@@ -19,4 +19,4 @@ const defaultMode: TypewriterModeFn = async ({ elements }, options) => {
 	options.cascade && options.dispatch('done')
 }
 
-export default defaultMode
+export { mode }

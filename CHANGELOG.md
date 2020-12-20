@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - chore: bump dependencies [`1444f38`](https://github.com/henriquehbr/svelte-typewriter/commit/1444f38c26cec088998f93d34ec04841408d8b2c)
 - refactor(default): modularize "getLongestTextElement" [`41e7b02`](https://github.com/henriquehbr/svelte-typewriter/commit/41e7b02ffd33914057790a2f04ecd7b2550f5e20)
 - refactor(getLongestTextElement): return Element rather TypewriterElement [`a915357`](https://github.com/henriquehbr/svelte-typewriter/commit/a915357c84cf7da7c61b52e550239c9f267165e9)
+- chore(modes): switch from default to named exports [`1279d4d`](https://github.com/henriquehbr/svelte-typewriter/commit/1279d4de84edac734b1408c2acd9501b454a6406)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 - chore(cascade): remove unnecessary cursor hiding function [`d26afa6`](https://github.com/henriquehbr/svelte-typewriter/commit/d26afa60818872fce5c704c0aac6f6a5c8ae541e)
 

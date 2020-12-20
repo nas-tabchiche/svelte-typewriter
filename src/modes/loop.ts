@@ -44,7 +44,7 @@ const loopAnimation: LoopAnimation = async (parentElement, { currentNode, text }
 	cleanChildNodes(parentElement)
 }
 
-const loop: TypewriterModeFn = async ({ node, elements }, options) => {
+const mode: TypewriterModeFn = async ({ node, elements }, options) => {
 	while (true) {
 		if (options.loop) {
 			for (const element of elements) await loopAnimation(node, element, options)
@@ -55,4 +55,4 @@ const loop: TypewriterModeFn = async ({ node, elements }, options) => {
 	}
 }
 
-export default loop
+export { mode }

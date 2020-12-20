@@ -62,7 +62,7 @@ const hasMatchingLetter: HasMatchingLetter = (elementWithScrambledText, normalTe
 	}
 }
 
-const scramble: TypewriterModeFn = async ({ elements }, options) => {
+const mode: TypewriterModeFn = async ({ elements }, options) => {
 	elementsToScramble = [
 		...elements.map(({ currentNode }) => ({ currentNode, matchingLetters: [] }))
 	]
@@ -87,4 +87,4 @@ const scramble: TypewriterModeFn = async ({ elements }, options) => {
 	options.dispatch('done')
 }
 
-export default scramble
+export { mode }
