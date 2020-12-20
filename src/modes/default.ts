@@ -4,7 +4,7 @@ import type { TypewriterModeFn } from '@svelte-typewriter/types'
 const defaultMode: TypewriterModeFn = async ({ elements }, options) => {
 	for (const element of elements) writeEffect(element, options)
 
-	const { currentNode: lastElementToFinish } = getLongestTextElement(elements)
+	const lastElementToFinish = getLongestTextElement(elements)
 
 	const observer = new MutationObserver(mutations => {
 		mutations.forEach((mutation: any) => {

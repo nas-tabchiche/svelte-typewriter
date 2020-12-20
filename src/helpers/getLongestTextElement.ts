@@ -1,14 +1,19 @@
 import type { TypewriterElement } from '@svelte-typewriter/types'
 
-type GetLongestTextElement = (elements: TypewriterElement[]) => TypewriterElement
+type GetLongestTextElement = (elements: TypewriterElement[]) => Element
+
+type DescendingSortFunction = (
+	firstElement: TypewriterElement,
+	secondElement: TypewriterElement
+) => number
+
+const descendingSortFunction: DescendingSortFunction = (firstElement, secondElement) =>
+	secondElement.text.length - firstElement.text.length
 
 const getLongestTextElement: GetLongestTextElement = elements => {
-	return elements.reduce((longestTextElement, element) => {
-		const longestTextLength = longestTextElement.text.length
-		return element.text.length > longestTextLength
-			? (longestTextElement = element)
-			: longestTextElement
-	})
+	const descendingTextLengthOrder = elements.sort(descendingSortFunction)
+	const longestTextElement = descendingTextLengthOrder[0].currentNode
+	return longestTextElement
 }
 
 export { getLongestTextElement }
