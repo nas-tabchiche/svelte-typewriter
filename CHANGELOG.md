@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Commits
 
 - build: replace tsc with rollup for building typescript [`96d620d`](https://github.com/henriquehbr/svelte-typewriter/commit/96d620d8ea4a843230fd29b543bc95c232b25c3d)
-- chore(example): add a component for each animation mode [`df06ae4`](https://github.com/henriquehbr/svelte-typewriter/commit/df06ae4fd7cc7a06214bfeec76c178cbb9a7b992)
+- chore(example): add a component for each animation mode [`4c52161`](https://github.com/henriquehbr/svelte-typewriter/commit/4c521617c58c87b0d858e8083d1736772f140f42)
 - refactor: convert helpers and modes to typescript (#33) [`4683a02`](https://github.com/henriquehbr/svelte-typewriter/commit/4683a02978a2b2608268cf5d136071d1993ad2e4)
 - refactor: add proper types for helpers and modes (#33) [`23ac8bc`](https://github.com/henriquehbr/svelte-typewriter/commit/23ac8bc7800166b7cdd4912ad3a092cde6b3ae46)
 - refactor: convert "utils" into separated "helpers" (#33) [`fb6158d`](https://github.com/henriquehbr/svelte-typewriter/commit/fb6158d296e2f99dde8ec7e5a39a6edf39087911)
@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor(default): modularize "getLongestTextElement" [`41e7b02`](https://github.com/henriquehbr/svelte-typewriter/commit/41e7b02ffd33914057790a2f04ecd7b2550f5e20)
 - refactor(getLongestTextElement): return Element rather TypewriterElement [`a915357`](https://github.com/henriquehbr/svelte-typewriter/commit/a915357c84cf7da7c61b52e550239c9f267165e9)
 - chore(modes): switch from default to named exports [`119119e`](https://github.com/henriquehbr/svelte-typewriter/commit/119119ea2793c1ce9d835e6a5af3fcb97765db7e)
+- chore: bump dependencies [`b12065b`](https://github.com/henriquehbr/svelte-typewriter/commit/b12065b0faa06ca379c5d3f8b858d13cc74fb7dc)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 - chore(cascade): remove unnecessary cursor hiding function [`d26afa6`](https://github.com/henriquehbr/svelte-typewriter/commit/d26afa60818872fce5c704c0aac6f6a5c8ae541e)
 
