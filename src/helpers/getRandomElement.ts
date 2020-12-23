@@ -3,8 +3,9 @@ import { TypewriterElement } from '@svelte-typewriter/types'
 
 type GetRandomText = (element: TypewriterElement[]) => TypewriterElement
 
+let alreadyChoosenTexts: any[] = []
+
 const getRandomElement: GetRandomText = elements => {
-	let alreadyChoosenTexts: any[] = []
 	while (true) {
 		const randomIndex = rng(0, elements.length)
 		// After each iteration, avoid repeating the last text from the last iteration
@@ -12,8 +13,7 @@ const getRandomElement: GetRandomText = elements => {
 			typeof alreadyChoosenTexts === 'number' && randomIndex !== alreadyChoosenTexts
 		const isTextFirstTime =
 			Array.isArray(alreadyChoosenTexts) && !alreadyChoosenTexts.includes(randomIndex)
-		const shouldDisplayText = isTextFirstTime || isTextDifferentFromPrevious
-		if (shouldDisplayText) {
+		if (isTextFirstTime || isTextDifferentFromPrevious) {
 			isTextDifferentFromPrevious && (alreadyChoosenTexts = [])
 			alreadyChoosenTexts.push(randomIndex)
 			const randomText = elements[randomIndex]

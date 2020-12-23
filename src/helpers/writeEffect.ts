@@ -1,5 +1,10 @@
-import { typingInterval, hideCursorOnAnimationEnd } from '@svelte-typewriter/helpers'
+import { typingInterval } from '@svelte-typewriter/helpers'
 import type { TypewriterEffectFn } from '@svelte-typewriter/types'
+
+type HideCursorOnAnimationEnd = (element: Element) => void
+
+const hideCursorOnAnimationEnd: HideCursorOnAnimationEnd = element =>
+	element.classList.replace('typing', 'finished-typing')
 
 const writeEffect: TypewriterEffectFn = async ({ currentNode, text }, options) => {
 	currentNode.classList.add('typing')
@@ -9,8 +14,7 @@ const writeEffect: TypewriterEffectFn = async ({ currentNode, text }, options) =
 		currentNode.innerHTML = text.slice(0, index)
 		await typingInterval(options.interval)
 	}
-	const loopModeDisabled = !options.loop && !options.loopRandom
-	loopModeDisabled && hideCursorOnAnimationEnd(currentNode)
+	hideCursorOnAnimationEnd(currentNode)
 }
 
 export { writeEffect }

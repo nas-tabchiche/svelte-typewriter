@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte'
+	import { onMount, onDestroy, createEventDispatcher } from 'svelte'
 	import { typewriter } from './core/modes'
 
 	export let interval = 30
@@ -8,11 +8,11 @@
 	export let loopRandom = false
 	export let scramble = false
 	export let cursor = true
-	export let delay = 0
+  export let delay = 0
 
-	const dispatch = createEventDispatcher()
+  $: options = { interval, cascade, loop, loopRandom, scramble, cursor, delay, dispatch }
 
-	const options = { interval, cascade, loop, loopRandom, scramble, cursor, delay, dispatch }
+  const dispatch = createEventDispatcher()
 </script>
 
 <style>
@@ -27,7 +27,15 @@
 		}
 	}
 
-	.cursor :global(.typing::after) {
+  .typewriter-container > :global(*:not(.typing):not(.finished-typing)) {
+    display: none;
+  }
+
+  .typewriter-container :global(.finished-typing::after) {
+    content: none;
+  }
+
+	.typewriter-container :global(.typing::after) {
 		content: '▌';
 		display: inline-block;
 		color: var(--cursor-color);
@@ -40,7 +48,8 @@
 </style>
 
 <div
-	use:typewriter={options}
+  use:typewriter={options}
+  class="typewriter-container"
 	class:cursor
 	class:delay={options.delay > 0}
 	style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"

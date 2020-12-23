@@ -14,7 +14,8 @@ const options = {
 	output: {
 		format: 'es',
 		name: 'app',
-		dir: 'public/build'
+		dir: 'public/build',
+		exports: 'named'
 	},
 	plugins: [
 		svelte({
