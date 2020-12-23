@@ -1,5 +1,5 @@
 <script>
-	import Typewriter from 'Typewriter.svelte'
+	import TypewriterControls from '../components/TypewriterControls.svelte'
 </script>
 
 <h1>Cascade mode</h1>
@@ -10,9 +10,9 @@
   &lt;Typewriter cascade /&gt;
 </pre>
 
-<Typewriter cascade>
+<TypewriterControls cascade>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -20,9 +20,9 @@
   &lt;Typewriter cascade interval=&lcub;80&rcub; /&gt;
 </pre>
 
-<Typewriter cascade interval={80}>
+<TypewriterControls cascade interval={80}>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -30,9 +30,9 @@
   &lt;Typewriter cascade interval=&lcub;80&rcub; delay=&lcub;3000&rcub; /&gt;
 </pre>
 
-<Typewriter cascade interval={80} delay={3000}>
+<TypewriterControls cascade interval={80} delay={3000}>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -40,26 +40,32 @@
   &lt;Typewriter cascade interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor=&lcub;false&rcub; /&gt;
 </pre>
 
-<Typewriter cascade interval={80} delay={3000} cursor={false}>
+<TypewriterControls cascade interval={80} delay={3000} cursor={false}>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
 <pre>
-  &lt;Typewriter cascade interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='green' /&gt;
+  &lt;Typewriter cascade interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='limegreen' /&gt;
 </pre>
 
-<Typewriter cascade interval={80} delay={3000} cursor='green'>
+<TypewriterControls cascade interval={80} delay={3000} cursor='limegreen'>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
 <pre>
-  &lt;Typewriter cascade interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='green' on:done=&lcub;() =&gt; console.log('Hello World!')&rcub; /&gt;
+  &lt;Typewriter cascade interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='limegreen' on:done=&lcub;() =&gt; console.log('Hello World!')&rcub; /&gt;
 </pre>
 
-<Typewriter cascade interval={80} delay={3000} cursor='green' on:done={() => console.log('Hello World!')}>
+<TypewriterControls
+  cascade
+  interval={80}
+  delay={3000}
+  cursor='limegreen'
+  on:done={() => console.log('Hello World!')}
+>
   <slot />
-</Typewriter>
+</TypewriterControls>

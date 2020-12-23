@@ -1,5 +1,5 @@
 <script>
-	import Typewriter from 'Typewriter.svelte'
+	import TypewriterControls from '../components/TypewriterControls.svelte'
 </script>
 
 <h1>LoopRandom mode</h1>
@@ -10,9 +10,9 @@
   &lt;Typewriter loopRandom /&gt;
 </pre>
 
-<Typewriter loopRandom>
+<TypewriterControls loopRandom>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -20,9 +20,9 @@
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; /&gt;
 </pre>
 
-<Typewriter loopRandom interval={80}>
+<TypewriterControls loopRandom interval={80}>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -30,9 +30,9 @@
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; /&gt;
 </pre>
 
-<Typewriter loopRandom interval={80} delay={3000}>
+<TypewriterControls loopRandom interval={80} delay={3000}>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -40,9 +40,9 @@
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor=&lcub;false&rcub; /&gt;
 </pre>
 
-<Typewriter loopRandom interval={80} delay={3000} cursor={false}>
+<TypewriterControls loopRandom interval={80} delay={3000} cursor={false}>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -50,9 +50,9 @@
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='limegreen' /&gt;
 </pre>
 
-<Typewriter loopRandom interval={80} delay={3000} cursor='limegreen'>
+<TypewriterControls loopRandom interval={80} delay={3000} cursor='limegreen'>
   <slot />
-</Typewriter>
+</TypewriterControls>
 
 <hr>
 
@@ -60,6 +60,12 @@
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='limegreen' on:done=&lcub;() =&gt; console.log('Hello World!')&rcub; /&gt;
 </pre>
 
-<Typewriter loopRandom interval={80} delay={3000} cursor='limegreen' on:done={() => console.log('Hello World!')}>
+<TypewriterControls
+  loopRandom
+  interval={80}
+  delay={3000}
+  cursor='limegreen'
+  on:done={() => console.log('Hello World!')}
+>
   <slot />
-</Typewriter>
+</TypewriterControls>

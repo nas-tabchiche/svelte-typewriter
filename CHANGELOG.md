@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: convert helpers and modes to typescript (#33) [`4683a02`](https://github.com/henriquehbr/svelte-typewriter/commit/4683a02978a2b2608268cf5d136071d1993ad2e4)
 - refactor: add proper types for helpers and modes (#33) [`23ac8bc`](https://github.com/henriquehbr/svelte-typewriter/commit/23ac8bc7800166b7cdd4912ad3a092cde6b3ae46)
 - refactor: convert "utils" into separated "helpers" (#33) [`fb6158d`](https://github.com/henriquehbr/svelte-typewriter/commit/fb6158d296e2f99dde8ec7e5a39a6edf39087911)
+- refactor: reinitialize component on state update [`ee84e42`](https://github.com/henriquehbr/svelte-typewriter/commit/ee84e42765e00074581d7975adc73258416bc824)
 - refactor: unify loop and loopRandom modes [`914ef72`](https://github.com/henriquehbr/svelte-typewriter/commit/914ef722e84152f581546cd7e7bba8f168ad144e)
 - refactor: modularize getRandomElement from loop mode (#33) [`6fd55b7`](https://github.com/henriquehbr/svelte-typewriter/commit/6fd55b7c739073bbc49f482073fffbab19a1aed0)
 - refactor(utils): integrate loop logic into "writeEffect" (#33) [`1ba9750`](https://github.com/henriquehbr/svelte-typewriter/commit/1ba975028c1e1b068c231fb03967796f7ad0821e)
@@ -28,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor(default): modularize "getLongestTextElement" [`41e7b02`](https://github.com/henriquehbr/svelte-typewriter/commit/41e7b02ffd33914057790a2f04ecd7b2550f5e20)
 - refactor(getLongestTextElement): return Element rather TypewriterElement [`a915357`](https://github.com/henriquehbr/svelte-typewriter/commit/a915357c84cf7da7c61b52e550239c9f267165e9)
 - chore(modes): switch from default to named exports [`119119e`](https://github.com/henriquehbr/svelte-typewriter/commit/119119ea2793c1ce9d835e6a5af3fcb97765db7e)
-- chore: bump dependencies [`b12065b`](https://github.com/henriquehbr/svelte-typewriter/commit/b12065b0faa06ca379c5d3f8b858d13cc74fb7dc)
+- chore: bump dependencies [`41978b5`](https://github.com/henriquehbr/svelte-typewriter/commit/41978b5abbadf1eefe055c13f9c3152f8ca1fc28)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 - chore(cascade): remove unnecessary cursor hiding function [`d26afa6`](https://github.com/henriquehbr/svelte-typewriter/commit/d26afa60818872fce5c704c0aac6f6a5c8ae541e)
 
