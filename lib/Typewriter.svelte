@@ -6,20 +6,19 @@
 	export let cascade = false
 	export let loop = false
 	export let loopRandom = false
-	export let scramble = false
 	export let cursor = true
-  export let delay = 0
+	export let delay = 0
 
-  let isMounted = false
-  let reinit = {}
+	let isMounted = false
+	let reinit = {}
 
-  $: options = { interval, cascade, loop, loopRandom, scramble, cursor, delay, dispatch }
+	$: options = { interval, cascade, loop, loopRandom, cursor, delay, dispatch }
 
-  const dispatch = createEventDispatcher()
+	const dispatch = createEventDispatcher()
 
-  beforeUpdate(() => (isMounted && (reinit = {})))
+	beforeUpdate(() => isMounted && (reinit = {}))
 
-  onMount(() => (isMounted = true))
+	onMount(() => (isMounted = true))
 </script>
 
 <style>
@@ -34,13 +33,13 @@
 		}
 	}
 
-  .typewriter-container > :global(*:not(.typing):not(.finished-typing)) {
-    display: none;
-  }
+	.typewriter-container > :global(*:not(.typing):not(.finished-typing)) {
+		display: none;
+	}
 
-  .typewriter-container :global(.finished-typing::after) {
-    content: none;
-  }
+	.typewriter-container :global(.finished-typing::after) {
+		content: none;
+	}
 
 	.cursor :global(.typing::after) {
 		content: '▌';
@@ -55,13 +54,13 @@
 </style>
 
 {#key reinit}
-  <div
-    use:typewriter={options}
-    class="typewriter-container"
-    class:cursor
-    class:delay={options.delay > 0}
-    style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
-  >
-    <slot />
-  </div>
+	<div
+		use:typewriter={options}
+		class="typewriter-container"
+		class:cursor
+		class:delay={options.delay > 0}
+		style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
+	>
+		<slot />
+	</div>
 {/key}

@@ -3,9 +3,9 @@ import type { TypewriterMainFn } from '@svelte-typewriter/types'
 
 const typewriter: TypewriterMainFn = async (node, options) => {
 	const { mode } =
-		((options.loop || options.loopRandom) && (await import('./loopTypewriter'))) ||
-		(options.scramble && (await import('./scramble'))) ||
-		(await import('./typewriter'))
+		options.loop || options.loopRandom
+			? await import('./loopTypewriter')
+			: await import('./typewriter')
 	const elements = getElements(node)
 	if (options.delay > 0) {
 		const { sleep } = await import('../helpers')

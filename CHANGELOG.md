@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5)
+## [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.5...HEAD)
+
+### Commits
+
+- refactor!: remove scramble mode [`7d759d4`](https://github.com/henriquehbr/svelte-typewriter/commit/7d759d4d12a01a1d3488aa637820295553c9520e)
+
+## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
 
 ### Merged
 

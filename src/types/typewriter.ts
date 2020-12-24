@@ -13,7 +13,6 @@ interface TypewriterOptions {
 	cascade: boolean
 	loop: boolean | number
 	loopRandom: boolean | number
-	scramble: boolean
 	cursor: boolean | string
 	delay: number
 	dispatch: (type: string, detail?: any) => void
