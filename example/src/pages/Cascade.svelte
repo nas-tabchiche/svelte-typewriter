@@ -1,5 +1,5 @@
 <script>
-	import TypewriterControls from '../components/TypewriterControls.svelte'
+	import TypewriterControls from '@example/components/TypewriterControls.svelte'
 </script>
 
 <h1>Cascade mode</h1>

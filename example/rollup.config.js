@@ -1,9 +1,13 @@
-import svelte from 'rollup-plugin-svelte-hot'
+import path from 'path'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import alias from '@rollup/plugin-alias'
+import svelte from 'rollup-plugin-svelte-hot'
 import hmr from 'rollup-plugin-hot'
 import analyze from 'rollup-plugin-analyzer'
 import { terser } from 'rollup-plugin-terser'
+
+const projectRootDir = path.resolve(__dirname)
 
 const dev = process.env.ROLLUP_WATCH
 const production = !dev
@@ -25,6 +29,14 @@ const options = {
 				optimistic: true,
 				noPreserveState: false
 			}
+		}),
+		alias({
+			entries: [
+				{
+					find: '@example',
+					replacement: path.resolve(projectRootDir, 'src')
+				}
+			]
 		}),
 		hmr({
 			public: './',

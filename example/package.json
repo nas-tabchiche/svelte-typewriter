@@ -9,6 +9,7 @@
 		"start": "sirv public -q -s"
 	},
 	"devDependencies": {
+		"@rollup/plugin-alias": "^3.1.1",
 		"@rollup/plugin-commonjs": "^17.0.0",
 		"@rollup/plugin-node-resolve": "^11.0.1",
 		"rimraf": "^3.0.2",
