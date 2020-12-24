@@ -1,4 +1,4 @@
-import { typingInterval } from '@svelte-typewriter/helpers'
+import { typingInterval } from './typingInterval'
 import type { TypewriterEffectFn } from '@svelte-typewriter/types'
 
 type HideCursorOnAnimationEnd = (element: Element) => void

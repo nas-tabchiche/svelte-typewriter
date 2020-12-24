@@ -1,4 +1,5 @@
-import { sleep, rng } from '@svelte-typewriter/helpers'
+import { sleep } from './sleep'
+import { rng } from './rng'
 
 type TypingInterval = (interval: number | number[]) => Promise<unknown>
 

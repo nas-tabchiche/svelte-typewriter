@@ -1,4 +1,4 @@
-import { rng } from '@svelte-typewriter/helpers'
+import { rng } from './rng'
 import { TypewriterElement } from '@svelte-typewriter/types'
 
 type GetRandomText = (element: TypewriterElement[]) => TypewriterElement

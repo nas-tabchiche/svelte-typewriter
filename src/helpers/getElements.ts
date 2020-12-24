@@ -1,4 +1,5 @@
-import { hasSingleTextNode, createElement } from '@svelte-typewriter/helpers'
+import { hasSingleTextNode } from './hasSingleTextNode'
+import { createElement } from './createElement'
 import type { TypewriterElement } from '@svelte-typewriter/types'
 
 type GetElements = (parentElement: Element) => TypewriterElement[]

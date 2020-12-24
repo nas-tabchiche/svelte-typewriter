@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
-- refactor!: remove scramble mode [`7d759d4`](https://github.com/henriquehbr/svelte-typewriter/commit/7d759d4d12a01a1d3488aa637820295553c9520e)
+- refactor!: remove scramble mode [`1c8ece8`](https://github.com/henriquehbr/svelte-typewriter/commit/1c8ece82abd203fb9132ca5427aab78f7a71cce8)
+- refactor(helpers): avoid circular dependencies (#35) [`22a7ed0`](https://github.com/henriquehbr/svelte-typewriter/commit/22a7ed031360cc1cfb17f1a8730429acbcb96677)
 
 ## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
 

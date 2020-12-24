@@ -1,4 +1,4 @@
-import { typingInterval } from '@svelte-typewriter/helpers'
+import { typingInterval } from './typingInterval'
 import type { TypewriterOptions } from '@svelte-typewriter/types'
 
 type UnwriteEffect = (currentNode: Element, options: TypewriterOptions) => Promise<void>
