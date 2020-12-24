@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...HEAD)
+## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5)
 
 ### Merged
 
@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - chore: bump dependencies [`41978b5`](https://github.com/henriquehbr/svelte-typewriter/commit/41978b5abbadf1eefe055c13f9c3152f8ca1fc28)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 - chore(cascade): remove unnecessary cursor hiding function [`d26afa6`](https://github.com/henriquehbr/svelte-typewriter/commit/d26afa60818872fce5c704c0aac6f6a5c8ae541e)
-- chore(example): replace cursor radio button by color picker [`9d9eba4`](https://github.com/henriquehbr/svelte-typewriter/commit/9d9eba41cd3c8820d51db50c9e123f5dec2e3cee)
+- chore(example): replace cursor radio button by color picker [`ea46b51`](https://github.com/henriquehbr/svelte-typewriter/commit/ea46b51724b1779160246148addc8fb638ffae3a)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
 
