@@ -16,8 +16,7 @@
 <input type="number" bind:value={interval} />
 
 <b>Cursor:</b>
-<input type="radio" bind:group={cursor} value={true} /> true
-<input type="radio" bind:group={cursor} value={false} /> false
+<input type="color" bind:value={cursor} />
 
 <b>Delay:</b>
 <input type="number" bind:value={delay} />

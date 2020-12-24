@@ -26,13 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor(helpers): add writeEffect [`939a86b`](https://github.com/henriquehbr/svelte-typewriter/commit/939a86b73780d4b2857fdabb1a7f0f2ed49a4416)
 - refactor: modularize cursor hiding module (#33) [`652895f`](https://github.com/henriquehbr/svelte-typewriter/commit/652895fb7a95f0d9e778ea4edbd3301e28b9d3db)
 - chore: bump dependencies [`1444f38`](https://github.com/henriquehbr/svelte-typewriter/commit/1444f38c26cec088998f93d34ec04841408d8b2c)
-- chore(example): add import alias [`d95e7ea`](https://github.com/henriquehbr/svelte-typewriter/commit/d95e7eabeb43bb03b2fe1f27c7b9061ebc8dcafe)
+- chore(example): add import alias [`bd6aee8`](https://github.com/henriquehbr/svelte-typewriter/commit/bd6aee8e408e0744a3a1a03b38161bd1f52cc707)
 - refactor(default): modularize "getLongestTextElement" [`41e7b02`](https://github.com/henriquehbr/svelte-typewriter/commit/41e7b02ffd33914057790a2f04ecd7b2550f5e20)
 - refactor(getLongestTextElement): return Element rather TypewriterElement [`a915357`](https://github.com/henriquehbr/svelte-typewriter/commit/a915357c84cf7da7c61b52e550239c9f267165e9)
 - chore(modes): switch from default to named exports [`119119e`](https://github.com/henriquehbr/svelte-typewriter/commit/119119ea2793c1ce9d835e6a5af3fcb97765db7e)
 - chore: bump dependencies [`41978b5`](https://github.com/henriquehbr/svelte-typewriter/commit/41978b5abbadf1eefe055c13f9c3152f8ca1fc28)
 - chore: remove duplicated "isInRange" helper types [`951052d`](https://github.com/henriquehbr/svelte-typewriter/commit/951052dbb492c2119b6b987cd43cf14b61b0c4af)
 - chore(cascade): remove unnecessary cursor hiding function [`d26afa6`](https://github.com/henriquehbr/svelte-typewriter/commit/d26afa60818872fce5c704c0aac6f6a5c8ae541e)
+- chore(example): replace cursor radio button by color picker [`9d9eba4`](https://github.com/henriquehbr/svelte-typewriter/commit/9d9eba41cd3c8820d51db50c9e123f5dec2e3cee)
 
 ## [v2.4.4](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.3...v2.4.4) - 2020-12-15
 
