@@ -3,11 +3,6 @@ interface TypewriterElement {
 	text: string
 }
 
-interface TypewriterParentData {
-	node: Element
-	elements: TypewriterElement[]
-}
-
 interface TypewriterOptions {
 	interval: number | number[]
 	cascade: boolean
@@ -20,16 +15,12 @@ interface TypewriterOptions {
 
 type TypewriterEffectFn = (element: TypewriterElement, options: TypewriterOptions) => Promise<void>
 
-type TypewriterModeFn = (
-	parentData: TypewriterParentData,
-	options: TypewriterOptions
-) => Promise<void>
+type TypewriterModeFn = (elements: TypewriterElement[], options: TypewriterOptions) => Promise<void>
 
 type TypewriterMainFn = (node: Element, options: TypewriterOptions) => void
 
 export {
 	TypewriterElement,
-	TypewriterParentData,
 	TypewriterOptions,
 	TypewriterEffectFn,
 	TypewriterModeFn,

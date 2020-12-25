@@ -12,7 +12,7 @@ const typewriter: TypewriterMainFn = async (node, options) => {
 		await sleep(options.delay)
 		node.classList.remove('delay')
 	}
-	mode({ node, elements }, options)
+	mode(elements, options)
 }
 
 export { typewriter }
