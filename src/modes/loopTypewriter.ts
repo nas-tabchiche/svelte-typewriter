@@ -1,7 +1,7 @@
 import { writeEffect, unwriteEffect, getRandomElement } from '@svelte-typewriter/helpers'
-import type { LoopAnimation, TypewriterModeFn } from '@svelte-typewriter/types'
+import type { TypewriterEffectFn, TypewriterModeFn } from '@svelte-typewriter/types'
 
-const loopTypewriter: LoopAnimation = async ({ currentNode, text }, options) => {
+const loopTypewriter: TypewriterEffectFn = async ({ currentNode, text }, options) => {
 	await writeEffect({ currentNode, text }, options)
 	const textWithUnescapedAmpersands = text.replaceAll('&', '&amp;')
 	const fullyWritten = currentNode.innerHTML === textWithUnescapedAmpersands
