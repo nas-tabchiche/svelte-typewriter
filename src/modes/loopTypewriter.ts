@@ -1,4 +1,6 @@
-import { writeEffect, unwriteEffect, getRandomElement } from '@svelte-typewriter/helpers'
+import { writeEffect } from '@svelte-typewriter/helpers/writeEffect'
+import { unwriteEffect } from '@svelte-typewriter/helpers/unwriteEffect'
+import { getRandomElement } from '@svelte-typewriter/helpers/getRandomElement'
 import type { TypewriterEffectFn, TypewriterModeFn } from '@svelte-typewriter/types'
 
 const loopTypewriter: TypewriterEffectFn = async ({ currentNode, text }, options) => {

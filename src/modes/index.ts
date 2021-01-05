@@ -1,4 +1,4 @@
-import { getElements } from '@svelte-typewriter/helpers'
+import { getElements } from '@svelte-typewriter/helpers/getElements'
 import type { TypewriterMainFn } from '@svelte-typewriter/types'
 
 const typewriter: TypewriterMainFn = async (node, options) => {
@@ -8,7 +8,7 @@ const typewriter: TypewriterMainFn = async (node, options) => {
 			: await import('./typewriter')
 	const elements = getElements(node)
 	if (options.delay > 0) {
-		const { sleep } = await import('../helpers')
+		const { sleep } = await import('@svelte-typewriter/helpers/sleep')
 		await sleep(options.delay)
 		node.classList.remove('delay')
 	}

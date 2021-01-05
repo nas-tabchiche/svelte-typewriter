@@ -1,4 +1,5 @@
-import { writeEffect, onAnimationEnd } from '@svelte-typewriter/helpers'
+import { writeEffect } from '@svelte-typewriter/helpers/writeEffect'
+import { onAnimationEnd } from '@svelte-typewriter/helpers/onAnimationEnd'
 import type { TypewriterElement, TypewriterModeFn } from '@svelte-typewriter/types'
 
 type CleanChildText = (elements: TypewriterElement[]) => void
@@ -10,7 +11,9 @@ const mode: TypewriterModeFn = async (elements, options) => {
 	if (options.cascade) {
 		cleanChildText(elements)
 	} else {
-		const { getLongestTextElement } = await import('@svelte-typewriter/helpers')
+		const { getLongestTextElement } = await import(
+			'@svelte-typewriter/helpers/getLongestTextElement'
+		)
 		const lastElementToFinish = getLongestTextElement(elements)
 		onAnimationEnd(lastElementToFinish, () => options.dispatch('done'))
 	}
