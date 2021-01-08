@@ -3,18 +3,21 @@
 	"version": "1.0.0",
 	"main": "src/index.js",
 	"license": "MIT",
-	"type": "module",
 	"scripts": {
 		"build": "rimraf public/build && node --experimental-specifier-resolution=node build",
 		"start": "sirv public -s"
 	},
 	"devDependencies": {
+		"@tsconfig/svelte": "^1.0.10",
 		"esbuild": "^0.8.29",
 		"esbuild-svelte": "^0.4.0",
 		"rimraf": "^3.0.2",
 		"sirv-cli": "^1.0.10",
 		"slash": "^3.0.0",
 		"svelte": "^3.31.1",
+		"svelte-check": "^1.1.26",
+		"svelte-preprocess": "^4.6.1",
+		"svelte-preprocess-esbuild": "^1.0.4",
 		"tiny-glob": "^0.2.8"
 	},
 	"dependencies": {

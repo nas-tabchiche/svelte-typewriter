@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Typewriter from '../../../src/Typewriter.svelte'
 
   export let interval = 30

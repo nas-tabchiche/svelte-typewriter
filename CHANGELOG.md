@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Commits
 
 - build: migrate from rollup to esbuild (#35) [`25b15be`](https://github.com/henriquehbr/svelte-typewriter/commit/25b15be1170638d5068cc0072864790128311774)
-- build: remove rollup [`e92c4ad`](https://github.com/henriquehbr/svelte-typewriter/commit/e92c4ad0252b5098882efa7c6555c6ec04246cc7)
+- build: remove rollup [`5b7d8aa`](https://github.com/henriquehbr/svelte-typewriter/commit/5b7d8aab39a3a9534393aaaa0a8270b049a4c971)
+- refactor: convert example project to typescript (#35) [`df905cd`](https://github.com/henriquehbr/svelte-typewriter/commit/df905cde1e631fadba9a90cc3159eced4f7f8c2a)
 - refactor!: remove scramble mode [`1c8ece8`](https://github.com/henriquehbr/svelte-typewriter/commit/1c8ece82abd203fb9132ca5427aab78f7a71cce8)
 - refactor: remove unused parent element references (#35) [`d5bffa0`](https://github.com/henriquehbr/svelte-typewriter/commit/d5bffa001fe41d08a580f257abc98eefd0342a5c)
 - refactor(helpers): avoid circular dependencies (#35) [`a501778`](https://github.com/henriquehbr/svelte-typewriter/commit/a501778dd5ffd51d1303484321bcaa8de69558f9)

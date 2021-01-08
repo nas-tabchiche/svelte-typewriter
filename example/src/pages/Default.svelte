@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import TypewriterControls from '@example/components/TypewriterControls.svelte'
 </script>
 

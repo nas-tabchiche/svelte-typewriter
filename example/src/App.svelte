@@ -1,6 +1,5 @@
-<script>
+<script lang="ts">
   import { Router, Link, Route } from 'svelte-routing'
-  import Loadable from 'svelte-loadable'
   import TypewriterMode from '@example/components/TypewriterMode.svelte'
 </script>
 

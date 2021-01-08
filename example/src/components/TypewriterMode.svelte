@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  // Submit PR with typings for `svelte-loadable`
   import Loadable from 'svelte-loadable'
 
   export let loader
