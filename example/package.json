@@ -21,6 +21,7 @@
 		"tiny-glob": "^0.2.8"
 	},
 	"dependencies": {
+    "svelte-typewriter": "file:../src/Typewriter.svelte",
 		"svelte-loadable": "^1.5.1",
 		"svelte-routing": "^1.5.0"
 	}

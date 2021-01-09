@@ -5,10 +5,10 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@example/*": [
-        "./src/*"
-      ],
-      "svelte/*": ["./node_modules/svelte/*"]
+      "@example/*": ["./src/*"],
+      "@svelte-typewriter/*": ["../src/*"]
     }
   },
+  "include": ["../src/**/*", "src/**/*"],
+  "exclude": ["node_modules"]
 }
