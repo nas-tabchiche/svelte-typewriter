@@ -14,8 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: convert example project to typescript (#35) [`74f6d59`](https://github.com/henriquehbr/svelte-typewriter/commit/74f6d59ae3f3d1ce2a3c701084f8506e0e51d7e0)
 - refactor!: remove scramble mode [`1c8ece8`](https://github.com/henriquehbr/svelte-typewriter/commit/1c8ece82abd203fb9132ca5427aab78f7a71cce8)
 - refactor: remove unused parent element references (#35) [`d5bffa0`](https://github.com/henriquehbr/svelte-typewriter/commit/d5bffa001fe41d08a580f257abc98eefd0342a5c)
+- chore(example): remove old build script [`af22d23`](https://github.com/henriquehbr/svelte-typewriter/commit/af22d23cdc28adca01b4db9337ee8abd5c68b17d)
 - refactor(helpers): avoid circular dependencies (#35) [`a501778`](https://github.com/henriquehbr/svelte-typewriter/commit/a501778dd5ffd51d1303484321bcaa8de69558f9)
-- refactor(example): add alias for svelte-typewriter src [`2237908`](https://github.com/henriquehbr/svelte-typewriter/commit/2237908b3c52532628a5b5e661ec05e2a805cd36)
+- refactor(example): add alias for svelte-typewriter src [`0be8d46`](https://github.com/henriquehbr/svelte-typewriter/commit/0be8d462b19a8cddc872749b427cc16a7d65547a)
 - refactor: remove unneeded types (#35) [`164164b`](https://github.com/henriquehbr/svelte-typewriter/commit/164164b10cdd4b3f334a50ec564d19d869d41d48)
 
 ## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
