@@ -1,6 +1,8 @@
 import path from 'path'
 import esbuild from 'esbuild'
 import sveltePlugin from 'esbuild-svelte'
+import { typescript } from 'svelte-preprocess-esbuild'
+import preprocess from 'svelte-preprocess'
 
 /** @type {import('esbuild').Plugin} */
 const dedupeSveltePlugin = {
@@ -9,7 +11,7 @@ const dedupeSveltePlugin = {
 		build.onResolve({ filter: /^svelte(\/[\a-zA-Z0-9@-]+)?$/ }, args => ({
 			path: path.resolve(process.cwd(), 'node_modules', args.path, 'index.js')
 		}))
-	}
+	} 
 }
 
 const build = async () => {
@@ -21,7 +23,19 @@ const build = async () => {
 		outbase: './src',
 		outdir: './public/build',
 		minify: true,
-		plugins: [sveltePlugin(), dedupeSveltePlugin]
+		plugins: [
+			sveltePlugin({
+				preprocessor: [
+					await typescript({
+						target: 'es2020'
+					}),
+					preprocess({
+						typescript: false
+					})
+				]
+			}),
+			dedupeSveltePlugin
+		]
 	})
 }
 

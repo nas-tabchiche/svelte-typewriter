@@ -4,68 +4,71 @@
 
 <h1>LoopRandom mode</h1>
 
-<hr>
+<hr />
 
 <pre>
   &lt;Typewriter loopRandom /&gt;
 </pre>
 
 <TypewriterControls loopRandom>
-  <slot />
+	<slot />
 </TypewriterControls>
 
-<hr>
+<hr />
 
 <pre>
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; /&gt;
 </pre>
 
 <TypewriterControls loopRandom interval={80}>
-  <slot />
+	<slot />
 </TypewriterControls>
 
-<hr>
+<hr />
 
 <pre>
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; /&gt;
 </pre>
 
 <TypewriterControls loopRandom interval={80} delay={3000}>
-  <slot />
+	<slot />
 </TypewriterControls>
 
-<hr>
+<hr />
 
-<pre>
+<pre
+>
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor=&lcub;false&rcub; /&gt;
 </pre>
 
 <TypewriterControls loopRandom interval={80} delay={3000} cursor={false}>
-  <slot />
+	<slot />
 </TypewriterControls>
 
-<hr>
+<hr />
 
-<pre>
+<pre
+>
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='limegreen' /&gt;
 </pre>
 
-<TypewriterControls loopRandom interval={80} delay={3000} cursor='limegreen'>
-  <slot />
+<TypewriterControls loopRandom interval={80} delay={3000} cursor="limegreen">
+	<slot />
 </TypewriterControls>
 
-<hr>
+<hr />
 
-<pre>
+<pre
+>
   &lt;Typewriter loopRandom interval=&lcub;80&rcub; delay=&lcub;3000&rcub; cursor='limegreen' on:done=&lcub;() =&gt; console.log('Hello World!')&rcub; /&gt;
 </pre>
 
 <TypewriterControls
-  loopRandom
-  interval={80}
-  delay={3000}
-  cursor='limegreen'
-  on:done={() => console.log('Hello World!')}
+	loopRandom
+	interval={80}
+	delay={3000}
+	cursor="limegreen"
+	on:done={() => console.log('Hello World!')}
 >
-  <slot />
+	<slot />
 </TypewriterControls>

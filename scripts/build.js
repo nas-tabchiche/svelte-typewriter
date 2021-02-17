@@ -18,6 +18,7 @@ const esbuildComponentConfig = format => ({
 	outExtension: {
 		'.js': format === 'esm' ? '.mjs' : '.js'
 	},
+	minify: true,
 	plugins: [sveltePlugin()]
 })
 
