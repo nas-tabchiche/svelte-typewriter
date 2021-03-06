@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor(helpers): avoid circular dependencies (#35) [`a501778`](https://github.com/henriquehbr/svelte-typewriter/commit/a501778dd5ffd51d1303484321bcaa8de69558f9)
 - refactor(example): add alias for svelte-typewriter src [`0be8d46`](https://github.com/henriquehbr/svelte-typewriter/commit/0be8d462b19a8cddc872749b427cc16a7d65547a)
 - refactor: remove unneeded types (#35) [`164164b`](https://github.com/henriquehbr/svelte-typewriter/commit/164164b10cdd4b3f334a50ec564d19d869d41d48)
+- chore(example): remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4) [`88604be`](https://github.com/henriquehbr/svelte-typewriter/commit/88604be1573a1fdab8b3a27ce92d8f9be75e43e9)
 
 ## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
 
