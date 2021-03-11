@@ -29,7 +29,8 @@
 		"postchangelog": "git add CHANGELOG.md",
 		"amend-changelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
 		"build": "rimraf lib && node scripts/build",
-		"example:dev": "yarn --cwd example && yarn --cwd example run dev",
+		"dev": "yarn --cwd example && yarn --cwd example dev",
+    "start": "yarn --cwd example && yarn --cwd example build && yarn --cwd example start",
 		"example:build": "yarn --cwd example && yarn --cwd example run build",
 		"prepublishOnly": "yarn build",
 		"prettier": "prettier --write \"./src/**/*.ts\""

@@ -27,9 +27,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: remove unneeded types (#35) [`164164b`](https://github.com/henriquehbr/svelte-typewriter/commit/164164b10cdd4b3f334a50ec564d19d869d41d48)
 - chore(example): remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4) [`69e660f`](https://github.com/henriquehbr/svelte-typewriter/commit/69e660fb425b360a8de552f3e0e1cf7774258436)
 - chore: remove redundant script `example:start` from package.json [`5d6d34e`](https://github.com/henriquehbr/svelte-typewriter/commit/5d6d34ed99810288fba2b40a9527aea48ea6f0ff)
+- chore(example): adjust favicon path [`7fb9fed`](https://github.com/henriquehbr/svelte-typewriter/commit/7fb9fed1afeef2caeee6356d7db2fc690f6b95ab)
 - chore: include example build output on .gitignore [`fe052f0`](https://github.com/henriquehbr/svelte-typewriter/commit/fe052f08b2a7ca08eab5640b80af89f43ec3873a)
 - chore(example): set `start` script to `vite preview` (#38) [`6d59623`](https://github.com/henriquehbr/svelte-typewriter/commit/6d596233f30686623a6ba1b1b2b4f6f79b5c0e5a)
-- chore(example): adjust favicon path [`9b6bb3d`](https://github.com/henriquehbr/svelte-typewriter/commit/9b6bb3dfbe62bb9373f5329b915ceb1bcb36c0a9)
+- chore: remove `example:` prefix from scripts [`f65d735`](https://github.com/henriquehbr/svelte-typewriter/commit/f65d7351d4f0f5070492e98fd0481f79b30cc1f1)
 
 ## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
 
