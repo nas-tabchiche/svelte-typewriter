@@ -11,15 +11,15 @@
 
 ## Summary
 
-- [svelte-typewriter](#svelte-typewriter)
-  - [Summary](#summary)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Props](#props)
-    - [Settings](#settings)
-    - [Modes](#modes)
-    - [Event listeners](#event-listeners)
-  - [Contributing](#contributing)
+-   [svelte-typewriter](#svelte-typewriter)
+    -   [Summary](#summary)
+    -   [Installation](#installation)
+    -   [Usage](#usage)
+    -   [Props](#props)
+        -   [Settings](#settings)
+        -   [Modes](#modes)
+        -   [Event listeners](#event-listeners)
+    -   [Contributing](#contributing)
 
 ## Installation
 
@@ -39,7 +39,6 @@ You need to import the Svelte component, and wrap your elements with the `<Typew
 
 ```svelte
 <script>
-  import Typewriter from 'svelte-typewriter'
 </script>
 
 <Typewriter>
@@ -47,6 +46,7 @@ You need to import the Svelte component, and wrap your elements with the `<Typew
 	<h2>The typewriter effect cascades by default</h2>
 	<p>Lorem ipsum dolor sit amet consectetur</p>
 </Typewriter>
+
 ```
 
 ## Props
@@ -86,6 +86,7 @@ You can control the behavior of the typewriter effect by passing specific props 
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b fix/my-new-bug-fix`
-3. Commit your changes: `git commit -am 'fix: Fix some bug'`
-4. Push to the branch: `git push origin fix/my-new-bug-fix`
-5. Submit a pull request :D
+3. Preview your changes with `yarn dev` (or `npm run dev`)
+4. Commit your changes: `git commit -am 'fix: Fix some bug'`
+5. Push to the branch: `git push origin fix/my-new-bug-fix`
+6. Submit a pull request :D
