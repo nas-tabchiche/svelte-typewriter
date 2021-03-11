@@ -27,7 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: remove unneeded types (#35) [`164164b`](https://github.com/henriquehbr/svelte-typewriter/commit/164164b10cdd4b3f334a50ec564d19d869d41d48)
 - chore(example): remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4) [`69e660f`](https://github.com/henriquehbr/svelte-typewriter/commit/69e660fb425b360a8de552f3e0e1cf7774258436)
 - chore: remove redundant script `example:start` from package.json [`5d6d34e`](https://github.com/henriquehbr/svelte-typewriter/commit/5d6d34ed99810288fba2b40a9527aea48ea6f0ff)
-- chore(example): set `start` script to `vite preview` (#38) [`7a6b452`](https://github.com/henriquehbr/svelte-typewriter/commit/7a6b452f2898ad9f1e99526fa2da6706e7b6c729)
+- chore(example): set `start` script to `vite preview` (#38) [`6d59623`](https://github.com/henriquehbr/svelte-typewriter/commit/6d596233f30686623a6ba1b1b2b4f6f79b5c0e5a)
+- chore: include example build output on .gitignore [`b2a5e39`](https://github.com/henriquehbr/svelte-typewriter/commit/b2a5e398f226c9ae7c28726a2788a680e33b1a8e)
 
 ## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
 
