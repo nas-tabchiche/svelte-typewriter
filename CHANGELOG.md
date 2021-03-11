@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: convert example project to typescript (#35) [`74f6d59`](https://github.com/henriquehbr/svelte-typewriter/commit/74f6d59ae3f3d1ce2a3c701084f8506e0e51d7e0)
 - refactor!: remove scramble mode [`1c8ece8`](https://github.com/henriquehbr/svelte-typewriter/commit/1c8ece82abd203fb9132ca5427aab78f7a71cce8)
 - build: setup vite (#38) [`c904f5a`](https://github.com/henriquehbr/svelte-typewriter/commit/c904f5a2c99b963059fd4489a56f03f1ae03818e)
-- chore: remove esbuild (#38) [`9af9daa`](https://github.com/henriquehbr/svelte-typewriter/commit/9af9daa5cd5314fa52b065fb91c4f13728f2b011)
+- chore: remove esbuild (#38) [`21b387f`](https://github.com/henriquehbr/svelte-typewriter/commit/21b387f39d72bad86d59129ecbbb69e69d8db745)
 - chore(example): remove old build script [`332225f`](https://github.com/henriquehbr/svelte-typewriter/commit/332225fee2f01c33c1470f925a162916054f705e)
 - refactor: remove unused parent element references (#35) [`d5bffa0`](https://github.com/henriquehbr/svelte-typewriter/commit/d5bffa001fe41d08a580f257abc98eefd0342a5c)
 - chore(example): remove unnecessary dependency [`9cb6e69`](https://github.com/henriquehbr/svelte-typewriter/commit/9cb6e6911e505d482fa2efea1f91f4bf6b5a596f)
@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor: remove unneeded types (#35) [`164164b`](https://github.com/henriquehbr/svelte-typewriter/commit/164164b10cdd4b3f334a50ec564d19d869d41d48)
 - chore(example): remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4) [`69e660f`](https://github.com/henriquehbr/svelte-typewriter/commit/69e660fb425b360a8de552f3e0e1cf7774258436)
 - chore: remove redundant script `example:start` from package.json [`5d6d34e`](https://github.com/henriquehbr/svelte-typewriter/commit/5d6d34ed99810288fba2b40a9527aea48ea6f0ff)
+- chore(example): set `start` script to `vite preview` (#38) [`7a6b452`](https://github.com/henriquehbr/svelte-typewriter/commit/7a6b452f2898ad9f1e99526fa2da6706e7b6c729)
 
 ## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
 
