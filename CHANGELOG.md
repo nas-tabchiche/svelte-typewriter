@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor!: remove scramble mode [`1c8ece8`](https://github.com/henriquehbr/svelte-typewriter/commit/1c8ece82abd203fb9132ca5427aab78f7a71cce8)
 - build: setup vite (#38) [`c904f5a`](https://github.com/henriquehbr/svelte-typewriter/commit/c904f5a2c99b963059fd4489a56f03f1ae03818e)
 - chore: remove esbuild (#38) [`21b387f`](https://github.com/henriquehbr/svelte-typewriter/commit/21b387f39d72bad86d59129ecbbb69e69d8db745)
+- build(example): add html minification vite plugin (#38) [`d3cc871`](https://github.com/henriquehbr/svelte-typewriter/commit/d3cc8713063c56acdf04ec5df4ba38108e592430)
 - chore(example): remove old build script [`332225f`](https://github.com/henriquehbr/svelte-typewriter/commit/332225fee2f01c33c1470f925a162916054f705e)
 - refactor: remove unused parent element references (#35) [`d5bffa0`](https://github.com/henriquehbr/svelte-typewriter/commit/d5bffa001fe41d08a580f257abc98eefd0342a5c)
 - chore(example): remove unnecessary dependency [`9cb6e69`](https://github.com/henriquehbr/svelte-typewriter/commit/9cb6e6911e505d482fa2efea1f91f4bf6b5a596f)
@@ -26,11 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - refactor(example): add alias for svelte-typewriter src [`0be8d46`](https://github.com/henriquehbr/svelte-typewriter/commit/0be8d462b19a8cddc872749b427cc16a7d65547a)
 - refactor: remove unneeded types (#35) [`164164b`](https://github.com/henriquehbr/svelte-typewriter/commit/164164b10cdd4b3f334a50ec564d19d869d41d48)
 - chore(example): remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4) [`69e660f`](https://github.com/henriquehbr/svelte-typewriter/commit/69e660fb425b360a8de552f3e0e1cf7774258436)
+- chore: remove `example:` prefix from scripts [`4d21455`](https://github.com/henriquehbr/svelte-typewriter/commit/4d2145548cfc4e85aa064b56ddc156b04ac3375d)
 - chore: remove redundant script `example:start` from package.json [`5d6d34e`](https://github.com/henriquehbr/svelte-typewriter/commit/5d6d34ed99810288fba2b40a9527aea48ea6f0ff)
 - chore(example): adjust favicon path [`7fb9fed`](https://github.com/henriquehbr/svelte-typewriter/commit/7fb9fed1afeef2caeee6356d7db2fc690f6b95ab)
 - chore: include example build output on .gitignore [`fe052f0`](https://github.com/henriquehbr/svelte-typewriter/commit/fe052f08b2a7ca08eab5640b80af89f43ec3873a)
 - chore(example): set `start` script to `vite preview` (#38) [`6d59623`](https://github.com/henriquehbr/svelte-typewriter/commit/6d596233f30686623a6ba1b1b2b4f6f79b5c0e5a)
-- chore: remove `example:` prefix from scripts [`f65d735`](https://github.com/henriquehbr/svelte-typewriter/commit/f65d7351d4f0f5070492e98fd0481f79b30cc1f1)
 
 ## [v2.4.5](https://github.com/henriquehbr/svelte-typewriter/compare/v2.4.4...v2.4.5) - 2020-12-24
 
