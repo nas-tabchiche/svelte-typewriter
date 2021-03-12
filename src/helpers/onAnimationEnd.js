@@ -1,10 +1,9 @@
-type OnAnimationEnd = (element: Element, callback: Function) => void
-
-const onAnimationEnd: OnAnimationEnd = (element, callback) => {
+/** @type {import(types').OnAnimationEnd} */
+const onAnimationEnd = (element, callback) => {
 	const observer = new MutationObserver(mutations => {
 		mutations.forEach(mutation => {
 			const elementAttributeChanged = mutation.type === 'attributes'
-			const elementFinishedTyping = !(mutation.target as Element).classList.contains('typing')
+			const elementFinishedTyping = mutation.target.classList.contains('typing')
 			if (elementAttributeChanged && elementFinishedTyping) callback()
 		})
 	})

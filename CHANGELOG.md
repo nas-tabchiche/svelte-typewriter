@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Merged
 
+- build: replace esbuild for Vite [`#47`](https://github.com/henriquehbr/svelte-typewriter/pull/47)
 - refactor: convert example components to typescript [`#35`](https://github.com/henriquehbr/svelte-typewriter/pull/35)
 
 ### Commits
@@ -16,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - build: migrate from rollup to esbuild (#35) [`25b15be`](https://github.com/henriquehbr/svelte-typewriter/commit/25b15be1170638d5068cc0072864790128311774)
 - build: remove rollup [`5b7d8aa`](https://github.com/henriquehbr/svelte-typewriter/commit/5b7d8aab39a3a9534393aaaa0a8270b049a4c971)
 - refactor: convert example project to typescript (#35) [`74f6d59`](https://github.com/henriquehbr/svelte-typewriter/commit/74f6d59ae3f3d1ce2a3c701084f8506e0e51d7e0)
+- refactor: rewrite lib files in js with JSDoc typings [`fde4088`](https://github.com/henriquehbr/svelte-typewriter/commit/fde4088ab602ec08b681fd7181bfb04f87632bf6)
 - refactor!: remove scramble mode [`1c8ece8`](https://github.com/henriquehbr/svelte-typewriter/commit/1c8ece82abd203fb9132ca5427aab78f7a71cce8)
 - build: setup vite (#38) [`cc03b48`](https://github.com/henriquehbr/svelte-typewriter/commit/cc03b485ffb4c9478935c979f4f2099b7cacbf54)
 - build(example): setup vite (#38) [`0ca8709`](https://github.com/henriquehbr/svelte-typewriter/commit/0ca8709a85741a1eb678c9ffd3650fa03639f7a1)
@@ -24,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - build(example): add html minification vite plugin (#38) [`bf0fea6`](https://github.com/henriquehbr/svelte-typewriter/commit/bf0fea6cd88d4fe9e2b5b2edabbedb0bd4868242)
 - chore(example): remove old build script [`332225f`](https://github.com/henriquehbr/svelte-typewriter/commit/332225fee2f01c33c1470f925a162916054f705e)
 - refactor: remove unused parent element references (#35) [`d5bffa0`](https://github.com/henriquehbr/svelte-typewriter/commit/d5bffa001fe41d08a580f257abc98eefd0342a5c)
-- docs: add "change preview" step on contribution guide [`2f76996`](https://github.com/henriquehbr/svelte-typewriter/commit/2f769965b0e96ac61f52fc08875417162d137699)
+- docs: add "change preview" step on contribution guide [`e4c7ea3`](https://github.com/henriquehbr/svelte-typewriter/commit/e4c7ea3e553f8e8fbf74f305f15a486bbd4ff648)
 - chore(example): remove unnecessary dependency [`9cb6e69`](https://github.com/henriquehbr/svelte-typewriter/commit/9cb6e6911e505d482fa2efea1f91f4bf6b5a596f)
 - refactor(helpers): avoid circular dependencies (#35) [`a501778`](https://github.com/henriquehbr/svelte-typewriter/commit/a501778dd5ffd51d1303484321bcaa8de69558f9)
 - refactor(example): add alias for svelte-typewriter src [`0be8d46`](https://github.com/henriquehbr/svelte-typewriter/commit/0be8d462b19a8cddc872749b427cc16a7d65547a)

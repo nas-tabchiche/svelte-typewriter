@@ -1,11 +1,10 @@
 import { rng } from './rng'
-import { TypewriterElement } from '@svelte-typewriter/types'
 
-type GetRandomText = (element: TypewriterElement[]) => TypewriterElement
+/** @type {any[]} */
+let alreadyChoosenTexts = []
 
-let alreadyChoosenTexts: any[] = []
-
-const getRandomElement: GetRandomText = elements => {
+/** @type {import(types').GetRandomText} */
+const getRandomElement = elements => {
 	while (true) {
 		const randomIndex = rng(0, elements.length)
 		// After each iteration, avoid repeating the last text from the last iteration

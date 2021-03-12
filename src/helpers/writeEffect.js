@@ -1,12 +1,9 @@
 import { typingInterval } from './typingInterval'
-import type { TypewriterEffectFn } from '@svelte-typewriter/types'
+/** @type {import(types').HideCursorOnAnimationEnd} */
+const hideCursorOnAnimationEnd = element => element.classList.replace('typing', 'finished-typing')
 
-type HideCursorOnAnimationEnd = (element: Element) => void
-
-const hideCursorOnAnimationEnd: HideCursorOnAnimationEnd = element =>
-	element.classList.replace('typing', 'finished-typing')
-
-const writeEffect: TypewriterEffectFn = async ({ currentNode, text }, options) => {
+/** @type {import(types').TypewriterEffectFn} */
+const writeEffect = async ({ currentNode, text }, options) => {
 	currentNode.classList.add('typing')
 	for (let index = 0; index <= text.length; index++) {
 		const char = text[index]

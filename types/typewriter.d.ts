@@ -15,14 +15,14 @@ interface TypewriterOptions {
 
 type TypewriterEffectFn = (element: TypewriterElement, options: TypewriterOptions) => Promise<void>
 
-type TypewriterModeFn = (elements: TypewriterElement[], options: TypewriterOptions) => Promise<void>
+type TypewriterMainFn = (node: Element, options: TypewriterOptions) => Promise<void>
 
-type TypewriterMainFn = (node: Element, options: TypewriterOptions) => void
+type TypewriterModeFn = (elements: TypewriterElement[], options: TypewriterOptions) => Promise<void>
 
 export {
 	TypewriterElement,
 	TypewriterOptions,
 	TypewriterEffectFn,
-	TypewriterModeFn,
-	TypewriterMainFn
+	TypewriterMainFn,
+	TypewriterModeFn
 }

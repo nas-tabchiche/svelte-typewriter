@@ -1,13 +1,8 @@
 import { writeEffect } from '@svelte-typewriter/helpers/writeEffect'
 import { onAnimationEnd } from '@svelte-typewriter/helpers/onAnimationEnd'
-import type { TypewriterElement, TypewriterModeFn } from '@svelte-typewriter/types'
 
-type CleanChildText = (elements: TypewriterElement[]) => void
-
-const cleanChildText: CleanChildText = elements =>
-	elements.forEach(element => (element.currentNode.textContent = ''))
-
-const mode: TypewriterModeFn = async (elements, options) => {
+/** @type {import('types').TypewriterOptions} */
+const mode = async (elements, options) => {
 	if (options.cascade) {
 		cleanChildText(elements)
 	} else {
