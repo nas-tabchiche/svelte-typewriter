@@ -1,5 +1,6 @@
 import { writeEffect } from '@svelte-typewriter/helpers/writeEffect'
 import { onAnimationEnd } from '@svelte-typewriter/helpers/onAnimationEnd'
+import { cleanChildText } from '@svelte-typewriter/helpers/cleanChildText'
 
 /** @type {import('types').TypewriterOptions} */
 const mode = async (elements, options) => {

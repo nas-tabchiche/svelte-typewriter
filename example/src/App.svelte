@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { Router, Link, Route } from 'svelte-routing'
   import TypewriterMode from '@example/components/TypewriterMode.svelte'
 </script>
