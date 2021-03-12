@@ -1,9 +1,7 @@
 import { typingInterval } from './typingInterval'
-import type { TypewriterOptions } from '@svelte-typewriter/types'
 
-type UnwriteEffect = (currentNode: Element, options: TypewriterOptions) => Promise<void>
-
-const unwriteEffect: UnwriteEffect = async (currentNode, options) => {
+/** @type {import(types').UnwriteEffect} */
+const unwriteEffect = async (currentNode, options) => {
 	options.dispatch('done')
 	await typingInterval(typeof options.loop === 'number' ? options.loop : 1500)
 	const text = currentNode.innerHTML.replaceAll('&amp;', '&')

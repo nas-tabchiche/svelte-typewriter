@@ -1,7 +1,7 @@
 import { getElements } from '@svelte-typewriter/helpers/getElements'
-import type { TypewriterMainFn } from '@svelte-typewriter/types'
 
-const typewriter: TypewriterMainFn = async (node, options) => {
+/** @type {import('types').TypewriterMainFn} */
+const typewriter = async (node, options) => {
 	const { mode } =
 		options.loop || options.loopRandom
 			? await import('./loopTypewriter')

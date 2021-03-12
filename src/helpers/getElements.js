@@ -1,13 +1,11 @@
 import { hasSingleTextNode } from './hasSingleTextNode'
 import { createElement } from './createElement'
-import type { TypewriterElement } from '@svelte-typewriter/types'
 
-type GetElements = (parentElement: Element) => TypewriterElement[]
-
-const getElements: GetElements = parentElement => {
+/** @type {import(types').GetElements} */
+const getElements = parentElement => {
 	if (hasSingleTextNode(parentElement)) {
-		const text = parentElement.textContent!
-		const childNode = createElement(parentElement.textContent!, 'p')
+		const text = parentElement.textContent
+		const childNode = createElement(parentElement.textContent, 'p')
 		parentElement.textContent = ''
 		parentElement.appendChild(childNode)
 		return [{ currentNode: childNode, text }]
