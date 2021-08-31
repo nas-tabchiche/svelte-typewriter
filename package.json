@@ -21,25 +21,25 @@
 		"lib"
 	],
 	"scripts": {
-		"bump:patch": "cross-env HUSKY_SKIP_HOOKS=1 yarn version --patch",
-		"bump:minor": "cross-env HUSKY_SKIP_HOOKS=1 yarn version --minor",
-		"bump:major": "cross-env HUSKY_SKIP_HOOKS=1 yarn version --major",
-		"version": "yarn changelog -p",
-		"postversion": "yes \"\" | yarn publish",
+		"bump:patch": "cross-env HUSKY_SKIP_HOOKS=1 npm version patch",
+		"bump:minor": "cross-env HUSKY_SKIP_HOOKS=1 npm version minor",
+		"bump:major": "cross-env HUSKY_SKIP_HOOKS=1 npm version major",
+		"version": "npm run changelog -p",
+		"postversion": "yes \"\" | npm publish",
 		"changelog": "auto-changelog --template keepachangelog -l false --hide-credit",
 		"postchangelog": "git add CHANGELOG.md",
 		"amend-changelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
 		"build": "vite build",
-		"dev": "yarn --cwd example && yarn --cwd example dev",
-		"start": "yarn --cwd example && yarn --cwd example build && yarn --cwd example start",
-		"example:build": "yarn --cwd example && yarn --cwd example run build",
-		"prepublishOnly": "yarn build",
+		"dev": "cd example && npm i && npm run dev",
+		"start": "cd example && npm i && npm run build && npm run start",
+		"example:build": "cd example && npm i && npm run build",
+		"prepublishOnly": "npm run build",
 		"prettier": "prettier --write \"./src/**/*.js\""
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn prettier && yarn build && git add .",
-			"post-commit": "yarn changelog -u && yarn amend-changelog",
+			"pre-commit": "npm run prettier && npm run build && git add .",
+			"post-commit": "npm run changelog -u && npm run amend-changelog",
 			"pre-push": "cross-env HUSKY_SKIP_HOOKS=1 git push --tags"
 		}
 	},
