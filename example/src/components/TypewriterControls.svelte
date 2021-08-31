@@ -1,5 +1,5 @@
 <script>
-  import Typewriter from '@svelte-typewriter/Typewriter.svelte'
+  import Typewriter from 'svelte-typewriter'
 
   export let interval = 30
 	export let cascade = false

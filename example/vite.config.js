@@ -31,8 +31,7 @@ export default defineConfig(({ mode }) => {
 		resolve: {
 			alias: {
 				svelte: path.resolve(__dirname, 'node_modules/svelte'),
-				'@example': path.resolve(__dirname, 'src'),
-				'@svelte-typewriter': path.resolve(__dirname, '..', 'src')
+				'@example': path.resolve(__dirname, 'src')
 			}
 		},
 		plugins: [

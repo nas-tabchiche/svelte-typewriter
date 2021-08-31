@@ -14,6 +14,7 @@
 	"dependencies": {
 		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.19",
 		"svelte-loadable": "^1.5.1",
-		"svelte-routing": "^1.5.0"
+		"svelte-routing": "^1.5.0",
+        "svelte-typewriter": ".."
 	}
 }
