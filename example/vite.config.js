@@ -41,9 +41,6 @@ export default defineConfig(({ mode }) => {
 				emitCss: true
 			}),
 			htmlMinifier()
-		],
-		build: {
-			minify: isProduction
-		}
+		]
 	}
 })
