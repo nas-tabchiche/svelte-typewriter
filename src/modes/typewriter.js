@@ -1,15 +1,13 @@
-import { writeEffect } from '@svelte-typewriter/helpers/writeEffect'
-import { onAnimationEnd } from '@svelte-typewriter/helpers/onAnimationEnd'
-import { cleanChildText } from '@svelte-typewriter/helpers/cleanChildText'
+import { writeEffect } from '../helpers/writeEffect'
+import { onAnimationEnd } from '../helpers/onAnimationEnd'
+import { cleanChildText } from '../helpers/cleanChildText'
 
 /** @type {import('types').TypewriterOptions} */
 const mode = async (elements, options) => {
 	if (options.cascade) {
 		cleanChildText(elements)
 	} else {
-		const { getLongestTextElement } = await import(
-			'@svelte-typewriter/helpers/getLongestTextElement'
-		)
+		const { getLongestTextElement } = await import('../helpers/getLongestTextElement')
 		const lastElementToFinish = getLongestTextElement(elements)
 		onAnimationEnd(lastElementToFinish, () => options.dispatch('done'))
 	}
