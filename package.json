@@ -29,7 +29,7 @@
 		"changelog": "auto-changelog --template keepachangelog -l false --hide-credit",
 		"postchangelog": "git add CHANGELOG.md",
 		"amend-changelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
-        "postinstall": "cd example && npm i",
+		"postinstall": "cd example && npm i",
 		"build": "vite build",
 		"dev": "cd example && npm run dev",
 		"start": "cd example && npm run build && npm run start",
@@ -45,7 +45,6 @@
 		}
 	},
 	"devDependencies": {
-		"@svitejs/vite-plugin-svelte": "^0.10.0",
 		"auto-changelog": "^2.2.1",
 		"cross-env": "^7.0.3",
 		"husky": "^4.3.6",
@@ -53,5 +52,8 @@
 		"prettier-plugin-svelte": "^1.4.2",
 		"svelte": "^3.31.1",
 		"vite": "^2.0.5"
+	},
+	"dependencies": {
+		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.19"
 	}
 }
