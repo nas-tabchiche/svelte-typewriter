@@ -11,15 +11,14 @@
 
 ## Summary
 
--   [svelte-typewriter](#svelte-typewriter)
-    -   [Summary](#summary)
-    -   [Installation](#installation)
-    -   [Usage](#usage)
-    -   [Props](#props)
-        -   [Settings](#settings)
-        -   [Modes](#modes)
-        -   [Event listeners](#event-listeners)
-    -   [Contributing](#contributing)
+- [Summary](#summary)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+    - [Settings](#settings)
+    - [Modes](#modes)
+    - [Event listeners](#event-listeners)
+- [Contributing](#contributing)
 
 ## Installation
 
