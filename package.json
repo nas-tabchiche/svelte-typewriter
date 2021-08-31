@@ -11,14 +11,12 @@
 	},
 	"version": "2.4.5",
 	"svelte": "src/Typewriter.svelte",
-	"module": "lib/svelte-typewriter.es.js",
-	"main": "lib/svelte-typewriter.cjs.js",
 	"types": "types/index.d.ts",
 	"type": "module",
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
 	"files": [
-		"lib"
+		"src"
 	],
 	"scripts": {
 		"bump:patch": "cross-env HUSKY_SKIP_HOOKS=1 npm version patch",
@@ -30,16 +28,14 @@
 		"postchangelog": "git add CHANGELOG.md",
 		"amend-changelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
 		"postinstall": "cd example && npm i",
-		"build": "vite build",
 		"dev": "cd example && npm run dev",
-		"start": "cd example && npm run build && npm run start",
+		"start": "cd example && npm run start",
 		"example:build": "cd example && npm run build",
-		"prepublishOnly": "npm run build",
 		"prettier": "prettier --write \"./src/**/*.js\""
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run prettier && npm run build && git add .",
+			"pre-commit": "npm run prettier && git add .",
 			"post-commit": "npm run changelog -u && npm run amend-changelog",
 			"pre-push": "cross-env HUSKY_SKIP_HOOKS=1 git push --tags"
 		}
@@ -50,10 +46,6 @@
 		"husky": "^4.3.6",
 		"prettier": "^2.2.1",
 		"prettier-plugin-svelte": "^1.4.2",
-		"svelte": "^3.31.1",
-		"vite": "^2.0.5"
-	},
-	"dependencies": {
-		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.19"
+		"svelte": "^3.31.1"
 	}
 }
