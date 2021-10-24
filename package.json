@@ -22,10 +22,10 @@
 		"changelog": "docker run --rm -u $(id -u):$(id -g) -v $PWD:/app orhunp/git-cliff --output CHANGELOG.md",
 		"release": "./vertag",
         "get-git-cliff-docker-img": "docker pull orhunp/git-cliff",
-		"postinstall": "npm run get-git-cliff-docker-img && cd example && npm i",
-		"dev": "cd example && npm run dev",
-		"start": "cd example && npm run start",
-		"example:build": "cd example && npm run build",
+		"prepare": "npm run get-git-cliff-docker-img && npm i --prefix example",
+		"dev": "npm run --prefix example dev",
+		"start": "npm run --prefix example start",
+		"example:build": "npm run --prefix example build",
 		"prettier": "prettier --write \"./src/**/*.js\""
 	},
 	"husky": {
