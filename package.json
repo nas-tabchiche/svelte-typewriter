@@ -19,15 +19,10 @@
 		"src"
 	],
 	"scripts": {
-		"bump:patch": "cross-env HUSKY_SKIP_HOOKS=1 npm version patch",
-		"bump:minor": "cross-env HUSKY_SKIP_HOOKS=1 npm version minor",
-		"bump:major": "cross-env HUSKY_SKIP_HOOKS=1 npm version major",
-		"version": "npm run changelog -p",
-		"postversion": "yes \"\" | npm publish",
-		"changelog": "auto-changelog --template keepachangelog -l false --hide-credit",
-		"postchangelog": "git add CHANGELOG.md",
-		"amend-changelog": "cross-env HUSKY_SKIP_HOOKS=1 git commit --amend --no-edit --no-verify",
-		"postinstall": "cd example && npm i",
+		"changelog": "docker run --rm -u $(id -u):$(id -g) -v $PWD:/app orhunp/git-cliff --output CHANGELOG.md",
+		"release": "./vertag",
+        "get-git-cliff-docker-img": "docker pull orhunp/git-cliff",
+		"postinstall": "npm run get-git-cliff-docker-img && cd example && npm i",
 		"dev": "cd example && npm run dev",
 		"start": "cd example && npm run start",
 		"example:build": "cd example && npm run build",
@@ -35,13 +30,11 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run prettier && git add .",
-			"post-commit": "npm run changelog -u && npm run amend-changelog",
+			"pre-commit": "npm run prettier && npm run changelog && git add CHANGELOG.md src/.",
 			"pre-push": "cross-env HUSKY_SKIP_HOOKS=1 git push --tags"
 		}
 	},
 	"devDependencies": {
-		"auto-changelog": "^2.2.1",
 		"cross-env": "^7.0.3",
 		"husky": "^4.3.6",
 		"prettier": "^2.2.1",
