@@ -31,6 +31,9 @@ All notable changes to this project will be documented in this file.
 - Replace `auto-changelog` with `git-cliff`
 - Update `package.json` scripts to use `--prefix` instead of `cd`
 - Remove `cross-env` from `devDependencies`
+- Update `husky` to `7.0.4`
+- Remove `post-push` git hook
+- Amend changelog to include current commit
 
 ### Refactor
 
