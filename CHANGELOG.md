@@ -34,6 +34,7 @@ All notable changes to this project will be documented in this file.
 - Update `husky` to `7.0.4`
 - Remove `post-push` git hook
 - Amend changelog to include current commit
+- Update dependencies
 
 ### Refactor
 
