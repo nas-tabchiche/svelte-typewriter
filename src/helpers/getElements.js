@@ -1,23 +1,14 @@
 import { hasSingleTextNode } from './hasSingleTextNode'
-import { createElement } from './createElement'
 
 /** @type {import(types').GetElements} */
-const getElements = parentElement => {
-	if (hasSingleTextNode(parentElement)) {
-		const text = parentElement.textContent
-		const childNode = createElement(parentElement.textContent, 'p')
-		parentElement.textContent = ''
-		parentElement.appendChild(childNode)
-		return [{ currentNode: childNode, text }]
+const getElements = node => {
+	if (hasSingleTextNode(node)) {
+		const textWithFilteredAmpersand = node.innerHTML.replaceAll('&amp;', '&')
+		return { currentNode: node, text: textWithFilteredAmpersand }
 	} else {
-		const childElements = [...parentElement.children]
-		return childElements.map(currentNode => {
-			const textWithFilteredAmpersand = currentNode.innerHTML.replaceAll('&amp;', '&')
-			return {
-				currentNode,
-				text: textWithFilteredAmpersand
-			}
-		})
+		const children = [...node.children]
+		const allChildren = children.flatMap(getElements)
+		return allChildren
 	}
 }
 

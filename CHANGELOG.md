@@ -53,6 +53,7 @@ All notable changes to this project will be documented in this file.
 - Convert example components to typescript (#35)
 - Rewrite lib files in js with JSDoc typings
 - Replace import aliases with relative paths
+- Get all child elements instead just top-level ones
 
 ### Build
 
