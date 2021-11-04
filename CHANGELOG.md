@@ -46,6 +46,7 @@ All notable changes to this project will be documented in this file.
 - Create a separate section for breaking changes
 - Update changelog file name to be staged
 - Include missing version header on release entries
+- Simplify release process with `npm version`
 
 ### Refactor
 

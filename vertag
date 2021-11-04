@@ -42,10 +42,7 @@ release() {
     [ -z "$new_version" ] && echo "Missing version! aborting release..." && exit 1
 
     docker pull orhunp/git-cliff
-    npm run changelog
-    git add CHANGELOG.md
-    git commit -m "v$new_version"
-    git tag "v$new_version"
+    npm version "$new_version"
 }
 
 # this git binary won't be affected by aliases (hopefully)
