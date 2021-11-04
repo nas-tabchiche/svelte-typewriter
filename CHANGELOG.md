@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
 ### Breaking changes
 
 - Remove scramble mode
@@ -43,6 +45,7 @@ All notable changes to this project will be documented in this file.
 - Update dependencies
 - Create a separate section for breaking changes
 - Update changelog file name to be staged
+- Include missing version header on release entries
 
 ### Refactor
 
@@ -73,6 +76,8 @@ All notable changes to this project will be documented in this file.
 - Bump path-parse from 1.0.6 to 1.0.7
 - Remove duplicated `build` field from vite config
 - Update vite svelte plugin package name
+
+## [2.4.5] - 2020-12-24
 
 ### Miscellaneous Tasks
 
@@ -105,6 +110,8 @@ All notable changes to this project will be documented in this file.
 
 - Replace tsc with rollup for building typescript
 
+## [2.4.4] - 2020-12-15
+
 ### Bug Fixes
 
 - Properly filter innerHTML tags, closes #32
@@ -114,6 +121,8 @@ All notable changes to this project will be documented in this file.
 
 - Bump dependencies
 - Output css to ./public/build
+
+## [2.4.3] - 2020-12-11
 
 ### Bug Fixes
 
@@ -129,6 +138,8 @@ All notable changes to this project will be documented in this file.
 
 - Set changelog template to "keepachangelog"
 
+## [2.4.2] - 2020-12-11
+
 ### Bug Fixes
 
 - Properly animate nested elements (#25)
@@ -138,9 +149,13 @@ All notable changes to this project will be documented in this file.
 
 - Bump dependencies
 
+## [2.4.1] - 2020-11-12
+
 ### Bug Fixes
 
 - Properly animate single text nodes
+
+## [2.4.0] - 2020-11-12
 
 ### Documentation
 
@@ -152,6 +167,8 @@ All notable changes to this project will be documented in this file.
 
 - Dedupe "typewriterEffect"
 - Dedupe "cleanChilNodes"
+
+## [2.3.2] - 2020-11-12
 
 ### Features
 
@@ -168,6 +185,8 @@ All notable changes to this project will be documented in this file.
 
 - Rewrite changelog generation scripts
 
+## [2.3.1] - 2020-10-30
+
 ### Documentation
 
 - Add missing import on example
@@ -175,6 +194,8 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Bump dependencies
+
+## [2.3.0] - 2020-10-20
 
 ### Bug Fixes
 
@@ -198,6 +219,8 @@ All notable changes to this project will be documented in this file.
 - Split scramble mode into smaller functions
 - Simplify helper functions
 
+## [2.2.0] - 2020-10-07
+
 ### Bug Fixes
 
 - Solve regression in package.json `files` field #18
@@ -214,6 +237,8 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Remove changelog "Unreleased" section on `publish` script
+
+## [2.1.17] - 2020-10-06
 
 ### Bug Fixes
 
@@ -247,6 +272,8 @@ All notable changes to this project will be documented in this file.
 - Disable hash on bundle filenames
 - Set `summaryOnly` to true on rollup-plugin-analyzer
 
+## [2.1.16] - 2020-09-06
+
 ### Documentation
 
 - Update "Modes" and "Event listeners" sections
@@ -256,9 +283,13 @@ All notable changes to this project will be documented in this file.
 - Refactor changelog generation script
 - Bump dependencies
 
+## [2.1.15] - 2020-09-06
+
 ### Bug Fixes
 
 - Change loop mode behavior to use all child tags
+
+## [2.1.14] - 2020-09-06
 
 ### Bug Fixes
 
@@ -268,9 +299,13 @@ All notable changes to this project will be documented in this file.
 
 - Refactor documentation
 
+## [2.1.13] - 2020-09-03
+
 ### Bug Fixes
 
 - Solve problem with on:done listener on loop mode
+
+## [2.1.12] - 2020-07-18
 
 ### Miscellaneous Tasks
 
@@ -288,12 +323,16 @@ All notable changes to this project will be documented in this file.
 
 - Change printWidth from 120 to 80
 
+## [2.1.11] - 2020-07-16
+
 ### Miscellaneous Tasks
 
 - Bump "auto-changelog" from 1.16.2 to 2.2.0
 - Add "build" directory to .gitignore
 - Add prettier linting script
 - Add typings to rollup config
+
+## [2.1.9] - 2020-03-10
 
 ### Bug Fixes
 
@@ -303,6 +342,8 @@ All notable changes to this project will be documented in this file.
 
 - Add `example` directory for testing purposes
 
+## [2.1.8] - 2020-02-25
+
 ### Miscellaneous Tasks
 
 - Change svelte version from latest to 3.x
@@ -311,21 +352,31 @@ All notable changes to this project will be documented in this file.
 
 - Remove .prettierignore
 
+## [2.1.4] - 2020-02-10
+
 ### Miscellaneous Tasks
 
 - Bump svelte from 3.17.2 to 3.18.2
+
+## [2.1.1] - 2020-01-23
 
 ### Documentation
 
 - Add `on:done` section, closes #8
 
+## [2.1.0] - 2020-01-23
+
 ### Features
 
 - Implement animation callback event #8
 
+## [2.0.3] - 2020-01-20
+
 ### Documentation
 
 - Add "Made with Svelte" badge
+
+## [2.0.2] - 2020-01-12
 
 ### Documentation
 
@@ -334,41 +385,61 @@ All notable changes to this project will be documented in this file.
 - Remove directives deprecation notice
 - Add repl link for `loop` option
 
+## [2.0.0] - 2019-12-23
+
 ### Documentation
 
 - Document `cursor` option #7
+
+## [1.5.5] - 2019-12-15
 
 ### Refactor
 
 - Simplify verification of animation props
 
+## [1.5.4] - 2019-12-14
+
 ### Bug Fixes
 
 - Resolve `use` directive not working on single text node elements
+
+## [1.5.3] - 2019-12-12
 
 ### Dependencies
 
 - Bump `svelte` from "^3.15.0" to "^3.16.4"
 
+## [1.5.2] - 2019-12-11
+
 ### Documentation
 
 - Document the "directive-based" animation approach
+
+## [1.5.1] - 2019-12-11
 
 ### Bug Fixes
 
 - Remove unused properties from default parameters object
 
+## [1.5.0] - 2019-12-11
+
 ### Features
 
 - Create `use:typewriter` directive, closes #6
+
+## [1.4.2] - 2019-12-11
 
 ### Refactor
 
 - Rewrite typewriter function for svelte `use` directive
 
+## [1.4.1] - 2019-11-21
+
 ### Bug Fixes
 
 - Change the default value of `loop` to false
+
+## [1.4.0] - 2019-11-21
 
 ### Documentation
 
@@ -378,9 +449,13 @@ All notable changes to this project will be documented in this file.
 
 - Enable custom timing on `interval` #4
 
+## [1.3.4] - 2019-11-21
+
 ### Bug Fixes
 
 - Prevent flash of unstyled content
+
+## [1.3.0] - 2019-11-20
 
 ### Features
 
@@ -391,6 +466,8 @@ All notable changes to this project will be documented in this file.
 - Change CHANGELOG generation commit message
 - Add auto-changelog `version` script
 
+## [1.2.1] - 2019-11-15
+
 ### Documentation
 
 - Update svelte version on demo link
@@ -400,10 +477,15 @@ All notable changes to this project will be documented in this file.
 
 - Add `interval` and `cascade` options
 
+## [1.1.1] - 2019-11-12
+
 ### Miscellaneous Tasks
 
 - Add PR's welcome badge
 
+## [1.1.0] - 2019-11-12
+
 ### Miscellaneous Tasks
 
 - Update the main field
+
