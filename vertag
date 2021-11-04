@@ -43,7 +43,7 @@ release() {
 
     docker pull orhunp/git-cliff
     npm run changelog
-    git add NEW-CHANGELOG.md
+    git add CHANGELOG.md
     git commit -m "v$new_version"
     git tag "v$new_version"
 }

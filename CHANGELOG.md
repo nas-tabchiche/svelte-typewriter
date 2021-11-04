@@ -42,6 +42,7 @@ All notable changes to this project will be documented in this file.
 - Amend changelog to include current commit
 - Update dependencies
 - Create a separate section for breaking changes
+- Update changelog file name to be staged
 
 ### Refactor
 
