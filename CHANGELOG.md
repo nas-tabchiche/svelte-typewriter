@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Bug Fixes
+
+- Re-add scramble and solve previous implementation issues (#35, #37)
+
 ### Documentation
 
 - Add "change preview" step on contribution guide
