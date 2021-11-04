@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Add "change preview" step on contribution guide
 - Include missing import on "Usage" section
 - Remove unnecessary section from summary
+- Re-add scramble mode props to their respective sections
 
 ### Miscellaneous Tasks
 
