@@ -54,6 +54,7 @@ All notable changes to this project will be documented in this file.
 - Rewrite lib files in js with JSDoc typings
 - Replace import aliases with relative paths
 - Get all child elements instead just top-level ones
+- Adapt modes to properly animate nested elements
 
 ### Build
 
