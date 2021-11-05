@@ -9,7 +9,7 @@
 		"type": "git",
 		"url": "https://github.com/henriquehbr/svelte-typewriter"
 	},
-	"version": "3.0.0-alpha.0",
+	"version": "3.0.0-alpha.1",
 	"svelte": "src/Typewriter.svelte",
 	"types": "types/index.d.ts",
 	"type": "module",
@@ -33,7 +33,7 @@
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0"
 	},
-    "peerDependencies": {
-        "svelte": ">=3.28.x"
-    }
+	"peerDependencies": {
+		"svelte": ">=3.28.x"
+	}
 }
