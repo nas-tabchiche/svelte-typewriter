@@ -22,8 +22,6 @@
 
 ## Installation
 
-> **Notice:** From version 2.1.17 onwards, this library makes use of dynamic imports, if your Rollup configuration `output.format` is set to `iife` or `umd`, consider setting `inlineDynamicImports` to `true`, otherwise, change `output.format` to something else, like `esm` (for more details, consider checking [#21](https://github.com/henriquehbr/svelte-typewriter/issues/21))
-
 ```bash
 # yarn
 yarn add -D svelte-typewriter
@@ -83,6 +81,12 @@ You can control the behavior of the typewriter effect by passing specific props 
 | Event     | Trigger                                                                                                             |                                                                  |
 | --------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | `on:done` | Is executed at the end of the animation, if used with `loop` mode, this event will be fired at the end of each loop | [DEMO](https://svelte.dev/repl/145cbf66c396497aa5338846077d53e0) |
+
+## FAQs
+
+#### UMD and IIFE output formats are not supported for code-splitting builds.
+
+From version 2.1.17 onwards, this library makes use of dynamic imports, if your Rollup configuration `output.format` is set to `iife` or `umd`, consider setting `inlineDynamicImports` to `true`, otherwise, change `output.format` to something else, like `esm` (for more details, consider checking [#21](https://github.com/henriquehbr/svelte-typewriter/issues/21))
 
 ## Contributing
 

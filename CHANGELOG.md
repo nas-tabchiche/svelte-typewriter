@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Documentation
+
+- Create FAQs section
+
 ### Miscellaneous Tasks
 
 - Update package version on lockfile
