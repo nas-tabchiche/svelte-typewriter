@@ -31,7 +31,9 @@
 	"devDependencies": {
 		"husky": "^7.0.4",
 		"prettier": "^2.4.1",
-		"prettier-plugin-svelte": "^2.4.0",
-		"svelte": "^3.44.0"
-	}
+		"prettier-plugin-svelte": "^2.4.0"
+	},
+    "peerDependencies": {
+        "svelte": ">=3.28.x"
+    }
 }

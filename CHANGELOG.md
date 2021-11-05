@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Bug Fixes
+
+- Set svelte 3.28.x as `peerDependency` #60
+
 ### Documentation
 
 - Create FAQs section
