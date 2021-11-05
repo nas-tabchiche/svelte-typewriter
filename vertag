@@ -59,6 +59,14 @@ latest_tag=$(git describe --abbrev=0 --tags 2> /dev/null)
 
 # if repo doesn't have any git tags, assumes it's the first release
 if [ -n "$latest_tag" ]; then
+    specified_version=$1
+
+    if [ -n "$specified_version" ]; then
+        echo "bump: $specified_version"
+        release "$specified_version"
+        exit
+    fi
+
     latest_version="${latest_tag#?}"
     # get all commits since the last tag
     commits=$($git_bin log --format=format:%s "$latest_tag..HEAD")
@@ -91,7 +99,8 @@ if [ -n "$latest_tag" ]; then
     new_version=$(bump patch "$latest_version")
     echo "bump patch: $new_version"
     release "$new_version"
-else
-    echo "first release: 0.1.0"
-    release 0.1.0
+    exit
 fi
+
+echo "first release: 0.1.0"
+release 0.1.0
