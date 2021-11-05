@@ -48,6 +48,7 @@ All notable changes to this project will be documented in this file.
 - Include missing version header on release entries
 - Simplify release process with `npm version`
 - Tag release commit after changelog
+- Add descriptive comment to each git hook
 
 ### Refactor
 
