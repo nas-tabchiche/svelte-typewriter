@@ -26,8 +26,7 @@
 		"dev": "npm run --prefix example dev",
 		"start": "npm run --prefix example start",
 		"example:build": "npm run --prefix example build",
-		"prettier": "prettier --write \"./src/**/*.js\"",
-        "postversion": "./.husky/post-commit"
+		"prettier": "prettier --write \"./src/**/*.js\""
 	},
 	"devDependencies": {
 		"husky": "^7.0.4",

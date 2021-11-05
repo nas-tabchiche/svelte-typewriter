@@ -47,6 +47,7 @@ All notable changes to this project will be documented in this file.
 - Update changelog file name to be staged
 - Include missing version header on release entries
 - Simplify release process with `npm version`
+- Tag release commit after changelog
 
 ### Refactor
 
