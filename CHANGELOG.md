@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### Miscellaneous Tasks
+
+- Update package version on lockfile
+
 ## [3.0.0-alpha.0] - 2021-11-05
 
 ### Breaking changes
