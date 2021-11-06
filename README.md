@@ -54,6 +54,7 @@ The `<Typewriter>` component can receive props that allows to manipulate the beh
 -   Settings: general animation properties
 -   Modes: different styles of animation
 -   Event listeners: functions executed based on the condition of a trigger
+-   Child attributes: child elements animation properties
 
 ### Settings
 
@@ -81,6 +82,12 @@ You can control the behavior of the typewriter effect by passing specific props 
 | Event     | Trigger                                                                                                             |                                                                  |
 | --------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | `on:done` | Is executed at the end of the animation, if used with `loop` mode, this event will be fired at the end of each loop | [DEMO](https://svelte.dev/repl/145cbf66c396497aa5338846077d53e0) |
+
+### Child attributes
+
+| Attribute     | Description                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------------- |
+| `data-static` | Marks an element as static, excluding it from receiving animations from the `<Typewriter>` component |
 
 ## FAQs
 

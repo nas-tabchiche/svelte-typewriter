@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Documentation
+
+- Document the `data-static` attribute
+
 ### Features
 
 - Allow specifying static elements inside typewriter component (#41, #49)
