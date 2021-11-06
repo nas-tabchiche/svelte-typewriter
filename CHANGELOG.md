@@ -16,6 +16,10 @@ All notable changes to this project will be documented in this file.
 
 - Bump `svelte-typewriter` version on example lockfile before release
 
+### Refactor
+
+- Remove unnecessary `cleanChildNodes` helper
+
 ## [3.0.0-alpha.1] - 2021-11-05
 
 ### Bug Fixes

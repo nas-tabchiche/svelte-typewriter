@@ -1,4 +1,3 @@
-export * from './cleanChildNodes'
 export * from './createElement'
 export * from './getElements'
 export * from './getLongestTextElement'
