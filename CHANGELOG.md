@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Features
+
+- Allow specifying static elements inside typewriter component (#41, #49)
+
 ### Miscellaneous Tasks
 
 - Bump `svelte-typewriter` version on example lockfile before release

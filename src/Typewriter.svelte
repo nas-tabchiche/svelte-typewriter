@@ -28,7 +28,7 @@
 		}
 	}
 
-	.typewriter-container :global(*:not(.typing):not(.finished-typing)) {
+	.typewriter-container :global(*:not(.typing):not(.finished-typing):not([data-static])) {
 		display: none;
 	}
 

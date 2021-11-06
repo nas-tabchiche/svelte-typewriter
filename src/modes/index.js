@@ -1,4 +1,5 @@
 import { getElements } from '../helpers/getElements'
+import { makeNestedStaticElementsVisible } from '../helpers/makeNestedStaticElementsVisible'
 
 const getSelectedMode = async options => {
 	if (options.loop || options.loopRandom) {
@@ -12,6 +13,7 @@ const getSelectedMode = async options => {
 
 /** @type {import('types').TypewriterMainFn} */
 const typewriter = async (node, options) => {
+	makeNestedStaticElementsVisible(node)
 	const mode = await getSelectedMode(options)
 	const elements = getElements(node)
 	if (options.delay > 0) {
