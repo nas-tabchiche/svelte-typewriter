@@ -33,9 +33,13 @@ bump() {
 }
 
 # runs git-cliff
-# generates new changelog
-# add files and commit
-# tag commit
+# updates both package.json and lock file versions
+# generates changelog
+# stage all affected files
+# temporarily disable post-commit hook (to avoid a infinite loop)
+# commit the release
+# re-enable post-commit hook
+# tag release commit
 release() {
     new_version=$1
 
@@ -44,7 +48,8 @@ release() {
     docker pull orhunp/git-cliff
     npm version --git-tag-version false "$new_version"
     npm run changelog -- --tag "$new_version"
-    git add package*.json CHANGELOG.md
+    npm --prefix example i
+    git add package*.json CHANGELOG.md example/package-lock.json
     chmod -x .husky/post-commit
     git commit -m "$new_version"
     chmod +x .husky/post-commit

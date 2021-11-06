@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### Miscellaneous Tasks
+
+- Bump `svelte-typewriter` version on example lockfile before release
+
 ## [3.0.0-alpha.1] - 2021-11-05
 
 ### Bug Fixes
