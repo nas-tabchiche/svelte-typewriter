@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [3.0.0-alpha.2] - 2021-11-06
 
 ### Documentation
 
