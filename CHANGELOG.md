@@ -12,16 +12,17 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Miscellaneous Tasks
 
-- Update dependencies
-- Replace `svelte-routing` with `tinro`
-- Lock `svelte` version on 3.38.0
-- Add note regarding semantic versioning on header
+- **example:** Update dependencies
+- **example:** Replace `svelte-routing` with `tinro`
+- **example:** Lock `svelte` version on 3.38.0
+- **changelog:** Add note regarding semantic versioning on header
+- **changelog:** Show commits scope
 
 ## [3.0.0-alpha.2] - 2021-11-06
 
 ### Documentation
 
-- Document the `data-static` attribute
+- **props:** Document the `data-static` attribute
 
 ### Features
 
@@ -29,7 +30,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Miscellaneous Tasks
 
-- Bump `svelte-typewriter` version on example lockfile before release
+- **vertag:** Bump `svelte-typewriter` version on example lockfile before release
 
 ### Refactor
 
@@ -66,22 +67,22 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Miscellaneous Tasks
 
-- Remove old build script
-- Remove unnecessary dependency
-- Remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4)
+- **example:** Remove old build script
+- **example:** Remove unnecessary dependency
+- **example:** Remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4)
 - Remove redundant script `example:start` from package.json
-- Remove esbuild (#38)
-- Set `start` script to `vite preview` (#38)
+- **example:** Remove esbuild (#38)
+- **example:** Set `start` script to `vite preview` (#38)
 - Include example build output on .gitignore
-- Adjust favicon path
+- **example:** Adjust favicon path
 - Remove `example:` prefix from scripts
 - Remove unnecessary package `rimraf`
-- Rewrite example files in js with JSDoc typings
-- Change favicon path
-- Remove unnecessary package.json fields
+- **example:** Rewrite example files in js with JSDoc typings
+- **example:** Change favicon path
+- **example:** Remove unnecessary package.json fields
 - Replace `yarn` with `npm`
 - Install example project dependencies on `postinstall`
-- Import `svelte-typewriter` through local dependency instead alias
+- **example:** Import `svelte-typewriter` through local dependency instead alias
 - Set vite svelte plugin as devDependency instead dependency
 - Replace `auto-changelog` with `git-cliff`
 - Update `package.json` scripts to use `--prefix` instead of `cd`
@@ -90,42 +91,42 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Remove `post-push` git hook
 - Amend changelog to include current commit
 - Update dependencies
-- Create a separate section for breaking changes
-- Update changelog file name to be staged
-- Include missing version header on release entries
-- Simplify release process with `npm version`
-- Tag release commit after changelog
+- **changelog:** Create a separate section for breaking changes
+- **vertag:** Update changelog file name to be staged
+- **changelog:** Include missing version header on release entries
+- **vertag:** Simplify release process with `npm version`
+- **vertag:** Tag release commit after changelog
 - Add descriptive comment to each git hook
-- Allow specifying custom version
+- **vertag:** Allow specifying custom version
 
 ### Refactor
 
-- Avoid circular dependencies (#35)
+- **helpers:** Avoid circular dependencies (#35)
 - Remove unused parent element references (#35)
 - Remove unneeded types (#35)
 - Convert example project to typescript (#35)
-- Add alias for svelte-typewriter src
+- **example:** Add alias for svelte-typewriter src
 - Convert example components to typescript (#35)
 - Rewrite lib files in js with JSDoc typings
 - Replace import aliases with relative paths
-- Get all child elements instead just top-level ones
+- **getElements:** Get all child elements instead just top-level ones
 - Adapt modes to properly animate nested elements
 
 ### Build
 
 - Migrate from rollup to esbuild (#35)
 - Remove rollup
-- Setup vite (#38)
-- Add html minification vite plugin (#38)
+- **example:** Setup vite (#38)
+- **example:** Add html minification vite plugin (#38)
 - Setup vite (#38)
 - Remove esbuild (#38)
-- Bump handlebars from 4.7.6 to 4.7.7
-- Bump postcss from 8.2.8 to 8.2.15 in /example
-- Bump postcss from 8.2.8 to 8.2.15
-- Bump glob-parent from 5.1.1 to 5.1.2 in /example
-- Bump path-parse from 1.0.6 to 1.0.7 in /example
-- Bump path-parse from 1.0.6 to 1.0.7
-- Remove duplicated `build` field from vite config
+- **deps:** Bump handlebars from 4.7.6 to 4.7.7
+- **deps:** Bump postcss from 8.2.8 to 8.2.15 in /example
+- **deps:** Bump postcss from 8.2.8 to 8.2.15
+- **deps:** Bump glob-parent from 5.1.1 to 5.1.2 in /example
+- **deps:** Bump path-parse from 1.0.6 to 1.0.7 in /example
+- **deps:** Bump path-parse from 1.0.6 to 1.0.7
+- **example:** Remove duplicated `build` field from vite config
 - Update vite svelte plugin package name
 
 ## [2.4.5] - 2020-12-24
@@ -135,24 +136,24 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Remove unnecessary "any" types
 - Remove duplicated "isInRange" helper types
 - Bump dependencies
-- Remove unnecessary cursor hiding function
-- Switch from default to named exports
-- Add a component for each animation mode
+- **cascade:** Remove unnecessary cursor hiding function
+- **modes:** Switch from default to named exports
+- **example:** Add a component for each animation mode
 - Bump dependencies
-- Add import alias
-- Replace cursor radio button by color picker
+- **example:** Add import alias
+- **example:** Replace cursor radio button by color picker
 
 ### Refactor
 
 - Convert "utils" into separated "helpers" (#33)
 - Convert helpers and modes to typescript (#33)
 - Add proper types for helpers and modes (#33)
-- Add writeEffect
+- **helpers:** Add writeEffect
 - Modularize cursor hiding module (#33)
-- Integrate loop logic into "writeEffect" (#33)
+- **utils:** Integrate loop logic into "writeEffect" (#33)
 - Unify loop and loopRandom modes
-- Modularize "getLongestTextElement"
-- Return Element rather TypewriterElement
+- **default:** Modularize "getLongestTextElement"
+- **getLongestTextElement:** Return Element rather TypewriterElement
 - Unify both cascade and default modes (#33)
 - Modularize getRandomElement from loop mode (#33)
 - Reinitialize component on state update
@@ -165,21 +166,21 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Bug Fixes
 
-- Properly filter innerHTML tags, closes #32
-- Escape ampersand unicode entity, closes #31
+- **utils:** Properly filter innerHTML tags, closes #32
+- **utils:** Escape ampersand unicode entity, closes #31
 
 ### Miscellaneous Tasks
 
 - Bump dependencies
-- Output css to ./public/build
+- **example:** Output css to ./public/build
 
 ## [2.4.3] - 2020-12-11
 
 ### Bug Fixes
 
-- Preserve element attributes (#29)
-- Preserve element attributes, closes #29
-- Re-add cursor, closes #30
+- **loop:** Preserve element attributes (#29)
+- **loopRandom:** Preserve element attributes, closes #29
+- **cascade:** Re-add cursor, closes #30
 
 ### Documentation
 
@@ -193,8 +194,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Bug Fixes
 
-- Properly animate nested elements (#25)
-- Adjust to work with "getElements" changes (#25)
+- **cascade:** Properly animate nested elements (#25)
+- **scramble:** Adjust to work with "getElements" changes (#25)
 
 ### Miscellaneous Tasks
 
@@ -204,7 +205,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Bug Fixes
 
-- Properly animate single text nodes
+- **loopRandom:** Properly animate single text nodes
 
 ## [2.4.0] - 2020-11-12
 
@@ -216,8 +217,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Refactor
 
-- Dedupe "typewriterEffect"
-- Dedupe "cleanChilNodes"
+- **loop,loopRandom:** Dedupe "typewriterEffect"
+- **loop,loopRandom:** Dedupe "cleanChilNodes"
 
 ## [2.3.2] - 2020-11-12
 
@@ -250,9 +251,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Bug Fixes
 
-- Solve animation issue with multiple elements
+- **scramble:** Solve animation issue with multiple elements
 - Properly animate single text elements on scramble mode
-- Properly emit "done" event
+- **scramble:** Properly emit "done" event
 
 ### Documentation
 
@@ -268,7 +269,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Refactor
 
 - Split scramble mode into smaller functions
-- Simplify helper functions
+- **scramble:** Simplify helper functions
 
 ## [2.2.0] - 2020-10-07
 
@@ -293,7 +294,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Bug Fixes
 
-- Solve single text node elements regression
+- **utils:** Solve single text node elements regression
 
 ### Documentation
 
@@ -301,10 +302,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Miscellaneous Tasks
 
-- Bump node-fetch from 2.6.0 to 2.6.1
+- **deps:** Bump node-fetch from 2.6.0 to 2.6.1
 - Add favicon
 - Add build script to pre-commit hook
-- Bump node-fetch from 2.6.0 to 2.6.1
+- **deps:** Bump node-fetch from 2.6.0 to 2.6.1
 
 ### Refactor
 
@@ -313,7 +314,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Simplify `getElements` function
 - Replace mode components with actions #15
 - Move cursor styles to Typewriter.svelte
-- Remove unnecessary code
+- **loop:** Remove unnecessary code
 - Split non-loop into default and cascade modes
 
 ### Build
@@ -327,11 +328,11 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Documentation
 
-- Update "Modes" and "Event listeners" sections
+- **readme:** Update "Modes" and "Event listeners" sections
 
 ### Miscellaneous Tasks
 
-- Refactor changelog generation script
+- **changelog:** Refactor changelog generation script
 - Bump dependencies
 
 ## [2.1.15] - 2020-09-06
@@ -348,7 +349,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Documentation
 
-- Refactor documentation
+- **README:** Refactor documentation
 
 ## [2.1.13] - 2020-09-03
 
@@ -413,7 +414,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Documentation
 
-- Add `on:done` section, closes #8
+- **README:** Add `on:done` section, closes #8
 
 ## [2.1.0] - 2020-01-23
 
@@ -425,22 +426,22 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Documentation
 
-- Add "Made with Svelte" badge
+- **README:** Add "Made with Svelte" badge
 
 ## [2.0.2] - 2020-01-12
 
 ### Documentation
 
-- Update directives deprecation notice
-- Add demo repl for `cursor` option
-- Remove directives deprecation notice
-- Add repl link for `loop` option
+- **README:** Update directives deprecation notice
+- **README:** Add demo repl for `cursor` option
+- **README:** Remove directives deprecation notice
+- **README:** Add repl link for `loop` option
 
 ## [2.0.0] - 2019-12-23
 
 ### Documentation
 
-- Document `cursor` option #7
+- **README:** Document `cursor` option #7
 
 ## [1.5.5] - 2019-12-15
 
@@ -464,7 +465,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Documentation
 
-- Document the "directive-based" animation approach
+- **README:** Document the "directive-based" animation approach
 
 ## [1.5.1] - 2019-12-11
 
@@ -488,13 +489,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Bug Fixes
 
-- Change the default value of `loop` to false
+- **loop:** Change the default value of `loop` to false
 
 ## [1.4.0] - 2019-11-21
 
 ### Documentation
 
-- Add custom timing array to `interval` section, closes #4
+- **README:** Add custom timing array to `interval` section, closes #4
 
 ### Features
 
@@ -504,13 +505,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Bug Fixes
 
-- Prevent flash of unstyled content
+- **fouc:** Prevent flash of unstyled content
 
 ## [1.3.0] - 2019-11-20
 
 ### Features
 
-- Add `loop` option, closes #3
+- **loop:** Add `loop` option, closes #3
 
 ### Miscellaneous Tasks
 
@@ -521,8 +522,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Documentation
 
-- Update svelte version on demo link
-- Add separated demos for each option
+- **README:** Update svelte version on demo link
+- **README:** Add separated demos for each option
 
 ### Features
 
@@ -532,7 +533,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Miscellaneous Tasks
 
-- Add PR's welcome badge
+- **README:** Add PR's welcome badge
 
 ## [1.1.0] - 2019-11-12
 
