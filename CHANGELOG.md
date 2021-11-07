@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update `example` project dependencies
+- Replace `svelte-routing` with `tinro`
 
 ## [3.0.0-alpha.2] - 2021-11-06
 

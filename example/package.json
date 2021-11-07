@@ -10,11 +10,11 @@
 		"html-minifier": "^4.0.0",
 		"svelte": "^3.44.1",
 		"svelte-check": "^2.2.8",
+		"tinro": "^0.6.7",
 		"vite": "^2.6.13"
 	},
 	"dependencies": {
 		"svelte-loadable": "^1.5.1",
-		"svelte-routing": "^1.6.0",
 		"svelte-typewriter": ".."
 	}
 }
