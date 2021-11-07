@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 
 - Update dependencies
 - Replace `svelte-routing` with `tinro`
+- Lock `svelte` version on 3.38.0
 
 ## [3.0.0-alpha.2] - 2021-11-06
 
