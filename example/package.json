@@ -6,15 +6,15 @@
 		"start": "vite preview"
 	},
 	"devDependencies": {
-		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.19",
+		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
 		"html-minifier": "^4.0.0",
-		"svelte": "^3.35.0",
-		"svelte-check": "^1.1.26",
-		"vite": "^2.0.5"
+		"svelte": "^3.44.1",
+		"svelte-check": "^2.2.8",
+		"vite": "^2.6.13"
 	},
 	"dependencies": {
 		"svelte-loadable": "^1.5.1",
-		"svelte-routing": "^1.5.0",
+		"svelte-routing": "^1.6.0",
 		"svelte-typewriter": ".."
 	}
 }
