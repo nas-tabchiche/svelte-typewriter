@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [unreleased]
+## Unreleased
 
 ### Bug Fixes
 
@@ -17,8 +17,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - **example:** Lock `svelte` version on 3.38.0
 - **changelog:** Add note regarding semantic versioning on header
 - **changelog:** Show commits scope
+- **changelog:** Remove square brackets around versions
 
-## [3.0.0-alpha.2] - 2021-11-06
+## 3.0.0-alpha.2 - 2021-11-06
 
 ### Documentation
 
@@ -36,7 +37,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Remove unnecessary `cleanChildNodes` helper
 
-## [3.0.0-alpha.1] - 2021-11-05
+## 3.0.0-alpha.1 - 2021-11-05
 
 ### Bug Fixes
 
@@ -50,7 +51,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Update package version on lockfile
 
-## [3.0.0-alpha.0] - 2021-11-05
+## 3.0.0-alpha.0 - 2021-11-05
 
 ### Breaking changes
 
@@ -129,7 +130,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - **example:** Remove duplicated `build` field from vite config
 - Update vite svelte plugin package name
 
-## [2.4.5] - 2020-12-24
+## 2.4.5 - 2020-12-24
 
 ### Miscellaneous Tasks
 
@@ -162,7 +163,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Replace tsc with rollup for building typescript
 
-## [2.4.4] - 2020-12-15
+## 2.4.4 - 2020-12-15
 
 ### Bug Fixes
 
@@ -174,7 +175,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Bump dependencies
 - **example:** Output css to ./public/build
 
-## [2.4.3] - 2020-12-11
+## 2.4.3 - 2020-12-11
 
 ### Bug Fixes
 
@@ -190,7 +191,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Set changelog template to "keepachangelog"
 
-## [2.4.2] - 2020-12-11
+## 2.4.2 - 2020-12-11
 
 ### Bug Fixes
 
@@ -201,13 +202,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Bump dependencies
 
-## [2.4.1] - 2020-11-12
+## 2.4.1 - 2020-11-12
 
 ### Bug Fixes
 
 - **loopRandom:** Properly animate single text nodes
 
-## [2.4.0] - 2020-11-12
+## 2.4.0 - 2020-11-12
 
 ### Documentation
 
@@ -220,7 +221,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - **loop,loopRandom:** Dedupe "typewriterEffect"
 - **loop,loopRandom:** Dedupe "cleanChilNodes"
 
-## [2.3.2] - 2020-11-12
+## 2.3.2 - 2020-11-12
 
 ### Features
 
@@ -237,7 +238,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Rewrite changelog generation scripts
 
-## [2.3.1] - 2020-10-30
+## 2.3.1 - 2020-10-30
 
 ### Documentation
 
@@ -247,7 +248,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Bump dependencies
 
-## [2.3.0] - 2020-10-20
+## 2.3.0 - 2020-10-20
 
 ### Bug Fixes
 
@@ -271,7 +272,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Split scramble mode into smaller functions
 - **scramble:** Simplify helper functions
 
-## [2.2.0] - 2020-10-07
+## 2.2.0 - 2020-10-07
 
 ### Bug Fixes
 
@@ -290,7 +291,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Remove changelog "Unreleased" section on `publish` script
 
-## [2.1.17] - 2020-10-06
+## 2.1.17 - 2020-10-06
 
 ### Bug Fixes
 
@@ -324,7 +325,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Disable hash on bundle filenames
 - Set `summaryOnly` to true on rollup-plugin-analyzer
 
-## [2.1.16] - 2020-09-06
+## 2.1.16 - 2020-09-06
 
 ### Documentation
 
@@ -335,13 +336,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - **changelog:** Refactor changelog generation script
 - Bump dependencies
 
-## [2.1.15] - 2020-09-06
+## 2.1.15 - 2020-09-06
 
 ### Bug Fixes
 
 - Change loop mode behavior to use all child tags
 
-## [2.1.14] - 2020-09-06
+## 2.1.14 - 2020-09-06
 
 ### Bug Fixes
 
@@ -351,13 +352,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - **README:** Refactor documentation
 
-## [2.1.13] - 2020-09-03
+## 2.1.13 - 2020-09-03
 
 ### Bug Fixes
 
 - Solve problem with on:done listener on loop mode
 
-## [2.1.12] - 2020-07-18
+## 2.1.12 - 2020-07-18
 
 ### Miscellaneous Tasks
 
@@ -375,7 +376,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Change printWidth from 120 to 80
 
-## [2.1.11] - 2020-07-16
+## 2.1.11 - 2020-07-16
 
 ### Miscellaneous Tasks
 
@@ -384,7 +385,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add prettier linting script
 - Add typings to rollup config
 
-## [2.1.9] - 2020-03-10
+## 2.1.9 - 2020-03-10
 
 ### Bug Fixes
 
@@ -394,7 +395,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Add `example` directory for testing purposes
 
-## [2.1.8] - 2020-02-25
+## 2.1.8 - 2020-02-25
 
 ### Miscellaneous Tasks
 
@@ -404,31 +405,31 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Remove .prettierignore
 
-## [2.1.4] - 2020-02-10
+## 2.1.4 - 2020-02-10
 
 ### Miscellaneous Tasks
 
 - Bump svelte from 3.17.2 to 3.18.2
 
-## [2.1.1] - 2020-01-23
+## 2.1.1 - 2020-01-23
 
 ### Documentation
 
 - **README:** Add `on:done` section, closes #8
 
-## [2.1.0] - 2020-01-23
+## 2.1.0 - 2020-01-23
 
 ### Features
 
 - Implement animation callback event #8
 
-## [2.0.3] - 2020-01-20
+## 2.0.3 - 2020-01-20
 
 ### Documentation
 
 - **README:** Add "Made with Svelte" badge
 
-## [2.0.2] - 2020-01-12
+## 2.0.2 - 2020-01-12
 
 ### Documentation
 
@@ -437,61 +438,61 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - **README:** Remove directives deprecation notice
 - **README:** Add repl link for `loop` option
 
-## [2.0.0] - 2019-12-23
+## 2.0.0 - 2019-12-23
 
 ### Documentation
 
 - **README:** Document `cursor` option #7
 
-## [1.5.5] - 2019-12-15
+## 1.5.5 - 2019-12-15
 
 ### Refactor
 
 - Simplify verification of animation props
 
-## [1.5.4] - 2019-12-14
+## 1.5.4 - 2019-12-14
 
 ### Bug Fixes
 
 - Resolve `use` directive not working on single text node elements
 
-## [1.5.3] - 2019-12-12
+## 1.5.3 - 2019-12-12
 
 ### Dependencies
 
 - Bump `svelte` from "^3.15.0" to "^3.16.4"
 
-## [1.5.2] - 2019-12-11
+## 1.5.2 - 2019-12-11
 
 ### Documentation
 
 - **README:** Document the "directive-based" animation approach
 
-## [1.5.1] - 2019-12-11
+## 1.5.1 - 2019-12-11
 
 ### Bug Fixes
 
 - Remove unused properties from default parameters object
 
-## [1.5.0] - 2019-12-11
+## 1.5.0 - 2019-12-11
 
 ### Features
 
 - Create `use:typewriter` directive, closes #6
 
-## [1.4.2] - 2019-12-11
+## 1.4.2 - 2019-12-11
 
 ### Refactor
 
 - Rewrite typewriter function for svelte `use` directive
 
-## [1.4.1] - 2019-11-21
+## 1.4.1 - 2019-11-21
 
 ### Bug Fixes
 
 - **loop:** Change the default value of `loop` to false
 
-## [1.4.0] - 2019-11-21
+## 1.4.0 - 2019-11-21
 
 ### Documentation
 
@@ -501,13 +502,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Enable custom timing on `interval` #4
 
-## [1.3.4] - 2019-11-21
+## 1.3.4 - 2019-11-21
 
 ### Bug Fixes
 
 - **fouc:** Prevent flash of unstyled content
 
-## [1.3.0] - 2019-11-20
+## 1.3.0 - 2019-11-20
 
 ### Features
 
@@ -518,7 +519,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Change CHANGELOG generation commit message
 - Add auto-changelog `version` script
 
-## [1.2.1] - 2019-11-15
+## 1.2.1 - 2019-11-15
 
 ### Documentation
 
@@ -529,13 +530,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Add `interval` and `cascade` options
 
-## [1.1.1] - 2019-11-12
+## 1.1.1 - 2019-11-12
 
 ### Miscellaneous Tasks
 
 - **README:** Add PR's welcome badge
 
-## [1.1.0] - 2019-11-12
+## 1.1.0 - 2019-11-12
 
 ### Miscellaneous Tasks
 
