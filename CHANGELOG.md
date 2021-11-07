@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
 ## [unreleased]
 
 ### Bug Fixes
@@ -13,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Update dependencies
 - Replace `svelte-routing` with `tinro`
 - Lock `svelte` version on 3.38.0
+- Add note regarding semantic versioning on header
 
 ## [3.0.0-alpha.2] - 2021-11-06
 
