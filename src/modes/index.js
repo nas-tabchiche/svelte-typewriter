@@ -15,7 +15,7 @@ const getSelectedMode = async options => {
 const typewriter = async (node, options) => {
 	makeNestedStaticElementsVisible(node)
 	const mode = await getSelectedMode(options)
-	const elements = getElements(node)
+	const elements = getElements(node, { parentElement: node, ...options })
 	if (options.delay > 0) {
 		const { sleep } = await import('../helpers/sleep')
 		await sleep(options.delay)

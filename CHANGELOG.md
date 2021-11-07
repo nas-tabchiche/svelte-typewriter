@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### Bug Fixes
+
+- Properly animate elements containing a single text node
+
 ### Miscellaneous Tasks
 
-- Update `example` project dependencies
+- Update dependencies
 - Replace `svelte-routing` with `tinro`
 
 ## [3.0.0-alpha.2] - 2021-11-06

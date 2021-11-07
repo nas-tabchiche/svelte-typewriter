@@ -12,7 +12,10 @@ const getRandomElement = elements => {
 			typeof alreadyChoosenTexts === 'number' && randomIndex !== alreadyChoosenTexts
 		const isTextFirstTime =
 			Array.isArray(alreadyChoosenTexts) && !alreadyChoosenTexts.includes(randomIndex)
-		if (isTextFirstTime || isTextDifferentFromPrevious) {
+		const hasSingleChildElement = elements.length === 1
+		const shouldAnimate =
+			hasSingleChildElement || isTextFirstTime || isTextDifferentFromPrevious
+		if (shouldAnimate) {
 			isTextDifferentFromPrevious && (alreadyChoosenTexts = [])
 			alreadyChoosenTexts.push(randomIndex)
 			const randomText = elements[randomIndex]
