@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 3.0.0-alpha.4 - 2021-11-07
+## Unreleased
+
+### Bug Fixes
+
+- **getElements:** Pass `parentElement` parameter when calling itself recursively
+
+## 3.0.0-alpha.4 - 2021-11-11
 
 ### Bug Fixes
 

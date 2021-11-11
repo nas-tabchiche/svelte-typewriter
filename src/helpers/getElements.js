@@ -18,7 +18,7 @@ const getElements = (node, { parentElement }) => {
 		return [{ currentNode: node, text: textWithFilteredAmpersand }]
 	} else {
 		const children = [...node.children].filter(filterOutStaticElements)
-		const allChildren = children.flatMap(getElements)
+		const allChildren = children.flatMap(child => getElements(child, { parentElement }))
 		return allChildren
 	}
 }
