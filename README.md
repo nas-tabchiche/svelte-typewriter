@@ -94,12 +94,12 @@ You can control the behavior of the typewriter effect by passing specific props 
 
 ## Used by
 
-<div style="display:flex;align-items:center;justify-content:center">
+<div align="center">
     <a href="https://github.com/GeopJr/SveltePress" style="margin:0 12px">
         <img src="sveltepress-logo.png" width="128" alt="SveltePress logo">
     </a>
     <a href="https://github.com/ThatConference/that.us" style="margin:0 12px">
-        <img src="that-us-logo.svg" width="256" alt="That.us logo">
+        <img src="that-us-logo.svg" width="256" height="128" alt="That.us logo">
     </a>
 </div>
 
