@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Documentation
 
 - Include FAQs on summary
+- Highlight prop types
 
 ## 3.0.0-alpha.5 - 2021-11-11
 

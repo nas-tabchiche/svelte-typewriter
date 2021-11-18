@@ -51,12 +51,12 @@ You need to import the Svelte component, and wrap your elements with the `<Typew
 
 ## Props
 
-The `<Typewriter>` component can receive props that allows to manipulate the behavior of the resulting animation, these props are divided into 3 groups
+The `<Typewriter>` component can receive props that allows to manipulate the behavior of the resulting animation, these props are divided into 4 groups
 
--   Settings: general animation properties
--   Modes: different styles of animation
--   Event listeners: functions executed based on the condition of a trigger
--   Child attributes: child elements animation properties
+- **Settings:** general animation properties
+- **Modes:** different styles of animation
+- **Event listeners:** functions executed based on the condition of a trigger
+- **Child attributes:** child elements animation properties
 
 ### Settings
 
