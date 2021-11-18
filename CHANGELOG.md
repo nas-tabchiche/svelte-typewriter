@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Documentation
+
+- Include FAQs on summary
+
 ## 3.0.0-alpha.5 - 2021-11-11
 
 ### Bug Fixes

@@ -18,6 +18,8 @@
     - [Settings](#settings)
     - [Modes](#modes)
     - [Event listeners](#event-listeners)
+- [FAQs](#faqs)
+    - [UMD and IIFE output formats are not supported for code-splitting builds](#umd-and-iife-output-formats-are-not-supported-for-code-splitting-builds)
 - [Contributing](#contributing)
 
 ## Installation
