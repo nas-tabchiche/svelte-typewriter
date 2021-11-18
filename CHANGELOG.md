@@ -11,7 +11,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Include FAQs on summary
 - Highlight prop types
 - Add section for projects using `svelte-typewriter`
-- Properly align logos on "Used by" section
+- Properly align dependent projects logos
+- Open dependent projects links on a new tab
 
 ## 3.0.0-alpha.5 - 2021-11-11
 
