@@ -18,6 +18,7 @@
     - [Settings](#settings)
     - [Modes](#modes)
     - [Event listeners](#event-listeners)
+- [Used by](#used-by)
 - [FAQs](#faqs)
     - [UMD and IIFE output formats are not supported for code-splitting builds](#umd-and-iife-output-formats-are-not-supported-for-code-splitting-builds)
 - [Contributing](#contributing)
@@ -90,6 +91,17 @@ You can control the behavior of the typewriter effect by passing specific props 
 | Attribute     | Description                                                                                          |
 | ------------- | ---------------------------------------------------------------------------------------------------- |
 | `data-static` | Marks an element as static, excluding it from receiving animations from the `<Typewriter>` component |
+
+## Used by
+
+<div style="display:flex;align-items:center;justify-content:center">
+    <a href="https://github.com/GeopJr/SveltePress" style="margin:0 12px">
+        <img src="sveltepress-logo.png" width="128" alt="SveltePress logo">
+    </a>
+    <a href="https://github.com/ThatConference/that.us" style="margin:0 12px">
+        <img src="that-us-logo.svg" width="256" alt="That.us logo">
+    </a>
+</div>
 
 ## FAQs
 
