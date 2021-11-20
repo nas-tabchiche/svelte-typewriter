@@ -18,6 +18,7 @@
     - [Settings](#settings)
     - [Modes](#modes)
     - [Event listeners](#event-listeners)
+    - [Child attributes](#child-attributes)
 - [Used by](#used-by)
 - [FAQs](#faqs)
     - [UMD and IIFE output formats are not supported for code-splitting builds](#umd-and-iife-output-formats-are-not-supported-for-code-splitting-builds)
