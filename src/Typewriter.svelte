@@ -43,10 +43,6 @@
 		color: var(--cursor-color);
 		animation: cursorFade 1.25s infinite;
 	}
-
-	.delay {
-		visibility: hidden;
-	}
 </style>
 
 <div

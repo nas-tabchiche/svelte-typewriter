@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## Unreleased
 
+### Bug Fixes
+
+- Prevent static elements from being hidden during delay
+
 ### Documentation
 
 - Include FAQs on summary
@@ -14,6 +18,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Properly align dependent projects logos
 - Open dependent projects links on a new tab
 - Include "Child attributes" section on summary
+
+### Features
+
+- Add `unwriteInterval` prop for loop modes
+
+### Miscellaneous Tasks
+
+- **example:** Add usage examples for `unwriteInterval` prop
 
 ## 3.0.0-alpha.5 - 2021-11-11
 
