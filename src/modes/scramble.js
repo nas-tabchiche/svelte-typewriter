@@ -71,6 +71,8 @@ export const mode = async (elements, options) => {
 					break
 				}
 			}
+
+			currentNode.innerHTML = text
 		})
 	})
 	options.dispatch('done')
