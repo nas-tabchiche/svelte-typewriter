@@ -16,7 +16,8 @@
 	"author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
 	"license": "MIT",
 	"files": [
-		"src"
+		"src",
+		"types"
 	],
 	"scripts": {
 		"changelog": "docker run --rm -u $(id -u):$(id -g) -v $PWD:/app orhunp/git-cliff --output CHANGELOG.md",
@@ -29,6 +30,7 @@
 		"prettier": "prettier --write \"./src/**/*.js\""
 	},
 	"devDependencies": {
+		"@tsconfig/svelte": "^3.0.0",
 		"husky": "^7.0.4",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0"

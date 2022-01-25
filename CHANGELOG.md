@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Miscellaneous Tasks
+
+- Include types directory on npm releases
+- Add `tsconfig.json` for proper typescript support
+
 ## 3.0.0-alpha.7 - 2022-01-19
 
 ### Bug Fixes
