@@ -1,16 +1,29 @@
+interface TypewriterProps {
+    interval?: number | number[]
+	cascade?: boolean
+	loop?: boolean | number
+	loopRandom?: boolean | number
+    scramble?: boolean | number
+    scrambleSlowdown?: boolean
+	cursor?: boolean | string
+	delay?: number
+	unwriteInterval?: boolean | number
+}
+
+interface TypewriterEvents {
+    done: CustomEvent<any>
+}
+
+interface TypewriterSlots {
+    default: {}
+}
+
 interface TypewriterElement {
 	currentNode: Element
 	text: string
 }
 
-interface TypewriterOptions {
-	interval: number | number[]
-	unwriteInterval: boolean | number
-	cascade: boolean
-	loop: boolean | number
-	loopRandom: boolean | number
-	cursor: boolean | string
-	delay: number
+interface TypewriterOptions extends TypewriterProps {
 	dispatch: (type: string, detail?: any) => void
 }
 
@@ -25,5 +38,8 @@ export {
 	TypewriterOptions,
 	TypewriterEffectFn,
 	TypewriterMainFn,
-	TypewriterModeFn
+	TypewriterModeFn,
+    TypewriterProps,
+    TypewriterEvents,
+    TypewriterSlots
 }
