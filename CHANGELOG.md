@@ -4,16 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 3.0.0-alpha.8 - 2022-01-26
 
 ### Miscellaneous Tasks
 
-- Include types directory on npm releases
-- Add `tsconfig.json` for proper typescript support
+- Include types on npm releases
 - Add component typings
-- Move component types to same directory as component
-- Move component types to definition barrel file
-- **types:** Set all component props to optional
 
 ## 3.0.0-alpha.7 - 2022-01-19
 
