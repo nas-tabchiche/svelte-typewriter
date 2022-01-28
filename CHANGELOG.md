@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Bug Fixes
+
+- Render children elements when js is disabled
+
+### Build
+
+- **deps:** Bump nanoid from 3.1.30 to 3.2.0 in /example
+
 ## 3.0.0-alpha.8 - 2022-01-26
 
 ### Miscellaneous Tasks

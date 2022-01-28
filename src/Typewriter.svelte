@@ -45,6 +45,10 @@
 	}
 </style>
 
+<noscript>
+    <slot />
+</noscript>
+
 <div
     use:typewriter={options}
     class="typewriter-container"
