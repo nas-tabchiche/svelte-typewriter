@@ -10,6 +10,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Render children elements when js is disabled
 
+### Miscellaneous Tasks
+
+- Update dependencies
+
 ### Build
 
 - **deps:** Bump nanoid from 3.1.30 to 3.2.0 in /example
