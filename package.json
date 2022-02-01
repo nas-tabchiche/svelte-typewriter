@@ -36,6 +36,6 @@
 		"prettier-plugin-svelte": "^2.6.0"
 	},
 	"peerDependencies": {
-		"svelte": ">=3.28.x"
+		"svelte": ">=3.46.x"
 	}
 }

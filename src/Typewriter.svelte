@@ -54,7 +54,7 @@
     class="typewriter-container"
     class:cursor
 	class:delay={options.delay > 0}
-    style="--cursor-color: {typeof cursor === 'string' ? cursor : 'black'}"
+    style:--cursor-color={typeof cursor === 'string' ? cursor : 'black'}
 >
     <slot />
 </div>
