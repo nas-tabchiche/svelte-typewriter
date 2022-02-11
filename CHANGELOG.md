@@ -10,6 +10,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Set typewriter component as commonjs entrypoint #73
 
+### Documentation
+
+- Add jest `Unexpected token` issue to FAQ section
+
 ## 3.0.0-alpha.10 - 2022-02-01
 
 ### Refactor

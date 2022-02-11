@@ -111,6 +111,19 @@ You can control the behavior of the typewriter effect by passing specific props 
 
 From version 2.1.17 onwards, this library makes use of dynamic imports, if your Rollup configuration `output.format` is set to `iife` or `umd`, consider setting `inlineDynamicImports` to `true`, otherwise, change `output.format` to something else, like `esm` (for more details, consider checking [#21](https://github.com/henriquehbr/svelte-typewriter/issues/21))
 
+#### Test suite failed to run: SyntaxError: Unexpected token '<'
+
+This happens because Jest cannot parse Svelte syntax right away, it must be transpiled by Babel beforehand, therefore, we must tell Jest to ignore `node_modules` as a whole (as it can contain other Svelte components, or files that aren't recognized by Jest), this can be done by setting the `transformIgnorePatterns` property on your Jest configuration, example below:
+
+```js
+// jest.config.js
+module.exports = {
+    transformIgnorePatterns: ["node_modules"]
+}
+```
+
+> More details on #73
+
 ## Contributing
 
 1. Fork it!
