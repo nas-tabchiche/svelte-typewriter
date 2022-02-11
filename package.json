@@ -9,8 +9,8 @@
 		"type": "git",
 		"url": "https://github.com/henriquehbr/svelte-typewriter"
 	},
-	"version": "3.0.0-alpha.10",
-    "main": "src/Typewriter.svelte",
+	"version": "3.0.0-alpha.11",
+	"main": "src/Typewriter.svelte",
 	"svelte": "src/Typewriter.svelte",
 	"types": "types/index.d.ts",
 	"type": "module",
