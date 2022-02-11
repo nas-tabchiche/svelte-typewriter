@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Documentation
 
 - Update `Unexpected token` FAQ description and solution
+- Add link to issue 73 on `Unexpected token` FAQ
 
 ## 3.0.0-alpha.11 - 2022-02-11
 

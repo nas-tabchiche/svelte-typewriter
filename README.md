@@ -122,7 +122,7 @@ module.exports = {
 }
 ```
 
-> More details on #73
+> More details on [#73](https://github.com/henriquehbr/svelte-typewriter/issues/73)
 
 ## Contributing
 
