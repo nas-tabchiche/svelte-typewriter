@@ -49,12 +49,14 @@
     <slot />
 </noscript>
 
-<div
-    use:typewriter={options}
-    class="typewriter-container"
-    class:cursor
-	class:delay={options.delay > 0}
-    style:--cursor-color={typeof cursor === 'string' ? cursor : 'black'}
->
-    <slot />
-</div>
+{#key options}
+    <div
+        use:typewriter={options}
+        class="typewriter-container"
+        class:cursor
+        class:delay={options.delay > 0}
+        style:--cursor-color={typeof cursor === 'string' ? cursor : 'black'}
+    >
+        <slot />
+    </div>
+{/key}

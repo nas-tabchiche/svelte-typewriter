@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## Unreleased
 
+### Bug Fixes
+
+- Reinitialize component when props are changed
+
 ### Documentation
 
 - Update `Unexpected token` FAQ description and solution
