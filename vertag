@@ -48,8 +48,7 @@ release() {
     docker pull orhunp/git-cliff
     npm version --git-tag-version false "$new_version"
     npm run changelog -- --tag "$new_version"
-    npm --prefix example i
-    git add package*.json CHANGELOG.md example/package-lock.json
+    git add package*.json CHANGELOG.md
     chmod -x .husky/post-commit
     git commit -m "$new_version"
     chmod +x .husky/post-commit

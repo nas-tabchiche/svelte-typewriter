@@ -1,7 +1,7 @@
 <script context="module">
     export const __pageMeta = {
         title: 'Typewriter',
-        description: 'Typewriter component'
+        description: 'Typewriter component on default mode'
     }
 </script>
 
@@ -9,7 +9,6 @@
     import { Variant } from '@vitebook/client'
     import { ControlsAddon, EventsAddon } from '@vitebook/client/addons'
 
-    import Typewriter from './Typewriter.svelte'
     import Example from './Example.svelte'
 
     let interval
@@ -18,9 +17,7 @@
 </script>
 
 <Variant name="Default mode" description="Typewriter component on default mode">
-    <Typewriter {interval} {cursor} {delay}>
-        <Example />
-    </Typewriter>
+    <Example {interval} {cursor} {delay} />
 </Variant>
 
 <ControlsAddon>

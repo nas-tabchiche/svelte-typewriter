@@ -15,6 +15,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Update `Unexpected token` FAQ description and solution
 - Add link to issue 73 on `Unexpected token` FAQ
 
+### Build
+
+- **deps:** Bump minimist from 1.2.5 to 1.2.6 in /example (#75)
+
+### Refactor
+
+- Replace example project with Vitebook
+
 ## 3.0.0-alpha.11 - 2022-02-11
 
 ### Bug Fixes

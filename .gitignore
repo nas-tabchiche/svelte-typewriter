@@ -1,3 +1,5 @@
 node_modules
-yarn-error.log
-example/dist
+.DS_STORE
+.cache
+.temp
+dist
