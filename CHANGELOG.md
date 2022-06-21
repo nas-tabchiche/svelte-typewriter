@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 3.0.0-alpha.12 - 2022-06-21
+
+### Breaking changes
+
+- Set cursor color through CSS variable instead of `cursor` prop
 
 ### Bug Fixes
 
@@ -15,13 +19,21 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Update `Unexpected token` FAQ description and solution
 - Add link to issue 73 on `Unexpected token` FAQ
 
-### Build
+### Features
 
-- **deps:** Bump minimist from 1.2.5 to 1.2.6 in /example (#75)
+- Allow changing the cursor width (#78)
+
+### Miscellaneous Tasks
+
+- Simplify version release process
 
 ### Refactor
 
 - Replace example project with Vitebook
+
+### Build
+
+- **deps:** Bump minimist from 1.2.5 to 1.2.6 in /example (#75)
 
 ## 3.0.0-alpha.11 - 2022-02-11
 
