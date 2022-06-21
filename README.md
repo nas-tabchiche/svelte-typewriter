@@ -53,12 +53,13 @@ You need to import the Svelte component, and wrap your elements with the `<Typew
 
 ## Props
 
-The `<Typewriter>` component can receive props that allows to manipulate the behavior of the resulting animation, these props are divided into 4 groups
+The `<Typewriter>` component can receive props that allows to manipulate the behavior of the resulting animation, these props are divided into 5 groups
 
 - **Settings:** general animation properties
 - **Modes:** different styles of animation
 - **Event listeners:** functions executed based on the condition of a trigger
 - **Child attributes:** child elements animation properties
+- **CSS variables:** styling-related properties
 
 ### Settings
 
@@ -93,6 +94,12 @@ You can control the behavior of the typewriter effect by passing specific props 
 | Attribute     | Description                                                                                          |
 | ------------- | ---------------------------------------------------------------------------------------------------- |
 | `data-static` | Marks an element as static, excluding it from receiving animations from the `<Typewriter>` component |
+
+### CSS variables
+
+| Variable         | Description           |
+| ---------------- | --------------------- |
+| `--cursor-width` | Sets the cursor width |
 
 ## Used by
 

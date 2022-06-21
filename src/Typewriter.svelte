@@ -37,12 +37,15 @@
 		content: none;
 	}
 
-	.cursor :global(.typing::after) {
-		content: '▌';
-		display: inline-block;
-		color: var(--cursor-color);
-		animation: cursorFade 1.25s infinite;
-	}
+    .cursor :global(.typing::after) {
+        content: '';
+        width: var(--cursor-width, 1ch);
+        height: 2ch;
+        display: inline-block;
+        vertical-align: text-top;
+        background-color: var(--cursor-color, black);
+        animation: cursorFade 1.25s infinite;
+    }
 </style>
 
 <noscript>
