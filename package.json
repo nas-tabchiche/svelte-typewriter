@@ -21,10 +21,9 @@
     "types"
   ],
   "scripts": {
-    "changelog": "docker run --rm -u $(id -u):$(id -g) -v $PWD:/app orhunp/git-cliff --output CHANGELOG.md",
-    "release": "./vertag",
-    "get-git-cliff-docker-img": "docker pull orhunp/git-cliff",
-    "prepare": "husky install && npm run get-git-cliff-docker-img",
+    "prerelease": "DOCKER_BUILDKIT=1 docker build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
+    "release": "docker run --rm -t -v $PWD:/repo -e GIT_NAME=\"$(git config user.name)\" -e GIT_EMAIL=\"$(git config user.email)\" release ./bump-package-json",
+    "prepare": "husky install",
     "prettier": "prettier --write \"./src/**/*.js\"",
     "vitebook:dev": "vitebook dev",
     "vitebook:build": "vitebook build",

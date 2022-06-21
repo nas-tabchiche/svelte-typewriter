@@ -1,9 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-# includes the latest commit to the changelog
-npm run changelog &&
-git add CHANGELOG.md &&
-chmod -x .husky/post-commit &&
-git commit --no-verify --amend --no-edit &&
-chmod +x .husky/post-commit
