@@ -11,6 +11,7 @@
 	export let cursor = true
 	export let delay = 0
 	export let unwriteInterval = false
+    export let disabled = false
 
 	const dispatch = createEventDispatcher()
   
@@ -53,12 +54,16 @@
 </noscript>
 
 {#key options}
-    <div
-        use:typewriter={options}
-        class="typewriter-container"
-        class:cursor
-        class:delay={options.delay > 0}
-    >
+    {#if disabled}
         <slot />
-    </div>
+    {:else}
+        <div
+            use:typewriter={options}
+            class="typewriter-container"
+            class:cursor
+            class:delay={options.delay > 0}
+        >
+            <slot />
+        </div>
+    {/if}
 {/key}

@@ -13,10 +13,11 @@
 
     let scramble = true
     let scrambleSlowdown
+    let disabled = false
 </script>
 
 <Variant name="Scramble mode" description="Typewriter component on scramble mode">
-    <Example {scramble} {scrambleSlowdown} />
+    <Example {disabled} {scramble} {scrambleSlowdown} />
 </Variant>
 
 <ControlsAddon>
@@ -25,5 +26,8 @@
     </div>
     <div>
         <b>Slowdown effect</b> <input type="checkbox" bind:checked={scrambleSlowdown} />
+    </div>
+    <div>
+        <b>Disabled</b> <input type="checkbox" bind:checked={disabled} />
     </div>
 </ControlsAddon>

@@ -11,13 +11,14 @@
 
     import Example from './Example.svelte'
 
-    let interval
-    let cursor
-    let delay
+    let interval = 30
+    let cursor = true
+    let delay = 0
+    let disabled = false
 </script>
 
 <Variant name="Cascade mode" description="Typewriter component on cascade mode">
-    <Example cascade {interval} {cursor} {delay} />
+    <Example {disabled} cascade {interval} {cursor} {delay} />
 </Variant>
 
 <ControlsAddon>
@@ -29,5 +30,8 @@
     </div>
     <div>
         <b>Delay</b> <input type="number" bind:value={delay} />
+    </div>
+    <div>
+        <b>Disabled</b> <input type="checkbox" bind:checked={disabled} />
     </div>
 </ControlsAddon>

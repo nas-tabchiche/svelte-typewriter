@@ -11,15 +11,16 @@
 
     import Example from './Example.svelte'
 
-    let interval
-    let cursor
-    let delay
-    let loopRandom
-    let unwriteInterval
+    let interval = 30
+    let cursor = true
+    let delay = 0
+    let loopRandom = false
+    let unwriteInterval = false
+    let disabled = false
 </script>
 
 <Variant name="Loop mode" description="Typewriter component on loop mode">
-    <Example {interval} {cursor} {delay} loop={!loopRandom} {loopRandom} {unwriteInterval} />
+    <Example {disabled} {interval} {cursor} {delay} loop={!loopRandom} {loopRandom} {unwriteInterval} />
 </Variant>
 
 <ControlsAddon>
@@ -37,5 +38,8 @@
     </div>
     <div>
         <b>Unwrite interval</b> <input type="number" bind:value={unwriteInterval} />
+    </div>
+    <div>
+        <b>Disabled</b> <input type="checkbox" bind:checked={disabled} />
     </div>
 </ControlsAddon>

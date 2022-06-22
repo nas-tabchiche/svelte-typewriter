@@ -70,6 +70,7 @@ The `<Typewriter>` component can receive props that allows to manipulate the beh
 | `cursor`              | `boolean`           | Enables/disables the cursor on the Typewriter animation                                                                 | `true`                                        | [DEMO](https://svelte.dev/repl/6008b5aaff6f46e5909c63e795a19f5a)                |
 | `delay`               | `number`            | The interval in milliseconds before the animation starts                                                                | `0`                                           | [DEMO](https://svelte.dev/repl/2002ac9fe1e0433a88a687b3b3d4c58b?version=3.29.0) |
 | `scrambleSlowdown`    | `boolean`           | Enables/disables the slowdown effect right before the scramble animation ends (only works in scramble mode)             | `true` if on scramble mode, otherwise `false` | TBA                                                                             |
+| `disabled`            | `boolean`           | Enables/disabled the typewriter animation                                                                               | `false`                                       | TBA                                                                             |
 
 ### Modes
 
