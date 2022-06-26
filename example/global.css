@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, #app {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #282828;
+    color: white;
+}
+
+body #app .typewriter-container {
+    font-family: monospace;
+    margin-top: auto;
+}
