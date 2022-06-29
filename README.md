@@ -69,6 +69,7 @@ groups
 | `cursor` | `boolean` | Enables/disables the cursor on the Typewriter animation | `true` |
 | `delay` | `number` | The interval (in milliseconds) before the animation starts | `0` |
 | `disabled` | `boolean` | Enables/disables the typewriter animation | `false` |
+| `element` | `string` | Sets the tag that will be used for the container element | `div` |
 | `wordInterval` | `number` | **(`loop`/`loopRandom` modes only)** Sets the interval (in milliseconds) between each word | `1500` |
 | `unwriteInterval` | `number` | **(`loop`/`loopRandom` modes only)** The interval (in milliseconds) between each letter unwrite, is valid only on loops. If not defined it uses interval | `false` |
 | `scrambleDuration` | `number` | **(`scramble` mode only)** Sets the duration (in milliseconds) of the scramble animation | `3000` |

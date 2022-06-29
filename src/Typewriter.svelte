@@ -3,10 +3,14 @@
 
     $: isLoopMode = /^loop(Random)?$/.test(mode)
 
+    // general-purpose props
 	export let interval = 30
 	export let cursor = true
 	export let delay = 0
     export let disabled = false
+    export let element = "div"
+
+    // mode-specific props
     export let scrambleDuration = isScrambleMode ? 3000 : 0
     export let scrambleSlowdown = isScrambleMode ? true : false
 	export let unwriteInterval = isLoopMode ? 30 : 0
@@ -74,9 +78,9 @@
     {:else}
         {#await delayPromise() then delay}
             {#await modes[mode]() then selectedMode}
-                <div use:selectedMode.default={$$props} class:cursor class="typewriter-container">
+                <svelte:element this={element} use:selectedMode.default={$$props} class:cursor class="typewriter-container">
                     <slot />
-                </div>
+                </svelte:element>
             {/await}
         {/await}
     {/if}

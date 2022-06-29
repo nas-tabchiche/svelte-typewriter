@@ -7,11 +7,15 @@
     const isLoopMode = mode => /^loop(Random)?$/.test(mode)
 
     const props = {
+        // general-purpose props
         mode: "concurrent",
         interval: 30,
         delay: 0,
         cursor: true,
         disabled: false,
+        element: "div",
+
+        // mode-specific props
         get unwriteInterval() {
             return isLoopMode(this.mode) ? 30 : 0
         },
@@ -24,11 +28,13 @@
         get scrambleSlowdown() {
             return this.mode === "scramble" ? true : false
         },
+
+        // CSS variables
         "--cursor-width": "1ch",
         "--cursor-color": "black"
     }
 
-    // CSS properties can't be directly destructured to the component
+    // CSS variables can't be directly destructured to the component
     // due to their syntax
     let cursorWidth = "1ch"
     let cursorColor = "black"
@@ -65,6 +71,7 @@
     </Select>
     <Input bind:value={props.interval} label="Interval" type="number" />
     <Input bind:value={props.delay} label="Delay" type="number" />
+    <Input bind:value={props.element} label="Container element" type="text" />
     <Input bind:value={props["--cursor-width"]} label="Cursor width" type="text" />
     {#if props.mode === "loop" || props.mode === "loopRandom"}
         <Input bind:value={props.unwriteInterval} label="Unwrite interval" type="number" />
