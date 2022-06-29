@@ -108,13 +108,13 @@ You can control the behavior of the typewriter effect by passing specific props 
 ## Used by
 
 <div align="center">
-    <a target="_blank" href="https://github.com/GeopJr/SveltePress" style="margin:0 12px">
+    <a href="https://github.com/GeopJr/SveltePress">
         <img src="sveltepress-logo.png" width="128" alt="SveltePress logo">
     </a>
-    <a target="_blank" href="https://github.com/ThatConference/that.us" style="margin:0 12px">
+    <a href="https://github.com/ThatConference/that.us">
         <img src="that-us-logo.svg" width="256" height="128" alt="That.us logo">
     </a>
-    <a target="_blank" href="https://github.com/Fronvo/site" style="margin:0 12px">
+    <a href="https://github.com/Fronvo/site">
         <img src="fronvo-logo.svg" width="256" height="128" alt="Fronvo logo">
     </a>
 </div>
