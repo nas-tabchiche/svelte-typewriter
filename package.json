@@ -21,9 +21,10 @@
     "types"
   ],
   "scripts": {
-    "dev": "vite example",
-    "build": "vite build example",
-    "preview": "vite preview example",
+    "example:dev": "vite example",
+    "example:build": "vite build example",
+    "example:preview": "vite preview example",
+    "example:deploy": "pnpm example:build && gh-pages -f -d example/dist -m \"Deploy example application\"",
     "prerelease": "DOCKER_BUILDKIT=1 docker build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
     "release": "docker run --rm -t -v $PWD:/repo -e GIT_NAME=\"$(git config user.name)\" -e GIT_EMAIL=\"$(git config user.email)\" release ./bump-package-json",
     "prepare": "husky install",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "1.0.0-next.36",
     "@tsconfig/svelte": "^3.0.0",
+    "gh-pages": "^4.0.0",
     "husky": "^7.0.4",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.6.0",
