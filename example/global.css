@@ -18,9 +18,26 @@ body {
     align-items: center;
     background: #282828;
     color: white;
+    font-family: Courier;
 }
 
 body #app .typewriter-container {
-    font-family: monospace;
     margin-top: auto;
+}
+
+body #app .input-container,
+body #app .select-container {
+    display: flex;
+    align-items: center;
+    margin: 8px auto;
+    gap: 12px;
+}
+
+body #app .input-container input,
+body #app .select-container select {
+    flex-grow: 1;
+    background-color: transparent;
+    border: 2px solid #a89984;
+    color: #a89984;
+    font-size: 16px;
 }

@@ -1,32 +1,16 @@
+import { getLettersTimeout } from '../helpers/getLettersTimeout'
+import { getRandomLetter } from '../helpers/getRandomLetter'
+import { rng } from '../helpers/rng'
 import { sleep } from '../helpers/sleep'
 import { runOnEveryParentUntil } from '../helpers/runOnEveryParentUntil'
-
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min
-
-const getRandomLetter = () => {
-	const possibleLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.split(
-		''
-	)
-	const letterIndexLimit = possibleLetters.length
-	const randomLetterIndex = getRandomNumber(0, letterIndexLimit)
-	const randomLetter = possibleLetters[randomLetterIndex]
-	return randomLetter
-}
-
-// returns a array with a timeout (in ms) for each letter of the word
-const getLettersTimeout = (textLetters, timeout) => {
-	const minimumTimeoutPossible = timeout / 3
-	// TODO: find a better way to deal with this instead of explicitly reducing the maximum timeout
-	// otherwise, at the end of the animation, one or two characters remain scrambled
-	const lettersTimeout = textLetters.map(() =>
-		getRandomNumber(minimumTimeoutPossible, timeout - 100)
-	)
-	return lettersTimeout
-}
+import { animationSetup } from '../helpers/animationSetup'
 
 /** @type {TypewriterModeFn} */
-export const mode = async (elements, options) => {
-	const timeout = typeof options.scramble == 'number' ? options.scramble : 3000
+const scramble = async (node, props) => {
+	const { options, elements } = animationSetup(node, props)
+
+	const timeout = options.scrambleDuration
+
 	await new Promise(resolve => {
 		elements.forEach(async ({ currentNode, text }) => {
 			let wordLetters = text.split('')
@@ -38,7 +22,7 @@ export const mode = async (elements, options) => {
 			})
 
 			while (Date.now() - startingTime < timeout) {
-				const randomLetterIndex = getRandomNumber(0, wordLetters.length)
+				const randomLetterIndex = rng(0, wordLetters.length)
 				const randomLetterTimeout = lettersTimeout[randomLetterIndex]
 				const isRandomLetterWhitespace = wordLetters[randomLetterIndex] === ' '
 				const timeEllapsed = () => Date.now() - startingTime
@@ -77,3 +61,5 @@ export const mode = async (elements, options) => {
 	})
 	options.dispatch('done')
 }
+
+export default scramble

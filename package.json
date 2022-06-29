@@ -22,6 +22,8 @@
   ],
   "scripts": {
     "dev": "vite example",
+    "build": "vite build example",
+    "preview": "vite preview example",
     "prerelease": "DOCKER_BUILDKIT=1 docker build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
     "release": "docker run --rm -t -v $PWD:/repo -e GIT_NAME=\"$(git config user.name)\" -e GIT_EMAIL=\"$(git config user.email)\" release ./bump-package-json",
     "prepare": "husky install",

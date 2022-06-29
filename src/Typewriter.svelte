@@ -1,21 +1,34 @@
 <script>
-	import { createEventDispatcher } from 'svelte'
-	import { typewriter } from './modes'
+    export let mode = "concurrent"
+
+    $: isLoopMode = /^loop(Random)?$/.test(mode)
 
 	export let interval = 30
-	export let cascade = false
-	export let loop = false
-	export let loopRandom = false
-    export let scramble = false
-    export let scrambleSlowdown = scramble ? true : false
 	export let cursor = true
 	export let delay = 0
-	export let unwriteInterval = false
     export let disabled = false
+    export let scrambleDuration = isScrambleMode ? 3000 : 0
+    export let scrambleSlowdown = isScrambleMode ? true : false
+	export let unwriteInterval = isLoopMode ? 30 : 0
+    export let wordInterval = isLoopMode ? 1500 : 0
 
-	const dispatch = createEventDispatcher()
-  
-    $: options = { interval, cascade, loop, loopRandom, scramble, scrambleSlowdown, cursor, delay, dispatch, unwriteInterval }
+    const modes = {
+        concurrent: () => import("./modes/concurrent.js"),
+        cascade: () => import("./modes/cascade.js"),
+        loop: () => import("./modes/loop.js"),
+        loopRandom: () => import("./modes/loopRandom.js"),
+        scramble: () => import("./modes/scramble.js")
+    }
+
+    $: if (!isLoopMode && (unwriteInterval || wordInterval)) {
+        console.log(mode, unwriteInterval, wordInterval)
+        console.warn("[svelte-typewriter] The props 'unwriteInterval' and 'wordInterval' can only be used on loop mode")
+    }
+
+    $: if (mode !== "scramble" && (scrambleDuration || scrambleSlowdown))
+        console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' can only be used on scramble mode")
+
+    $: delayPromise = () => new Promise(resolve => setTimeout(() => resolve(delay), delay))
 </script>
 
 <style>
@@ -49,21 +62,22 @@
     }
 </style>
 
+<svelte:options accessors />
+
 <noscript>
     <slot />
 </noscript>
 
-{#key options}
+{#key $$props}
     {#if disabled}
         <slot />
     {:else}
-        <div
-            use:typewriter={options}
-            class="typewriter-container"
-            class:cursor
-            class:delay={options.delay > 0}
-        >
-            <slot />
-        </div>
+        {#await delayPromise() then delay}
+            {#await modes[mode]() then selectedMode}
+                <div use:selectedMode.default={$$props} class:cursor class="typewriter-container">
+                    <slot />
+                </div>
+            {/await}
+        {/await}
     {/if}
 {/key}

@@ -3,7 +3,7 @@ const onAnimationEnd = (element, callback) => {
 	const observer = new MutationObserver(mutations => {
 		mutations.forEach(mutation => {
 			const elementAttributeChanged = mutation.type === 'attributes'
-			const elementFinishedTyping = mutation.target.classList.contains('typing')
+			const elementFinishedTyping = mutation.target.classList.contains('finished-typing')
 			if (elementAttributeChanged && elementFinishedTyping) callback()
 		})
 	})
