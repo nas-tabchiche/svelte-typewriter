@@ -78,8 +78,8 @@ groups
 
 You can control the behavior of the typewriter effect by passing specific props to the `<Typewriter>` component, the table below contains information about all modes:
 
-| Mode| Description |
-| - | - | - |
+| Mode | Description |
+| - | - |
 | `concurrent` | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode |
 | `cascade` | Apply animation on all elements sequentially instead of simultaneously |
 | `loop` | Cycles the animation between the children elements of the parent `Typewriter` component |
