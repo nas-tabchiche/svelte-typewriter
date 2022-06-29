@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-alpha.14] - 2022-06-29
+
+### Documentation
+
+- Update demo url
+
+### Features
+
+- Allow specifying the container element tag ([#43](https://github.com/orhun/git-cliff/issues/43))
+
 ## [3.0.0-alpha.13] - 2022-06-29
 
 ### Documentation
