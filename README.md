@@ -114,6 +114,9 @@ You can control the behavior of the typewriter effect by passing specific props 
     <a target="_blank" href="https://github.com/ThatConference/that.us" style="margin:0 12px">
         <img src="that-us-logo.svg" width="256" height="128" alt="That.us logo">
     </a>
+    <a target="_blank" href="https://github.com/Fronvo/site" style="margin:0 12px">
+        <img src="fronvo-logo.svg" width="256" height="128" alt="Fronvo logo">
+    </a>
 </div>
 
 ## FAQs
