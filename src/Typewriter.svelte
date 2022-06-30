@@ -11,8 +11,8 @@
     export let element = "div"
 
     // mode-specific props
-    export let scrambleDuration = isScrambleMode ? 3000 : 0
-    export let scrambleSlowdown = isScrambleMode ? true : false
+    export let scrambleDuration = mode === "scramble" ? 3000 : 0
+    export let scrambleSlowdown = mode === "scramble" ? true : false
 	export let unwriteInterval = isLoopMode ? 30 : 0
     export let wordInterval = isLoopMode ? 1500 : 0
 
