@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-alpha.15] - 2022-06-30
+
+### Bug Fixes
+
+- Remove references to nonexistent `isScrambleMode` variable
+
 ## [3.0.0-alpha.14] - 2022-06-29
 
 ### Documentation
