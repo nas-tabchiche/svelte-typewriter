@@ -118,6 +118,9 @@ You can control the behavior of the typewriter effect by passing specific props 
     <a href="https://github.com/Fronvo/site">
         <img src="fronvo-logo.svg" width="256" height="128" alt="Fronvo logo">
     </a>
+    <a href="https://github.com/PlebeianTech/plebeian-market">
+        <img src="plebeian-market-logo.jpg" height="128" alt="plebeian.market logo" />
+    </a>
 </div>
 
 ## FAQs
