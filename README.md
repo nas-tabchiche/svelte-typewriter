@@ -13,6 +13,8 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Component-based approach](#component-based-approach)
+  - [Directive-based approach](#directive-based-approach)
 - [Props](#props)
     - [Settings](#settings)
       - [Modes](#modes)
@@ -35,8 +37,10 @@ pnpm i -D svelte-typewriter
 
 ## Usage
 
-You need to import the Svelte component, and wrap your elements with the
-`<Typewriter>` component
+### Component-based approach
+
+In order to use this method, you need to import the Svelte component, and wrap
+your elements with the `<Typewriter>` component
 
 ```svelte
 <script>
@@ -44,10 +48,36 @@ You need to import the Svelte component, and wrap your elements with the
 </script>
 
 <Typewriter>
-	<h1>Testing the typewriter effect</h1>
+    <h1>Testing the typewriter effect</h1>
 </Typewriter>
-
 ```
+
+### Directive-based approach
+
+This method relies on [Svelte actions](https://svelte.dev/docs#template-syntax-element-directives-use-action)
+(more specifically, the `use:action` directive), in order to animate your
+components with this approach, you must import the directive of the animation
+mode you want to use and include it as a attribute on your element
+
+```svelte
+<script>
+    import { concurrent } from 'svelte-typewriter'
+</script>
+
+<p use:concurrent={{ interval: 30 }}>Testing the typewriter effect</p>
+```
+
+Each mode has it's own directive, which accepts a single object parameter that
+can be used to set the animation props (just like on the component-based approach)
+
+There are just a few limitations of this approach to keep in mind:
+
+- For now, there's no way to have the cursor caret on the text being animated
+- Event listeners (like `on:done`) won't be triggered
+- Depending on the animation mode you're using, some essential animation
+properties must be explicitly specified, because they don't have default values
+when used on a directive, otherwise the animation won't work properly, those
+include `interval`, `wordInterval`, `writeInterval` and `scrambleDuration`
 
 ## Props
 
