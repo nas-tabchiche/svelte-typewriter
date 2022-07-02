@@ -101,9 +101,9 @@ groups
 | `disabled` | `boolean` | Enables/disables the typewriter animation | `false` |
 | `element` | `string` | Sets the tag that will be used for the container element | `div` |
 | `wordInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** Sets the interval (in milliseconds) between each word | `1500` |
-| `unwriteInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** The interval (in milliseconds) between each letter unwrite, if not defined it uses `interval` | `false` |
+| `unwriteInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** The interval (in milliseconds) between each letter unwrite, if not defined it uses `interval` | `30` |
 | `scrambleDuration` | `number` | **(`scramble` mode only)** Sets the duration (in milliseconds) of the scramble animation | `3000` |
-| `scrambleSlowdown` | `boolean` | **(`scramble` mode only)** Enables/disables the slowdown effect right before the scramble animation ends (only works in scramble mode) | `true` if on scramble mode, otherwise `false` |
+| `scrambleSlowdown` | `boolean` | **(`scramble` mode only)** Enables/disables the slowdown effect right before the scramble animation ends (only works in scramble mode) | `true` |
 
 #### Modes
 
