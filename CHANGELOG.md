@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-alpha.17] - 2022-07-02
+
+### Bug Fixes
+
+- Prevent loop modes from hiding static elements
+
 ## [3.0.0-alpha.16] - 2022-07-02
 
 ### Documentation
