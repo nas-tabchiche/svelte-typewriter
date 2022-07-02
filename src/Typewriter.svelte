@@ -95,7 +95,9 @@
 
 {#key $$props}
     {#if disabled}
-        <slot />
+        <div class="typewriter-container">
+            <slot />
+        </div>
     {:else}
         {#await delayPromise() then delay}
             {#await modes[mode]() then selectedMode}

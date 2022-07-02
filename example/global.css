@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-#app {
+body #app {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,8 +21,9 @@ body {
     font-family: Courier;
 }
 
+/* compensates customization panel height */
 body #app .typewriter-container {
-    margin-top: auto;
+    margin-top: -250px;
 }
 
 body #app .input-container,

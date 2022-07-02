@@ -1,5 +1,7 @@
 <style>
     .customization-panel {
+        position: fixed;
+        bottom: 0;
         display: flex;
         flex-direction: column;
         background-color: #a8998426;
@@ -9,7 +11,6 @@
         width: 100%;
         font-family: Courier;
         border-radius: 14px 14px 0 0;
-        margin-top: auto;
         animation: slide-up 0.75s forwards;
         max-height: 250px;
         overflow-y: auto;
