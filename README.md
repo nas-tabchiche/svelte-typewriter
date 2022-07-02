@@ -98,6 +98,7 @@ groups
 | `interval` | `number` or `array` | The interval (in milliseconds) between each letter, you can also pass a array of distinct intervals to mimic human typing | `30` |
 | `cursor` | `boolean` | Enables/disables the cursor on the Typewriter animation | `true` |
 | `delay` | `number` | The interval (in milliseconds) before the animation starts | `0` |
+| `showCursorOnDelay` | `boolean` | (only usable when `delay` is not 0) Shows the cursor during delay period | `false` |
 | `disabled` | `boolean` | Enables/disables the typewriter animation | `false` |
 | `element` | `string` | Sets the tag that will be used for the container element | `div` |
 | `wordInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** Sets the interval (in milliseconds) between each word | `1500` |

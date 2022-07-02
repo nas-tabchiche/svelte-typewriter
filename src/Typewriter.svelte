@@ -27,8 +27,11 @@
 	export let interval = 30
 	export let cursor = true
 	export let delay = 0
+    export let showCursorOnDelay = false
     export let disabled = false
     export let element = "div"
+
+    $: unnecessaryCursorOnDelay = delay < 1 && showCursorOnDelay
 
     // mode-specific props
     export let scrambleDuration = mode === "scramble" ? 3000 : 0
@@ -52,6 +55,8 @@
 
     $: if (mode !== "scramble" && (scrambleDuration || scrambleSlowdown))
         console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' can only be used on scramble mode")
+
+    $: unnecessaryCursorOnDelay && console.warn("[svelte-typewriter] The prop 'showCursorOnDelay' has no effect if the delay is 0")
 
     $: delayPromise = () => new Promise(resolve => setTimeout(() => resolve(delay), delay))
 </script>
@@ -99,7 +104,13 @@
             <slot />
         </div>
     {:else}
-        {#await delayPromise() then delay}
+        {#await delayPromise()}
+            {#if showCursorOnDelay}
+                <div class="typewriter-container cursor">
+                    <p class="typing"></p>
+                </div>
+            {/if}
+        {:then}
             {#await modes[mode]() then selectedMode}
                 <svelte:element this={element} use:selectedMode.default={$$props} class:cursor class="typewriter-container">
                     <slot />
