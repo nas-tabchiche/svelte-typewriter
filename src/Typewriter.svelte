@@ -31,13 +31,16 @@
     export let disabled = false
     export let element = "div"
 
-    $: unnecessaryCursorOnDelay = delay < 1 && showCursorOnDelay
 
     // mode-specific props
     export let scrambleDuration = mode === "scramble" ? 3000 : 0
     export let scrambleSlowdown = mode === "scramble" ? true : false
 	export let unwriteInterval = isLoopMode ? 30 : 0
     export let wordInterval = isLoopMode ? 1500 : 0
+
+    $: unnecessaryCursorOnDelay = delay < 1 && showCursorOnDelay
+    $: unnecessaryLoopProps = !isLoopMode && (unwriteInterval || wordInterval)
+    $: unnecessaryScrambleProps = mode !== "scramble" && (scrambleDuration || scrambleSlowdown)
 
     const modes = {
         concurrent: () => import("./modes/concurrent.js"),
@@ -48,15 +51,9 @@
         scramble: () => import("./modes/scramble.js")
     }
 
-    $: if (!isLoopMode && (unwriteInterval || wordInterval)) {
-        console.log(mode, unwriteInterval, wordInterval)
-        console.warn("[svelte-typewriter] The props 'unwriteInterval' and 'wordInterval' can only be used on loop mode")
-    }
-
-    $: if (mode !== "scramble" && (scrambleDuration || scrambleSlowdown))
-        console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' can only be used on scramble mode")
-
     $: unnecessaryCursorOnDelay && console.warn("[svelte-typewriter] The prop 'showCursorOnDelay' has no effect if the delay is 0")
+    $: unnecessaryLoopProps && console.warn("[svelte-typewriter] The props 'unwriteInterval' and 'wordInterval' can only be used on loop mode")
+    $: unnecessaryScrambleProps && console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' can only be used on scramble mode")
 
     $: delayPromise = () => new Promise(resolve => setTimeout(() => resolve(delay), delay))
 </script>
