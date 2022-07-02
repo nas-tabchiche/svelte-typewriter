@@ -1,3 +1,21 @@
+<script context="module">
+    import {
+        concurrent,
+        cascade,
+        loop,
+        loopRandom,
+        scramble
+    } from './modes'
+
+    export {
+        concurrent,
+        cascade,
+        loop,
+        loopRandom,
+        scramble
+    }
+</script>
+
 <script>
     export let mode = "concurrent"
 
