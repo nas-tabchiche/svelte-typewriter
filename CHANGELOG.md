@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-alpha.18] - 2022-07-02
+
+### Documentation
+
+- Update the default values of mode-specific props
+
+### Features
+
+- Add one-time loop mode ([#46](https://github.com/orhun/git-cliff/issues/46))
+
 ## [3.0.0-alpha.17] - 2022-07-02
 
 ### Bug Fixes
