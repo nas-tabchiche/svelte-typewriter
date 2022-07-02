@@ -6,7 +6,7 @@
 
     const isLoopMode = mode => /^loop(Once|Random)?$/.test(mode)
 
-    const props = {
+    let props = {
         // general-purpose props
         mode: "concurrent",
         interval: 30,
@@ -19,14 +19,26 @@
         get unwriteInterval() {
             return isLoopMode(this.mode) ? 30 : 0
         },
+        set unwriteInterval(unwriteInterval) {
+            props = { ...props, unwriteInterval }
+        },
         get wordInterval() {
             return isLoopMode(this.mode) ? 1500 : 0
+        },
+        set wordInterval(wordInterval) {
+            props = { ...props, wordInterval }
         },
         get scrambleDuration() {
             return this.mode === "scramble" ? 3000 : 0
         },
+        set scrambleDuration(scrambleDuration) {
+            props = { ...props, scrambleDuration }
+        },
         get scrambleSlowdown() {
             return this.mode === "scramble" ? true : false
+        },
+        set scrambleSlowdown(scrambleSlowdown) {
+            props = { ...props, scrambleSlowdown }
         },
 
         // CSS variables
@@ -74,7 +86,7 @@
     <Input bind:value={props.delay} label="Delay" type="number" />
     <Input bind:value={props.element} label="Container element" type="text" />
     <Input bind:value={props["--cursor-width"]} label="Cursor width" type="text" />
-    {#if props.mode === "loop" || props.mode === "loopRandom"}
+    {#if isLoopMode(props.mode)}
         <Input bind:value={props.unwriteInterval} label="Unwrite interval" type="number" />
         <Input bind:value={props.wordInterval} label="Word interval" type="number" />
     {/if}
