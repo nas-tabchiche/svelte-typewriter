@@ -94,14 +94,14 @@ groups
 
 | Prop | Type | Description | Default |
 | - | - | - | - |
-| `mode` | `concurrent`, `cascade`, `loop`, `loopRandom` or `scramble` | The animation mode to be used | `concurrent` |
+| `mode` | `concurrent`, `cascade`, `loop`, `loopOnce`, `loopRandom` or `scramble` | The animation mode to be used | `concurrent` |
 | `interval` | `number` or `array` | The interval (in milliseconds) between each letter, you can also pass a array of distinct intervals to mimic human typing | `30` |
 | `cursor` | `boolean` | Enables/disables the cursor on the Typewriter animation | `true` |
 | `delay` | `number` | The interval (in milliseconds) before the animation starts | `0` |
 | `disabled` | `boolean` | Enables/disables the typewriter animation | `false` |
 | `element` | `string` | Sets the tag that will be used for the container element | `div` |
-| `wordInterval` | `number` | **(`loop`/`loopRandom` modes only)** Sets the interval (in milliseconds) between each word | `1500` |
-| `unwriteInterval` | `number` | **(`loop`/`loopRandom` modes only)** The interval (in milliseconds) between each letter unwrite, is valid only on loops. If not defined it uses interval | `false` |
+| `wordInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** Sets the interval (in milliseconds) between each word | `1500` |
+| `unwriteInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** The interval (in milliseconds) between each letter unwrite, if not defined it uses `interval` | `false` |
 | `scrambleDuration` | `number` | **(`scramble` mode only)** Sets the duration (in milliseconds) of the scramble animation | `3000` |
 | `scrambleSlowdown` | `boolean` | **(`scramble` mode only)** Enables/disables the slowdown effect right before the scramble animation ends (only works in scramble mode) | `true` if on scramble mode, otherwise `false` |
 
@@ -114,6 +114,7 @@ You can control the behavior of the typewriter effect by passing specific props 
 | `concurrent` | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode |
 | `cascade` | Apply animation on all elements sequentially instead of simultaneously |
 | `loop` | Cycles the animation between the children elements of the parent `Typewriter` component |
+| `loopOnce` | It's very similar to the `loop` mode, but the animation stops once it reaches the last element |
 | `loopRandom` | It's very similar to `loop` mode, but instead of cycling the animation in a linear way, it picks a random child element to animate each time |
 | `scramble` | Slowly reveals the a word by continuously randomizing all of it's letters for a specific amount of time |
 
@@ -121,7 +122,7 @@ You can control the behavior of the typewriter effect by passing specific props 
 
 | Event | Trigger |
 | - | -  |
-| `on:done` | Is executed at the end of the animation, if used with `loop` mode, this event will be fired at the end of each loop |
+| `on:done` | Is executed at the end of the animation, if used with one of the loop modes, this event will be fired at the end of each loop |
 
 ### Child attributes
 

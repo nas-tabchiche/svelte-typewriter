@@ -4,7 +4,7 @@
     import Input from "./components/Input.svelte"
     import Select from "./components/Select.svelte"
 
-    const isLoopMode = mode => /^loop(Random)?$/.test(mode)
+    const isLoopMode = mode => /^loop(Once|Random)?$/.test(mode)
 
     const props = {
         // general-purpose props
@@ -66,6 +66,7 @@
         <option value="concurrent" selected>Concurrent</option>
         <option value="cascade">Cascade</option>
         <option value="loop">Loop</option>
+        <option value="loopOnce">One-time loop</option>
         <option value="loopRandom">Random loop</option>
         <option value="scramble">Scramble</option>
     </Select>

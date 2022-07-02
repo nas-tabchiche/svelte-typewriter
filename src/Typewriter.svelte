@@ -3,6 +3,7 @@
         concurrent,
         cascade,
         loop,
+        loopOnce,
         loopRandom,
         scramble
     } from './modes'
@@ -11,6 +12,7 @@
         concurrent,
         cascade,
         loop,
+        loopOnce,
         loopRandom,
         scramble
     }
@@ -19,7 +21,7 @@
 <script>
     export let mode = "concurrent"
 
-    $: isLoopMode = /^loop(Random)?$/.test(mode)
+    $: isLoopMode = /^loop(Once|Random)?$/.test(mode)
 
     // general-purpose props
 	export let interval = 30
@@ -38,6 +40,7 @@
         concurrent: () => import("./modes/concurrent.js"),
         cascade: () => import("./modes/cascade.js"),
         loop: () => import("./modes/loop.js"),
+        loopOnce: () => import("./modes/loopOnce.js"),
         loopRandom: () => import("./modes/loopRandom.js"),
         scramble: () => import("./modes/scramble.js")
     }
