@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-alpha.16] - 2022-07-02
+
+### Documentation
+
+- Add plebeian.market to the "Used by" section
+- Add usage instructions for directive-based animation modes
+
+### Features
+
+- Allow using animation modes through Svelte directives
+
 ## [3.0.0-alpha.15] - 2022-06-30
 
 ### Bug Fixes
