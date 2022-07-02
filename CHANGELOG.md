@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-alpha.19] - 2022-07-02
+
+### Features
+
+- Allow showing cursor during delay period ([#61](https://github.com/orhun/git-cliff/issues/61))
+
+### Miscellaneous Tasks
+
+- Properly display loop modes props on example project
+- Wrap component child elements on a div when disabled
+
 ## [3.0.0-alpha.18] - 2022-07-02
 
 ### Documentation
