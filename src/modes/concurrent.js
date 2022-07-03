@@ -11,8 +11,16 @@ const concurrent = (node, props) => {
 	onAnimationEnd(lastElementToFinish, () => options.dispatch('done'))
 
 	for (const element of elements) {
+		// "then" is required here to prevent blocking execution, thus keeping
+		// the animation asynchronous
 		writeEffect(element, options).then(() => {
-			element.currentNode.classList.replace('typing', 'finished-typing')
+			if (options.keepCursorOnFinish) {
+				const isNotLongestElement = element.currentNode !== lastElementToFinish
+				isNotLongestElement &&
+					element.currentNode.classList.replace('typing', 'finished-typing')
+			} else {
+				element.currentNode.classList.replace('typing', 'finished-typing')
+			}
 		})
 	}
 }

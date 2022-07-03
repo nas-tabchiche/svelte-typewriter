@@ -9,7 +9,13 @@ const cascade = async (node, props) => {
 
 	for (const element of elements) {
 		await writeEffect(element, options)
-		element.currentNode.classList.replace('typing', 'finished-typing')
+
+		if (options.keepCursorOnFinish) {
+			const isLastElement = elements.indexOf(element) === elements.length - 1
+			!isLastElement && element.currentNode.classList.replace('typing', 'finished-typing')
+		} else {
+			element.currentNode.classList.replace('typing', 'finished-typing')
+		}
 	}
 
 	options.dispatch('done')

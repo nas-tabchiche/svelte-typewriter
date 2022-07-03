@@ -23,14 +23,18 @@
 
     $: isLoopMode = /^loop(Once|Random)?$/.test(mode)
 
+    // these modes stop once all given elements have finished their animations
+    // and support the cursor
+    $: isFiniteCursorMode = ["concurrent", "cascade", "loopOnce"].includes(mode)
+
     // general-purpose props
 	export let interval = 30
 	export let cursor = true
+    export let keepCursorOnFinish = false
 	export let delay = 0
     export let showCursorOnDelay = false
     export let disabled = false
     export let element = "div"
-
 
     // mode-specific props
     export let scrambleDuration = mode === "scramble" ? 3000 : 0
@@ -38,6 +42,7 @@
 	export let unwriteInterval = isLoopMode ? 30 : 0
     export let wordInterval = isLoopMode ? 1500 : 0
 
+    $: unnecessaryCursorOnEnd = !isFiniteCursorMode && keepCursorOnFinish
     $: unnecessaryCursorOnDelay = delay < 1 && showCursorOnDelay
     $: unnecessaryLoopProps = !isLoopMode && (unwriteInterval || wordInterval)
     $: unnecessaryScrambleProps = mode !== "scramble" && (scrambleDuration || scrambleSlowdown)
@@ -51,6 +56,7 @@
         scramble: () => import("./modes/scramble.js")
     }
 
+    $: unnecessaryCursorOnEnd && console.warn("[svelte-typewriter] The prop 'keepCursorOnFinish' only has effect on the following modes: 'concurrent', 'cascade' and 'loopOnce'")
     $: unnecessaryCursorOnDelay && console.warn("[svelte-typewriter] The prop 'showCursorOnDelay' has no effect if the delay is 0")
     $: unnecessaryLoopProps && console.warn("[svelte-typewriter] The props 'unwriteInterval' and 'wordInterval' can only be used on loop mode")
     $: unnecessaryScrambleProps && console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' can only be used on scramble mode")

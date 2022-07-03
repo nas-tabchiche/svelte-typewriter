@@ -11,6 +11,7 @@
         mode: "concurrent",
         interval: 30,
         delay: 0,
+        keepCursorOnFinish: false,
         showCursorOnDelay: false,
         cursor: true,
         disabled: false,
@@ -95,6 +96,7 @@
         <Input bind:value={props.scrambleDuration} label="Scramble duration" type="number" />
         <Input bind:value={props.scrambleSlowdown} label="Scramble slowdown" type="checkbox" />
     {/if}
+    <Input bind:value={props.keepCursorOnFinish} label="Keep cursor on end" type="checkbox" />
     <Input bind:value={props.showCursorOnDelay} label="Cursor on delay" type="checkbox" />
     <Input bind:value={props.cursor} label="Cursor" type="checkbox" />
     <Input bind:value={props.disabled} label="Disabled" type="checkbox" />
