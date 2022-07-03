@@ -25,7 +25,7 @@
     "example:build": "vite build example",
     "example:preview": "vite preview example",
     "example:deploy": "pnpm example:build && gh-pages -f -d example/dist -m \"Deploy example application\"",
-    "prerelease": "DOCKER_BUILDKIT=1 docker build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
+    "prerelease": "docker rmi -f release && DOCKER_BUILDKIT=1 docker build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
     "release": "docker run --rm -t -v $PWD:/repo -e GIT_NAME=\"$(git config user.name)\" -e GIT_EMAIL=\"$(git config user.email)\" release ./bump-package-json",
     "prepare": "husky install",
     "prettier": "prettier --write \"./src/**/*.js\""
