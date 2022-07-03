@@ -21,12 +21,6 @@
 <script>
     export let mode = "concurrent"
 
-    $: isLoopMode = /^loop(Once|Random)?$/.test(mode)
-
-    // these modes stop once all given elements have finished their animations
-    // and support the cursor
-    $: isFiniteCursorMode = ["concurrent", "cascade", "loopOnce"].includes(mode)
-
     // general-purpose props
 	export let interval = 30
 	export let cursor = true
@@ -37,15 +31,21 @@
     export let element = "div"
 
     // mode-specific props
-    export let scrambleDuration = mode === "scramble" ? 3000 : 0
-    export let scrambleSlowdown = mode === "scramble" ? true : false
-	export let unwriteInterval = isLoopMode ? 30 : 0
-    export let wordInterval = isLoopMode ? 1500 : 0
+    export let scrambleDuration = 3000
+    export let scrambleSlowdown = true
+	export let unwriteInterval = 30
+    export let wordInterval = 1500
+
+    $: isLoopMode = /^loop(Once|Random)?$/.test(mode)
+
+    // these modes stop once all given elements have finished their animations
+    // and support the cursor
+    $: isFiniteCursorMode = ["concurrent", "cascade", "loopOnce"].includes(mode)
 
     $: unnecessaryCursorOnEnd = !isFiniteCursorMode && keepCursorOnFinish
     $: unnecessaryCursorOnDelay = delay < 1 && showCursorOnDelay
-    $: unnecessaryLoopProps = !isLoopMode && (unwriteInterval || wordInterval)
-    $: unnecessaryScrambleProps = mode !== "scramble" && (scrambleDuration || scrambleSlowdown)
+    $: unnecessaryLoopProps = !isLoopMode && ($$props.unwriteInterval || $$props.wordInterval)
+    $: unnecessaryScrambleProps = mode !== "scramble" && ($$props.scrambleDuration || $$props.scrambleSlowdown)
 
     const modes = {
         concurrent: () => import("./modes/concurrent.js"),
@@ -62,6 +62,20 @@
     $: unnecessaryScrambleProps && console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' can only be used on scramble mode")
 
     $: delayPromise = () => new Promise(resolve => setTimeout(() => resolve(delay), delay))
+
+    $: props = {
+        interval,
+        cursor,
+        keepCursorOnFinish,
+        delay,
+        showCursorOnDelay,
+        disabled,
+        element,
+        scrambleDuration,
+        scrambleSlowdown,
+        unwriteInterval,
+        wordInterval
+    }
 </script>
 
 <style>
@@ -101,7 +115,7 @@
     <slot />
 </noscript>
 
-{#key $$props}
+{#key props}
     {#if disabled}
         <div class="typewriter-container">
             <slot />
@@ -115,7 +129,7 @@
             {/if}
         {:then}
             {#await modes[mode]() then selectedMode}
-                <svelte:element this={element} use:selectedMode.default={$$props} class:cursor class="typewriter-container">
+                <svelte:element this={element} use:selectedMode.default={props} class:cursor class="typewriter-container">
                     <slot />
                 </svelte:element>
             {/await}
