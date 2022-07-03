@@ -2,11 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-alpha.20] - 2022-07-03
+
+### Features
+
+- Allow keeping cursor after animation has finished ([#64](https://github.com/henriquehbr/svelte-typewriter/issues/64))
+
+### Miscellaneous Tasks
+
+- Re-add `git-cliff` configuration file
+
+### Refactor
+
+- Optimize warnings of unnecessary prop usage
+
 ## [3.0.0-alpha.19] - 2022-07-02
 
 ### Features
 
-- Allow showing cursor during delay period ([#61](https://github.com/orhun/git-cliff/issues/61))
+- Allow showing cursor during delay period ([#61](https://github.com/henriquehbr/svelte-typewriter/issues/61))
 
 ### Miscellaneous Tasks
 
@@ -21,7 +35,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Add one-time loop mode ([#46](https://github.com/orhun/git-cliff/issues/46))
+- Add one-time loop mode ([#46](https://github.com/henriquehbr/svelte-typewriter/issues/46))
 
 ## [3.0.0-alpha.17] - 2022-07-02
 
@@ -54,7 +68,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Allow specifying the container element tag ([#43](https://github.com/orhun/git-cliff/issues/43))
+- Allow specifying the container element tag ([#43](https://github.com/henriquehbr/svelte-typewriter/issues/43))
 
 ## [3.0.0-alpha.13] - 2022-06-29
 
@@ -66,7 +80,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Allow disabling the typewriter animation ([#77](https://github.com/orhun/git-cliff/issues/77))
+- Allow disabling the typewriter animation ([#77](https://github.com/henriquehbr/svelte-typewriter/issues/77))
 - [**breaking**] Add `mode` prop for setting the animation mode
 
 ### Miscellaneous Tasks
@@ -92,7 +106,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Allow changing the cursor width ([#78](https://github.com/orhun/git-cliff/issues/78))
+- Allow changing the cursor width ([#78](https://github.com/henriquehbr/svelte-typewriter/issues/78))
 - [**breaking**] Set cursor color through CSS variable instead of `cursor` prop
 
 ### Miscellaneous Tasks
@@ -102,10 +116,6 @@ All notable changes to this project will be documented in this file.
 ### Refactor
 
 - Replace example project with Vitebook
-
-### Build
-
-- Bump minimist from 1.2.5 to 1.2.6 in /example ([#75](https://github.com/orhun/git-cliff/issues/75))
 
 ## [3.0.0-alpha.11] - 2022-02-11
 
@@ -132,10 +142,6 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update dependencies
-
-### Build
-
-- Bump nanoid from 3.1.30 to 3.2.0 in /example
 
 ## [3.0.0-alpha.8] - 2022-01-26
 
@@ -245,8 +251,8 @@ All notable changes to this project will be documented in this file.
 - Remove unnecessary dependency
 - Remove svelte-preprocessor-esbuild (lukeed/svelte-preprocessor-esbuild#4)
 - Remove redundant script `example:start` from package.json
-- Remove esbuild ([#38](https://github.com/orhun/git-cliff/issues/38))
-- Set `start` script to `vite preview` ([#38](https://github.com/orhun/git-cliff/issues/38))
+- Remove esbuild ([#38](https://github.com/henriquehbr/svelte-typewriter/issues/38))
+- Set `start` script to `vite preview` ([#38](https://github.com/henriquehbr/svelte-typewriter/issues/38))
 - Include example build output on .gitignore
 - Adjust favicon path
 - Remove `example:` prefix from scripts
@@ -276,34 +282,16 @@ All notable changes to this project will be documented in this file.
 ### Refactor
 
 - [**breaking**] Remove scramble mode
-- Avoid circular dependencies ([#35](https://github.com/orhun/git-cliff/issues/35))
-- Remove unused parent element references ([#35](https://github.com/orhun/git-cliff/issues/35))
-- Remove unneeded types ([#35](https://github.com/orhun/git-cliff/issues/35))
-- Convert example project to typescript ([#35](https://github.com/orhun/git-cliff/issues/35))
+- Avoid circular dependencies ([#35](https://github.com/henriquehbr/svelte-typewriter/issues/35))
+- Remove unused parent element references ([#35](https://github.com/henriquehbr/svelte-typewriter/issues/35))
+- Remove unneeded types ([#35](https://github.com/henriquehbr/svelte-typewriter/issues/35))
+- Convert example project to typescript ([#35](https://github.com/henriquehbr/svelte-typewriter/issues/35))
 - Add alias for svelte-typewriter src
-- Convert example components to typescript ([#35](https://github.com/orhun/git-cliff/issues/35))
+- Convert example components to typescript ([#35](https://github.com/henriquehbr/svelte-typewriter/issues/35))
 - Rewrite lib files in js with JSDoc typings
 - Replace import aliases with relative paths
 - Get all child elements instead just top-level ones
 - Adapt modes to properly animate nested elements
-
-### Build
-
-- Migrate from rollup to esbuild ([#35](https://github.com/orhun/git-cliff/issues/35))
-- Remove rollup
-- Setup vite ([#38](https://github.com/orhun/git-cliff/issues/38))
-- Add html minification vite plugin ([#38](https://github.com/orhun/git-cliff/issues/38))
-- Setup vite ([#38](https://github.com/orhun/git-cliff/issues/38))
-- Remove esbuild ([#38](https://github.com/orhun/git-cliff/issues/38))
-- Bump handlebars from 4.7.6 to 4.7.7
-- Bump postcss from 8.2.8 to 8.2.15 in /example
-- Bump postcss from 8.2.8 to 8.2.15
-- Bump glob-parent from 5.1.1 to 5.1.2 in /example
-- Bump path-parse from 1.0.6 to 1.0.7 in /example
-- Bump path-parse from 1.0.6 to 1.0.7
-- Remove duplicated `build` field from vite config
-- Update vite svelte plugin package name
-- [**breaking**] Drop support for ESM and UMD bundles
 
 ## [2.4.5] - 2020-12-24
 
@@ -321,22 +309,18 @@ All notable changes to this project will be documented in this file.
 
 ### Refactor
 
-- Convert "utils" into separated "helpers" ([#33](https://github.com/orhun/git-cliff/issues/33))
-- Convert helpers and modes to typescript ([#33](https://github.com/orhun/git-cliff/issues/33))
-- Add proper types for helpers and modes ([#33](https://github.com/orhun/git-cliff/issues/33))
+- Convert "utils" into separated "helpers" ([#33](https://github.com/henriquehbr/svelte-typewriter/issues/33))
+- Convert helpers and modes to typescript ([#33](https://github.com/henriquehbr/svelte-typewriter/issues/33))
+- Add proper types for helpers and modes ([#33](https://github.com/henriquehbr/svelte-typewriter/issues/33))
 - Add writeEffect
-- Modularize cursor hiding module ([#33](https://github.com/orhun/git-cliff/issues/33))
-- Integrate loop logic into "writeEffect" ([#33](https://github.com/orhun/git-cliff/issues/33))
+- Modularize cursor hiding module ([#33](https://github.com/henriquehbr/svelte-typewriter/issues/33))
+- Integrate loop logic into "writeEffect" ([#33](https://github.com/henriquehbr/svelte-typewriter/issues/33))
 - Unify loop and loopRandom modes
 - Modularize "getLongestTextElement"
 - Return Element rather TypewriterElement
-- Unify both cascade and default modes ([#33](https://github.com/orhun/git-cliff/issues/33))
-- Modularize getRandomElement from loop mode ([#33](https://github.com/orhun/git-cliff/issues/33))
+- Unify both cascade and default modes ([#33](https://github.com/henriquehbr/svelte-typewriter/issues/33))
+- Modularize getRandomElement from loop mode ([#33](https://github.com/henriquehbr/svelte-typewriter/issues/33))
 - Reinitialize component on state update
-
-### Build
-
-- Replace tsc with rollup for building typescript
 
 ## [2.4.4] - 2020-12-15
 
@@ -354,7 +338,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-- Preserve element attributes ([#29](https://github.com/orhun/git-cliff/issues/29))
+- Preserve element attributes ([#29](https://github.com/henriquehbr/svelte-typewriter/issues/29))
 - Preserve element attributes, closes #29
 - Re-add cursor, closes #30
 
@@ -370,8 +354,8 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-- Properly animate nested elements ([#25](https://github.com/orhun/git-cliff/issues/25))
-- Adjust to work with "getElements" changes ([#25](https://github.com/orhun/git-cliff/issues/25))
+- Properly animate nested elements ([#25](https://github.com/henriquehbr/svelte-typewriter/issues/25))
+- Adjust to work with "getElements" changes ([#25](https://github.com/henriquehbr/svelte-typewriter/issues/25))
 
 ### Miscellaneous Tasks
 
@@ -493,13 +477,6 @@ All notable changes to this project will be documented in this file.
 - Remove unnecessary code
 - Split non-loop into default and cascade modes
 
-### Build
-
-- Add build script to example app
-- Generate ESM and UMD compatible bundles
-- Disable hash on bundle filenames
-- Set `summaryOnly` to true on rollup-plugin-analyzer
-
 ## [2.1.16] - 2020-09-06
 
 ### Documentation
@@ -547,10 +524,6 @@ All notable changes to this project will be documented in this file.
 
 - Simplify conditional expressions
 
-### Lint
-
-- Change printWidth from 120 to 80
-
 ## [2.1.11] - 2020-07-16
 
 ### Miscellaneous Tasks
@@ -575,10 +548,6 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Change svelte version from latest to 3.x
-
-### Lint
-
-- Remove .prettierignore
 
 ## [2.1.4] - 2020-02-10
 
@@ -630,12 +599,6 @@ All notable changes to this project will be documented in this file.
 ### Bug Fixes
 
 - Resolve `use` directive not working on single text node elements
-
-## [1.5.3] - 2019-12-12
-
-### Dependencies
-
-- Bump `svelte` from "^3.15.0" to "^3.16.4"
 
 ## [1.5.2] - 2019-12-11
 
@@ -717,4 +680,3 @@ All notable changes to this project will be documented in this file.
 
 - Update the main field
 
-<!-- generated by git-cliff -->
