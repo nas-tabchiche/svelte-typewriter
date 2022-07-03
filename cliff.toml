@@ -64,7 +64,7 @@ skip_tags = ""
 ignore_tags = ""
 
 # sort the tags chronologically
-date_order = false
+date_order = true
 
 # sort the commits inside sections by oldest/newest order
 sort_commits = "oldest"
