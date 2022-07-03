@@ -18,40 +18,15 @@
         element: "div",
 
         // mode-specific props
-        get unwriteInterval() {
-            return isLoopMode(this.mode) ? 30 : 0
-        },
-        set unwriteInterval(unwriteInterval) {
-            props = { ...props, unwriteInterval }
-        },
-        get wordInterval() {
-            return isLoopMode(this.mode) ? 1500 : 0
-        },
-        set wordInterval(wordInterval) {
-            props = { ...props, wordInterval }
-        },
-        get scrambleDuration() {
-            return this.mode === "scramble" ? 3000 : 0
-        },
-        set scrambleDuration(scrambleDuration) {
-            props = { ...props, scrambleDuration }
-        },
-        get scrambleSlowdown() {
-            return this.mode === "scramble" ? true : false
-        },
-        set scrambleSlowdown(scrambleSlowdown) {
-            props = { ...props, scrambleSlowdown }
-        },
+        unwriteInterval: 30,
+        wordInterval: 1500,
+        scrambleDuration: 3000,
+        scrambleSlowdown: true,
 
         // CSS variables
         "--cursor-width": "1ch",
         "--cursor-color": "black"
     }
-
-    // CSS variables can't be directly destructured to the component
-    // due to their syntax
-    let cursorWidth = "1ch"
-    let cursorColor = "black"
 </script>
 
 <Typewriter

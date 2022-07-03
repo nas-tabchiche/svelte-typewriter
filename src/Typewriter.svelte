@@ -115,7 +115,7 @@
     <slot />
 </noscript>
 
-{#key props}
+{#key $$props}
     {#if disabled}
         <div class="typewriter-container">
             <slot />
