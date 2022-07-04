@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0-beta.0] - 2022-07-03
+
+### Bug Fixes
+
+- Ensure unused props fallback to their default values
+
+### Miscellaneous Tasks
+
+- Add notice about sourcehut migration
+- Make `git-cliff` sort git tags chronologically
+- Remove dangling release docker images before building
+- Remove getters and setters from example project props
+
 ## [3.0.0-alpha.20] - 2022-07-03
 
 ### Features
