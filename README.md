@@ -115,7 +115,7 @@ groups
 ### Settings
 
 | Prop | Type | Description | Default |
-| - | - | - | - |
+| --- | --- | --- | --- |
 | `mode` | `concurrent`, `cascade`, `loop`, `loopOnce`, `loopRandom` or `scramble` | The animation mode to be used | `concurrent` |
 | `interval` | `number` or `array` | The interval (in milliseconds) between each letter, you can also pass a array of distinct intervals to mimic human typing | `30` |
 | `cursor` | `boolean` | Enables/disables the cursor on the Typewriter animation | `true` |
@@ -134,7 +134,7 @@ groups
 You can control the behavior of the typewriter effect by passing specific props to the `<Typewriter>` component, the table below contains information about all modes:
 
 | Mode | Description |
-| - | - |
+| --- | --- |
 | `concurrent` | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode |
 | `cascade` | Apply animation on all elements sequentially instead of simultaneously |
 | `loop` | Cycles the animation between the children elements of the parent `Typewriter` component |
@@ -145,19 +145,19 @@ You can control the behavior of the typewriter effect by passing specific props 
 ### Event listeners
 
 | Event | Trigger |
-| - | -  |
+| --- | --- |
 | `on:done` | Is executed at the end of the animation, if used with one of the loop modes, this event will be fired at the end of each loop |
 
 ### Child attributes
 
 | Attribute | Description |
-| - | - |
+| --- | --- |
 | `data-static` | Marks an element as static, excluding it from receiving animations from the `<Typewriter>` component |
 
 ### CSS variables
 
 | Variable | Description |
-| - | - |
+| --- | --- |
 | `--cursor-color` | Sets the cursor color (accepts any valid color name, hex code and rgb/rgba values) |
 | `--cursor-width` | Sets the cursor width |
 
