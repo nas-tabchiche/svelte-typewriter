@@ -165,16 +165,16 @@ You can control the behavior of the typewriter effect by passing specific props 
 
 <div align="center">
     <a href="https://github.com/GeopJr/SveltePress">
-        <img src="sveltepress-logo.png" width="128" alt="SveltePress logo">
+        <img src="https://git.sr.ht/~henriquehbr/svelte-typewriter/blob/main/sveltepress-logo.png" width="128" alt="SveltePress logo">
     </a>
     <a href="https://github.com/ThatConference/that.us">
-        <img src="that-us-logo.svg" width="256" height="128" alt="That.us logo">
+        <img src="https://git.sr.ht/~henriquehbr/svelte-typewriter/blob/main/that-us-logo.png" width="256" alt="That.us logo">
     </a>
     <a href="https://github.com/Fronvo/site">
-        <img src="fronvo-logo.svg" width="256" height="128" alt="Fronvo logo">
+        <img src="https://git.sr.ht/~henriquehbr/svelte-typewriter/blob/main/fronvo-logo.png" width="256" alt="Fronvo logo">
     </a>
     <a href="https://github.com/PlebeianTech/plebeian-market">
-        <img src="plebeian-market-logo.jpg" height="128" alt="plebeian.market logo" />
+        <img src="https://git.sr.ht/~henriquehbr/svelte-typewriter/blob/main/plebeian-market-logo.jpg" height="128" alt="plebeian.market logo" />
     </a>
 </div>
 
