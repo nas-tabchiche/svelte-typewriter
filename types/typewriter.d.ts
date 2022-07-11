@@ -1,13 +1,18 @@
 interface TypewriterProps {
+    // general-purpose props
+    mode?: "concurrent" | "cascade" | "loop" | "loopOnce" | "loopRandom" | "scramble"
     interval?: number | number[]
-	cascade?: boolean
-	loop?: boolean | number
-	loopRandom?: boolean | number
-    scramble?: boolean | number
-    scrambleSlowdown?: boolean
-	cursor?: boolean | string
+	cursor?: boolean
+    keepCursorOnFinish?: boolean
 	delay?: number
-	unwriteInterval?: boolean | number
+    showCursorOnDelay?: boolean
+    disabled?: boolean
+
+    // mode-specific props
+    scrambleDuration?: number
+    scrambleSlowdown?: boolean
+	unwriteInterval?: number
+    wordInterval?: number
 }
 
 interface TypewriterEvents {
