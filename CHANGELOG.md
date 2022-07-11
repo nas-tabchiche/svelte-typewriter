@@ -2,7 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.0.0-beta.0] - 2022-07-03
+## [3.0.0-beta.1] - 2022-07-11
+
+### Bug Fixes
+
+- Include animation modes functions on type definitions
+
+### Documentation
+
+- Fix markdown table formatting on sourcehut
+- Fix showcase projects logos breaking on sourcehut
+
+### Miscellaneous Tasks
+
+- Re-add getters and setters on example project
+
+## [3.0.0-beta.0] - 2022-07-04
 
 ### Bug Fixes
 
