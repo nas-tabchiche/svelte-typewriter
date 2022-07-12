@@ -1,5 +1,5 @@
 import type { TypewriterProps } from '../typewriter'
 
-type loopRandom = (parentElement: Element, props: TypewriterProps) => void
+type LoopRandomMode = (parentElement: Element, props: TypewriterProps) => void
 
-export { loopRandom }
+export const loopRandom: LoopRandomMode

@@ -1,5 +1,5 @@
 import type { TypewriterProps } from '../typewriter'
 
-type concurrent = (parentElement: Element, props: TypewriterProps) => void
+type ConcurrentMode = (parentElement: Element, props: TypewriterProps) => void
 
-export { concurrent }
+export const concurrent: ConcurrentMode

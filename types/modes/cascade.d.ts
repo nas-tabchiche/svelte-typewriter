@@ -1,5 +1,5 @@
 import type { TypewriterProps } from '../typewriter'
 
-type cascade = (parentElement: Element, props: TypewriterProps) => void
+type CascadeMode = (parentElement: Element, props: TypewriterProps) => void
 
-export { cascade }
+export const cascade: CascadeMode

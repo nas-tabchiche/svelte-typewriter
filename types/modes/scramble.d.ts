@@ -1,5 +1,5 @@
 import type { TypewriterProps } from '../typewriter'
 
-type scramble = (parentElement: Element, props: TypewriterProps) => void
+type ScrambleMode = (parentElement: Element, props: TypewriterProps) => void
 
-export { scramble }
+export const scramble: ScrambleMode

@@ -1,5 +1,5 @@
 import type { TypewriterProps } from '../typewriter'
 
-type loop = (parentElement: Element, props: TypewriterProps) => void
+type LoopMode = (parentElement: Element, props: TypewriterProps) => void
 
-export { loop }
+export const loop: LoopMode
