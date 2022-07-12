@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# creates a tarball with the website content and uploads it to "pages.sr.ht"
+
+# abort on errors
+set -e
+
+# aborts if the deploy token is not defined
+if [ -z "$SRHT_DEPLOY_TOKEN" ]; then
+    echo "Deploy token not found, set it to the environment variable 'SRHT_DEPLOY_TOKEN'"
+    exit 1
+fi
+
+rm -rf example/{dist,site.tar.gz}
+
+pnpm example:build
+
+# creates a tarball with website contents
+tar -C example/dist -cvz . > example/site.tar.gz
+
+# uploads site's tarball to "pages.sr.ht"
+curl -L --oauth2-bearer "$SRHT_DEPLOY_TOKEN" \
+    -Fcontent=@example/site.tar.gz \
+    https://pages.sr.ht/publish/henriquehbr.srht.site/svelte-typewriter
