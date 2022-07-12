@@ -109,8 +109,6 @@
     }
 </style>
 
-<svelte:options accessors />
-
 <noscript>
     <slot />
 </noscript>
