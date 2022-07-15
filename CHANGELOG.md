@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.1] - 2022-07-12
+
+### Bug Fixes
+
+- Export animation directives instead of their types
+
+### Miscellaneous Tasks
+
+- Remove unnecessary `accessors` option from component
+- Migrate example project deployments to sourcehut pages
+
 ## [3.0.0-beta.1] - 2022-07-11
 
 ### Bug Fixes
