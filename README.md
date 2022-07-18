@@ -28,8 +28,7 @@ code in Copilot.
 [![npm Downloads](https://img.shields.io/npm/dw/svelte-typewriter)](https://www.npmjs.com/package/svelte-typewriter)
 [![MadeWithSvelte.com shield](https://madewithsvelte.com/storage/repo-shields/2074-shield.svg)](https://madewithsvelte.com/p/svelte-typewriter/shield-link)
 
-[DEMO](https://henriquehbr.github.io/svelte-typewriter)
-
+[DEMO](https://henriquehbr.srht.site/svelte-typewriter)
 
 ## Summary
 
