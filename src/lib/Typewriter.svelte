@@ -1,23 +1,3 @@
-<script context="module">
-    import {
-        concurrent,
-        cascade,
-        loop,
-        loopOnce,
-        loopRandom,
-        scramble
-    } from './modes'
-
-    export {
-        concurrent,
-        cascade,
-        loop,
-        loopOnce,
-        loopRandom,
-        scramble
-    }
-</script>
-
 <script>
     export let mode = "concurrent"
 
@@ -48,12 +28,12 @@
     $: unnecessaryScrambleProps = mode !== "scramble" && ($$props.scrambleDuration || $$props.scrambleSlowdown)
 
     const modes = {
-        concurrent: () => import("./modes/concurrent.js"),
-        cascade: () => import("./modes/cascade.js"),
-        loop: () => import("./modes/loop.js"),
-        loopOnce: () => import("./modes/loopOnce.js"),
-        loopRandom: () => import("./modes/loopRandom.js"),
-        scramble: () => import("./modes/scramble.js")
+        concurrent: () => import("./modes/concurrent"),
+        cascade: () => import("./modes/cascade"),
+        loop: () => import("./modes/loop"),
+        loopOnce: () => import("./modes/loopOnce"),
+        loopRandom: () => import("./modes/loopRandom"),
+        scramble: () => import("./modes/scramble")
     }
 
     $: unnecessaryCursorOnEnd && console.warn("[svelte-typewriter] The prop 'keepCursorOnFinish' only has effect on the following modes: 'concurrent', 'cascade' and 'loopOnce'")

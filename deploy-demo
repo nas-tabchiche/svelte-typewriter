@@ -11,14 +11,14 @@ if [ -z "$SRHT_DEPLOY_TOKEN" ]; then
     exit 1
 fi
 
-rm -rf example/{dist,site.tar.gz}
+rm -rf build
 
-pnpm example:build
+pnpm build
 
 # creates a tarball with website contents
-tar -C example/dist -cvz . > example/site.tar.gz
+tar -C build -cvz . > site.tar.gz
 
 # uploads site's tarball to "pages.sr.ht"
 curl -L --oauth2-bearer "$SRHT_DEPLOY_TOKEN" \
-    -Fcontent=@example/site.tar.gz \
+    -Fcontent=@site.tar.gz \
     https://pages.sr.ht/publish/henriquehbr.srht.site/svelte-typewriter

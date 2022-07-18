@@ -1,8 +1,8 @@
 <script>
-    import Typewriter from "../../src/Typewriter.svelte"
-    import CustomizationPanel from "./components/CustomizationPanel.svelte"
-    import Input from "./components/Input.svelte"
-    import Select from "./components/Select.svelte"
+    import Typewriter from "$lib"
+    import CustomizationPanel from "$components/CustomizationPanel.svelte"
+    import Input from "$components/Input.svelte"
+    import Select from "$components/Select.svelte"
 
     const isLoopMode = mode => /^loop(Once|Random)?$/.test(mode)
 
@@ -48,6 +48,10 @@
         "--cursor-color": "black"
     }
 </script>
+
+<svelte:head>
+    <link rel="stylesheet" href="/global.css" />
+</svelte:head>
 
 <Typewriter
     --cursor-width={props["--cursor-width"]}

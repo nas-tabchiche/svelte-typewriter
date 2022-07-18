@@ -1,6 +1,8 @@
 node_modules
-.DS_STORE
-.cache
-.temp
-dist
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
 site.tar.gz

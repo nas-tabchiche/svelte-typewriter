@@ -20,24 +20,31 @@
     "src",
     "types"
   ],
+  "exports": {
+    ".": "./src/lib/Typewriter.svelte"
+  },
   "scripts": {
-    "example:dev": "vite example",
-    "example:build": "vite build example",
-    "example:preview": "vite preview example",
-    "example:deploy": "./example/deploy-site",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "package": "svelte-kit package",
+    "prepare": "husky install && svelte-kit sync",
+    "deploy-demo": "./deploy-demo",
     "prerelease": "docker rmi -f release && DOCKER_BUILDKIT=1 docker build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
     "release": "docker run --rm -t -v $PWD:/repo -e GIT_NAME=\"$(git config user.name)\" -e GIT_EMAIL=\"$(git config user.email)\" release ./bump-package-json",
-    "prepare": "husky install",
     "prettier": "prettier --write \"./src/**/*.js\""
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "1.0.0-next.36",
-    "@tsconfig/svelte": "^3.0.0",
-    "husky": "^7.0.4",
-    "prettier": "^2.5.1",
-    "prettier-plugin-svelte": "^2.6.0",
-    "svelte": "^3.47.0",
-    "vite": "2.8.6"
+    "@sveltejs/adapter-static": "1.0.0-next.37",
+    "@sveltejs/kit": "1.0.0-next.377",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.7.0",
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.0",
+    "svelte2tsx": "^0.5.11",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.0"
   },
   "peerDependencies": {
     "svelte": ">=3.47.x"

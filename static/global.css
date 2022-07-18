@@ -2,16 +2,13 @@
     box-sizing: border-box;
 }
 
-html, body, #app {
+html, body {
     height: 100%;
     overflow-y: hidden;
 }
 
 body {
     margin: 0;
-}
-
-body #app {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,20 +19,20 @@ body #app {
 }
 
 /* compensates customization panel height */
-body #app .typewriter-container {
+.typewriter-container {
     margin-top: -250px;
 }
 
-body #app .input-container,
-body #app .select-container {
+.input-container,
+.select-container {
     display: flex;
     align-items: center;
     margin: 8px auto;
     gap: 12px;
 }
 
-body #app .input-container input,
-body #app .select-container select {
+.input-container input,
+.select-container select {
     flex-grow: 1;
     background-color: transparent;
     border: 2px solid #a89984;
