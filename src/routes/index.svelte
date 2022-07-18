@@ -49,10 +49,6 @@
     }
 </script>
 
-<svelte:head>
-    <link rel="stylesheet" href="/global.css" />
-</svelte:head>
-
 <Typewriter
     --cursor-width={props["--cursor-width"]}
     --cursor-color={props["--cursor-color"]}

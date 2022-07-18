@@ -9,11 +9,11 @@ const config = {
         },
         prerender: {
             default: true
+        },
+        paths: {
+            // deploys to "https://henriquehbr.github.io/svelte-typewriter"
+            base: '/svelte-typewriter'
         }
-    },
-    paths: {
-        // deploys to "https://henriquehbr.github.io/svelte-typewriter"
-        base: '/svelte-typewriter'
     }
 }
 
