@@ -175,6 +175,9 @@ You can control the behavior of the typewriter effect by passing specific props 
     <a href="https://github.com/PlebeianTech/plebeian-market">
         <img src="https://git.sr.ht/~henriquehbr/svelte-typewriter/blob/main/plebeian-market-logo.jpg" height="128" alt="plebeian.market logo" />
     </a>
+    <a href="https://github.com/kishansripada/pada">
+        <img src="https://git.sr.ht/~henriquehbr/svelte-typewriter/blob/main/pada-logo.png" height="128" alt="pada logo" />
+    </a>
 </div>
 
 ## FAQs
