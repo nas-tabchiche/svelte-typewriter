@@ -19,7 +19,10 @@
   "svelte": "src/Typewriter.svelte",
   "types": "types/index.d.ts",
   "type": "module",
-  "author": "Henrique Borges <henriqueborgeshbr@gmail.com>",
+  "author": {
+    "name": "Henrique Borges",
+    "email": "henriqueborgeshbr@gmail.com"
+  },
   "license": "MIT",
   "files": [
     "src",
