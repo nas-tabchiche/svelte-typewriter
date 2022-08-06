@@ -2,7 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-## [3.0.1] - 2022-07-12
+## [3.0.2] - 2022-08-06
+
+### Documentation
+
+- Update demo url
+- Add pada to the projects showcase
+- Remove sourcehut migration notice
+
+### Miscellaneous Tasks
+
+- Migrate project structure to SvelteKit
+- Set base path on correct config property
+- Update repository URLs on `package.json`
+- Separate author name from email in `package.json`
+- Update dependencies
+
+## [3.0.1] - 2022-07-15
 
 ### Bug Fixes
 
