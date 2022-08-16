@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.4] - 2022-08-16
+
+### Bug Fixes
+
+- Include modes and helpers when publishing to npm
+
 ## [3.0.3] - 2022-08-16
 
 ### Bug Fixes

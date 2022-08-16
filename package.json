@@ -14,7 +14,7 @@
     "url": "https://todo.sr.ht/~henriquehbr/svelte-typewriter",
     "email": "henriqueborgeshbr@gmail.com"
   },
-  "version": "3.0.3",
+  "version": "3.0.4",
   "main": "Typewriter.svelte",
   "svelte": "Typewriter.svelte",
   "type": "module",
@@ -23,7 +23,10 @@
     "email": "henriqueborgeshbr@gmail.com"
   },
   "license": "MIT",
-  "files": ["helpers", "modes"],
+  "files": [
+    "helpers",
+    "modes"
+  ],
   "exports": {
     ".": "./src/lib/Typewriter.svelte"
   },
