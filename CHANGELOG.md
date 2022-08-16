@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.3] - 2022-08-16
+
+### Bug Fixes
+
+- Adjust path of entry point file
+
+### Miscellaneous Tasks
+
+- Replace deprecated config option
+
 ## [3.0.2] - 2022-08-06
 
 ### Documentation
