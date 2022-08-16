@@ -15,9 +15,8 @@
     "email": "henriqueborgeshbr@gmail.com"
   },
   "version": "3.0.2",
-  "main": "src/Typewriter.svelte",
-  "svelte": "src/Typewriter.svelte",
-  "types": "types/index.d.ts",
+  "main": "Typewriter.svelte",
+  "svelte": "Typewriter.svelte",
   "type": "module",
   "author": {
     "name": "Henrique Borges",
