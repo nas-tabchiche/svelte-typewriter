@@ -6,5 +6,5 @@
 	"trailingComma": "none",
 	"useTabs": true,
 	"arrowParens": "avoid",
-	"svelteBracketNewLine": true
+	"bracketSameLine": true
 }
