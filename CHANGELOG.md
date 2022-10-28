@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0] - 2022-10-28
+
+### Documentation
+
+- Adjust summary items indentation level
+
+### Features
+
+- Allow setting cursor timeout after animation ends
+
 ## [3.0.4] - 2022-08-16
 
 ### Bug Fixes
