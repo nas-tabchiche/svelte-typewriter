@@ -22,10 +22,11 @@
     // and support the cursor
     $: isFiniteCursorMode = ["concurrent", "cascade", "loopOnce"].includes(mode)
 
-    $: unnecessaryCursorOnEnd = !isFiniteCursorMode && keepCursorOnFinish
-    $: unnecessaryCursorOnDelay = delay < 1 && showCursorOnDelay
-    $: unnecessaryLoopProps = !isLoopMode && ($$props.unwriteInterval || $$props.wordInterval)
-    $: unnecessaryScrambleProps = mode !== "scramble" && ($$props.scrambleDuration || $$props.scrambleSlowdown)
+    $: invalidCursorOnFinish = !isFiniteCursorMode && keepCursorOnFinish
+    $: invalidCursorOnDelay = delay < 1 && showCursorOnDelay
+    $: invalidLoopProps = !isLoopMode && ($$props.unwriteInterval || $$props.wordInterval)
+    $: invalidScrambleProps = mode !== "scramble" && ($$props.scrambleDuration || $$props.scrambleSlowdown)
+    $: unnecessaryCursorOnFinish = typeof keepCursorOnFinish === 'number' && keepCursorOnFinish < 1
 
     const modes = {
         concurrent: () => import("./modes/concurrent"),
@@ -36,10 +37,11 @@
         scramble: () => import("./modes/scramble")
     }
 
-    $: unnecessaryCursorOnEnd && console.warn("[svelte-typewriter] The prop 'keepCursorOnFinish' only has effect on the following modes: 'concurrent', 'cascade' and 'loopOnce'")
-    $: unnecessaryCursorOnDelay && console.warn("[svelte-typewriter] The prop 'showCursorOnDelay' has no effect if the delay is 0")
-    $: unnecessaryLoopProps && console.warn("[svelte-typewriter] The props 'unwriteInterval' and 'wordInterval' can only be used on loop mode")
-    $: unnecessaryScrambleProps && console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' can only be used on scramble mode")
+    $: invalidCursorOnFinish && console.warn("[svelte-typewriter] The prop 'keepCursorOnFinish' is compatible only with finite modes")
+    $: invalidCursorOnDelay && console.warn("[svelte-typewriter] The prop 'showCursorOnDelay' has no effect if the delay is 0")
+    $: invalidLoopProps && console.warn("[svelte-typewriter] The props 'unwriteInterval' and 'wordInterval' are only compatible with loop modes")
+    $: invalidScrambleProps && console.warn("[svelte-typewriter] The props 'scrambleDuration' and 'scrambleSlowdown' are only compatible with scramble mode")
+    $: unnecessaryCursorOnFinish && console.warn("[svelte-typewriter] The prop 'keepCursorOnFinish' has no effect with values lower than 1")
 
     $: delayPromise = () => new Promise(resolve => setTimeout(() => resolve(delay), delay))
 
@@ -84,7 +86,7 @@
         height: 2ch;
         display: inline-block;
         vertical-align: text-top;
-        background-color: var(--cursor-color, black);
+        background-color: var(--cursor-color, #000000);
         animation: cursorFade 1.25s infinite;
     }
 </style>

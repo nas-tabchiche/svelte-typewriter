@@ -7,17 +7,21 @@
     const isLoopMode = mode => /^loop(Once|Random)?$/.test(mode)
 
     let props = {
-        // general-purpose props
+        // ### general-purpose props ###
+        // multiple options
         mode: "concurrent",
+        // numbers
         interval: 30,
         delay: 0,
+        // booleans
         keepCursorOnFinish: false,
         showCursorOnDelay: false,
         cursor: true,
         disabled: false,
+        // strings
         element: "div",
 
-        // mode-specific props
+        // ### mode-specific props ###
         get unwriteInterval() {
             return isLoopMode(this.mode) ? 30 : 0
         },
@@ -43,9 +47,9 @@
             props = { ...props, scrambleSlowdown }
         },
 
-        // CSS variables
+        // ### CSS variables ###
         "--cursor-width": "1ch",
-        "--cursor-color": "black"
+        "--cursor-color": "#000000"
     }
 </script>
 
@@ -92,6 +96,9 @@
         <Input bind:value={props.scrambleSlowdown} label="Scramble slowdown" type="checkbox" />
     {/if}
     <Input bind:value={props.keepCursorOnFinish} label="Keep cursor on end" type="checkbox" />
+    {#if props.keepCursorOnFinish}
+        <Input bind:value={props.keepCursorOnFinish} label="Cursor timeout" type="number" />
+    {/if}
     <Input bind:value={props.showCursorOnDelay} label="Cursor on delay" type="checkbox" />
     <Input bind:value={props.cursor} label="Cursor" type="checkbox" />
     <Input bind:value={props.disabled} label="Disabled" type="checkbox" />

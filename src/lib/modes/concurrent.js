@@ -21,6 +21,12 @@ const concurrent = (node, props) => {
 			} else {
 				element.currentNode.classList.replace('typing', 'finished-typing')
 			}
+
+			const cursorHasTimeout = typeof options.keepCursorOnFinish === 'number'
+			cursorHasTimeout &&
+				setTimeout(() => {
+					element.currentNode.classList.replace('typing', 'finished-typing')
+				}, options.keepCursorOnFinish)
 		})
 	}
 }

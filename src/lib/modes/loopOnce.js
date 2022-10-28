@@ -28,14 +28,15 @@ const loopOnce = async (node, props) => {
 						? element.classList.remove('typing')
 						: element.classList.remove('finished-typing')
 				})
-			} else if (!options.keepCursorOnFinish) {
-				// by default, the cursor is kept when the animation is finished
-				// here we remove the cursor if "keepCursorOnFinish" is false
-				runOnEveryParentUntil(currentNode, options.parentElement, element => {
-					currentNode === element &&
-						element.classList.replace('typing', 'finished-typing')
-				})
 			}
+
+			runOnEveryParentUntil(currentNode, options.parentElement, element => {
+				const cursorHasTimeout = typeof options.keepCursorOnFinish === 'number'
+				cursorHasTimeout &&
+					setTimeout(() => {
+						element.classList.replace('typing', 'finished-typing')
+					}, options.keepCursorOnFinish)
+			})
 		}
 	}
 }

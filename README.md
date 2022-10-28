@@ -97,7 +97,7 @@ groups
 | `mode` | `concurrent`, `cascade`, `loop`, `loopOnce`, `loopRandom` or `scramble` | The animation mode to be used | `concurrent` |
 | `interval` | `number` or `array` | The interval (in milliseconds) between each letter, you can also pass a array of distinct intervals to mimic human typing | `30` |
 | `cursor` | `boolean` | Enables/disables the cursor on the Typewriter animation | `true` |
-| `keepCursorOnFinish` | `boolean` | Keep the cursor visible after the animation has finished | `false` |
+| `keepCursorOnFinish` | `number` or `boolean` | Keep the cursor visible (indefinitely, or for a given amount of time, in milliseconds) after the animation has finished | `false` |
 | `delay` | `number` | The interval (in milliseconds) before the animation starts | `0` |
 | `showCursorOnDelay` | `boolean` | (only usable when `delay` is not 0) Shows the cursor during delay period | `false` |
 | `disabled` | `boolean` | Enables/disables the typewriter animation | `false` |
