@@ -14,7 +14,7 @@
     "url": "https://todo.sr.ht/~henriquehbr/svelte-typewriter",
     "email": "henriqueborgeshbr@gmail.com"
   },
-  "version": "3.1.1",
+  "version": "3.1.2",
   "main": "Typewriter.svelte",
   "svelte": "Typewriter.svelte",
   "type": "module",

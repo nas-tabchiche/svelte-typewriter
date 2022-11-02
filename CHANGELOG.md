@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.2] - 2022-11-02
+
+### Bug Fixes
+
+- Automaticaly generate package before publishing to npm
+
 ## [3.1.1] - 2022-11-02
 
 ### Bug Fixes
