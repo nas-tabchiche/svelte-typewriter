@@ -15,8 +15,8 @@
     "email": "henriqueborgeshbr@gmail.com"
   },
   "version": "3.1.1",
-  "main": "src/lib/Typewriter.svelte",
-  "svelte": "src/lib/Typewriter.svelte",
+  "main": "Typewriter.svelte",
+  "svelte": "Typewriter.svelte",
   "type": "module",
   "author": {
     "name": "Henrique Borges",
@@ -27,19 +27,19 @@
     "helpers",
     "modes"
   ],
-  "exports": {
-    ".": "./src/lib/Typewriter.svelte"
+  "publishConfig": {
+    "directory": "package"
   },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "package": "svelte-kit package",
     "prepare": "husky install",
     "deploy-demo": "./deploy-demo",
     "prerelease": "docker rmi -f release && DOCKER_BUILDKIT=1 docker build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
     "release": "docker run --rm -t -v $PWD:/repo -e GIT_NAME=\"$(git config user.name)\" -e GIT_EMAIL=\"$(git config user.email)\" release ./bump-package-json",
-    "prettier": "prettier --write \"./src/**/*.js\""
+    "prettier": "prettier --write \"./src/**/*.js\"",
+    "prepublish": "svelte-kit package"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "1.0.0-next.38",
