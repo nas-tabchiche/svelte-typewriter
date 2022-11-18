@@ -26,6 +26,7 @@
   "files": [
     "helpers",
     "modes",
+    "*.js",
     "*.d.ts"
   ],
   "types": "index.d.ts",
