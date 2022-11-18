@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.4] - 2022-11-18
+
+### Bug Fixes
+
+- Include javascript files when publishing to npm
+
 ## [3.1.3] - 2022-11-06
 
 ### Bug Fixes
