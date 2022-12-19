@@ -39,8 +39,7 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "deploy-demo": "./deploy-demo",
-    "prerelease": "docker rmi -f release && docker buildx build --build-arg HOST_USER_UID=\"$(id -u)\" -t release .",
-    "release": "docker run --rm -t -v $PWD:/repo -e GIT_NAME=\"$(git config user.name)\" -e GIT_EMAIL=\"$(git config user.email)\" release ./bump-package-json",
+    "release": "docker run --rm -t -v $PWD:/repo henriquehbr/tagit:0.7.0-node ./bump-package-json",
     "prettier": "prettier --write \"./src/**/*.js\"",
     "prepublish": "svelte-kit package"
   },
