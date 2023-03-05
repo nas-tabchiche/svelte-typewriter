@@ -33,7 +33,7 @@
 pnpm i -D svelte-typewriter
 ```
 
-> `pnpm` is used here just as an example, you can use your package of choice
+> `pnpm` is used here just as an example, you can use your package manager of choice
 
 ## Usage
 
