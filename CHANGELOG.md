@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.5] - 2023-04-17
+
+### Bug Fixes
+
+- Emit `done` event on concurrent mode with `keepCursorOnFinish`
+
+### Documentation
+
+- Add missing word on installation instructions hint
+
+### Miscellaneous Tasks
+
+- Use docker buildkit subcommand instead of environment variable
+- Update `tagit` to version 0.7.0
+
 ## [3.1.4] - 2022-11-18
 
 ### Bug Fixes
