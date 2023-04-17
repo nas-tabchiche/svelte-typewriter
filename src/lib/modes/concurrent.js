@@ -16,8 +16,9 @@ const concurrent = (node, props) => {
 		writeEffect(element, options).then(() => {
 			if (options.keepCursorOnFinish) {
 				const isNotLongestElement = element.currentNode !== lastElementToFinish
-				isNotLongestElement &&
-					element.currentNode.classList.replace('typing', 'finished-typing')
+				isNotLongestElement
+					? element.currentNode.classList.replace('typing', 'finished-typing')
+					: options.dispatch('done')
 			} else {
 				element.currentNode.classList.replace('typing', 'finished-typing')
 			}
