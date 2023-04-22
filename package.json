@@ -16,7 +16,6 @@
   },
   "version": "3.1.5",
   "main": "Typewriter.svelte",
-  "svelte": "Typewriter.svelte",
   "type": "module",
   "author": {
     "name": "Henrique Borges",
@@ -57,5 +56,11 @@
   },
   "peerDependencies": {
     "svelte": ">=3.47.x"
+  },
+  "exports": {
+    ".": {
+      "default": "./index.js",
+      "svelte": "./index.js"
+    }
   }
 }
