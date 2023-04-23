@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.6] - 2023-04-23
+
+### Bug Fixes
+
+- Solve conflicts when resolving svelte source files
+
 ## [3.1.5] - 2023-04-17
 
 ### Bug Fixes
