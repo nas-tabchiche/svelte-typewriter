@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.7] - 2023-10-23
+
+### Bug Fixes
+
+- Use proper return types on svelte actions
+
+### Miscellaneous Tasks
+
+- Update dependencies
+
 ## [3.1.6] - 2023-04-23
 
 ### Bug Fixes
