@@ -7,9 +7,6 @@ const config = {
         alias: {
             $components: 'src/components'
         },
-        prerender: {
-            default: true
-        },
         paths: {
             // deploys to "https://henriquehbr.github.io/svelte-typewriter"
             base: '/svelte-typewriter'
