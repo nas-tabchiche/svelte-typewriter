@@ -4,6 +4,32 @@ import { typingInterval } from '../helpers/typingInterval'
 import { unwriteEffect } from '../helpers/unwriteEffect'
 import { runOnEveryParentUntil } from '../helpers/runOnEveryParentUntil'
 
+/**
+ * @typedef {object} Props
+ * @property {number} [interval]
+ * @property {boolean} [cursor]
+ * @property {boolean} [keepCursorOnFinish]
+ * @property {number} [delay]
+ * @property {boolean} [showCursorOnDelay]
+ * @property {boolean} [disabled]
+ * @property {string} [element]
+ * @property {number} [scrambleDuration]
+ * @property {number} [scrambleSlowdown]
+ * @property {number} [unwriteInterval]
+ * @property {number} [wordInterval]
+ */
+
+/**
+ * @typedef {{ update: () => void, destroy: () => void }} SvelteActionReturnType
+ */
+
+/**
+ * @typedef {(node: HTMLElement, props: Props) => SvelteActionReturnType} TypewriterModeFn
+ */
+
+/**
+ * @type {TypewriterModeFn}
+ */
 const loopOnce = async (node, props) => {
 	const { options, elements } = animationSetup(node, props)
 
@@ -38,6 +64,11 @@ const loopOnce = async (node, props) => {
 					}, options.keepCursorOnFinish)
 			})
 		}
+	}
+
+	return {
+		update() {},
+		destroy() {}
 	}
 }
 

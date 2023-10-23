@@ -5,7 +5,32 @@ import { sleep } from '../helpers/sleep'
 import { runOnEveryParentUntil } from '../helpers/runOnEveryParentUntil'
 import { animationSetup } from '../helpers/animationSetup'
 
-/** @type {TypewriterModeFn} */
+/**
+ * @typedef {object} Props
+ * @property {number} [interval]
+ * @property {boolean} [cursor]
+ * @property {boolean} [keepCursorOnFinish]
+ * @property {number} [delay]
+ * @property {boolean} [showCursorOnDelay]
+ * @property {boolean} [disabled]
+ * @property {string} [element]
+ * @property {number} [scrambleDuration]
+ * @property {number} [scrambleSlowdown]
+ * @property {number} [unwriteInterval]
+ * @property {number} [wordInterval]
+ */
+
+/**
+ * @typedef {{ update: () => void, destroy: () => void }} SvelteActionReturnType
+ */
+
+/**
+ * @typedef {(node: HTMLElement, props: Props) => SvelteActionReturnType} TypewriterModeFn
+ */
+
+/**
+ * @type {TypewriterModeFn}
+ */
 const scramble = async (node, props) => {
 	const { options, elements } = animationSetup(node, props)
 
@@ -59,7 +84,13 @@ const scramble = async (node, props) => {
 			currentNode.innerHTML = text
 		})
 	})
+
 	options.dispatch('done')
+
+	return {
+		update() {},
+		destroy() {}
+	}
 }
 
 export default scramble

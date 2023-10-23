@@ -15,7 +15,7 @@
     "email": "henriqueborgeshbr@gmail.com"
   },
   "version": "3.1.6",
-  "main": "Typewriter.svelte",
+  "main": "./package/Typewriter.svelte",
   "type": "module",
   "author": {
     "name": "Henrique Borges",
@@ -40,7 +40,7 @@
     "deploy-demo": "./deploy-demo",
     "release": "docker run --rm -t -v $PWD:/repo henriquehbr/tagit:0.7.0-node ./bump-package-json",
     "prettier": "prettier --write \"./src/**/*.js\"",
-    "prepublish": "svelte-package"
+    "prepublish": "svelte-package -i . -o package"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^2.0.3",
@@ -60,8 +60,8 @@
   },
   "exports": {
     ".": {
-      "default": "./index.js",
-      "svelte": "./index.js"
+      "types": "./package/index.d.ts",
+      "svelte": "./package/index.js"
     }
   }
 }
