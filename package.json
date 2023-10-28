@@ -22,16 +22,7 @@
     "email": "henriqueborgeshbr@gmail.com"
   },
   "license": "MIT",
-  "files": [
-    "helpers",
-    "modes",
-    "*.js",
-    "*.d.ts"
-  ],
-  "types": "index.d.ts",
-  "publishConfig": {
-    "directory": "package"
-  },
+  "files": ["package"],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -40,7 +31,7 @@
     "deploy-demo": "./deploy-demo",
     "release": "docker run --rm -t -v $PWD:/repo henriquehbr/tagit:0.7.0-node ./bump-package-json",
     "prettier": "prettier --write \"./src/**/*.js\"",
-    "prepublish": "svelte-package -i . -o package"
+    "prepublish": "svelte-package -o package"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^2.0.3",
@@ -62,6 +53,11 @@
     ".": {
       "types": "./package/index.d.ts",
       "svelte": "./package/index.js"
+    }
+  },
+  "typesVersions": {
+    ">4.0": {
+      "svelte-typewriter": ["./package/index.d.ts"]
     }
   }
 }
