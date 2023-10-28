@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.8] - 2023-10-28
+
+### Bug Fixes
+
+- Adjust package publish settings
+
 ## [3.1.7] - 2023-10-23
 
 ### Bug Fixes
