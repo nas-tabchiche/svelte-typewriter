@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.0] - 2023-11-09
+
+### Features
+
+- Trigger "done" event on loop mode each time text gets fully erased
+
 ## [3.1.8] - 2023-10-28
 
 ### Bug Fixes
