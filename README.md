@@ -122,9 +122,9 @@ You can control the behavior of the typewriter effect by passing specific props 
 
 ### Event listeners
 
-| Event | Trigger |
-| --- | --- |
-| `on:done` | Is executed at the end of the animation, if used with one of the loop modes, this event will be fired at the end of each loop |
+| Event | Trigger | Detail |
+| --- | --- | --- |
+| `on:done` | Is executed at the end of the animation, if used with one of the loop modes, this event will be fired after each word gets written and erased | `"write" \| "unwrite" \| null` |
 
 ### Child attributes
 

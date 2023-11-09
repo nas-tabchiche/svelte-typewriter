@@ -10,9 +10,10 @@ const writeAndUnwriteText = async ({ currentNode, text }, options) => {
 	const fullyWritten = currentNode.innerHTML === textWithUnescapedAmpersands
 
 	if (fullyWritten) {
-		options.dispatch('done')
+		options.dispatch('done', 'write')
 		await typingInterval(options.wordInterval)
 		await unwriteEffect(currentNode, options)
+		options.dispatch('done', 'unwrite')
 	}
 
 	runOnEveryParentUntil(currentNode, options.parentElement, element => {
