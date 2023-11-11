@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.1] - 2023-11-11
+
+### Bug Fixes
+
+- Write/unwrite emojis as a whole instead of byte-by-byte ([#11](https://github.com/henriquehbr/svelte-typewriter/issues/11))
+
 ## [3.2.0] - 2023-11-09
 
 ### Features
