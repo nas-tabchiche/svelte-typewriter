@@ -59,7 +59,7 @@
     on:done={event => console.log("The animation has finished!", event.detail ? `(event: ${event.detail})` : "")}
     {...props}>
     <h3 data-static>This text won't be animated</h3>
-    <p>Normal text</p>
+    <p>Normal text with 👁️‍🗨️ emojis 🤯</p>
     <p>&&& Ampersands &&&</p>
     <div>
         <p>Nested content</p>
