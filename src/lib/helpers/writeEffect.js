@@ -8,15 +8,21 @@ const writeEffect = async ({ currentNode, text }, options) => {
 		element.classList.add(classToAdd)
 	})
 
-	for (let index = 0; index <= text.length; index++) {
-		const letter = text[index]
+	const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' })
+	const segmentedText = [...segmenter.segment(text)]
 
-		const letterSizeInBytes = new Blob([letter]).size
-		const isSpecialCharacter = letterSizeInBytes > 1
+	let pendingClosingBracket = false
 
-		if (isSpecialCharacter) continue
-
-		letter === '<' && (index = text.indexOf('>', index))
+	for (const { segment: letter, index } of segmentedText) {
+		if (letter === '>') {
+			pendingClosingBracket = false
+			continue
+		} else if (letter === '<') {
+			pendingClosingBracket = true
+			continue
+		} else if (pendingClosingBracket) {
+			continue
+		}
 
 		currentNode.innerHTML = text.slice(0, index)
 		await typingInterval(options.interval)
