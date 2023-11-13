@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.2] - 2023-11-13
+
+### Bug Fixes
+
+- Prevent multiple emojis in a row from being (un)typed all at once
+
 ## [3.2.1] - 2023-11-11
 
 ### Bug Fixes
