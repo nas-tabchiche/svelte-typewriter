@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.2.3] - 2024-01-08
+
+### Bug Fixes
+
+- Add `Intl.Segmenter` polyfill to support Firefox
+
 ## [3.2.2] - 2023-11-13
 
 ### Bug Fixes
