@@ -1,4 +1,6 @@
 <script>
+    import '@formatjs/intl-segmenter/polyfill'
+
     export let mode = "concurrent"
 
     // general-purpose props

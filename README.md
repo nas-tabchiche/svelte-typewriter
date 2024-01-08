@@ -9,11 +9,6 @@
 
 [DEMO](https://henriquehbr.srht.site/svelte-typewriter)
 
-> **Disclaimer:** As of November 13 2023, both Firefox and Firefox for Android aren't supported due
-to a dependency on [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)
-which is needed in order to animate some multi-byte unicode characters properly, like emojis, more information
-[here](https://todo.sr.ht/~henriquehbr/svelte-typewriter/11)
-
 ## Summary
 
 - [Installation](#installation)
