@@ -14,7 +14,7 @@
 		"url": "https://github.com/nas-tabchiche/svelte-typewriter",
 		"email": "n.tabchiche2@gmail.com"
 	},
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"main": "./package/Typewriter.svelte",
 	"type": "module",
 	"author": {
@@ -60,7 +60,7 @@
 	},
 	"typesVersions": {
 		">4.0": {
-			"svelte-typewriter": [
+			"sv-typewriter": [
 				"./package/index.d.ts"
 			]
 		}
