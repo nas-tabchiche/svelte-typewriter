@@ -1,71 +1,71 @@
 {
-  "name": "svelte-typewriter",
-  "description": "A simple and reusable typewriter effect for your Svelte applications",
-  "keywords": [
-    "svelte",
-    "typewriter-effect"
-  ],
-  "homepage": "https://sr.ht/~henriquehbr/svelte-typewriter",
-  "repository": {
-    "type": "git",
-    "url": "https://git.sr.ht/~henriquehbr/svelte-typewriter"
-  },
-  "bugs": {
-    "url": "https://todo.sr.ht/~henriquehbr/svelte-typewriter",
-    "email": "henriqueborgeshbr@gmail.com"
-  },
-  "version": "3.2.3",
-  "main": "./package/Typewriter.svelte",
-  "type": "module",
-  "author": {
-    "name": "Henrique Borges",
-    "email": "henriqueborgeshbr@gmail.com"
-  },
-  "license": "MIT",
-  "files": [
-    "package"
-  ],
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "prepare": "husky install",
-    "deploy-demo": "./deploy-demo",
-    "release": "docker run --rm -t -v $PWD:/repo henriquehbr/tagit:0.7.0-node ./bump-package-json",
-    "prettier": "prettier --write \"./src/**/*.js\"",
-    "prepublish": "svelte-package -o package"
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-static": "^3.0.0",
-    "@sveltejs/kit": "^2.5.27",
-    "@sveltejs/package": "^2.3.7",
-    "@sveltejs/vite-plugin-svelte": "^4.0.0",
-    "husky": "^8.0.3",
-    "prettier": "^3.1.0",
-    "prettier-plugin-svelte": "^3.2.6",
-    "svelte": "^5.0.0",
-    "svelte-check": "^4.0.0",
-    "svelte2tsx": "^0.6.23",
-    "typescript": "^5.5.0",
-    "vite": "^5.4.4"
-  },
-  "peerDependencies": {
-    "svelte": ">=3.47.x"
-  },
-  "exports": {
-    ".": {
-      "types": "./package/index.d.ts",
-      "svelte": "./package/index.js"
-    }
-  },
-  "typesVersions": {
-    ">4.0": {
-      "svelte-typewriter": [
-        "./package/index.d.ts"
-      ]
-    }
-  },
-  "dependencies": {
-    "@formatjs/intl-segmenter": "^11.5.3"
-  }
+	"name": "sv-typewriter",
+	"description": "A simple and reusable typewriter effect for your Svelte applications",
+	"keywords": [
+		"svelte",
+		"typewriter-effect"
+	],
+	"homepage": "https://github.com/nas-tabchiche/svelte-typewriter",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nas-tabchiche/svelte-typewriter"
+	},
+	"bugs": {
+		"url": "https://github.com/nas-tabchiche/svelte-typewriter",
+		"email": "n.tabchiche2@gmail.com"
+	},
+	"version": "4.0.0",
+	"main": "./package/Typewriter.svelte",
+	"type": "module",
+	"author": {
+		"name": "Nassim Tabchiche",
+		"email": "n.tabchiche2@gmail.com"
+	},
+	"license": "MIT",
+	"files": [
+		"package"
+	],
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "husky install",
+		"deploy-demo": "./deploy-demo",
+		"release": "docker run --rm -t -v $PWD:/repo henriquehbr/tagit:0.7.0-node ./bump-package-json",
+		"prettier": "prettier --write \"./src/**/*.js\"",
+		"prepublish": "svelte-package -o package"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.0",
+		"@sveltejs/kit": "^2.5.27",
+		"@sveltejs/package": "^2.3.7",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"husky": "^8.0.3",
+		"prettier": "^3.1.0",
+		"prettier-plugin-svelte": "^3.2.6",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"svelte2tsx": "^0.6.23",
+		"typescript": "^5.5.0",
+		"vite": "^5.4.4"
+	},
+	"peerDependencies": {
+		"svelte": ">=3.47.x"
+	},
+	"exports": {
+		".": {
+			"types": "./package/index.d.ts",
+			"svelte": "./package/index.js"
+		}
+	},
+	"typesVersions": {
+		">4.0": {
+			"svelte-typewriter": [
+				"./package/index.d.ts"
+			]
+		}
+	},
+	"dependencies": {
+		"@formatjs/intl-segmenter": "^11.5.3"
+	}
 }
