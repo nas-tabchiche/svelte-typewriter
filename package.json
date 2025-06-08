@@ -8,7 +8,7 @@
 	"homepage": "https://github.com/nas-tabchiche/svelte-typewriter",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nas-tabchiche/svelte-typewriter"
+		"url": "git+https://github.com/nas-tabchiche/svelte-typewriter.git"
 	},
 	"bugs": {
 		"url": "https://github.com/nas-tabchiche/svelte-typewriter",
