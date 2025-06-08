@@ -1,7 +1,5 @@
 <script>
-    export let label
-    export let value
-    export let type
+    let { label, value = $bindable(), type } = $props();
 </script>
 
 <div class="input-container">

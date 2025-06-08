@@ -6,7 +6,7 @@
 
     const isLoopMode = mode => /^loop(Once|Random)?$/.test(mode)
 
-    let props = {
+    let props = $state({
         // ### general-purpose props ###
         // multiple options
         mode: "concurrent",
@@ -50,7 +50,7 @@
         // ### CSS variables ###
         "--cursor-width": "1ch",
         "--cursor-color": "#000000"
-    }
+    })
 </script>
 
 <Typewriter

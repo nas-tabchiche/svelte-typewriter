@@ -1,11 +1,10 @@
 <script>
-    export let label
-    export let value
+    let { label, value = $bindable(), children } = $props();
 </script>
 
 <div class="select-container">
     <span>{label}</span>
     <select bind:value>
-        <slot />
+        {@render children?.()}
     </select>
 </div>

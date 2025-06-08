@@ -1,3 +1,13 @@
+<script>
+    /**
+     * @typedef {Object} Props
+     * @property {import('svelte').Snippet} [children]
+     */
+
+    /** @type {Props} */
+    let { children } = $props();
+</script>
+
 <style>
     .customization-panel {
         position: fixed;
@@ -44,5 +54,5 @@
 </style>
 
 <div class="customization-panel">
-    <slot />
+    {@render children?.()}
 </div>
