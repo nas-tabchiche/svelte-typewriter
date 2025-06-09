@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # lints the code
-npm run prettier &&
-git add src/.
+pnpm run format &&
+  git add src/.

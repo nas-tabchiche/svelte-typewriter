@@ -13,18 +13,18 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Component-based approach](#component-based-approach)
-  - [Directive-based approach](#directive-based-approach)
+    - [Component-based approach](#component-based-approach)
+    - [Directive-based approach](#directive-based-approach)
 - [Props](#props)
-  - [Settings](#settings)
-    - [Modes](#modes)
-  - [Event listeners](#event-listeners)
-  - [Child attributes](#child-attributes)
-  - [CSS variables](#css-variables)
+    - [Settings](#settings)
+        - [Modes](#modes)
+    - [Event listeners](#event-listeners)
+    - [Child attributes](#child-attributes)
+    - [CSS variables](#css-variables)
 - [Used by](#used-by)
 - [FAQs](#faqs)
-  - [UMD and IIFE output formats are not supported for code-splitting builds](#umd-and-iife-output-formats-are-not-supported-for-code-splitting-builds)
-  - [Test suite failed to run: SyntaxError: Unexpected token '<'](#test-suite-failed-to-run-syntaxerror-unexpected-token-)
+    - [UMD and IIFE output formats are not supported for code-splitting builds](#umd-and-iife-output-formats-are-not-supported-for-code-splitting-builds)
+    - [Test suite failed to run: SyntaxError: Unexpected token '<'](#test-suite-failed-to-run-syntaxerror-unexpected-token-)
 - [Contributing](#contributing)
 
 ## Installation
@@ -44,11 +44,11 @@ your elements with the `<Typewriter>` component
 
 ```svelte
 <script>
-    import Typewriter from 'svelte-typewriter'
+	import Typewriter from 'svelte-typewriter'
 </script>
 
 <Typewriter>
-    <h1>Testing the typewriter effect</h1>
+	<h1>Testing the typewriter effect</h1>
 </Typewriter>
 ```
 
@@ -61,7 +61,7 @@ mode you want to use and include it as a attribute on your element
 
 ```svelte
 <script>
-    import { concurrent } from 'svelte-typewriter'
+	import { concurrent } from 'svelte-typewriter'
 </script>
 
 <p use:concurrent={{ interval: 30 }}>Testing the typewriter effect</p>
@@ -75,9 +75,9 @@ There are just a few limitations of this approach to keep in mind:
 - For now, there's no way to have the cursor caret on the text being animated
 - Event listeners (like `on:done`) won't be triggered
 - Depending on the animation mode you're using, some essential animation
-properties must be explicitly specified, because they don't have default values
-when used on a directive, otherwise the animation won't work properly, those
-include `interval`, `wordInterval`, `writeInterval` and `scrambleDuration`
+  properties must be explicitly specified, because they don't have default values
+  when used on a directive, otherwise the animation won't work properly, those
+  include `interval`, `wordInterval`, `writeInterval` and `scrambleDuration`
 
 ## Props
 
@@ -92,52 +92,52 @@ groups
 
 ### Settings
 
-| Prop | Type | Description | Default |
-| --- | --- | --- | --- |
-| `mode` | `concurrent`, `cascade`, `loop`, `loopOnce`, `loopRandom` or `scramble` | The animation mode to be used | `concurrent` |
-| `interval` | `number` or `array` | The interval (in milliseconds) between each letter, you can also pass a array of distinct intervals to mimic human typing | `30` |
-| `cursor` | `boolean` | Enables/disables the cursor on the Typewriter animation | `true` |
-| `keepCursorOnFinish` | `number` or `boolean` | Keep the cursor visible (indefinitely, or for a given amount of time, in milliseconds) after the animation has finished | `false` |
-| `delay` | `number` | The interval (in milliseconds) before the animation starts | `0` |
-| `showCursorOnDelay` | `boolean` | (only usable when `delay` is not 0) Shows the cursor during delay period | `false` |
-| `disabled` | `boolean` | Enables/disables the typewriter animation | `false` |
-| `element` | `string` | Sets the tag that will be used for the container element | `div` |
-| `wordInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** Sets the interval (in milliseconds) between each word | `1500` |
-| `unwriteInterval` | `number` | **(`loop`, `loopOnce` and `loopRandom` modes only)** The interval (in milliseconds) between each letter unwrite, if not defined it uses `interval` | `30` |
-| `scrambleDuration` | `number` | **(`scramble` mode only)** Sets the duration (in milliseconds) of the scramble animation | `3000` |
-| `scrambleSlowdown` | `boolean` | **(`scramble` mode only)** Enables/disables the slowdown effect right before the scramble animation ends (only works in scramble mode) | `true` |
+| Prop                 | Type                                                                    | Description                                                                                                                                        | Default      |
+| -------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `mode`               | `concurrent`, `cascade`, `loop`, `loopOnce`, `loopRandom` or `scramble` | The animation mode to be used                                                                                                                      | `concurrent` |
+| `interval`           | `number` or `array`                                                     | The interval (in milliseconds) between each letter, you can also pass a array of distinct intervals to mimic human typing                          | `30`         |
+| `cursor`             | `boolean`                                                               | Enables/disables the cursor on the Typewriter animation                                                                                            | `true`       |
+| `keepCursorOnFinish` | `number` or `boolean`                                                   | Keep the cursor visible (indefinitely, or for a given amount of time, in milliseconds) after the animation has finished                            | `false`      |
+| `delay`              | `number`                                                                | The interval (in milliseconds) before the animation starts                                                                                         | `0`          |
+| `showCursorOnDelay`  | `boolean`                                                               | (only usable when `delay` is not 0) Shows the cursor during delay period                                                                           | `false`      |
+| `disabled`           | `boolean`                                                               | Enables/disables the typewriter animation                                                                                                          | `false`      |
+| `element`            | `string`                                                                | Sets the tag that will be used for the container element                                                                                           | `div`        |
+| `wordInterval`       | `number`                                                                | **(`loop`, `loopOnce` and `loopRandom` modes only)** Sets the interval (in milliseconds) between each word                                         | `1500`       |
+| `unwriteInterval`    | `number`                                                                | **(`loop`, `loopOnce` and `loopRandom` modes only)** The interval (in milliseconds) between each letter unwrite, if not defined it uses `interval` | `30`         |
+| `scrambleDuration`   | `number`                                                                | **(`scramble` mode only)** Sets the duration (in milliseconds) of the scramble animation                                                           | `3000`       |
+| `scrambleSlowdown`   | `boolean`                                                               | **(`scramble` mode only)** Enables/disables the slowdown effect right before the scramble animation ends (only works in scramble mode)             | `true`       |
 
 #### Modes
 
 You can control the behavior of the typewriter effect by passing specific props to the `<Typewriter>` component, the table below contains information about all modes:
 
-| Mode | Description |
-| --- | --- |
-| `concurrent` | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode |
-| `cascade` | Apply animation on all elements sequentially instead of simultaneously |
-| `loop` | Cycles the animation between the children elements of the parent `Typewriter` component |
-| `loopOnce` | It's very similar to the `loop` mode, but the animation stops once it reaches the last element |
+| Mode         | Description                                                                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `concurrent` | Apply animation simultaneously on all elements, as opposed to the sequential animation of `cascade` mode                                     |
+| `cascade`    | Apply animation on all elements sequentially instead of simultaneously                                                                       |
+| `loop`       | Cycles the animation between the children elements of the parent `Typewriter` component                                                      |
+| `loopOnce`   | It's very similar to the `loop` mode, but the animation stops once it reaches the last element                                               |
 | `loopRandom` | It's very similar to `loop` mode, but instead of cycling the animation in a linear way, it picks a random child element to animate each time |
-| `scramble` | Slowly reveals the a word by continuously randomizing all of it's letters for a specific amount of time |
+| `scramble`   | Slowly reveals the a word by continuously randomizing all of it's letters for a specific amount of time                                      |
 
 ### Event listeners
 
-| Event | Trigger | Detail |
-| --- | --- | --- |
+| Event     | Trigger                                                                                                                                       | Detail                         |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | `on:done` | Is executed at the end of the animation, if used with one of the loop modes, this event will be fired after each word gets written and erased | `"write" \| "unwrite" \| null` |
 
 ### Child attributes
 
-| Attribute | Description |
-| --- | --- |
+| Attribute     | Description                                                                                          |
+| ------------- | ---------------------------------------------------------------------------------------------------- |
 | `data-static` | Marks an element as static, excluding it from receiving animations from the `<Typewriter>` component |
 
 ### CSS variables
 
-| Variable | Description |
-| --- | --- |
+| Variable         | Description                                                                        |
+| ---------------- | ---------------------------------------------------------------------------------- |
 | `--cursor-color` | Sets the cursor color (accepts any valid color name, hex code and rgb/rgba values) |
-| `--cursor-width` | Sets the cursor width |
+| `--cursor-width` | Sets the cursor width                                                              |
 
 ## Used by
 
@@ -180,7 +180,7 @@ example below:
 ```js
 // jest.config.js
 module.exports = {
-    transformIgnorePatterns: ["/node_modules/(?!(svelte-typewriter)/)"]
+	transformIgnorePatterns: ['/node_modules/(?!(svelte-typewriter)/)']
 }
 ```
 
