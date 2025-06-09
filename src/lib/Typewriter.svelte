@@ -1,8 +1,6 @@
 <script>
 	import { run } from 'svelte/legacy'
 
-	import '@formatjs/intl-segmenter/polyfill'
-
 	/**
 	 * @typedef {Object} Props
 	 * @property {string} [mode]
