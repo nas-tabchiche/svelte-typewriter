@@ -28,10 +28,10 @@
 		showCursorOnDelay = false,
 		disabled = false,
 		element = 'div',
-		scrambleDuration = 3000,
-		scrambleSlowdown = true,
-		unwriteInterval = 30,
-		wordInterval = 1500,
+		scrambleDuration = mode === 'scramble' ? 3000 : 0,
+		scrambleSlowdown = mode === 'scramble' ? true : false,
+		unwriteInterval = /^loop(Once|Random)?$/.test(mode) ? 30 : 0,
+		wordInterval = /^loop(Once|Random)?$/.test(mode) ? 1500 : 0,
 		children
 	} = $props()
 
